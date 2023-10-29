@@ -20,6 +20,7 @@ jq '. * {
 	"version": "0.0.1",
 	"license": "MIT",
 	"type": "module",
+	"publisher": "playform",
 	"private": "false",
 	"publishConfig": {
 		"access": "public"
