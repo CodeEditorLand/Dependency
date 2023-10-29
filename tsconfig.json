@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"emitDeclarationOnly": false,
+		"noEmit": true
+	},
+	"exclude": ["**/node_modules/**", "**/Target/**"],
+	"include": ["./Application/"],
+	"watchOptions": {
+		"excludeDirectories": ["**/node_modules/**", "**/Target/**"]
+	},
+	"extends": "typescript-esbuild/Target/Notation/TypeScript",
+}
