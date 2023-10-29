@@ -1,0 +1,31 @@
+{
+	"name": "codeeditorland",
+	"version": "0.0.1",
+	"private": false,
+	"license": "MIT",
+	"author": {
+		"name": "Nikola Hristov",
+		"email": "nikola@nikolahristov.tech",
+		"url": "https://nikolahristov.tech"
+	},
+	"type": "module",
+	"workspaces": [
+		"Application/**"
+	],
+	"scripts": {
+		"build": "turbo run build",
+		"dev": "turbo run dev",
+		"prepublishOnly": "turbo run prepublishOnly",
+		"start": "turbo run start"
+	},
+	"devDependencies": {
+		"turbo": "1.10.16",
+		"typescript-esbuild": "0.3.1"
+	},
+	"engines": {
+		"node": ">=14.0.0"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}
