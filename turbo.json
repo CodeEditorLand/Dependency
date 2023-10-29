@@ -1,0 +1,21 @@
+{
+	"$schema": "https://turbo.build/schema.json",
+	"pipeline": {
+		"dev": {
+			"dependsOn": ["^prepublishOnly"],
+			"cache": false
+		},
+		"start": {
+			"dependsOn": ["^prepublishOnly"],
+			"cache": false
+		},
+		"prepublishOnly": {
+			"dependsOn": ["^build", "^prepublishOnly"],
+			"outputs": ["Target/**"]
+		},
+		"build": {
+			"dependsOn": ["^prepublishOnly", "^build"],
+			"outputs": ["Target/**"]
+		}
+	}
+}
