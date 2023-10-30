@@ -31,7 +31,7 @@ jq '. * {
 		"url": "https://nikolahristov.tech"
 	},
 	"scripts": {
-		"prepublishOnly": "TypeScriptESBuild Source/**/*.ts"
+		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'"
 	},
 	"devDependencies": {
 		"typescript-esbuild": "0.3.1"
