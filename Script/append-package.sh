@@ -1,5 +1,8 @@
 #!/bin/sh
 
+
+# find -iname package.json -execdir /d/Developer/Application/CodeEditorLand/Script/append-package.sh \;
+
 pwd
 
 jq del\(\.eslintConfig\) < package.json >| package.json.tmp
