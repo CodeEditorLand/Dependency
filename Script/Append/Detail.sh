@@ -12,34 +12,34 @@ jq del\(\.prettier\) < package.json >| package.json.tmp
 
 # TODO: Add dynamic { "repository": { "directory": CodeEditorLand/Application/$REPOSITORY } }
 
-jq '. * {
-	"homepage": "https://github.com/CodeEditorLand/CodeEditorLand#readme",
-	"bugs": {
-		"url": "https://github.com/CodeEditorLand/CodeEditorLand/issues"
+jq ". * {
+	\"homepage\": \"https://github.com/CodeEditorLand/CodeEditorLand#readme\",
+	\"bugs\": {
+		\"url\": \"https://github.com/CodeEditorLand/CodeEditorLand/issues\"
 	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/CodeEditorLand/CodeEditorLand.git"
+	\"repository\": {
+		\"type\": \"git\",
+		\"url\": \"git+https://github.com/CodeEditorLand/CodeEditorLand.git\"
 	},
-	"version": "0.0.1",
-	"license": "MIT",
-	"type": "module",
-	"publisher": "playform",
-	"private": "false",
-	"publishConfig": {
-		"access": "public"
+	\"version\": \"0.0.1\",
+	\"license\": \"MIT\",
+	\"type\": \"module\",
+	\"publisher\": \"playform\",
+	\"private\": \"false\",
+	\"publishConfig\": {
+		\"access\": \"public\"
 	},
-	"author": {
-		"name": "Nikola Hristov",
-		"email": "nikola@nikolahristov.tech",
-		"url": "https://nikolahristov.tech"
+	\"author\": {
+		\"name\": \"Nikola Hristov\",
+		\"email\": \"nikola@nikolahristov.tech\",
+		\"url\": \"https://nikolahristov.tech\"
 	},
-	"scripts": {
-		"prepublishOnly": "TypeScriptESBuild Source/**/*.ts"
+	\"scripts\": {
+		\"prepublishOnly\": \"TypeScriptESBuild 'Source/**/*.ts'\"
 	},
-	"devDependencies": {
-		"typescript-esbuild": "0.3.1"
+	\"devDependencies\": {
+		\"typescript-esbuild\": \"0.3.1\"
 	}
-}' < package.json >| package.json.tmp
+}" < package.json >| package.json.tmp
 
 \mv package.json.tmp package.json
