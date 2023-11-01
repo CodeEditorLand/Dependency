@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 # find -iname package.json -execdir /d/Developer/Application/CodeEditorLand/Script/append-package.sh \;
 
 pwd
@@ -10,6 +9,8 @@ jq del\(\.eslintConfig\) < package.json >| package.json.tmp
 
 jq del\(\.prettier\) < package.json >| package.json.tmp
 \mv package.json.tmp package.json
+
+# TODO: Add dynamic { "repository": { "directory": CodeEditorLand/Application/$REPOSITORY } }
 
 jq '. * {
 	"homepage": "https://github.com/CodeEditorLand/CodeEditorLand#readme",
