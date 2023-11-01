@@ -6,7 +6,7 @@
 
 # 2) Found repositories
 
-REPOS_ORG=(
+Repository=(
 	"microsoft/applicationinsights-vscode"
 	"microsoft/azure-boards-vscode"
 	"microsoft/azure-iot-developer-kit"
@@ -319,6 +319,6 @@ REPOS_ORG=(
 
 # 3) Fork
 
-for REPO_ORG in "${REPOS_ORG[@]}"; do
-	gh repo fork "$REPO_ORG" --org CodeEditorLand
+for Repository in "${Repository[@]}"; do
+	gh repo fork "$Repository" --org CodeEditorLand
 done
