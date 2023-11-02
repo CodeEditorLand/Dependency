@@ -12,7 +12,8 @@ for Repository in "${Repository[@]}"; do
 
 	if [[ $Current != "$URL" ]]; then
 		cd "${Folder}" || exit
-		
+
+		git fetch
 		git tag | xargs -L 1 | xargs git push origin --delete
 		git tag | xargs -L 1 | xargs git tag --delete
 
