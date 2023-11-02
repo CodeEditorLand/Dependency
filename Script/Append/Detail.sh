@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# Context: CodeEditorLand/Application
+
 # find -iname package.json -execdir /d/Developer/Application/CodeEditorLand/Script/append-package.sh \;
 
 pwd
