@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# Context: CodeEditorLand/Application
+
 mv ./applicationinsights-vscode ./applicationinsights-Land
 mv ./azure-boards-vscode ./azure-boards-Land
 mv ./azure-pipelines-vscode ./azure-pipelines-Land
