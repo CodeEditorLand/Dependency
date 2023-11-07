@@ -52,3 +52,25 @@ for Repository in "${Repository[@]}"; do
 	# 	-F secret_scanning_push_protection_custom_link='https://link.nikolahristov.tech/protection-push' \
 	# 	--silent
 done
+
+# Usage:  gh repo edit [<repository>] [flags]
+
+# Flags:
+#       --add-topic strings        Add repository topic
+#       --allow-forking            Allow forking of an organization repository
+#       --allow-update-branch      Allow a pull request head branch that is behind its base branch to be updated
+#       --default-branch name      Set the default branch name for the repository
+#       --delete-branch-on-merge   Delete head branch when pull requests are merged
+#   -d, --description string       Description of the repository
+#       --enable-auto-merge        Enable auto-merge functionality
+#       --enable-discussions       Enable discussions in the repository
+#       --enable-issues            Enable issues in the repository
+#       --enable-merge-commit      Enable merging pull requests via merge commit
+#       --enable-projects          Enable projects in the repository
+#       --enable-rebase-merge      Enable merging pull requests via rebase
+#       --enable-squash-merge      Enable merging pull requests via squashed commit
+#       --enable-wiki              Enable wiki in the repository
+#   -h, --homepage URL             Repository home page URL
+#       --remove-topic strings     Remove repository topic
+#       --template                 Make the repository available as a template repository
+#       --visibility string        Change the visibility of the repository to {public,private,internal}
