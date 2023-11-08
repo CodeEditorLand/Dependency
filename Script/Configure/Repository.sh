@@ -13,7 +13,7 @@ for Repository in "${Repository[@]}"; do
 
 	gh repo set-default "$(git remote get-url origin)"
 
-	Upstream=$(gh repo view --json parent | jq --compact-output -r '.parent.owner.login, .parent.name' | tr -s '\r\n' '/')
+	Upstream=$(gh repo view --json parent | jq -c -r '.parent.owner.login, .parent.name' | tr -s '\r\n' '/')
 	Upstream="ssh://git@github.com/${Upstream}"
 	Upstream=$(echo "$Upstream" | sed 's/\/$/\.git/')
 
