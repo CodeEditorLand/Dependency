@@ -1,7 +1,7 @@
 # DESTRUCTIVE OPERATIONS
 
-1. (Owner) Adds organizational details to all of the `package.json` inside `Application`
-   (The Context)
+1. Adds organizational details to all of the `package.json` inside
+   `Application` (The Context)
 
     ```bash
     ../Append/Detail.sh
@@ -84,3 +84,4 @@
 
     ```bash
     Setting/Repository.sh
+    ```
