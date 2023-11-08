@@ -18,6 +18,12 @@
    Context)
 
     ```bash
+    cd Application # (The Context)
+    ```
+
+    and rename:
+
+    ```bash
     ../Rename/Repository.sh
     ```
 
@@ -91,5 +97,5 @@
     and set:
 
     ```bash
-    Setting/Repository.sh
+    ../Setting/Repository.sh
     ```
