@@ -1,7 +1,7 @@
 # DESTRUCTIVE OPERATIONS
 
-1. Adds organizational details to all of the `package.json` inside
-   `Application` (The Context)
+1. Adds organizational details to all of the `package.json` inside `Application`
+   (The Context)
 
     ```bash
     ../Append/Detail.sh
@@ -19,6 +19,14 @@
 
     ```bash
     ../Rename/Repository.sh
+    ```
+
+# Organization
+
+1. (Owner) Fork all of the repositories from the Microsoft organization
+
+    ```bash
+    ../Script/Fork/Organization.sh
     ```
 
 # Repository
