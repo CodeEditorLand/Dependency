@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Current directory
 Directory=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
 
 Organization="CodeEditorLand"
