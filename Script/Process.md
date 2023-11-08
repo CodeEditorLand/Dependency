@@ -38,7 +38,7 @@
     cd Application # (The Context)
     ```
 
-    and populate the cache
+    and populate the cache:
 
     ```bash
     ../Script/Cache/Get.sh
@@ -50,7 +50,7 @@
     cd Application # (The Context)
     ```
 
-    and clone
+    and clone:
 
     ```bash
     ../Script/Clone/Repository.sh
