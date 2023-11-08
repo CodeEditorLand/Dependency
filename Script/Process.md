@@ -1,6 +1,6 @@
 # DESTRUCTIVE OPERATIONS
 
-1. Adds organizational details to all of the `package.json` inside `Application`
+1. (Owner) Adds organizational details to all of the `package.json` inside `Application`
    (The Context)
 
     ```bash
@@ -24,7 +24,7 @@
 # Repository
 
 1. After cloning the repository
-   ssh://git@github.com/CodeEditorLand/CodeEditorLand.git:
+   `ssh://git@github.com/CodeEditorLand/CodeEditorLand.git`:
 
     ```bash
     cd Application # (The Context)
@@ -56,7 +56,7 @@
     cd Application # (The Context)
     ```
 
-    and configure
+    and configure:
 
     ```bash
     ../Script/Configure/Repository.sh
@@ -84,4 +84,3 @@
 
     ```bash
     Setting/Repository.sh
-    ```
