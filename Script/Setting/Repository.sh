@@ -90,5 +90,4 @@ for Repository in "${Repository[@]}"; do
 		--enable-squash-merge
 
 	cd - || exit
-
 done
