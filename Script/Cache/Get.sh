@@ -8,6 +8,8 @@ Organization="CodeEditorLand"
 
 Repository=()
 
+Omit="CodeEditorLand/CodeEditorLand"
+
 for ((Page = 1; Page <= 10; Page++)); do
 	mapfile -t TemporaryRepository < <(printf "%s" "$(
 		gh api \
@@ -16,7 +18,11 @@ for ((Page = 1; Page <= 10; Page++)); do
 			orgs/"${Organization}"/repos?per_page=100\&page=${Page} | jq -r '.[].full_name'
 	)" | tr -d '\r')
 
-	Repository+=("${TemporaryRepository[@]}")
+	for Temporary in "${TemporaryRepository[@]}"; do
+		if [[ "$Temporary" != "$Omit" ]]; then
+			Repository+=("$Temporary")
+		fi
+	done
 done
 
 printf "%s\n" "${Repository[@]}" > "$Directory"/Repository/CodeEditorLand.md
