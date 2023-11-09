@@ -9,7 +9,7 @@ readarray -t Repository < "$Directory"/../Cache/Repository/CodeEditorLand.md
 for Repository in "${Repository[@]}"; do
 	Folder="${Repository/'CodeEditorLand/'/}"
 
-	cd "${Folder}" || exit
+	cd "$Folder" || exit
 
 	pwd
 

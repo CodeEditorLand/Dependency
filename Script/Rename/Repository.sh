@@ -32,6 +32,10 @@ for Repository in "${Repository[@]}"; do
 
 	cd "$Folder" || exit
 
+	pwd
+
+	echo "$Rename"
+
 	gh repo set-default "$(git remote get-url origin)"
 	gh repo rename "$Rename" --yes
 

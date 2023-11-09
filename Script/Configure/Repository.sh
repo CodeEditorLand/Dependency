@@ -9,18 +9,24 @@ readarray -t Repository < "$Directory"/../Cache/Repository/CodeEditorLand.md
 for Repository in "${Repository[@]}"; do
 	Folder="${Repository/'CodeEditorLand/'/}"
 
-	cd "${Folder}" || exit
+	cd "$Folder" || exit
 
 	pwd
 
 	gh repo set-default "$(git remote get-url origin)"
 
 	Upstream=$(gh repo view --json parent | jq -c -r '.parent.owner.login, .parent.name' | tr -s '\r\n' '/')
-	Upstream="ssh://git@github.com/${Upstream}"
-	Upstream=$(echo "$Upstream" | sed 's/\/$/\.git/')
 
-	git remote add upstream "$Upstream"
-	git remote set-url upstream "$Upstream"
+	if [[ "$Upstream" != "null/null" ]]; then
+		Upstream="ssh://git@github.com/${Upstream}"
+		Upstream=$(echo "$Upstream" | sed 's/\/$/\.git/')
+
+		echo "$Upstream"
+
+		git remote remove upstream
+		git remote add upstream "$Upstream"
+		git remote set-url upstream "$Upstream"
+	fi
 
 	cd - || exit
 done

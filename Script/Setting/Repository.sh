@@ -77,6 +77,8 @@ for Repository in "${Repository[@]}"; do
 
 	cd "$Folder" || exit
 
+	pwd
+
 	gh repo set-default "$(git remote get-url origin)"
 
 	gh repo edit \

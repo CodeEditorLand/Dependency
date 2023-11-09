@@ -74,8 +74,6 @@
     ../Script/Clone/Repository.sh
     ```
 
-(TODO: Check for missing upstreams (null/null))
-
 3. After all of the repositories are cloned configure their upstream:
 
     ```bash
