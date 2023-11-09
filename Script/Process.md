@@ -27,6 +27,18 @@
     ../Rename/Repository.sh
     ```
 
+4. Syncs repositories with their upstream:
+
+    ```bash
+    cd Application # (The Context)
+    ```
+
+    and sync:
+
+    ```bash
+    ../Script/Sync/Repository.sh
+    ```
+
 # Organization
 
 1. (Owner) Fork all of the repositories from the Microsoft organization
@@ -76,19 +88,7 @@
     ../Script/Configure/Repository.sh
     ```
 
-4. After configuring the repositories sync with their upstream:
-
-    ```bash
-    cd Application # (The Context)
-    ```
-
-    and sync:
-
-    ```bash
-    ../Script/Sync/Repository.sh
-    ```
-
-5. (Owner) Set the permissions for all the repositories and common settings:
+4. (Owner) Set the permissions for all the repositories and common settings:
 
     ```bash
     cd Application # (The Context)

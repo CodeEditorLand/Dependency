@@ -11,6 +11,8 @@ for Repository in "${Repository[@]}"; do
 
 	cd "${Folder}" || exit
 
+	pwd
+
 	git fetch
 	git tag | xargs -L 1 | xargs git push origin --delete
 	git tag | xargs -L 1 | xargs git tag --delete

@@ -11,6 +11,8 @@ for Repository in "${Repository[@]}"; do
 
 	cd "${Folder}" || exit
 
+	pwd
+
 	gh repo set-default "$(git remote get-url origin)"
 
 	Upstream=$(gh repo view --json parent | jq -c -r '.parent.owner.login, .parent.name' | tr -s '\r\n' '/')

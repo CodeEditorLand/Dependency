@@ -11,6 +11,8 @@ for Repository in "${Repository[@]}"; do
 
 	cd "${Folder}" || exit
 
+	pwd
+
 	git add .
 	git commit -m "squash!"
 	git pull
