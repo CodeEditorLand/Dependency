@@ -1,4 +1,6 @@
-# DESTRUCTIVE OPERATIONS
+# How-to
+
+## DESTRUCTIVE OPERATIONS
 
 1. Adds organizational details to all of the `package.json` inside `Application`
    (The Context)
@@ -39,7 +41,7 @@
     ../Script/Sync/Repository.sh
     ```
 
-# Organization
+## Forking
 
 1. (Owner) Fork all of the repositories from the Microsoft organization
 
@@ -47,7 +49,7 @@
     ../Script/Fork/Organization.sh
     ```
 
-# Repository
+## Cloning
 
 1. After cloning the repository
    `ssh://git@github.com/CodeEditorLand/CodeEditorLand.git`:
