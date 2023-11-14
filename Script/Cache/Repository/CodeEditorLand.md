@@ -308,4 +308,3 @@ CodeEditorLand/LandZeromq
 CodeEditorLand/LandspacesQuickstart
 CodeEditorLand/wil
 CodeEditorLand/DevSkim
-CodeEditorLand/.github

@@ -22,6 +22,7 @@ for Repository in "${Repository[@]}"; do
 		-o -iname .prettierrc.js \
 		-o -iname .prettierrc.json \
 		-o -iname .prettierrc.yaml \
+		-o -iname .github \
 		\) -exec rm -rf {} \;
 
 	cd - || exit
