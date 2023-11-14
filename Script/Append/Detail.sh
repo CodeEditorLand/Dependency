@@ -6,10 +6,10 @@
 
 pwd
 
-jq del\(\.eslintConfig\) < package.json >| package.json.tmp
+jq del\(\.eslintConfig\) <package.json >|package.json.tmp
 \mv package.json.tmp package.json
 
-jq del\(\.prettier\) < package.json >| package.json.tmp
+jq del\(\.prettier\) <package.json >|package.json.tmp
 \mv package.json.tmp package.json
 
 # TODO: Add dynamic { "repository": { "directory": CodeEditorLand/Application/$REPOSITORY } }
@@ -42,6 +42,6 @@ jq ". * {
 	\"devDependencies\": {
 		\"typescript-esbuild\": \"0.3.1\"
 	}
-}" < package.json >| package.json.tmp
+}" <package.json >|package.json.tmp
 
 \mv package.json.tmp package.json

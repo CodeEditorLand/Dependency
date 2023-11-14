@@ -2,13 +2,16 @@
 
 # Contextless
 
-Directory=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
+Directory=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 
 Organization="CodeEditorLand"
 
 Repository=()
 
-Omit="CodeEditorLand/CodeEditorLand"
+Omit=(
+	"CodeEditorLand/CodeEditorLand"
+	"CodeEditorLand/.github"
+)
 
 for ((Page = 1; Page <= 10; Page++)); do
 	mapfile -t TemporaryRepository < <(printf "%s" "$(
@@ -19,10 +22,20 @@ for ((Page = 1; Page <= 10; Page++)); do
 	)" | tr -d '\r')
 
 	for Temporary in "${TemporaryRepository[@]}"; do
-		if [[ "$Temporary" != "$Omit" ]]; then
+		Flag=false
+
+		for RepositoryOmit in "${Omit[@]}"; do
+			if [ "$Temporary" = "$RepositoryOmit" ]; then
+				Flag=true
+
+				break
+			fi
+		done
+
+		if [ "$Flag" = false ]; then
 			Repository+=("$Temporary")
 		fi
 	done
 done
 
-printf "%s\n" "${Repository[@]}" > "$Directory"/Repository/CodeEditorLand.md
+printf "%s\n" "${Repository[@]}" >"$Directory"/Repository/CodeEditorLand.md
