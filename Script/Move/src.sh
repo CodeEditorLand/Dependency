@@ -13,8 +13,12 @@ for Repository in "${Repository[@]}"; do
 
 	pwd
 
-	cp -rf src/* Source/
-	rm -rf src/
+	if [[ -d "src" ]]; then
+		cp -rf src/* Source/
+		rm -rf src/
+	fi
+
+	find . -name src -type d -execdir bash -c 'cp -rf src/* Source/ ; rm -rf src/' \;
 
 	cd - || exit
 done

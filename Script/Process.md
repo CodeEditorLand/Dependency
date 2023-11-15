@@ -7,8 +7,8 @@
     ../Append/Detail.sh
     ```
 
-2. Removes all of the tags from the repositories inside `Application` (The
-   Context)
+2. Removes all of the tags and (Prettier, Biome, Rome, ) from the repositories
+   inside `Application` (The Context)
 
     ```bash
     ../Clean/Repository.sh
@@ -37,6 +37,18 @@
 
     ```bash
     ../Script/Sync/Repository.sh
+    ```
+
+5. Moves src into the Source folder:
+
+    ```bash
+    cd Application # (The Context)
+    ```
+
+    and move:
+
+    ```bash
+    ../Script/Move/src.sh
     ```
 
 # Forking

@@ -18,7 +18,7 @@ for Repository in "${Repository[@]}"; do
 	git pull
 	git push
 
-	git fetch upstream --depth 1
+	git fetch upstream --depth 1 --no-tags
 
 	Main=$(gh repo view --json parent | jq -c -r '.parent.owner.login, .parent.name' | tr -s '\r\n' '/')
 	Main=$(echo "$Main" | sed 's/\/$//')
