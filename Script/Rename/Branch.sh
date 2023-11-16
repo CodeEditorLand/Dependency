@@ -18,7 +18,7 @@ for Repository in "${Repository[@]}"; do
 	git switch -c main
 
 	git push -f --set-upstream origin main
-	
+
 	gh repo edit --default-branch main
 
 	cd - || exit
