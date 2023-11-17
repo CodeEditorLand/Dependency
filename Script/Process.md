@@ -51,7 +51,7 @@
     ../Script/Move/src.sh
     ```
 
-# Forking
+# Organization
 
 1. (Owner) Fork all of the repositories from the Microsoft organization
 
@@ -59,7 +59,7 @@
     ../Script/Fork/Organization.sh
     ```
 
-# Cloning
+# Repository
 
 1. After cloning the repository
    `ssh://git@github.com/CodeEditorLand/CodeEditorLand.git`:

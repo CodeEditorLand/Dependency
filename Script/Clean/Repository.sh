@@ -1,10 +1,12 @@
 #!/bin/bash
 
+echo "Process: Clean/Repository.sh"
+
 # Context: CodeEditorLand/Application
 
-Directory=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
+Directory=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
 
-readarray -t Repository <"$Directory"/../Cache/Repository/CodeEditorLand.md
+readarray -t Repository < "$Directory"/../Cache/Repository/CodeEditorLand.md
 
 for Repository in "${Repository[@]}"; do
 	Folder="${Repository/'CodeEditorLand/'/}"
@@ -14,7 +16,7 @@ for Repository in "${Repository[@]}"; do
 	pwd
 
 	git fetch origin
-	git fetch upstream --no-tags
+	git fetch upstream --depth 1 --no-tags
 
 	git tag | xargs -L 1 | xargs git push origin --delete
 	git tag | xargs -L 1 | xargs git tag --delete

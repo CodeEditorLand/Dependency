@@ -1,10 +1,12 @@
 #!/bin/bash
 
+echo "Process: Sync/Repository.sh"
+
 # Context: CodeEditorLand/Application
 
-Directory=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
+Directory=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
 
-readarray -t Repository <"$Directory"/../Cache/Repository/CodeEditorLand.md
+readarray -t Repository < "$Directory"/../Cache/Repository/CodeEditorLand.md
 
 for Repository in "${Repository[@]}"; do
 	Folder="${Repository/'CodeEditorLand/'/}"

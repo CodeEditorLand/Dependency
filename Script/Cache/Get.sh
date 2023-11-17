@@ -1,8 +1,10 @@
 #!/bin/bash
 
+echo "Process: Cache/Get.sh"
+
 # Contextless
 
-Directory=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
+Directory=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
 
 Organization="CodeEditorLand"
 
@@ -38,4 +40,4 @@ for ((Page = 1; Page <= 10; Page++)); do
 	done
 done
 
-printf "%s\n" "${Repository[@]}" >"$Directory"/Repository/CodeEditorLand.md
+printf "%s\n" "${Repository[@]}" > "$Directory"/Repository/CodeEditorLand.md
