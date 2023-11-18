@@ -43,3 +43,15 @@ jobs:
             - run:
                   chmod a+x Script/Setting/Repository.sh ;
                   Script/Setting/Repository.sh
+
+            - run:
+                  chmod a+x Script/Clean/Repository.sh ;
+                  Script/Clean/Repository.sh
+
+            - run:
+                  chmod a+x Script/Sync/Repository.sh ;
+                  Script/Sync/Repository.sh
+
+            - run:
+                  chmod a+x Script/Move/src.sh ;
+                  Script/Move/src.sh

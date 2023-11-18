@@ -21,10 +21,16 @@
     cd Application # (The Context)
     ```
 
-    and rename:
+    and rename (vscode -> Land):
 
     ```bash
     ../Rename/Repository.sh
+    ```
+
+    or branch (any -> main):
+
+    ```bash
+    ../Rename/Branch.sh
     ```
 
 4. Syncs repositories with their upstream:
