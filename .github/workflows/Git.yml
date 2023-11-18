@@ -52,6 +52,4 @@ jobs:
                   chmod a+x Script/Sync/Repository.sh ;
                   Script/Sync/Repository.sh
 
-            - run:
-                  chmod a+x Script/Move/src.sh ;
-                  Script/Move/src.sh
+            - run: chmod a+x Script/Move/src.sh ; Script/Move/src.sh
