@@ -30,11 +30,12 @@ jobs:
               with:
                   submodules: recursive
 
-            - run: chmod a+x Script/Cache/Get.sh ; Script/Cache/Get.sh
+            # - run: chmod a+x Script/Cache/Get.sh ; Script/Cache/Get.sh
+            # - run: git submodule init ; git submodule update
 
-            - run:
-                  chmod a+x Script/Clone/Repository.sh ;
-                  Script/Clone/Repository.sh
+            # - run:
+            #       chmod a+x Script/Clone/Repository.sh ;
+            #       Script/Clone/Repository.sh
 
             - run:
                   chmod a+x Script/Configure/Repository.sh ;
