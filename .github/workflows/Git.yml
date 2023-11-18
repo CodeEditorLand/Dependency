@@ -28,6 +28,8 @@ jobs:
         steps:
             - uses: actions/checkout@v4.1.1
 
-            - run: Script/Cache/Get.sh
+            - run: chmod a+x Script/Cache/Get.sh ; Script/Cache/Get.sh
 
-            - run: Script/Clean/Repository.sh
+            - run:
+                  chmod a+x Script/Clean/Repository.sh ;
+                  Script/Clean/Repository.sh
