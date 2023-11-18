@@ -44,5 +44,10 @@ for Repository in "${Repository[@]}"; do
 		-o -iname yarn.lock \
 		\) -exec rm -rf {} \;
 
+	\find . \
+		-iname '*test*' \
+		-type d \
+		-exec rm -rf {} \;
+
 	cd - || exit
 done
