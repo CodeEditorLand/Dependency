@@ -922,9 +922,6 @@ url = ssh://git@github.com/CodeEditorLand/LandZeromq.git
 [submodule "Application/LandspacesQuickstart"]
 path = Application/LandspacesQuickstart
 url = ssh://git@github.com/CodeEditorLand/LandspacesQuickstart.git
-[submodule "Application/Wil"]
-path = Application/Wil
-url = ssh://git@github.com/CodeEditorLand/Wil.git
 [submodule "Application/DevSkim"]
 path = Application/DevSkim
 url = ssh://git@github.com/CodeEditorLand/DevSkim.git
