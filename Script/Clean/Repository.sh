@@ -21,7 +21,8 @@ for Repository in "${Repository[@]}"; do
 	git tag | xargs -L 1 | xargs git push origin --delete
 	git tag | xargs -L 1 | xargs git tag --delete
 
-	\find . \( \
+	\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o \
+		\( \
 		-iname .prettierrc \
 		-o -iname .clang-format \
 		-o -iname .csharpierrc \
@@ -44,7 +45,7 @@ for Repository in "${Repository[@]}"; do
 		-o -iname yarn.lock \
 		\) -exec rm -rf {} \;
 
-	\find . \
+	\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o \
 		-iname '*test*' \
 		-type d \
 		-exec rm -rf {} \;
