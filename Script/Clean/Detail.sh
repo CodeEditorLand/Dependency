@@ -17,3 +17,9 @@ jq del\(\.engines\) < package.json >| package.json.tmp
 
 jq del\(\.tags\) < package.json >| package.json.tmp
 \mv package.json.tmp package.json
+
+jq del\(\.categories\) < package.json >| package.json.tmp
+\mv package.json.tmp package.json
+
+jq del\(\.keywords\) < package.json >| package.json.tmp
+\mv package.json.tmp package.json
