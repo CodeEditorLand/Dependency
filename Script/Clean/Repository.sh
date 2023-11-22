@@ -42,7 +42,13 @@ for Repository in "${Repository[@]}"; do
 		-o -iname pnpm-lock.yaml \
 		-o -iname prettier.config.js \
 		-o -iname rustfmt.toml \
+		-o -iname .husky \
+		-o -iname .azure-pipelines \
+		-o -iname .configurations \
+		-o -iname .devcontainer \
+		-o -iname .eslintplugin \
 		-o -iname yarn.lock \
+		-o -iname .yarnrc \
 		\) -exec rm -rf {} \;
 
 	\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o \
