@@ -43,6 +43,7 @@ for Repository in "${Repository[@]}"; do
 		-o -iname prettier.config.js \
 		-o -iname rustfmt.toml \
 		-o -iname .husky \
+		-o -iname .vscode \
 		-o -iname .azure-pipelines \
 		-o -iname .configurations \
 		-o -iname .devcontainer \
