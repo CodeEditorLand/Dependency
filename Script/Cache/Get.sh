@@ -13,6 +13,11 @@ Repository=()
 Omit=(
 	"CodeEditorLand/CodeEditorLand"
 	"CodeEditorLand/.github"
+	"CodeEditorLand/Wil"
+	"CodeEditorLand/node-gyp"
+	"CodeEditorLand/debugger-libs"
+	"CodeEditorLand/NRefactory"
+	"CodeEditorLand/oniguruma"
 )
 
 for ((Page = 1; Page <= 10; Page++)); do

@@ -306,6 +306,5 @@ CodeEditorLand/LandWinsta11er
 CodeEditorLand/LandWordcount
 CodeEditorLand/LandZeromq
 CodeEditorLand/LandspacesQuickstart
-CodeEditorLand/Wil
 CodeEditorLand/DevSkim
 CodeEditorLand/TestBed
