@@ -1,0 +1,48 @@
+[submodule "Application/LandDotnettools"]
+	path = Application/LandDotnettools
+	url = ssh://git@github.com/CodeEditorLand/LandDotnettools.git
+[submodule "Application/LandDtdl"]
+	path = Application/LandDtdl
+	url = ssh://git@github.com/CodeEditorLand/LandDtdl.git
+[submodule "Application/LandDts"]
+	path = Application/LandDts
+	url = ssh://git@github.com/CodeEditorLand/LandDts.git
+[submodule "Application/LandDwarfDebugging"]
+	path = Application/LandDwarfDebugging
+	url = ssh://git@github.com/CodeEditorLand/LandDwarfDebugging.git
+[submodule "Application/LandDwarfDebuggingExt"]
+	path = Application/LandDwarfDebuggingExt
+	url = ssh://git@github.com/CodeEditorLand/LandDwarfDebuggingExt.git
+[submodule "Application/LandEdgeDebug"]
+	path = Application/LandEdgeDebug
+	url = ssh://git@github.com/CodeEditorLand/LandEdgeDebug.git
+[submodule "Application/LandEdgeDebug2"]
+	path = Application/LandEdgeDebug2
+	url = ssh://git@github.com/CodeEditorLand/LandEdgeDebug2.git
+[submodule "Application/LandEdgeDevtools"]
+	path = Application/LandEdgeDevtools
+	url = ssh://git@github.com/CodeEditorLand/LandEdgeDevtools.git
+[submodule "Application/LandEdgeDevtoolsNetwork"]
+	path = Application/LandEdgeDevtoolsNetwork
+	url = ssh://git@github.com/CodeEditorLand/LandEdgeDevtoolsNetwork.git
+[submodule "Application/LandEditorconfig"]
+	path = Application/LandEditorconfig
+	url = ssh://git@github.com/CodeEditorLand/LandEditorconfig.git
+[submodule "Application/LandEmbeddedTools"]
+	path = Application/LandEmbeddedTools
+	url = ssh://git@github.com/CodeEditorLand/LandEmbeddedTools.git
+[submodule "Application/LandEmmetHelper"]
+	path = Application/LandEmmetHelper
+	url = ssh://git@github.com/CodeEditorLand/LandEmmetHelper.git
+[submodule "Application/LandEmmetLegacy"]
+	path = Application/LandEmmetLegacy
+	url = ssh://git@github.com/CodeEditorLand/LandEmmetLegacy.git
+[submodule "Application/LandEslint"]
+	path = Application/LandEslint
+	url = ssh://git@github.com/CodeEditorLand/LandEslint.git
+[submodule "Application/LandExplorerCommand"]
+	path = Application/LandExplorerCommand
+	url = ssh://git@github.com/CodeEditorLand/LandExplorerCommand.git
+[submodule "Application/LandExtensionRecommender"]
+	path = Application/LandExtensionRecommender
+	url = ssh://git@github.com/CodeEditorLand/LandExtensionRecommender.git
