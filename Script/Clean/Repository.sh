@@ -30,7 +30,9 @@ for Repository in "${Repository[@]}"; do
 		-o -iname .csharpierrc \
 		-o -iname .devcontainer \
 		-o -iname .editorconfig \
+		-o -iname .eslintignore \
 		-o -iname .eslintplugin \
+		-o -iname .eslintrc.base.json \
 		-o -iname .eslintrc.cjs \
 		-o -iname .eslintrc.js \
 		-o -iname .eslintrc.json \
@@ -47,7 +49,6 @@ for Repository in "${Repository[@]}"; do
 		-o -iname .vscode \
 		-o -iname .yarnrc \
 		-o -iname biome.json \
-		-o -iname rome.json \
 		-o -iname Cargo.lock \
 		-o -iname jsconfig.json \
 		-o -iname package-lock.json \
