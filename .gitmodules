@@ -529,3 +529,24 @@
 [submodule "Application/LandMssql"]
 	path = Application/LandMssql
 	url = ssh://git@github.com/CodeEditorLand/LandMssql.git
+[submodule "Application/LandNotebookTestdata"]
+	path = Application/LandNotebookTestdata
+	url = ssh://git@github.com/CodeEditorLand/LandNotebookTestdata.git
+[submodule "Application/LandNotepadplusplusKeybindings"]
+	path = Application/LandNotepadplusplusKeybindings
+	url = ssh://git@github.com/CodeEditorLand/LandNotepadplusplusKeybindings.git
+[submodule "Application/LandNpmScripts"]
+	path = Application/LandNpmScripts
+	url = ssh://git@github.com/CodeEditorLand/LandNpmScripts.git
+[submodule "Application/LandOcticonsFont"]
+	path = Application/LandOcticonsFont
+	url = ssh://git@github.com/CodeEditorLand/LandOcticonsFont.git
+[submodule "Application/LandOnedriveBrowser"]
+	path = Application/LandOnedriveBrowser
+	url = ssh://git@github.com/CodeEditorLand/LandOnedriveBrowser.git
+[submodule "Application/LandPwaAnalyzer"]
+	path = Application/LandPwaAnalyzer
+	url = ssh://git@github.com/CodeEditorLand/LandPwaAnalyzer.git
+[submodule "Application/LandPylint"]
+	path = Application/LandPylint
+	url = ssh://git@github.com/CodeEditorLand/LandPylint.git
