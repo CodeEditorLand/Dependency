@@ -36,6 +36,6 @@ jq ". * {
 	\"devDependencies\": {
 		\"typescript-esbuild\": \"0.3.1\"
 	}
-}" < package.json >| package.json.tmp
+}" <package.json >|package.json.tmp
 
 \mv package.json.tmp package.json

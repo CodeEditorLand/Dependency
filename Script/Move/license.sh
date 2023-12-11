@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Process: Move/src.sh"
+echo "Process: Move/license.sh"
 
 # Context: CodeEditorLand/Application
 
@@ -15,12 +15,7 @@ for Repository in "${Repository[@]}"; do
 
 	pwd
 
-	if [[ -d "src" ]]; then
-		cp -rf src/* Source/
-		rm -rf src/
-	fi
-
-	find . -name src -type d -execdir bash -c 'cp -rf src/* Source/ ; rm -rf src/' \;
+	find . -name license.txt -type f -execdir mv {} LICENSE \;
 
 	cd - || exit
 done
