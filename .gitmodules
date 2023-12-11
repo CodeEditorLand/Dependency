@@ -607,3 +607,24 @@
 [submodule "Application/LandTypescriptTslintPlugin"]
 	path = Application/LandTypescriptTslintPlugin
 	url = ssh://git@github.com/CodeEditorLand/LandTypescriptTslintPlugin.git
+[submodule "Application/LandLoc"]
+	path = Application/LandLoc
+	url = ssh://git@github.com/CodeEditorLand/LandLoc.git
+[submodule "Application/LandLocDeprecated"]
+	path = Application/LandLocDeprecated
+	url = ssh://git@github.com/CodeEditorLand/LandLocDeprecated.git
+[submodule "Application/LandLombok"]
+	path = Application/LandLombok
+	url = ssh://git@github.com/CodeEditorLand/LandLombok.git
+[submodule "Application/LandLsifExtension"]
+	path = Application/LandLsifExtension
+	url = ssh://git@github.com/CodeEditorLand/LandLsifExtension.git
+[submodule "Application/LandMockDebug"]
+	path = Application/LandMockDebug
+	url = ssh://git@github.com/CodeEditorLand/LandMockDebug.git
+[submodule "Application/LandPythonDevicesimulator"]
+	path = Application/LandPythonDevicesimulator
+	url = ssh://git@github.com/CodeEditorLand/LandPythonDevicesimulator.git
+[submodule "Application/LandPythonDsExtensionPack"]
+	path = Application/LandPythonDsExtensionPack
+	url = ssh://git@github.com/CodeEditorLand/LandPythonDsExtensionPack.git
