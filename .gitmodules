@@ -550,3 +550,60 @@
 [submodule "Application/LandPylint"]
 	path = Application/LandPylint
 	url = ssh://git@github.com/CodeEditorLand/LandPylint.git
+[submodule "Application/LandPython"]
+	path = Application/LandPython
+	url = ssh://git@github.com/CodeEditorLand/LandPython.git
+[submodule "Application/LandPythonToolsExtensionTemplate"]
+	path = Application/LandPythonToolsExtensionTemplate
+	url = ssh://git@github.com/CodeEditorLand/LandPythonToolsExtensionTemplate.git
+[submodule "Application/LandPythonWebWasm"]
+	path = Application/LandPythonWebWasm
+	url = ssh://git@github.com/CodeEditorLand/LandPythonWebWasm.git
+[submodule "Application/LandReactNative"]
+	path = Application/LandReactNative
+	url = ssh://git@github.com/CodeEditorLand/LandReactNative.git
+[submodule "Application/LandReactSample"]
+	path = Application/LandReactSample
+	url = ssh://git@github.com/CodeEditorLand/LandReactSample.git
+[submodule "Application/LandRecipes"]
+	path = Application/LandRecipes
+	url = ssh://git@github.com/CodeEditorLand/LandRecipes.git
+[submodule "Application/LandReferencesView"]
+	path = Application/LandReferencesView
+	url = ssh://git@github.com/CodeEditorLand/LandReferencesView.git
+[submodule "Application/LandTasVue"]
+	path = Application/LandTasVue
+	url = ssh://git@github.com/CodeEditorLand/LandTasVue.git
+[submodule "Application/LandUri"]
+	path = Application/LandUri
+	url = ssh://git@github.com/CodeEditorLand/LandUri.git
+[submodule "Application/LandWebPlayground"]
+	path = Application/LandWebPlayground
+	url = ssh://git@github.com/CodeEditorLand/LandWebPlayground.git
+[submodule "Application/LandWebviewUiToolkit"]
+	path = Application/LandWebviewUiToolkit
+	url = ssh://git@github.com/CodeEditorLand/LandWebviewUiToolkit.git
+[submodule "Application/LandWebviewUiToolkitSamples"]
+	path = Application/LandWebviewUiToolkitSamples
+	url = ssh://git@github.com/CodeEditorLand/LandWebviewUiToolkitSamples.git
+[submodule "Application/LandJavaDebug"]
+	path = Application/LandJavaDebug
+	url = ssh://git@github.com/CodeEditorLand/LandJavaDebug.git
+[submodule "Application/LandJavaDependency"]
+	path = Application/LandJavaDependency
+	url = ssh://git@github.com/CodeEditorLand/LandJavaDependency.git
+[submodule "Application/LandNotebookRenderers"]
+	path = Application/LandNotebookRenderers
+	url = ssh://git@github.com/CodeEditorLand/LandNotebookRenderers.git
+[submodule "Application/LandPythonInstaller"]
+	path = Application/LandPythonInstaller
+	url = ssh://git@github.com/CodeEditorLand/LandPythonInstaller.git
+[submodule "Application/Landtestcover"]
+	path = Application/Landtestcover
+	url = ssh://git@github.com/CodeEditorLand/Landtestcover.git
+[submodule "Application/LandTypescriptNext"]
+	path = Application/LandTypescriptNext
+	url = ssh://git@github.com/CodeEditorLand/LandTypescriptNext.git
+[submodule "Application/LandTypescriptTslintPlugin"]
+	path = Application/LandTypescriptTslintPlugin
+	url = ssh://git@github.com/CodeEditorLand/LandTypescriptTslintPlugin.git
