@@ -4,9 +4,9 @@ echo "Process: Configure/Repository.sh"
 
 # Context: CodeEditorLand/Application
 
-Directory=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
+Directory=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 
-readarray -t Repository < "$Directory"/../Cache/Repository/CodeEditorLand.md
+readarray -t Repository <"$Directory"/../Cache/Repository/CodeEditorLand.md
 
 for Repository in "${Repository[@]}"; do
 	Folder="${Repository/'CodeEditorLand/'/}"
@@ -14,6 +14,14 @@ for Repository in "${Repository[@]}"; do
 	cd "$Folder" || exit
 
 	pwd
+
+	Origin=$(git remote get-url origin)
+	Origin=$(echo "$Origin" | sed 's/git@github.com:/ssh:\/\/git@github.com\//')
+
+	git remote set-url origin "$Origin"
+
+	echo "Origin: "
+	echo "$Origin"
 
 	gh repo set-default "$(git remote get-url origin)"
 

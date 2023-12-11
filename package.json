@@ -27,7 +27,7 @@
 		"start": "turbo run start"
 	},
 	"devDependencies": {
-		"turbo": "1.10.16",
+		"turbo": "1.11.1",
 		"typescript-esbuild": "0.3.2"
 	},
 	"engines": {

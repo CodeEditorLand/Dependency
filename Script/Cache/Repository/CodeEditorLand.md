@@ -308,3 +308,4 @@ CodeEditorLand/LandZeromq
 CodeEditorLand/LandspacesQuickstart
 CodeEditorLand/DevSkim
 CodeEditorLand/TestBed
+CodeEditorLand/Oniguruma

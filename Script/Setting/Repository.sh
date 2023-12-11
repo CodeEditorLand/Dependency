@@ -4,11 +4,18 @@ echo "Process: Setting/Repository.sh"
 
 # Context: CodeEditorLand/Application
 
-Directory=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
+Directory=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 
-readarray -t Repository < "$Directory"/../Cache/Repository/CodeEditorLand.md
+readarray -t Repository <"$Directory"/../Cache/Repository/CodeEditorLand.md
 
 for Repository in "${Repository[@]}"; do
+
+	Folder="${Repository/'CodeEditorLand/'/}"
+
+	cd "$Folder" || exit
+
+	pwd
+
 	gh api \
 		--method PUT \
 		-H "Accept: application/vnd.github+json" \
@@ -71,20 +78,12 @@ for Repository in "${Repository[@]}"; do
 		-F delete_branch_on_merge=true \
 		-F allow_update_branch=true \
 		-F use_squash_pr_title_as_default=true \
-		-F allow_forking=true \
 		-F web_commit_signoff_required=true \
 		--silent
-
-	Folder="${Repository/'CodeEditorLand/'/}"
-
-	cd "$Folder" || exit
-
-	pwd
 
 	gh repo set-default "$(git remote get-url origin)"
 
 	gh repo edit \
-		--allow-forking \
 		--allow-update-branch \
 		--default-branch main \
 		--delete-branch-on-merge \
