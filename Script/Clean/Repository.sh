@@ -4,9 +4,9 @@ echo "Process: Clean/Repository.sh"
 
 # Context: CodeEditorLand/Application
 
-Directory=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
+Directory=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 
-readarray -t Repository < "$Directory"/../Cache/Repository/CodeEditorLand.md
+readarray -t Repository <"$Directory"/../Cache/Repository/CodeEditorLand.md
 
 for Repository in "${Repository[@]}"; do
 	Folder="${Repository/'CodeEditorLand/'/}"
@@ -24,16 +24,28 @@ for Repository in "${Repository[@]}"; do
 	\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o \
 		\( \
 		-iname .prettierrc \
+		-o -iname .azure-pipelines \
 		-o -iname .clang-format \
+		-o -iname .configurations \
 		-o -iname .csharpierrc \
+		-o -iname .devcontainer \
 		-o -iname .editorconfig \
+		-o -iname .eslintplugin \
+		-o -iname .eslintrc.cjs \
+		-o -iname .eslintrc.js \
+		-o -iname .eslintrc.json \
+		-o -iname .eslintrc.yaml \
+		-o -iname .eslintrc.yml \
 		-o -iname .github \
+		-o -iname .husky \
 		-o -iname .pnpm-store \
 		-o -iname .prettierignore \
 		-o -iname .prettierrc.js \
 		-o -iname .prettierrc.json \
 		-o -iname .prettierrc.yaml \
 		-o -iname .stylua.toml \
+		-o -iname .vscode \
+		-o -iname .yarnrc \
 		-o -iname biome.json \
 		-o -iname rome.json \
 		-o -iname Cargo.lock \
@@ -41,15 +53,9 @@ for Repository in "${Repository[@]}"; do
 		-o -iname package-lock.json \
 		-o -iname pnpm-lock.yaml \
 		-o -iname prettier.config.js \
+		-o -iname rome.json \
 		-o -iname rustfmt.toml \
-		-o -iname .husky \
-		-o -iname .vscode \
-		-o -iname .azure-pipelines \
-		-o -iname .configurations \
-		-o -iname .devcontainer \
-		-o -iname .eslintplugin \
 		-o -iname yarn.lock \
-		-o -iname .yarnrc \
 		\) -exec rm -rf {} \;
 
 	\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o \
