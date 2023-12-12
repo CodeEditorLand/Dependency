@@ -28,7 +28,7 @@
 	},
 	"devDependencies": {
 		"turbo": "1.11.1",
-		"typescript-esbuild": "0.3.2"
+		"typescript-esbuild": "0.3.3"
 	},
 	"engines": {
 		"node": ">=14.0.0"

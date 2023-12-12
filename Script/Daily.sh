@@ -22,4 +22,4 @@ Directory=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 "$Directory"/Clean/Detail.sh
 "$Directory"/Move/src.sh
 "$Directory"/Move/license.sh
-"$Directory"/Append/Detail.sh
+# "$Directory"/Append/Detail.sh
