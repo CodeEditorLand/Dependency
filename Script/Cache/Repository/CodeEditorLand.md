@@ -293,7 +293,6 @@ CodeEditorLand/LandZeromq
 CodeEditorLand/Linkcheckermd
 CodeEditorLand/MonacoEditor
 CodeEditorLand/NodeRequestLight
-CodeEditorLand/Oniguruma
 CodeEditorLand/PlaywrightLand
 CodeEditorLand/PowerplatformLand
 CodeEditorLand/PowerplatformLandLab

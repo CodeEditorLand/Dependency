@@ -17,7 +17,7 @@ Omit=(
 	"CodeEditorLand/node-gyp"
 	"CodeEditorLand/debugger-libs"
 	"CodeEditorLand/NRefactory"
-	"CodeEditorLand/oniguruma"
+	"CodeEditorLand/Oniguruma"
 )
 
 for ((Page = 1; Page <= 10; Page++)); do
@@ -44,5 +44,7 @@ for ((Page = 1; Page <= 10; Page++)); do
 		fi
 	done
 done
+
+mapfile -t Repository < <(printf "%s\n" "${Repository[@]}" | sort)
 
 printf "%s\n" "${Repository[@]}" >"$Directory"/Repository/CodeEditorLand.md
