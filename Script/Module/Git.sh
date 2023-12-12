@@ -31,6 +31,7 @@ for Repository in "${Repository[@]}"; do
 		[submodule "Application/${Folder}"]
 		path = Application/${Folder}
 		url = ${Origin}
+
 	EOM
 
 	echo "$Submodule" >>"$Directory"/../../.gitmodules
