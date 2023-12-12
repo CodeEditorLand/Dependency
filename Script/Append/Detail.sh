@@ -18,7 +18,7 @@ jq ". * {
 		\"url\": \"git+https://github.com/CodeEditorLand/CodeEditorLand.git\"
 	},
 	\"version\": \"0.0.1\",
-	\"license\": \"MIT\",
+	\"license\": \"SEE LICENSE IN LICENSE\",
 	\"type\": \"module\",
 	\"publisher\": \"playform\",
 	\"private\": \"false\",
