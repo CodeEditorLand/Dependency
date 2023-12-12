@@ -142,7 +142,7 @@ git submodule add ssh://git@github.com/CodeEditorLand/LandJsDebug.git Applicatio
 git submodule add ssh://git@github.com/CodeEditorLand/LandJsDebugBrowsers.git Application/LandJsDebugBrowsers
 git submodule add ssh://git@github.com/CodeEditorLand/LandJsDebugCompanion.git Application/LandJsDebugCompanion
 git submodule add ssh://git@github.com/CodeEditorLand/LandJshint.git Application/LandJshint
-git submodule add ssh://git@github.com/CodeEditorLand/LandJSON.tmLanguage.git CodeEditorLand/Application.tmLanguage
+git submodule add ssh://git@github.com/CodeEditorLand/LandJSON.tmLanguage.git Application/LandJSON.tmLanguage
 git submodule add ssh://git@github.com/CodeEditorLand/LandJsonLanguageservice.git Application/LandJsonLanguageservice
 git submodule add ssh://git@github.com/CodeEditorLand/LandJsProfileVisualizer.git Application/LandJsProfileVisualizer
 git submodule add ssh://git@github.com/CodeEditorLand/LandJupyter.git Application/LandJupyter
