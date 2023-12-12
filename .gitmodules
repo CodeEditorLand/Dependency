@@ -742,6 +742,9 @@ url = ssh://git@github.com/CodeEditorLand/ScopestudioLand.git
 [submodule "Application/SynapseLand"]
 path = Application/SynapseLand
 url = ssh://git@github.com/CodeEditorLand/SynapseLand.git
+[submodule "Application/TestBed"]
+path = Application/TestBed
+url = ssh://git@github.com/CodeEditorLand/TestBed.git
 [submodule "Application/ThemeConverterForVs"]
 path = Application/ThemeConverterForVs
 url = ssh://git@github.com/CodeEditorLand/ThemeConverterForVs.git
@@ -928,6 +931,3 @@ url = ssh://git@github.com/CodeEditorLand/LandJupyterHub.git
 [submodule "Application/LandExtensionTelemetry"]
 path = Application/LandExtensionTelemetry
 url = ssh://git@github.com/CodeEditorLand/LandExtensionTelemetry.git
-[submodule "Application/TestBed"]
-	path = Application/TestBed
-	url = ssh://git@github.com/CodeEditorLand/TestBed.git
