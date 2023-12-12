@@ -928,3 +928,6 @@ url = ssh://git@github.com/CodeEditorLand/LandJupyterHub.git
 [submodule "Application/LandExtensionTelemetry"]
 path = Application/LandExtensionTelemetry
 url = ssh://git@github.com/CodeEditorLand/LandExtensionTelemetry.git
+[submodule "Application/TestBed"]
+	path = Application/TestBed
+	url = ssh://git@github.com/CodeEditorLand/TestBed.git
