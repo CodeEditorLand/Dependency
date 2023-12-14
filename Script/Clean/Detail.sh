@@ -6,20 +6,35 @@ echo "Process: Clean/Detail.sh"
 
 pwd
 
-jq del\(\.eslintConfig\) <package.json >|package.json.tmp
+jq 'del(.eslintConfig,.prettier,.peerDependencies,.engines,.tags,.categories,.keywords)' <package.json >|package.json.tmp
 \mv package.json.tmp package.json
 
-jq del\(\.prettier\) <package.json >|package.json.tmp
-\mv package.json.tmp package.json
+Omit=(
+	"eslint-config-prettier"
+	"eslint-config-standard"
+	"eslint-plugin-import"
+	"eslint-plugin-node"
+	"eslint-plugin-promise"
+	"eslint-plugin-react"
+	"eslint-plugin-require-path-exists"
+	"eslint-plugin-standard"
+	"eslint"
+	"prettier"
+	"tslint"
+)
 
-jq del\(\.engines\) <package.json >|package.json.tmp
-\mv package.json.tmp package.json
+Remove() {
+	local Type="$1"
 
-jq del\(\.tags\) <package.json >|package.json.tmp
-\mv package.json.tmp package.json
+	for Dependency in "${Omit[@]}"; do
+		Query='del(.'"$Type"'.'"${Dependency}"')'
 
-jq del\(\.categories\) <package.json >|package.json.tmp
-\mv package.json.tmp package.json
+		echo "$Query"
 
-jq del\(\.keywords\) <package.json >|package.json.tmp
-\mv package.json.tmp package.json
+		# jq "$Query" <package.json >|package.json.tmp
+		\mv package.json.tmp package.json
+	done
+}
+
+Remove "dependencies"
+Remove "devDependencies"

@@ -27,11 +27,8 @@
 		"start": "turbo run start"
 	},
 	"devDependencies": {
-		"turbo": "1.11.1",
+		"turbo": "1.11.2",
 		"typescript-esbuild": "0.3.3"
-	},
-	"engines": {
-		"node": ">=14.0.0"
 	},
 	"publishConfig": {
 		"access": "public"
