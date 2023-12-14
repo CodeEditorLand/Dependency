@@ -308,3 +308,4 @@ CodeEditorLand/SynapseLand
 CodeEditorLand/TestBed
 CodeEditorLand/ThemeConverterForVs
 CodeEditorLand/TypeScriptLandExtensions
+CodeEditorLand/Website
