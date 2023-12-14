@@ -8,7 +8,7 @@ pwd
 
 # TODO: Add dynamic { "repository": { "directory": CodeEditorLand/Application/$REPOSITORY } }
 
-\jq ". * {
+\jq -S ". * {
 	\"homepage\": \"https://github.com/CodeEditorLand/CodeEditorLand#readme\",
 	\"bugs\": {
 		\"url\": \"https://github.com/CodeEditorLand/CodeEditorLand/issues\"
