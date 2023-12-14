@@ -10,19 +10,27 @@ jq "del(.eslintConfig,.prettier,.peerDependencies,.engines,.tags,.categories,.ke
 \mv package.json.tmp package.json
 
 Omit=(
+	"@typescript-eslint/eslint-plugin"
+	"@typescript-eslint/parser"
 	"eslint-config-prettier"
 	"eslint-config-standard"
+	"eslint-import-resolver-node"
+	"eslint-import-resolver-typescript"
+	"eslint-plugin-header"
 	"eslint-plugin-import"
+	"eslint-plugin-jsdoc"
+	"eslint-plugin-local"
 	"eslint-plugin-node"
+	"eslint-plugin-prettier"
 	"eslint-plugin-promise"
 	"eslint-plugin-react"
 	"eslint-plugin-require-path-exists"
 	"eslint-plugin-standard"
+	"eslint-plugin-unicorn"
 	"eslint"
+	"gulp-eslint"
 	"prettier"
 	"tslint"
-	"@typescript-eslint/eslint-plugin"
-	"@typescript-eslint/parser"
 )
 
 Key() {
