@@ -1,10 +1,10 @@
 #!/bin/bash
 
-echo "Process: Daily.sh"
+\echo "Process: Daily.sh"
 
 # Context: CodeEditorLand/Application
 
-Directory=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
+Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
 "$Directory"/Cache/Get.sh
 "$Directory"/Module/Git.sh

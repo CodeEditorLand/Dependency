@@ -1,10 +1,10 @@
 #!/bin/sh
 
-echo "Process: Append/Detail.sh"
+\echo "Process: Append/Detail.sh"
 
 # Context: CodeEditorLand/Application
 
-pwd
+\pwd
 
 # TODO: Add dynamic { "repository": { "directory": CodeEditorLand/Application/$REPOSITORY } }
 

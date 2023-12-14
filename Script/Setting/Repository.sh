@@ -1,15 +1,14 @@
 #!/bin/bash
 
-echo "Process: Setting/Repository.sh"
+\echo "Process: Setting/Repository.sh"
 
 # Context: CodeEditorLand/Application
 
-Directory=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
+Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
-readarray -t Repository <"$Directory"/../Cache/Repository/CodeEditorLand.md
+\readarray -t Repository <"$Directory"/../Cache/Repository/CodeEditorLand.md
 
 for Repository in "${Repository[@]}"; do
-
 	Folder="${Repository/'CodeEditorLand/'/}"
 
 	cd "$Folder" || exit

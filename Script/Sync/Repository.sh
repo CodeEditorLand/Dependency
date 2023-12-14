@@ -1,19 +1,19 @@
 #!/bin/bash
 
-echo "Process: Sync/Repository.sh"
+\echo "Process: Sync/Repository.sh"
 
 # Context: CodeEditorLand/Application
 
-Directory=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
+Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
-readarray -t Repository <"$Directory"/../Cache/Repository/CodeEditorLand.md
+\readarray -t Repository <"$Directory"/../Cache/Repository/CodeEditorLand.md
 
 for Repository in "${Repository[@]}"; do
 	Folder="${Repository/'CodeEditorLand/'/}"
 
-	cd "$Folder" || exit
+	\cd "$Folder" || \exit
 
-	pwd
+	\pwd
 
 	\git add .
 	\git commit -m "squash!"
@@ -22,11 +22,11 @@ for Repository in "${Repository[@]}"; do
 
 	\git fetch upstream --depth 1 --no-tags
 
-	Main=$(gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | tr -s '\r\n' '/')
-	Main=$(echo "$Main" | sed 's/\/$//')
-	Main=$(gh repo view "$Main" --json defaultBranchRef | \jq -r -c '.defaultBranchRef.name')
+	Main=$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/')
+	Main=$(\echo "$Main" | \sed 's/\/$//')
+	Main=$(\gh repo view "$Main" --json defaultBranchRef | \jq -r -c '.defaultBranchRef.name')
 
-	git merge upstream/"$Main" --allow-unrelated-histories -X theirs
+	\git merge upstream/"$Main" --allow-unrelated-histories -X theirs
 
-	cd - || exit
+	\cd - || \exit
 done
