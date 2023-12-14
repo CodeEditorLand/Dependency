@@ -34,7 +34,7 @@ jq ". * {
 		\"prepublishOnly\": \"TypeScriptESBuild 'Source/**/*.ts'\"
 	},
 	\"devDependencies\": {
-		\"typescript-esbuild\": \"0.3.1\"
+		\"typescript-esbuild\": \"0.3.3\"
 	}
 }" package.json >|package.json.tmp
 

@@ -6,7 +6,7 @@ echo "Process: Clean/Detail.sh"
 
 pwd
 
-jq "del(.eslintConfig,.prettier,.peerDependencies,.engines,.tags,.categories,.keywords)" package.json >|package.json.tmp
+jq "del(.eslintConfig,.prettier,.peerDependencies,.engines,.tags,.categories,.keywords,.scripts.lint,.scripts.[\"lint-fix\"])" package.json >|package.json.tmp
 \mv package.json.tmp package.json
 
 Omit=(
@@ -21,7 +21,8 @@ Omit=(
 	"eslint"
 	"prettier"
 	"tslint"
-	"tslint"
+	"@typescript-eslint/eslint-plugin"
+	"@typescript-eslint/parser"
 )
 
 Key() {
