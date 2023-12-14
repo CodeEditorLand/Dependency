@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Process: Fork/Organization.sh"
+\echo "Process: Fork/Organization.sh"
 
 # 1) Page by page on https://github.com/orgs/microsoft/repositories?q=vscode&type=all&language=&sort= do:
 
@@ -322,5 +322,5 @@ Repository=(
 # 3) Fork
 
 for Repository in "${Repository[@]}"; do
-	gh repo fork "$Repository" --org CodeEditorLand
+	\gh repo fork "$Repository" --org CodeEditorLand
 done

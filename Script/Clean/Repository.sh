@@ -1,25 +1,25 @@
 #!/bin/bash
 
-echo "Process: Clean/Repository.sh"
+\echo "Process: Clean/Repository.sh"
 
 # Context: CodeEditorLand/Application
 
-Directory=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
+Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
-readarray -t Repository <"$Directory"/../Cache/Repository/CodeEditorLand.md
+\readarray -t Repository <"$Directory"/../Cache/Repository/CodeEditorLand.md
 
 for Repository in "${Repository[@]}"; do
 	Folder="${Repository/'CodeEditorLand/'/}"
 
-	cd "$Folder" || exit
+	\cd "$Folder" || \exit
 
-	pwd
+	\pwd
 
-	git fetch origin
-	git fetch upstream --depth 1 --no-tags
+	\git fetch origin
+	\git fetch upstream --depth 1 --no-tags
 
-	git tag | xargs -L 1 | xargs git push origin --delete
-	git tag | xargs -L 1 | xargs git tag --delete
+	\git tag | \xargs -L 1 | \xargs git push origin --delete
+	\git tag | \xargs -L 1 | \xargs git tag --delete
 
 	\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o \
 		\( \
@@ -64,5 +64,5 @@ for Repository in "${Repository[@]}"; do
 		-type d \
 		-exec rm -rf {} \;
 
-	cd - || exit
+	\cd - || \exit
 done

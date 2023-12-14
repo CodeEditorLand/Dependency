@@ -11,11 +11,11 @@ Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 for Repository in "${Repository[@]}"; do
 	Folder="${Repository/'CodeEditorLand/'/}"
 
-	cd "$Folder" || exit
+	\cd "$Folder" || \exit
 
-	pwd
+	\pwd
 
-	gh api \
+	\gh api \
 		--method PUT \
 		-H "Accept: application/vnd.github+json" \
 		-H "X-GitHub-Api-Version: 2022-11-28" \
@@ -23,14 +23,14 @@ for Repository in "${Repository[@]}"; do
 		-f access_level='organization' \
 		--silent
 
-	gh api \
+	\gh api \
 		--method PUT \
 		-H "Accept: application/vnd.github+json" \
 		-H "X-GitHub-Api-Version: 2022-11-28" \
 		user/starred/"${Repository}" \
 		--silent
 
-	gh api \
+	\gh api \
 		--method PUT \
 		-H "Accept: application/vnd.github+json" \
 		-H "X-GitHub-Api-Version: 2022-11-28" \
@@ -39,7 +39,7 @@ for Repository in "${Repository[@]}"; do
 		-F can_approve_pull_request_reviews=true \
 		--silent
 
-	gh api \
+	\gh api \
 		--method PUT \
 		-H "Accept: application/vnd.github+json" \
 		-H "X-GitHub-Api-Version: 2022-11-28" \
@@ -48,21 +48,21 @@ for Repository in "${Repository[@]}"; do
 		-f allowed_actions='all' \
 		--silent
 
-	gh api \
+	\gh api \
 		--method PUT \
 		-H "Accept: application/vnd.github+json" \
 		-H "X-GitHub-Api-Version: 2022-11-28" \
 		repos/"${Repository}"/vulnerability-alerts \
 		--silent
 
-	gh api \
+	\gh api \
 		--method PUT \
 		-H "Accept: application/vnd.github+json" \
 		-H "X-GitHub-Api-Version: 2022-11-28" \
 		repos/"${Repository}"/automated-security-fixes \
 		--silent
 
-	gh api \
+	\gh api \
 		--method PATCH \
 		-H "Accept: application/vnd.github+json" \
 		-H "X-GitHub-Api-Version: 2022-11-28" \
@@ -80,9 +80,9 @@ for Repository in "${Repository[@]}"; do
 		-F web_commit_signoff_required=true \
 		--silent
 
-	gh repo set-default "$(git remote get-url origin)"
+	\gh repo set-default "$(\git remote get-url origin)"
 
-	gh repo edit \
+	\gh repo edit \
 		--allow-update-branch \
 		--default-branch main \
 		--delete-branch-on-merge \
@@ -91,5 +91,5 @@ for Repository in "${Repository[@]}"; do
 		--enable-merge-commit \
 		--enable-squash-merge
 
-	cd - || exit
+	\cd - || \exit
 done

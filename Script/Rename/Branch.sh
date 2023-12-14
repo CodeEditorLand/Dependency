@@ -1,27 +1,27 @@
 #!/bin/bash
 
-echo "Process: Rename/Branch.sh"
+\echo "Process: Rename/Branch.sh"
 
 # Context: CodeEditorLand/Application
 
-Directory=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
+Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
-readarray -t Repository <"$Directory"/../Cache/Repository/CodeEditorLand.md
+\readarray -t Repository <"$Directory"/../Cache/Repository/CodeEditorLand.md
 
 for Repository in "${Repository[@]}"; do
 	Folder="${Repository/'CodeEditorLand/'/}"
 
-	cd "$Folder" || exit
+	\cd "$Folder" || \exit
 
-	pwd
+	\pwd
 
-	gh repo set-default "$(git remote get-url origin)"
+	\gh repo set-default "$(\git remote get-url origin)"
 
-	git switch -c main
+	\git switch -c main
 
-	git push -f --set-upstream origin main
+	\git push -f --set-upstream origin main
 
-	gh repo edit --default-branch main
+	\gh repo edit --default-branch main
 
-	cd - || exit
+	\cd - || \exit
 done
