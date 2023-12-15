@@ -1,5 +1,5 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.3.0/schema.json",
+	"$schema": "https://biomejs.dev/schemas/1.4.1/schema.json",
 	"organizeImports": {
 		"enabled": true
 	},
@@ -43,7 +43,8 @@
 			"nursery": {
 				"all": true,
 				"useImportRestrictions": "off",
-				"noUselessLoneBlockStatements": "off"
+				"noUselessLoneBlockStatements": "off",
+				"noDefaultExport": "off"
 			},
 			"performance": {
 				"all": true
@@ -53,7 +54,8 @@
 			},
 			"style": {
 				"all": true,
-				"useNamingConvention": "off"
+				"useNamingConvention": "off",
+				"noUselessElse": "off"
 			},
 			"suspicious": {
 				"all": true,
