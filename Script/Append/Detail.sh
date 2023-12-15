@@ -21,7 +21,7 @@
 	\"license\": \"SEE LICENSE IN LICENSE\",
 	\"type\": \"module\",
 	\"publisher\": \"playform\",
-	\"private\": \"false\",
+	\"private\": false,
 	\"publishConfig\": {
 		\"access\": \"public\"
 	},

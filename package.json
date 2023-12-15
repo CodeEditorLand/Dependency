@@ -1,7 +1,7 @@
 {
 	"name": "codeeditorland",
 	"version": "0.0.1",
-	"private": "false",
+	"private": false,
 	"homepage": "https://github.com/CodeEditorLand/CodeEditorLand#readme",
 	"bugs": {
 		"url": "https://github.com/CodeEditorLand/CodeEditorLand/issues"
@@ -18,7 +18,8 @@
 	},
 	"type": "module",
 	"workspaces": [
-		"Application/**"
+		"Application/**",
+		"!Application/**/Target/"
 	],
 	"scripts": {
 		"build": "turbo run build",
@@ -27,6 +28,7 @@
 		"start": "turbo run start"
 	},
 	"devDependencies": {
+		"@biomejs/biome": "1.4.1",
 		"turbo": "1.11.2",
 		"typescript-esbuild": "0.3.3"
 	},
