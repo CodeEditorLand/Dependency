@@ -3,6 +3,9 @@
 	"organizeImports": {
 		"enabled": true
 	},
+	"files": {
+		"maxSize": 10000000
+	},
 	"formatter": {
 		"enabled": true,
 		"formatWithErrors": true,
