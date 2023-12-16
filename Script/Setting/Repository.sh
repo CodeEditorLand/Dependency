@@ -15,6 +15,8 @@ for Repository in "${Repository[@]}"; do
 
 	\pwd
 
+	\gh repo set-default "$(\git remote get-url origin)"
+
 	\gh api \
 		--method PUT \
 		-H "Accept: application/vnd.github+json" \
@@ -79,8 +81,6 @@ for Repository in "${Repository[@]}"; do
 		-F use_squash_pr_title_as_default=true \
 		-F web_commit_signoff_required=true \
 		--silent
-
-	\gh repo set-default "$(\git remote get-url origin)"
 
 	\gh repo edit \
 		--allow-update-branch \

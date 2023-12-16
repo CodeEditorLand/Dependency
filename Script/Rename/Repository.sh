@@ -11,6 +11,12 @@ Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 for Repository in "${Repository[@]}"; do
 	Folder="${Repository/'CodeEditorLand/'/}"
 
+	\cd "$Folder" || \exit
+
+	\pwd
+
+	\gh repo set-default "$(\git remote get-url origin)"
+
 	Rename=""
 
 	Rename=$(\tr '[:lower:]' '[:upper:]' <<<"${Folder:0:1}")
@@ -32,14 +38,9 @@ for Repository in "${Repository[@]}"; do
 
 	Rename=$(\echo "$Rename" | \sed -E "s/vscode/Land/gI")
 
-	\cd "$Folder" || \exit
-
-	\pwd
-
 	\echo "Rename: "
 	\echo "$Rename"
 
-	\gh repo set-default "$(\git remote get-url origin)"
 	\gh repo rename "$Rename" --yes
 
 	\cd - || \exit
