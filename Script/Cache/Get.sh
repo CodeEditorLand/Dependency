@@ -42,6 +42,33 @@ for ((Page = 1; Page <= 10; Page++)); do
 		if [ "$Flag" = false ]; then
 			Repository+=("$Temporary")
 		fi
+
+		# TODO: Add these to the cache
+		# Sync/Repository
+
+		# ```sh
+		# Main=$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/')
+		# Main=$(\echo "$Main" | \sed 's/\/$//')
+		# Main=$(\gh repo view "$Main" --json defaultBranchRef | \jq -r -c '.defaultBranchRef.name')
+		# ```
+
+		# # Configure/Repository
+
+		# ```sh
+		# Upstream=$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/')
+
+		# if [[ "$Upstream" != "null/null" ]]; then
+		# 	Upstream="ssh://git@github.com/${Upstream}"
+		# 	Upstream=$(\echo "$Upstream" | \sed 's/\/$/\.git/')
+
+		# 	\echo "Upstream: "
+		# 	\echo "$Upstream"
+
+		# 	\git remote remove upstream
+		# 	\git remote add upstream "$Upstream"
+		# 	\git remote set-url upstream "$Upstream"
+		# fi
+		# ```
 	done
 done
 
