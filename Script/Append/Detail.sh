@@ -8,6 +8,7 @@
 
 # TODO: Add dynamic { "repository": { "directory": CodeEditorLand/Application/$REPOSITORY } }
 # The path is always CodeEditorLand/CodeEditorLand/Application/$SUBMODULE.name
+# or fetch the correct submodule URL
 
 \jq -S ". * {
 	\"homepage\": \"https://github.com/CodeEditorLand/CodeEditorLand#readme\",
