@@ -29,6 +29,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.4.1",
+		"@yesmaintain/script": "0.0.2",
 		"turbo": "1.11.2",
 		"typescript-esbuild": "0.3.3"
 	},
