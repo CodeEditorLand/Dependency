@@ -631,9 +631,9 @@ url = ssh://git@github.com/CodeEditorLand/LandPython.git
 [submodule "Application/LandPythonDebugger"]
 path = Application/LandPythonDebugger
 url = ssh://git@github.com/CodeEditorLand/LandPythonDebugger.git
-[submodule "Application/LandPythonDevicesimulator"]
-path = Application/LandPythonDevicesimulator
-url = ssh://git@github.com/CodeEditorLand/LandPythonDevicesimulator.git
+[submodule "Application/LandPythonDeviceSimulator"]
+path = Application/LandPythonDeviceSimulator
+url = ssh://git@github.com/CodeEditorLand/LandPythonDeviceSimulator.git
 [submodule "Application/LandPythonDsExtensionPack"]
 path = Application/LandPythonDsExtensionPack
 url = ssh://git@github.com/CodeEditorLand/LandPythonDsExtensionPack.git

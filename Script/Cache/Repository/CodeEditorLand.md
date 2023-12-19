@@ -209,7 +209,7 @@ CodeEditorLand/LandPwaAnalyzer
 CodeEditorLand/LandPylint
 CodeEditorLand/LandPython
 CodeEditorLand/LandPythonDebugger
-CodeEditorLand/LandPythonDevicesimulator
+CodeEditorLand/LandPythonDeviceSimulator
 CodeEditorLand/LandPythonDsExtensionPack
 CodeEditorLand/LandPythonInstaller
 CodeEditorLand/LandPythonToolsExtensionTemplate
