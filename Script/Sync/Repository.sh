@@ -22,12 +22,11 @@ for Repository in "${Repository[@]}"; do
 
 	\git fetch upstream --depth 1 --no-tags
 
-	# TODO: Place in cache
 	Main=$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/')
 	Main=$(\echo "$Main" | \sed 's/\/$//')
 	Main=$(\gh repo view "$Main" --json defaultBranchRef | \jq -r -c '.defaultBranchRef.name')
 
-	\git merge upstream/"$Main" --allow-unrelated-histories -X theirs
+	\git merge upstream/"$Main" --allow-unrelated-histories
 
 	\cd - || \exit
 done
