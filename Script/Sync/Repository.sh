@@ -26,7 +26,7 @@ for Repository in "${Repository[@]}"; do
 	Main=$(\echo "$Main" | \sed 's/\/$//')
 	Main=$(\gh repo view "$Main" --json defaultBranchRef | \jq -r -c '.defaultBranchRef.name')
 
-	\git merge upstream/"$Main" --allow-unrelated-histories
+	\git merge upstream/"$Main" --allow-unrelated-histories -X theirs
 
 	\cd - || \exit
 done
