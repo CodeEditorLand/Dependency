@@ -302,10 +302,10 @@ CodeEditorLand/Pvscbot
 CodeEditorLand/PythonSampleLandDjangoTutorial
 CodeEditorLand/PythonSampleLandFastapiTutorial
 CodeEditorLand/PythonSampleLandFlaskTutorial
+CodeEditorLand/Quantum
 CodeEditorLand/SarifLandExtension
 CodeEditorLand/ScopestudioLand
 CodeEditorLand/SynapseLand
-CodeEditorLand/TestBed
 CodeEditorLand/ThemeConverterForVs
 CodeEditorLand/TypeScriptLandExtensions
 CodeEditorLand/Website
