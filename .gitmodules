@@ -22,6 +22,9 @@ url = ssh://git@github.com/CodeEditorLand/AzureStreamAnalyticsInLand.git
 [submodule "Application/Codetour"]
 path = Application/Codetour
 url = ssh://git@github.com/CodeEditorLand/Codetour.git
+[submodule "Application/Commonality"]
+path = Application/Commonality
+url = ssh://git@github.com/CodeEditorLand/Commonality.git
 [submodule "Application/ComposeLanguageService"]
 path = Application/ComposeLanguageService
 url = ssh://git@github.com/CodeEditorLand/ComposeLanguageService.git
@@ -910,3 +913,24 @@ url = ssh://git@github.com/CodeEditorLand/PythonSampleLandFastapiTutorial.git
 [submodule "Application/PythonSampleLandFlaskTutorial"]
 path = Application/PythonSampleLandFlaskTutorial
 url = ssh://git@github.com/CodeEditorLand/PythonSampleLandFlaskTutorial.git
+[submodule "Application/Quantum"]
+path = Application/Quantum
+url = ssh://git@github.com/CodeEditorLand/Quantum.git
+[submodule "Application/SarifLandExtension"]
+path = Application/SarifLandExtension
+url = ssh://git@github.com/CodeEditorLand/SarifLandExtension.git
+[submodule "Application/ScopestudioLand"]
+path = Application/ScopestudioLand
+url = ssh://git@github.com/CodeEditorLand/ScopestudioLand.git
+[submodule "Application/SynapseLand"]
+path = Application/SynapseLand
+url = ssh://git@github.com/CodeEditorLand/SynapseLand.git
+[submodule "Application/ThemeConverterForVs"]
+path = Application/ThemeConverterForVs
+url = ssh://git@github.com/CodeEditorLand/ThemeConverterForVs.git
+[submodule "Application/TypeScriptLandExtensions"]
+path = Application/TypeScriptLandExtensions
+url = ssh://git@github.com/CodeEditorLand/TypeScriptLandExtensions.git
+[submodule "Application/Website"]
+path = Application/Website
+url = ssh://git@github.com/CodeEditorLand/Website.git
