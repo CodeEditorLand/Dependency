@@ -1,23 +1,22 @@
 {
 	"$schema": "https://biomejs.dev/schemas/1.4.1/schema.json",
-	"organizeImports": {
-		"enabled": true
-	},
 	"files": {
+		"ignore": ["**/Target/**/*", "**/Documentation/**/*"],
 		"maxSize": 10000000
 	},
 	"formatter": {
 		"enabled": true,
 		"formatWithErrors": true,
 		"indentStyle": "tab",
-		"lineWidth": 80,
-		"indentWidth": 4
+		"indentWidth": 4,
+		"lineWidth": 80
 	},
 	"javascript": {
 		"formatter": {
-			"enabled": true,
 			"arrowParentheses": "always",
+			"enabled": true,
 			"indentStyle": "tab",
+			"indentWidth": 4,
 			"jsxQuoteStyle": "double",
 			"lineWidth": 80,
 			"quoteProperties": "asNeeded",
@@ -35,9 +34,9 @@
 			"all": true,
 			"complexity": {
 				"all": true,
+				"noExcessiveCognitiveComplexity": "off",
 				"noForEach": "off",
-				"useLiteralKeys": "off",
-				"noExcessiveCognitiveComplexity": "off"
+				"useLiteralKeys": "off"
 			},
 			"correctness": {
 				"all": true,
@@ -45,9 +44,9 @@
 			},
 			"nursery": {
 				"all": true,
-				"useImportRestrictions": "off",
+				"noDefaultExport": "off",
 				"noUselessLoneBlockStatements": "off",
-				"noDefaultExport": "off"
+				"useImportRestrictions": "off"
 			},
 			"performance": {
 				"all": true
@@ -57,13 +56,21 @@
 			},
 			"style": {
 				"all": true,
-				"useNamingConvention": "off",
-				"noUselessElse": "off"
+				"noUselessElse": "off",
+				"useNamingConvention": "off"
 			},
 			"suspicious": {
 				"all": true,
 				"noConsoleLog": "off"
 			}
 		}
+	},
+	"organizeImports": {
+		"enabled": true
+	},
+	"vcs": {
+		"clientKind": "git",
+		"enabled": true,
+		"useIgnoreFile": true
 	}
 }
