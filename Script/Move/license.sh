@@ -16,6 +16,7 @@ for Repository in "${Repository[@]}"; do
 	\pwd
 
 	\find . -name license.txt -type f -execdir mv {} LICENSE \;
+	\find . -name license.md -type f -execdir mv {} LICENSE \;
 
 	\cd - || \exit
 done
