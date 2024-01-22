@@ -8,7 +8,7 @@ updates:
           interval: "daily"
 
     - package-ecosystem: "npm"
-      directory: "/"
+      directory: "/Application"
       schedule:
           interval: "daily"
       versioning-strategy: increase
