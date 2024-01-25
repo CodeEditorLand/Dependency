@@ -1,79 +1,100 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.5.2/schema.json",
-	"files": {
-		"ignore": ["**/Target/**/*", "**/Documentation/**/*", "**/dist/**/*"],
-		"maxSize": 10000000
-	},
-	"formatter": {
-		"enabled": true,
-		"formatWithErrors": true,
-		"indentStyle": "tab",
-		"indentWidth": 4,
-		"lineWidth": 80
-	},
-	"javascript": {
-		"formatter": {
-			"arrowParentheses": "always",
-			"enabled": true,
-			"indentStyle": "tab",
-			"indentWidth": 4,
-			"jsxQuoteStyle": "double",
-			"lineWidth": 80,
-			"quoteProperties": "asNeeded",
-			"quoteStyle": "double",
-			"semicolons": "always",
-			"trailingComma": "all"
-		}
-	},
-	"linter": {
-		"enabled": true,
-		"rules": {
-			"a11y": {
-				"all": true
-			},
-			"all": true,
-			"complexity": {
-				"all": true,
-				"noExcessiveCognitiveComplexity": "off",
-				"noForEach": "off",
-				"useLiteralKeys": "off"
-			},
-			"correctness": {
-				"all": true,
-				"noUnusedVariables": "off"
-			},
-			"nursery": {
-				"all": true,
-				"noUselessLoneBlockStatements": "off",
-				"useImportRestrictions": "off",
-				"useShorthandFunctionType": "off",
-				"useFilenamingConvention": "off",
-				"noNodejsModules": "off"
-			},
-			"performance": {
-				"all": true
-			},
-			"security": {
-				"all": true
-			},
-			"style": {
-				"all": true,
-				"noUselessElse": "off",
-				"useNamingConvention": "off",
-				"noDefaultExport": "off"
-			},
-			"suspicious": {
-				"all": true,
-				"noConsoleLog": "off"
-			}
-		}
-	},
-	"organizeImports": {
-		"enabled": true
-	},
-	"vcs": {
-		"clientKind": "git",
-		"enabled": true,
-		"useIgnoreFile": true
-	}
+    "$schema": "https://biomejs.dev/schemas/1.5.2/schema.json",
+    "files": {
+        "ignore": [
+            "**/Target/**/*",
+            "**/Documentation/**/*",
+            "**/dist/**/*"
+        ],
+        "maxSize": 10000000
+    },
+    "formatter": {
+        "enabled": true,
+        "formatWithErrors": true,
+        "indentStyle": "tab",
+        "indentWidth": 4,
+        "lineEnding": "lf",
+        "lineWidth": 80
+    },
+    "javascript": {
+        "formatter": {
+            "arrowParentheses": "always",
+            "bracketSameLine": true,
+            "bracketSpacing": true,
+            "enabled": true,
+            "indentStyle": "tab",
+            "indentWidth": 4,
+            "jsxQuoteStyle": "double",
+            "lineEnding": "lf",
+            "lineWidth": 80,
+            "quoteProperties": "asNeeded",
+            "quoteStyle": "double",
+            "semicolons": "always",
+            "trailingComma": "all"
+        }
+    },
+    "json": {
+        "formatter": {
+            "enabled": true,
+            "indentStyle": "tab",
+            "indentWidth": 4,
+            "lineEnding": "lf",
+            "lineWidth": 80
+        },
+        "parser": {
+            "allowComments": true
+        }
+    },
+    "linter": {
+        "enabled": true,
+        "rules": {
+            "a11y": {
+                "all": true
+            },
+            "all": true,
+            "complexity": {
+                "all": true,
+                "noExcessiveCognitiveComplexity": "off",
+                "noForEach": "off",
+                "useLiteralKeys": "off"
+            },
+            "correctness": {
+                "all": true,
+                "noUnusedVariables": "off"
+            },
+            "nursery": {
+                "all": true,
+                "noNodejsModules": "off",
+                "noUselessLoneBlockStatements": "off",
+                "useFilenamingConvention": "off",
+                "useImportRestrictions": "off",
+                "useNodejsImportProtocol": "off",
+                "useShorthandFunctionType": "off"
+            },
+            "performance": {
+                "all": true
+            },
+            "security": {
+                "all": true
+            },
+            "style": {
+                "all": true,
+                "noDefaultExport": "off",
+                "noUselessElse": "off",
+                "useNamingConvention": "off"
+            },
+            "suspicious": {
+                "all": true,
+                "noConsoleLog": "off"
+            }
+        }
+    },
+    "organizeImports": {
+        "enabled": true
+    },
+    "vcs": {
+        "clientKind": "git",
+        "enabled": true,
+        "useIgnoreFile": true
+    }
 }

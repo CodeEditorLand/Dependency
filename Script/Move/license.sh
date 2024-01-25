@@ -15,8 +15,8 @@ for Repository in "${Repository[@]}"; do
 
 	\pwd
 
-	\find . -name license.txt -type f -execdir mv {} LICENSE \;
-	\find . -name license.md -type f -execdir mv {} LICENSE \;
+	\find . -type d \( -iname node_modules -o -iname vendor -o -iname dist -o -iname target -o -iname \.git -o -iname \.next \) -prune -false -o -iname license.txt -type f -execdir mv {} LICENSE \;
+	\find . -type d \( -iname node_modules -o -iname vendor -o -iname dist -o -iname target -o -iname \.git -o -iname \.next \) -prune -false -o -iname license.md -type f -execdir mv {} LICENSE \;
 
 	\cd - || \exit
 done

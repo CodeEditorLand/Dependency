@@ -1,43 +1,21 @@
-#!/bin/sh
+#!/bin/bash
 
 \echo "Process: Append/Detail.sh"
 
 # Context: CodeEditorLand/Application
 
-\pwd
+Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
 
-# TODO: Add dynamic { "repository": { "directory": CodeEditorLand/Application/$REPOSITORY } }
-# The path is always CodeEditorLand/CodeEditorLand/Application/$SUBMODULE.name
-# or fetch the correct submodule URL
+\readarray -t Repository < "$Directory"/../Cache/Repository/CodeEditorLand.md
 
-\jq -S ". * {
-	\"homepage\": \"https://github.com/CodeEditorLand/CodeEditorLand#readme\",
-	\"bugs\": {
-		\"url\": \"https://github.com/CodeEditorLand/CodeEditorLand/issues\"
-	},
-	\"repository\": {
-		\"type\": \"git\",
-		\"url\": \"git+https://github.com/CodeEditorLand/CodeEditorLand.git\"
-	},
-	\"version\": \"0.0.1\",
-	\"license\": \"SEE LICENSE IN LICENSE\",
-	\"type\": \"module\",
-	\"publisher\": \"playform\",
-	\"private\": false,
-	\"publishConfig\": {
-		\"access\": \"public\"
-	},
-	\"author\": {
-		\"name\": \"Nikola Hristov\",
-		\"email\": \"nikola@nikolahristov.tech\",
-		\"url\": \"https://nikolahristov.tech\"
-	},
-	\"scripts\": {
-		\"prepublishOnly\": \"TypeScriptESBuild 'Source/**/*.ts'\"
-	},
-	\"devDependencies\": {
-		\"typescript-esbuild\": \"0.3.3\"
-	}
-}" package.json >| package.json.tmp
+for Repository in "${Repository[@]}"; do
+	Folder="${Repository/'CodeEditorLand/'/}"
 
-\mv package.json.tmp package.json
+	\cd "$Folder" || \exit
+
+	\pwd
+
+	\find . -type d \( -iname node_modules -o -iname vendor -o -iname dist -o -iname target -o -iname \.git -o -iname \.next \) -prune -false -o -iname package.json -type f -execdir bash -c "$Directory"/../Action/Append/Detail.sh \;
+
+	\cd - || \exit
+done
