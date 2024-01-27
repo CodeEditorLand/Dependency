@@ -1,6 +1,6 @@
 #!/bin/bash
 
-\echo "Process: Append/Detail.sh"
+\echo "Action: Append/Detail.sh"
 
 # Context: CodeEditorLand/Application
 
@@ -36,7 +36,7 @@
 		\"prepublishOnly\": \"TypeScriptESBuild 'Source/**/*.ts'\"
 	},
 	\"devDependencies\": {
-		\"typescript-esbuild\": \"0.3.3\"
+		\"typescript-esbuild\": \"0.3.6\"
 	}
 }" package.json >| package.json.tmp
 

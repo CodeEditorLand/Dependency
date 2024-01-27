@@ -40,6 +40,7 @@ for Repository in "${Repository[@]}"; do
 		-o -iname .eslintrc.yml \
 		-o -iname .github \
 		-o -iname .husky \
+		-o -iname .nvmrc \
 		-o -iname .pnpm-store \
 		-o -iname .prettierignore \
 		-o -iname .prettierrc.js \

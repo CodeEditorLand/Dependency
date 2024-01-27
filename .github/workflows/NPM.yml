@@ -33,11 +33,12 @@ jobs:
 
             - run: npm install -g npm
 
-            - name: Publish .
-              continue-on-error: true
-              working-directory: .
-              run: |
-                  npm install --legacy-peer-deps
-                  npm publish --legacy-peer-deps --provenance
-              env:
-                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+				- name: Publish .
+				  continue-on-error: true
+				  working-directory: .
+				  run: |
+					  npm install --legacy-peer-deps
+					  npm publish --legacy-peer-deps --provenance
+				  env:
+					  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+	

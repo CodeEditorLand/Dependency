@@ -5,6 +5,7 @@ CodeEditorLand/AzureIotDeveloperKit
 CodeEditorLand/AzurePipelinesLand
 CodeEditorLand/AzureReposLand
 CodeEditorLand/AzureStreamAnalyticsInLand
+CodeEditorLand/Biome
 CodeEditorLand/Codetour
 CodeEditorLand/Commonality
 CodeEditorLand/ComposeLanguageService
