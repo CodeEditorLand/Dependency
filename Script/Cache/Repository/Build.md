@@ -6,7 +6,6 @@ CodeEditorLand/AzurePipelinesLand
 CodeEditorLand/AzureReposLand
 CodeEditorLand/AzureStreamAnalyticsInLand
 CodeEditorLand/Codetour
-CodeEditorLand/Commonality
 CodeEditorLand/ComposeLanguageService
 CodeEditorLand/DeoptexplorerLand
 CodeEditorLand/DevSkim

@@ -15,6 +15,7 @@ Omit=(
 	"CodeEditorLand/Babel"
 	"CodeEditorLand/Biome"
 	"CodeEditorLand/Build"
+	"CodeEditorLand/Commonality"
 	"CodeEditorLand/debugger-libs"
 	"CodeEditorLand/node-gyp"
 	"CodeEditorLand/NRefactory"
