@@ -77,4 +77,4 @@ done
 
 \mapfile -t Repository < <(\printf "%s\n" "${Repository[@]}" | \sort)
 
-\printf "%s\n" "${Repository[@]}" > "$Directory"/Repository/CodeEditorLand.md
+\printf "%s\n" "${Repository[@]}" > "$Directory"/Repository/Build.md
