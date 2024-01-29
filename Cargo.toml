@@ -11,10 +11,9 @@ autobenches = false
 
 [[bin]]
 name = "land"
-path = "Source/Fn/Binary.rs"
+path = "Source/Function/Binary/Land.rs"
 
 [lib]
-crate_type = ["rlib"]
 name = "Library"
 path = "Source/lib.rs"
 
