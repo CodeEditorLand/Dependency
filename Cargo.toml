@@ -11,7 +11,7 @@ autobenches = false
 
 [[bin]]
 name = "land"
-path = "Source/Function/Binary/Land.rs"
+path = "Source/Fn/Binary/Land.rs"
 
 [lib]
 name = "Library"
