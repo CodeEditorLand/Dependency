@@ -1,5 +1,5 @@
-use Library::Fn::Cache::Get;
 use clap::{arg, Command};
+use Library::Fn::Cache::Get;
 
 fn main() {
 	let matches = Command::new("Land")
