@@ -1,3 +1,4 @@
+use Library::Fn::Cache::Get;
 use clap::{arg, Command};
 
 fn main() {
@@ -16,7 +17,7 @@ fn main() {
 
 	if category == "cache" {
 		if process == "get" {
-			Cache::Get::Fn();
+			Get::Fn();
 		}
 	} else {
 		eprintln!("Invalid process specified. Please use 'get'.");
