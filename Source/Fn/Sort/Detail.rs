@@ -4,12 +4,17 @@ fn main() {
 	println!("Process: Sort/Detail.sh");
 
 	// Context: CodeEditorLand/Application
-	let directory = std::env::current_dir().expect("Failed to get current directory");
-	let cache_path = directory.join("../Cache/Repository/Build.md");
 
-	let repositories = read_array(&cache_path).expect("Failed to read repositories");
-
-	for repository in repositories {
+	for repository in std::fs::read_to_string(
+		std::env::current_dir()
+			.expect("Failed to get current directory")
+			.join("../Cache/Repository/Build.md"),
+	)?
+	.lines()
+	.map(|s| s.to_string())
+	.collect()
+	.expect("Failed to read repositories")
+	{
 		let folder = repository.replace("CodeEditorLand/", "");
 
 		let output =
@@ -62,10 +67,4 @@ fn main() {
 
 		println!("{}", String::from_utf8_lossy(&output.stdout));
 	}
-}
-
-fn read_array(file_path: &std::path::Path) -> Result<Vec<String>, std::io::Error> {
-	let content = std::fs::read_to_string(file_path)?;
-	let repositories: Vec<String> = content.lines().map(|s| s.to_string()).collect();
-	Ok(repositories)
 }
