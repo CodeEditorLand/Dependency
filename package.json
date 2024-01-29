@@ -28,11 +28,11 @@
 		"start": "turbo run start"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "1.5.2",
-		"@yesmaintain/script": "0.0.7",
+		"@biomejs/biome": "1.5.3",
+		"@yesmaintain/script": "0.0.10",
 		"turbo": "1.11.3",
 		"typescript-esbuild": "0.3.6",
-		"sort-package-json": "0.0.1"
+		"sort-package-json": "2.6.0"
 	},
 	"publishConfig": {
 		"access": "public"
