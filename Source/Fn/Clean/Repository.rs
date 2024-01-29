@@ -1,71 +1,38 @@
-#!/bin/bash
+use rayon::prelude::*;
+use std::{error::Error, process::Command};
 
-\echo "Process: Clean/Repository.sh"
+fn main() {
+	// Fetch the list of repositories
+	let repositories = match std::fs::read_to_string("../Cache/Repository/Build.md") {
+		Ok(contents) => contents.lines().map(|s| s.trim().to_string()).collect::<Vec<_>>(),
+		Err(e) => {
+			eprintln!("Error reading repository list: {}", e);
+			std::process::exit(1);
+		}
+	};
 
-# Context: CodeEditorLand/Application
-
-Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
-
-\readarray -t Repository < "$Directory"/../Cache/Repository/Build.md
-
-Script() {
-	\cd "${1/'CodeEditorLand/'/}" || \exit
-
-	\pwd
-
-	\git fetch origin
-	\git fetch upstream --depth 1 --no-tags
-
-	\git tag | \xargs -L 1 | \xargs git push origin --delete
-	\git tag | \xargs -L 1 | \xargs git tag --delete
-
-	\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o \
-		\( \
-		-iname .prettierrc \
-		-o -iname .azure-pipelines \
-		-o -iname .clang-format \
-		-o -iname .configurations \
-		-o -iname .csharpierrc \
-		-o -iname .devcontainer \
-		-o -iname .editorconfig \
-		-o -iname .eslintignore \
-		-o -iname .eslintplugin \
-		-o -iname .eslintrc.base.json \
-		-o -iname .eslintrc.cjs \
-		-o -iname .eslintrc.js \
-		-o -iname .eslintrc.json \
-		-o -iname .eslintrc.yaml \
-		-o -iname .eslintrc.yml \
-		-o -iname .github \
-		-o -iname .husky \
-		-o -iname .nvmrc \
-		-o -iname .pnpm-store \
-		-o -iname .prettierignore \
-		-o -iname .prettierrc.js \
-		-o -iname .prettierrc.json \
-		-o -iname .prettierrc.yaml \
-		-o -iname .stylua.toml \
-		-o -iname .vscode \
-		-o -iname .yarnrc \
-		-o -iname biome.json \
-		-o -iname Cargo.lock \
-		-o -iname jsconfig.json \
-		-o -iname package-lock.json \
-		-o -iname pnpm-lock.yaml \
-		-o -iname prettier.config.js \
-		-o -iname rome.json \
-		-o -iname rustfmt.toml \
-		-o -iname yarn.lock \
-		\) -exec rm -rf {} \;
-
-	\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o \
-		-iname '*test*' \
-		-type d \
-		-exec rm -rf {} \;
-
-	\cd - || \exit
+	// Clone repositories in parallel
+	repositories.par_iter().for_each(|repo| {
+		if let Err(err) = clone_repository(repo) {
+			eprintln!("Error cloning repository {}: {}", repo, err);
+		}
+	});
 }
 
-export -f Script
+fn clone_repository(repository: &str) -> Result<(), Box<dyn Error>> {
+	// Execute git clone command
+	let output = Command::new("git")
+		.args(&["clone", "--depth=1", "--recurse-submodules", "--shallow-submodules"])
+		.arg(format!("ssh://git@github.com/{}.git", repository))
+		.output()?;
 
-parallel --jobs 6 Script ::: "${Repository[@]}"
+	// Print the output
+	println!("{}", String::from_utf8_lossy(&output.stdout));
+
+	// Check if the command was successful
+	if !output.status.success() {
+		return Err(format!("Failed to clone repository {}", repository).into());
+	}
+
+	Ok(())
+}

@@ -1,36 +1,40 @@
-#!/bin/bash
+use std::process::Command;
 
-\echo "Process: Sync/Repository.sh"
+fn main() {
+	println!("Process: Sync/Repository.sh");
 
-# Context: CodeEditorLand/Application
+	// Context: CodeEditorLand/Application
+	let directory = std::env::current_dir().expect("Failed to get current directory");
+	let cache_path = directory.join("../Cache/Repository/Build.md");
 
-Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
+	let repositories = read_array(&cache_path).expect("Failed to read repositories");
 
-\readarray -t Repository < "$Directory"/../Cache/Repository/Build.md
+	for repository in repositories {
+		let folder = repository.replace("CodeEditorLand/", "");
 
-Script() {
-	Folder="${1/'CodeEditorLand/'/}"
+		let output =
+			Command::new("cd").arg(&folder).output().expect("Failed to execute cd command");
 
-	\cd "$Folder" || \exit
+		println!("{}", String::from_utf8_lossy(&output.stdout));
 
-	\pwd
+		let output = Command::new("git")
+			.arg("add")
+			.arg(".")
+			.output()
+			.expect("Failed to execute git add command");
 
-	\git add .
-	\git commit -m "squash!"
-	\git pull
-	\git push
+		println!("{}", String::from_utf8_lossy(&output.stdout));
 
-	\git fetch upstream --depth 1 --no-tags
+		// Add more commands here...
 
-	Main=$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/')
-	Main=$(\echo "$Main" | \sed 's/\/$//')
-	Main=$(\gh repo view "$Main" --json defaultBranchRef | \jq -r -c '.defaultBranchRef.name')
+		let output = Command::new("cd").arg("-").output().expect("Failed to execute cd - command");
 
-	\git merge upstream/"$Main" --allow-unrelated-histories -X theirs
-
-	\cd - || \exit
+		println!("{}", String::from_utf8_lossy(&output.stdout));
+	}
 }
 
-export -f Script
-
-parallel --jobs 6 Script ::: "${Repository[@]}"
+fn read_array(file_path: &std::path::Path) -> Result<Vec<String>, std::io::Error> {
+	let content = std::fs::read_to_string(file_path)?;
+	let repositories: Vec<String> = content.lines().map(|s| s.to_string()).collect();
+	Ok(repositories)
+}
