@@ -3,27 +3,18 @@ use std::{env, fs, process::Command};
 fn main() {
 	println!("Process: Setting/Repository.sh");
 
-	// Get the current directory
-	let current_dir = match env::current_dir() {
-		Ok(dir) => dir,
-		Err(_) => {
-			eprintln!("Failed to get the current directory.");
-			return;
-		}
-	};
+	// Context: CodeEditorLand/Application
 
-	// Read the list of repositories from the file
-	let repository_file_path = current_dir.join("../Cache/Repository/Build.md");
-	let repository_list = match fs::read_to_string(&repository_file_path) {
-		Ok(content) => content,
-		Err(_) => {
-			eprintln!("Failed to read the repository list file.");
-			return;
-		}
-	};
-
-	// Process each repository
-	for repository in repository_list.lines() {
+	for repository in std::fs::read_to_string(
+		std::env::current_dir()
+			.expect("Failed to get current directory")
+			.join("../Cache/Repository/Build.md"),
+	)?
+	.lines()
+	.map(|s| s.to_string())
+	.collect()
+	.expect("Failed to read repositories")
+	{
 		if let Err(_) = process_repository(repository, &current_dir) {
 			eprintln!("Failed to process repository: {}", repository);
 		}
@@ -35,6 +26,7 @@ fn main() {
 fn process_repository(repository: &str, current_dir: &std::path::Path) -> std::io::Result<()> {
 	// Change directory to the repository
 	let repository_path = current_dir.join(repository.replace("CodeEditorLand/", ""));
+
 	env::set_current_dir(&repository_path)?;
 
 	// Print current directory
@@ -58,6 +50,7 @@ fn process_repository(repository: &str, current_dir: &std::path::Path) -> std::i
 			"--silent",
 		],
 	)?;
+
 	execute_command(
 		"gh",
 		&[
@@ -72,15 +65,14 @@ fn process_repository(repository: &str, current_dir: &std::path::Path) -> std::i
 			"--silent",
 		],
 	)?;
+
 	// Continue with other commands...
 
 	Ok(())
 }
 
 fn execute_command(command: &str, args: &[&str]) -> std::io::Result<()> {
-	let status = Command::new(command).args(args).status()?;
-
-	if !status.success() {
+	if !Command::new(command).args(args).status()?.success() {
 		return Err(std::io::Error::new(
 			std::io::ErrorKind::Other,
 			format!("Command execution failed: {} {:?}", command, args),

@@ -1,6 +1,6 @@
 use clap::{arg, Command};
 
-pub fn main() {
+fn main() {
 	let matches = Command::new("Land")
 		.version("0.1.0")
 		.author("Nikola R. Hristov <nikola@nikolahristov.tech>")
