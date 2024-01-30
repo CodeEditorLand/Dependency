@@ -1,0 +1,13 @@
+use_small_heuristics = "Max"
+use_try_shorthand = true
+use_field_init_shorthand = true
+tab_spaces = 4
+reorder_modules = true
+reorder_imports = true
+remove_nested_parens = true
+newline_style = "Unix"
+merge_derives = true
+imports_granularity = "Crate"
+hard_tabs = true
+force_explicit_abi = false
+edition = "2021"

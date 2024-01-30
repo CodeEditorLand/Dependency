@@ -1,0 +1,45 @@
+{
+	"name": "@codeeditorland/ingress-data",
+	"version": "0.0.1",
+	"private": false,
+	"description": "🏜️ Land ingress worker",
+	"homepage": "https://github.com/CodeEditorLand/NPM#readme",
+	"bugs": {
+		"url": "https://github.com/CodeEditorLand/NPM/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/CodeEditorLand/NPM.git",
+		"directory": "Ingress/Data"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "Nikola Hristov",
+		"email": "nikola@nikolahristov.tech",
+		"url": "https://nikolahristov.tech"
+	},
+	"type": "module",
+	"main": "./Target/Index.js",
+	"types": "./Target/Index.d.ts",
+	"scripts": {
+		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'"
+	},
+	"dependencies": {
+		"@codeeditorland/common": "0.0.1",
+		"itty-router": "4.0.27"
+	},
+	"devDependencies": {
+		"@cloudflare/workers-types": "4.20240129.0",
+		"@miniflare/tre": "3.0.0-next.14",
+		"@types/dotenv": "8.2.0",
+		"@typescript-eslint/eslint-plugin": "6.19.1",
+		"@typescript-eslint/parser": "6.19.1",
+		"eslint": "8.56.0",
+		"miniflare": "3.20231218.4",
+		"typescript-esbuild": "0.3.6",
+		"wrangler": "3.25.0"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}

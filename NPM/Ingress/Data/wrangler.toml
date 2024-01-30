@@ -1,0 +1,25 @@
+name = "ingress-data-land"
+main = "./Target/Worker.js"
+account_id = "ecc5b1147fe2b96b423abb0717c0a395"
+compatibility_date = "2024-01-29"
+compatibility_flags = ["nodejs_compat"]
+keep_vars = true
+route = { pattern = "ingress.data.land.playform.cloud", custom_domain = true, zone_name = "playform.cloud" }
+send_metrics = false
+tsconfig = "./tsconfig.json"
+workers_dev = false
+
+[build]
+command = "npm run prepublishOnly"
+cwd = "."
+watch_dir = "./Source"
+
+[dev]
+ip = "127.0.0.1"
+port = 4001
+
+[placement]
+mode = "smart"
+
+# [triggers]
+# crons = ["* * * * *"] # * * * * * = run every minute

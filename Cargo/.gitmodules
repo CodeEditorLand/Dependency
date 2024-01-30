@@ -1,0 +1,3 @@
+[submodule "Land"]
+path = Land
+url = ssh://git@github.com/CodeEditorLand/CargoLand.git

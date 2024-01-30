@@ -1,0 +1,9 @@
+[workspace]
+resolver = "2"
+members = ["Cargo/Land"]
+
+[workspace.package]
+authors = ["Nikola Hristov <nikola@nikolahristov.tech>"]
+homepage = "https://land.playform.cloud/"
+repository = "https://github.com/CodeEditorLand/Environment"
+edition = "2021"
