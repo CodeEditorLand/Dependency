@@ -1,9 +1,13 @@
 [workspace]
-resolver = "2"
 members = ["Cargo/Maintain"]
+resolver = "2"
 
 [workspace.package]
 authors = ["Nikola Hristov <nikola@nikolahristov.tech>"]
-homepage = "https://land.playform.cloud/"
-repository = "https://github.com/CodeEditorLand/Environment"
+documentation = "https://docs.land.playform.cloud/"
 edition = "2021"
+homepage = "https://land.playform.cloud/"
+license-file = "LICENSE"
+publish = false
+readme = "README.md"
+repository = "https://github.com/CodeEditorLand/Environment"
