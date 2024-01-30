@@ -1,9 +1,11 @@
 [submodule "NPM"]
-	path = NPM
-	url = ssh://git@github.com/CodeEditorLand/NPM.git
+path = NPM
+url = ssh://git@github.com/CodeEditorLand/NPM.git
+
 [submodule "Cargo"]
-	path = Cargo
-	url = ssh://git@github.com/CodeEditorLand/Cargo.git
+path = Cargo
+url = ssh://git@github.com/CodeEditorLand/Cargo.git
+
 [submodule "Land"]
-	path = Land
-	url = ssh://git@github.com/CodeEditorLand/EnvironmentLand.git
+path = Land
+url = ssh://git@github.com/CodeEditorLand/EnvironmentLand.git
