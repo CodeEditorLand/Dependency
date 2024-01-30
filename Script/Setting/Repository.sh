@@ -19,7 +19,7 @@ for Repository in "${Repository[@]}"; do
 		--method PUT \
 		-H "Accept: application/vnd.github+json" \
 		-H "X-GitHub-Api-Version: 2022-11-28" \
-		repos/"${1}"/actions/permissions/access \
+		repos/"${Repository}"/actions/permissions/access \
 		-f access_level='organization' \
 		--silent
 
@@ -27,14 +27,14 @@ for Repository in "${Repository[@]}"; do
 		--method PUT \
 		-H "Accept: application/vnd.github+json" \
 		-H "X-GitHub-Api-Version: 2022-11-28" \
-		user/starred/"${1}" \
+		user/starred/"${Repository}" \
 		--silent
 
 	\gh api \
 		--method PUT \
 		-H "Accept: application/vnd.github+json" \
 		-H "X-GitHub-Api-Version: 2022-11-28" \
-		repos/"${1}"/actions/permissions/workflow \
+		repos/"${Repository}"/actions/permissions/workflow \
 		-f default_workflow_permissions='write' \
 		-F can_approve_pull_request_reviews=true \
 		--silent
@@ -43,7 +43,7 @@ for Repository in "${Repository[@]}"; do
 		--method PUT \
 		-H "Accept: application/vnd.github+json" \
 		-H "X-GitHub-Api-Version: 2022-11-28" \
-		repos/"${1}"/actions/permissions \
+		repos/"${Repository}"/actions/permissions \
 		-F enabled=true \
 		-f allowed_actions='all' \
 		--silent
@@ -52,21 +52,21 @@ for Repository in "${Repository[@]}"; do
 		--method PUT \
 		-H "Accept: application/vnd.github+json" \
 		-H "X-GitHub-Api-Version: 2022-11-28" \
-		repos/"${1}"/vulnerability-alerts \
+		repos/"${Repository}"/vulnerability-alerts \
 		--silent
 
 	\gh api \
 		--method PUT \
 		-H "Accept: application/vnd.github+json" \
 		-H "X-GitHub-Api-Version: 2022-11-28" \
-		repos/"${1}"/automated-security-fixes \
+		repos/"${Repository}"/automated-security-fixes \
 		--silent
 
 	\gh api \
 		--method PATCH \
 		-H "Accept: application/vnd.github+json" \
 		-H "X-GitHub-Api-Version: 2022-11-28" \
-		repos/"${1}" \
+		repos/"${Repository}" \
 		-F has_issues=true \
 		-F has_projects=false \
 		-F has_wiki=false \
