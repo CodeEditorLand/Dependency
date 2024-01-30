@@ -2,11 +2,11 @@
 
 \echo "Process: Replace/Copyright.sh"
 
-# Context: CodeEditorLand/Application
+# Context: CodeEditorLand/Environment/Land
 
 Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
 
-\readarray -t Repository < "$Directory"/../Cache/Repository/Build.md
+\readarray -t Repository < "$Directory"/../Cache/Repository/Environment.md
 
 Script() {
 	\cd "${1/'CodeEditorLand/'/}" || \exit
