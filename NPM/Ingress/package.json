@@ -1,5 +1,5 @@
 {
-	"name": "@codeeditorland/ingress-data",
+	"name": "@codeeditorland/ingress",
 	"version": "0.0.1",
 	"private": false,
 	"description": "🏜️ Land ingress worker",
@@ -10,7 +10,7 @@
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/CodeEditorLand/NPM.git",
-		"directory": "Ingress/Data"
+		"directory": "Ingress"
 	},
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
@@ -33,7 +33,7 @@
 		"@miniflare/tre": "3.0.0-next.14",
 		"@types/dotenv": "8.2.0",
 		"@typescript-eslint/eslint-plugin": "6.20.0",
-		"@typescript-eslint/parser": "6.19.1",
+		"@typescript-eslint/parser": "6.20.0",
 		"eslint": "8.56.0",
 		"miniflare": "3.20231218.4",
 		"typescript-esbuild": "0.3.6",
