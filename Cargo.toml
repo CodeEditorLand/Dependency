@@ -1,6 +1,6 @@
 [workspace]
 resolver = "2"
-members = ["Cargo/Land"]
+members = ["Cargo/Maintain"]
 
 [workspace.package]
 authors = ["Nikola Hristov <nikola@nikolahristov.tech>"]
