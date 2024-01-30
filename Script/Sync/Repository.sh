@@ -8,8 +8,8 @@ Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
 
 \readarray -t Repository < "$Directory"/../Cache/Repository/Environment.md
 
-Script() {
-	Folder="${1/'CodeEditorLand/'/}"
+for Repository in "${Repository[@]}"; do
+	Folder="${Repository/'CodeEditorLand/'/}"
 
 	\cd "$Folder" || \exit
 
@@ -29,8 +29,4 @@ Script() {
 	\git merge upstream/"$Main" --allow-unrelated-histories -X theirs
 
 	\cd - || \exit
-}
-
-export -f Script
-
-parallel --jobs 6 Script ::: "${Repository[@]}"
+done

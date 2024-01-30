@@ -8,7 +8,7 @@ Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
 
 \readarray -t Repository < "$Directory"/../Cache/Repository/Environment.md
 
-Script() {
+for Repository in "${Repository[@]}"; do
 	Folder="${Repository/'CodeEditorLand/'/}"
 
 	\cd "$Folder" || \exit
@@ -19,8 +19,4 @@ Script() {
 	\find . -type d \( -iname node_modules -o -iname vendor -o -iname dist -o -iname target -o -iname \.git -o -iname \.next \) -prune -false -o -iname license.md -type f -execdir mv {} LICENSE \;
 
 	\cd - || \exit
-}
-
-export -f Script
-
-parallel --jobs 6 Script ::: "${Repository[@]}"
+done

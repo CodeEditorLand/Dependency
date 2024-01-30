@@ -8,8 +8,8 @@ Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
 
 \readarray -t Repository < "$Directory"/../Cache/Repository/Environment.md
 
-Script() {
-	\cd "${1/'CodeEditorLand/'/}" || \exit
+for Repository in "${Repository[@]}"; do
+	\cd "${Repository/'CodeEditorLand/'/}" || \exit
 
 	\pwd
 
@@ -90,8 +90,4 @@ Script() {
 		--enable-squash-merge
 
 	\cd - || \exit
-}
-
-export -f Script
-
-parallel --jobs 6 Script ::: "${Repository[@]}"
+done
