@@ -7,7 +7,7 @@ CodeEditorLand/AzureReposLand
 CodeEditorLand/AzureStreamAnalyticsInLand
 CodeEditorLand/Codetour
 CodeEditorLand/ComposeLanguageService
-CodeEditorLand/demo-repository
+CodeEditorLand/DemoRepository
 CodeEditorLand/DeoptexplorerLand
 CodeEditorLand/DevSkim
 CodeEditorLand/DevSkimLandPlugin
