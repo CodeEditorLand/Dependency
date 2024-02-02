@@ -18,6 +18,7 @@ Omit=(
 	"CodeEditorLand/CargoMaintain"
 	"CodeEditorLand/Commonality"
 	"CodeEditorLand/debugger-libs"
+	"CodeEditorLand/DemoRepository"
 	"CodeEditorLand/Environment"
 	"CodeEditorLand/EnvironmentLand"
 	"CodeEditorLand/node-gyp"
