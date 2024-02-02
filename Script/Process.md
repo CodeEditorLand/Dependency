@@ -18,7 +18,7 @@
    Context)
 
     ```bash
-    cd Application # (The Context)
+    cd Land # (The Context)
     ```
 
     and rename (vscode -> Land):
@@ -36,7 +36,7 @@
 4. Syncs repositories with their upstream:
 
     ```bash
-    cd Application # (The Context)
+    cd Land # (The Context)
     ```
 
     and sync:
@@ -48,13 +48,25 @@
 5. Moves src into the Source folder:
 
     ```bash
-    cd Application # (The Context)
+    cd Land # (The Context)
     ```
 
     and move:
 
     ```bash
     ../Script/Move/src.sh
+    ```
+
+6. Resets repositories to their their upstream breanches:
+
+    ```bash
+    cd Land # (The Context)
+    ```
+
+    and sync:
+
+    ```bash
+    ../Script/Sync/Repository.sh
     ```
 
 # Organization
@@ -71,7 +83,7 @@
    `ssh://git@github.com/CodeEditorLand/CodeEditorLand.git`:
 
     ```bash
-    cd Application # (The Context)
+    cd Land # (The Context)
     ```
 
     and populate the cache:
@@ -83,7 +95,7 @@
 2. After the cache is populated clone all of the repositories:
 
     ```bash
-    cd Application # (The Context)
+    cd Land # (The Context)
     ```
 
     and clone:
@@ -95,7 +107,7 @@
 3. After all of the repositories are cloned configure their upstream:
 
     ```bash
-    cd Application # (The Context)
+    cd Land # (The Context)
     ```
 
     and configure:
@@ -107,7 +119,7 @@
 4. (Owner) Set the permissions for all the repositories and common settings:
 
     ```bash
-    cd Application # (The Context)
+    cd Land # (The Context)
     ```
 
     and set:
