@@ -18,12 +18,14 @@ Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
 
 "$Directory"/Sync/Repository.sh
 
-"$Directory"/Clean/Repository.sh
-"$Directory"/Clean/Detail.sh
-"$Directory"/Move/license.sh
-"$Directory"/Move/package.sh
-"$Directory"/Move/src.sh
-"$Directory"/Append/Detail.sh
-"$Directory"/Sort/Detail.sh
+"$Directory"/Reset/Repository.sh
 
-Maintain Workflow
+# "$Directory"/Clean/Repository.sh
+# "$Directory"/Clean/Detail.sh
+# "$Directory"/Move/license.sh
+# "$Directory"/Move/package.sh
+# "$Directory"/Move/src.sh
+# "$Directory"/Append/Detail.sh
+# "$Directory"/Sort/Detail.sh
+
+# Maintain Workflow
