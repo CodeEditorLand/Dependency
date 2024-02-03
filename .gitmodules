@@ -1,4 +1,3 @@
-
 [submodule "Cargo"]
 path = Cargo
 url = ssh://git@github.com/CodeEditorLand/Cargo.git
