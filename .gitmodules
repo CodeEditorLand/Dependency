@@ -1,6 +1,3 @@
-[submodule "NPM"]
-path = NPM
-url = ssh://git@github.com/CodeEditorLand/NPM.git
 
 [submodule "Cargo"]
 path = Cargo
