@@ -25,6 +25,8 @@ for Repository in "${Repository[@]}"; do
 
 	Upstream=$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/')
 
+	echo "$Upstream"
+
 	if [[ "$Upstream" != "null/null" ]]; then
 		Upstream="ssh://git@github.com/${Upstream}"
 		Upstream=$(\echo "$Upstream" | \sed 's/\/$/\.git/')

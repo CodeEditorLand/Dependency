@@ -1,6 +1,6 @@
 #!/bin/bash
 
-\echo "Process: Rename/Branch.sh"
+\echo "Process: Switch/Branch.sh"
 
 # Context: CodeEditorLand/Environment/Land
 
