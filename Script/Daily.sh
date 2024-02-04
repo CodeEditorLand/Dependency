@@ -11,13 +11,12 @@ Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
 "$Directory"/Clone/Repository.sh
 "$Directory"/Module/Git.sh
 
-"$Directory"/Configure/Repository.sh
-"$Directory"/Setting/Repository.sh
+# "$Directory"/Configure/Repository.sh
+# "$Directory"/Setting/Repository.sh
 # "$Directory"/Rename/Repository.sh
 # "$Directory"/Rename/Branch.sh
 
 "$Directory"/Sync/Repository.sh
-
 "$Directory"/Reset/Repository.sh
 
 # "$Directory"/Clean/Repository.sh
