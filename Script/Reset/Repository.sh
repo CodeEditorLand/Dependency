@@ -30,7 +30,6 @@ for Repository in "${Repository[@]}"; do
 		\echo "Main: "
 		\echo "$Main"
 
-		\git merge upstream/"$Main" --allow-unrelated-histories -X theirs
 		\git reset --hard upstream/"$Main"
 		\git clean -dfx
 		\git push --force
