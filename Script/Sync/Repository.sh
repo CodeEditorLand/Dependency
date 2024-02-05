@@ -2,7 +2,7 @@
 
 \echo "Process: Sync/Repository.sh"
 
-# Context: CodeEditorLand/Environment/Land
+# Context: CodeEditorLand/Environment/Stream
 
 Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
 

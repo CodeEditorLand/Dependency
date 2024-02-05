@@ -2,12 +2,12 @@
 
 \echo "Process: Action/Append/Detail.sh"
 
-# Context: CodeEditorLand/Environment/Land
+# Context: CodeEditorLand/Environment/Stream
 
 \pwd
 
-# TODO: Add dynamic { "repository": { "directory": Environment/Land/$REPOSITORY } }
-# The path is always CodeEditorLand/Environment/Land/$SUBMODULE.name
+# TODO: Add dynamic { "repository": { "directory": Environment/Stream/$REPOSITORY } }
+# The path is always CodeEditorLand/Environment/Stream/$SUBMODULE.name
 # or fetch the correct submodule URL
 
 \jq -S ". * {
