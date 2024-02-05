@@ -1,12 +1,12 @@
 #!/bin/bash
 
-\echo "Process: Switch/Branch.sh"
+\echo "Process: Switch/Branch/Repository.sh"
 
 # Context: CodeEditorLand/Environment/Land
 
 Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
 
-\readarray -t Repository < "$Directory"/../Cache/Repository/Environment.md
+\readarray -t Repository < "$Directory"/../../Cache/Repository/Environment.md
 
 for Repository in "${Repository[@]}"; do
 	\cd "${Repository/'CodeEditorLand/'/}" || \exit
@@ -16,8 +16,8 @@ for Repository in "${Repository[@]}"; do
 	Upstream=$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/')
 
 	if [[ "$Upstream" != "null/null" ]]; then
-		\git switch -c instream
-		\git push -f --set-upstream origin instream
+		\git switch -c repository
+		\git push --set-upstream origin repository
 	fi
 
 	\cd - || \exit
