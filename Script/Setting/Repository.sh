@@ -2,11 +2,11 @@
 
 \echo "Process: Setting/Repository.sh"
 
-# Context: CodeEditorLand/Environment/Stream
+# Context: CodeEditorLand/CodeEditorLand/Stream
 
 Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
 
-\readarray -t Repository < "$Directory"/../Cache/Repository/Environment.md
+\readarray -t Repository < "$Directory"/../Cache/Repository/CodeEditorLand.md
 
 for Repository in "${Repository[@]}"; do
 	\cd "${Repository/'CodeEditorLand/'/}" || \exit
@@ -82,7 +82,6 @@ for Repository in "${Repository[@]}"; do
 
 	\gh repo edit \
 		--allow-update-branch \
-		--default-branch main \
 		--delete-branch-on-merge \
 		--enable-auto-merge \
 		--enable-issues \

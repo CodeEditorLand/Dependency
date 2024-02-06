@@ -2,11 +2,11 @@
 
 \echo "Process: Move/src.sh"
 
-# Context: CodeEditorLand/Environment/Stream
+# Context: CodeEditorLand/CodeEditorLand/Stream
 
 Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
 
-\readarray -t Repository < "$Directory"/../Cache/Repository/Environment.md
+\readarray -t Repository < "$Directory"/../Cache/Repository/CodeEditorLand.md
 
 for Repository in "${Repository[@]}"; do
 	\cd "${Repository/'CodeEditorLand/'/}" || \exit
@@ -14,6 +14,7 @@ for Repository in "${Repository[@]}"; do
 	\pwd
 
 	if [[ -d "src" ]]; then
+		\mkdir -p Source
 		\cp -rf src/* Source/
 		\rm -rf src/
 	fi

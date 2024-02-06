@@ -2,7 +2,7 @@
 
 \echo "Process: Daily.sh"
 
-# Context: CodeEditorLand/Environment/Stream
+# Context: CodeEditorLand/CodeEditorLand/Stream
 
 Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
 
@@ -17,16 +17,19 @@ Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
 # "$Directory"/Rename/Branch.sh
 
 # "$Directory"/Sync/Repository.sh
+# "$Directory"/Switch/Branch/Stream.sh
 # "$Directory"/Reset/Repository.sh
 "$Directory"/Switch/Branch/Repository.sh
-"$Directory"/Switch/Branch/Stream.sh
+# "$Directory"/Reset/Repository.sh
 
-# "$Directory"/Clean/Repository.sh
-# "$Directory"/Clean/Detail.sh
-# "$Directory"/Move/license.sh
-# "$Directory"/Move/package.sh
-# "$Directory"/Move/src.sh
-# "$Directory"/Append/Detail.sh
-# "$Directory"/Sort/Detail.sh
+# "$Directory"/Default/Branch/Repository.sh
 
-# Maintain Workflow
+"$Directory"/Clean/Repository.sh
+"$Directory"/Clean/Detail.sh
+"$Directory"/Move/license.sh
+"$Directory"/Move/package.sh
+"$Directory"/Move/src.sh
+"$Directory"/Append/Detail.sh
+"$Directory"/Sort/Detail.sh
+
+Maintain Workflow

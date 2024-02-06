@@ -16,10 +16,10 @@ Omit=(
 	"CodeEditorLand/Biome"
 	"CodeEditorLand/Cargo"
 	"CodeEditorLand/CargoMaintain"
+	"CodeEditorLand/CodeEditorLand"
 	"CodeEditorLand/Commonality"
 	"CodeEditorLand/debugger-libs"
 	"CodeEditorLand/DemoRepository"
-	"CodeEditorLand/Environment"
 	"CodeEditorLand/EnvironmentLand"
 	"CodeEditorLand/node-gyp"
 	"CodeEditorLand/NPM"
@@ -27,6 +27,7 @@ Omit=(
 	"CodeEditorLand/NPMIngress"
 	"CodeEditorLand/NRefactory"
 	"CodeEditorLand/Oniguruma"
+	"CodeEditorLand/Stream"
 	"CodeEditorLand/TypeScript"
 	"CodeEditorLand/Website"
 	"CodeEditorLand/Wil"
@@ -86,4 +87,4 @@ done
 
 \mapfile -t Repository < <(\printf "%s\n" "${Repository[@]}" | \sort)
 
-\printf "%s\n" "${Repository[@]}" > "$Directory"/Repository/Environment.md
+\printf "%s\n" "${Repository[@]}" > "$Directory"/Repository/CodeEditorLand.md

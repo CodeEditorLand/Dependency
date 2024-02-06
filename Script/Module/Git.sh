@@ -2,11 +2,11 @@
 
 \echo "Process: Module/Git.sh"
 
-# Context: CodeEditorLand/Environment/Stream
+# Context: CodeEditorLand/CodeEditorLand/Stream
 
 Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
 
-\readarray -t Repository < "$Directory"/../Cache/Repository/Environment.md
+\readarray -t Repository < "$Directory"/../Cache/Repository/CodeEditorLand.md
 
 \rm -rf "$Directory"/../../Land/.gitmodules
 

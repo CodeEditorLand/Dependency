@@ -1,6 +1,6 @@
 #!/bin/bash
 
-\echo "Process: Default/Branch/Repository.sh"
+\echo "Process: Switch/Branch/Repository.sh"
 
 # Context: CodeEditorLand/CodeEditorLand/Stream
 
@@ -13,11 +13,13 @@ for Repository in "${Repository[@]}"; do
 
 	\pwd
 
-	Upstream=$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/')
+	# Upstream=$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/')
 
-	if [[ "$Upstream" != "null/null" ]]; then
-		\gh repo edit --default-branch repository
-	fi
+	# if [[ "$Upstream" != "null/null" ]]; then
+	\git switch -c repository
+	\git switch repository
+	\git push --set-upstream origin repository
+	# fi
 
 	\cd - || \exit
 done
