@@ -1,0 +1,60 @@
+export default {
+	editorConfig: true,
+	arrowParens: "always",
+	bracketSameLine: true,
+	bracketSpacing: true,
+	cursorOffset: -1,
+	embeddedLanguageFormatting: "auto",
+	endOfLine: "lf",
+	htmlWhitespaceSensitivity: "css",
+	insertPragma: false,
+	jsxSingleQuote: false,
+	printWidth: 80,
+	proseWrap: "always",
+	quoteProps: "preserve",
+	requirePragma: false,
+	semi: true,
+	singleQuote: false,
+	tabWidth: 4,
+	trailingComma: "es5",
+	useTabs: true,
+	vueIndentScriptAndStyle: true,
+	plugins: [
+		"prettier-plugin-organize-attributes",
+		"prettier-plugin-sh",
+		"prettier-plugin-toml",
+		"prettier-plugin-packagejson",
+	],
+	overrides: [
+		{
+			files: "*.lua",
+			options: {
+				parser: "lua",
+			},
+		},
+		{
+			files: "*.toml",
+			options: {
+				parser: "toml",
+			},
+		},
+		{
+			files: "package.json",
+			options: {
+				trailingComma: "none",
+			},
+		},
+	],
+	importOrder: [
+		"^@(.*)/(.*)$",
+		"^@core/(.*)$",
+		"^@server/(.*)$",
+		"^@ui/(.*)$",
+		"^[./]",
+	],
+	importOrderSeparation: true,
+	importOrderSortSpecifiers: true,
+	attributeGroups: ["$DEFAULT", "^data-"],
+	attributeSort: "ASC",
+	attributeIgnoreCase: false,
+};
