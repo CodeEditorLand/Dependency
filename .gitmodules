@@ -4,3 +4,6 @@ url = ssh://git@github.com/CodeEditorLand/Stream.git
 [submodule "Cargo"]
 	path = Cargo
 	url = ssh://git@github.com/CodeEditorLand/Cargo.git
+[submodule "NPM"]
+	path = NPM
+	url = ssh://git@github.com/CodeEditorLand/NPM.git
