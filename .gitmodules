@@ -1,0 +1,3 @@
+[submodule "Stream"]
+	path = Stream
+	url = ssh://git@github.com/CodeEditorLand/Stream.git
