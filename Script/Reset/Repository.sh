@@ -32,7 +32,7 @@ for Repository in "${Repository[@]}"; do
 
 		\git reset --hard upstream/"$Main"
 		\git clean -dfx
-		\git add . 
+		\git add .
 		\git commit -m "squash!"
 		\git push --force
 	fi

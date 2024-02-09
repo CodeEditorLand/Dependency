@@ -19,7 +19,7 @@ Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
 "$Directory"/Switch/Branch/Stream.sh
 "$Directory"/Reset/Repository.sh
 "$Directory"/Switch/Branch/Repository.sh
-# "$Directory"/Reset/Repository.sh
+"$Directory"/Reset/Repository.sh
 
 # "$Directory"/Default/Branch/Repository.sh
 
