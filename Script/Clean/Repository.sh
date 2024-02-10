@@ -15,12 +15,12 @@ for Repository in "${Repository[@]}"; do
 
 	\git --no-pager fetch --all --tags
 
-	TAGS=$(\git --no-pager tag)
+	Tag=$(\git --no-pager tag)
 
-	for TAG in $TAGS; do
-		echo "Deleting tag: $TAG"
-		\git push --delete origin "$TAG"
-		\git tag --delete "$TAG"
+	for Tag in "${Tag[@]}"; do
+		echo "Deleting tag: $Tag"
+		\git push --delete origin "$Tag"
+		\git tag --delete "$Tag"
 	done
 
 	\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o \
