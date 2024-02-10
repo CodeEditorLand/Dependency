@@ -8,7 +8,7 @@ Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
 
 \readarray -t Repository < "$Directory"/../Cache/Repository/CodeEditorLand.md
 
-\rm -rf "$Directory"/../../Land/.gitmodules
+\rm -rf "$Directory"/../../Stream/.gitmodules
 
 for Repository in "${Repository[@]}"; do
 	Folder="${Repository/'CodeEditorLand/'/}"
@@ -34,7 +34,7 @@ for Repository in "${Repository[@]}"; do
 
 	EOM
 
-	\echo "$Submodule" >> "$Directory"/../../Land/.gitmodules
+	\echo "$Submodule" >> "$Directory"/../../Stream/.gitmodules
 
 	\cd - || \exit
 done

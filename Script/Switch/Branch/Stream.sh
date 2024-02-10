@@ -18,7 +18,7 @@ for Repository in "${Repository[@]}"; do
 	# if [[ "$Upstream" != "null/null" ]]; then
 	\git switch -c stream
 	\git switch stream
-	\git push --set-upstream origin stream
+	\git push --set-upstream origin stream --force
 	# fi
 
 	\cd - || \exit
