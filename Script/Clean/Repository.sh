@@ -4,20 +4,24 @@
 
 # Context: CodeEditorLand/CodeEditorLand/Stream
 
-Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
+Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
-\readarray -t Repository < "$Directory"/../Cache/Repository/CodeEditorLand.md
+\readarray -t Repository <"$Directory"/../Cache/Repository/CodeEditorLand.md
 
 for Repository in "${Repository[@]}"; do
 	\cd "${Repository/'CodeEditorLand/'/}" || \exit
 
 	\pwd
 
-	\git --no-pager fetch origin
-	\git --no-pager fetch upstream --depth 1 --no-tags
+	\git --no-pager fetch --all --tags
 
-	\git --no-pager tag | \xargs -L 1 | \xargs git --no-pager push --delete origin
-	\git --no-pager tag | \xargs -L 1 | \xargs git --no-pager tag --delete
+	TAGS=$(\git --no-pager tag)
+
+	for TAG in $TAGS; do
+		echo "Deleting tag: $TAG"
+		\git push --delete origin "$TAG"
+		\git tag --delete "$TAG"
+	done
 
 	\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o \
 		\( \
