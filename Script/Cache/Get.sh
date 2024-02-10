@@ -4,7 +4,7 @@
 
 # Contextless
 
-Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
+Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 
 Organization="CodeEditorLand"
 
@@ -24,6 +24,7 @@ Omit=(
 	"CodeEditorLand/DemoRepository"
 	"CodeEditorLand/EnvironmentLand"
 	"CodeEditorLand/JavaScript"
+	"CodeEditorLand/Land"
 	"CodeEditorLand/LLRT"
 	"CodeEditorLand/node-gyp"
 	"CodeEditorLand/NPM"
@@ -92,4 +93,4 @@ done
 
 \mapfile -t Repository < <(\printf "%s\n" "${Repository[@]}" | \sort)
 
-\printf "%s\n" "${Repository[@]}" > "$Directory"/Repository/CodeEditorLand.md
+\printf "%s\n" "${Repository[@]}" >"$Directory"/Repository/CodeEditorLand.md
