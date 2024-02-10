@@ -9,7 +9,7 @@ Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
 "$Directory"/Cache/Get.sh
 
 # "$Directory"/Clone/Repository.sh
-# "$Directory"/Module/Git.sh
+"$Directory"/Module/Git.sh
 
 "$Directory"/Configure/Repository.sh
 # "$Directory"/Setting/Repository.sh
@@ -21,7 +21,7 @@ Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
 "$Directory"/Switch/Branch/Repository.sh
 "$Directory"/Reset/Repository.sh
 
-# "$Directory"/Default/Branch/Repository.sh
+"$Directory"/Default/Branch/Repository.sh
 
 # "$Directory"/Clean/Repository.sh
 # "$Directory"/Clean/Detail.sh
