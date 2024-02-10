@@ -13,11 +13,11 @@ for Repository in "${Repository[@]}"; do
 
 	\pwd
 
-	\git fetch origin
-	\git fetch upstream --depth 1 --no-tags
+	\git --no-pager fetch origin
+	\git --no-pager fetch upstream --depth 1 --no-tags
 
-	\git tag | \xargs -L 1 | \xargs git push origin --delete
-	\git tag | \xargs -L 1 | \xargs git tag --delete
+	\git --no-pager tag | \xargs -L 1 | \xargs git --no-pager push --delete origin
+	\git --no-pager tag | \xargs -L 1 | \xargs git --no-pager tag --delete
 
 	\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o \
 		\( \
