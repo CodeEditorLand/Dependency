@@ -1,10 +1,12 @@
 packages:
     - "Land/**"
-    - "!Land/**/dist"
     - "!Land/**/build"
+    - "!Land/**/dist"
     - "!Land/**/Target"
+    - "!Land/**/target"
 
     - "NPM/**"
-    - "!NPM/**/dist"
     - "!NPM/**/build"
+    - "!NPM/**/dist"
     - "!NPM/**/Target"
+    - "!NPM/**/target"

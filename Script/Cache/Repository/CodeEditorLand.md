@@ -12,7 +12,7 @@ CodeEditorLand/DevSkim
 CodeEditorLand/DevSkimLandPlugin
 CodeEditorLand/DstoolkitDevcontainers
 CodeEditorLand/Gnls
-CodeEditorLand/Land
+CodeEditorLand/Editor
 CodeEditorLand/LandAnacondaExtensionPack
 CodeEditorLand/LandAnycode
 CodeEditorLand/LandApimanagement
