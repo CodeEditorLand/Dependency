@@ -13,11 +13,11 @@ for Repository in "${Repository[@]}"; do
 
 	\pwd
 
-	Upstream=$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/')
+	# Upstream=$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/')
 
-	if [[ "$Upstream" != "null/null" ]]; then
+	# if [[ "$Upstream" != "null/null" ]]; then
 		\gh repo edit --default-branch repository
-	fi
+	# fi
 
 	\cd - || \exit
 done
