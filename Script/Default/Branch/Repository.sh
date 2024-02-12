@@ -2,7 +2,7 @@
 
 \echo "Process: Default/Branch/Repository.sh"
 
-# Context: CodeEditorLand/CodeEditorLand/Stream
+# Context: CodeEditorLand/Land/Stream
 
 Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
 

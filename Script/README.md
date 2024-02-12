@@ -61,7 +61,7 @@
 # Repository
 
 1. After cloning the repository
-   `ssh://git@github.com/CodeEditorLand/CodeEditorLand.git`:
+   `ssh://git@github.com/CodeEditorLand/Land.git`:
 
     ```bash
     cd Land # (The Context)
