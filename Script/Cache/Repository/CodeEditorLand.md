@@ -11,8 +11,8 @@ CodeEditorLand/DeoptexplorerLand
 CodeEditorLand/DevSkim
 CodeEditorLand/DevSkimLandPlugin
 CodeEditorLand/DstoolkitDevcontainers
-CodeEditorLand/Gnls
 CodeEditorLand/Editor
+CodeEditorLand/Gnls
 CodeEditorLand/LandAnacondaExtensionPack
 CodeEditorLand/LandAnycode
 CodeEditorLand/LandApimanagement
