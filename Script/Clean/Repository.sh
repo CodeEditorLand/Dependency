@@ -15,9 +15,9 @@ for Repository in "${Repository[@]}"; do
 
 	\git --no-pager fetch --all --tags
 
-	Tag=$(\git --no-pager tag)
+	Tags=$(\git --no-pager tag)
 
-	for Tag in "${Tag[@]}"; do
+	for Tag in $Tags; do
 		echo "Deleting tag: $Tag"
 		\git push --delete origin "$Tag"
 		\git tag --delete "$Tag"
