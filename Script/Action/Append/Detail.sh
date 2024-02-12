@@ -11,13 +11,13 @@
 # or fetch the correct submodule URL
 
 \jq -S ". * {
-	\"homepage\": \"https://github.com/CodeEditorLand/Land#readme\",
+	\"homepage\": \"https://github.com/CodeEditorLand/Environment#readme\",
 	\"bugs\": {
 		\"url\": \"https://github.com/CodeEditorLand/Environment/issues\"
 	},
 	\"repository\": {
 		\"type\": \"git\",
-		\"url\": \"git+https://github.com/CodeEditorLand/Land.git\"
+		\"url\": \"git+https://github.com/CodeEditorLand/Environment.git\"
 	},
 	\"version\": \"0.0.1\",
 	\"license\": \"SEE LICENSE IN LICENSE\",
