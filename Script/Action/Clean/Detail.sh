@@ -2,7 +2,7 @@
 
 \echo "Process: Action/Clean/Detail.sh"
 
-# Context: CodeEditorLand/Land/Stream
+# Context: CodeEditorLand/Environment/Stream
 
 \pwd
 

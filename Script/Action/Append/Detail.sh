@@ -2,18 +2,18 @@
 
 \echo "Process: Action/Append/Detail.sh"
 
-# Context: CodeEditorLand/Land/Stream
+# Context: CodeEditorLand/Environment/Stream
 
 \pwd
 
 # TODO: Add dynamic { "repository": { "directory": Environment/Stream/$REPOSITORY } }
-# The path is always CodeEditorLand/Land/Stream/$SUBMODULE.name
+# The path is always CodeEditorLand/Environment/Stream/$SUBMODULE.name
 # or fetch the correct submodule URL
 
 \jq -S ". * {
 	\"homepage\": \"https://github.com/CodeEditorLand/Land#readme\",
 	\"bugs\": {
-		\"url\": \"https://github.com/CodeEditorLand/Land/issues\"
+		\"url\": \"https://github.com/CodeEditorLand/Environment/issues\"
 	},
 	\"repository\": {
 		\"type\": \"git\",
