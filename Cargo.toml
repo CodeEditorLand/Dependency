@@ -10,4 +10,4 @@ homepage = "https://land.playform.cloud/"
 license-file = "LICENSE"
 publish = false
 readme = "README.md"
-repository = "https://github.com/CodeEditorLand/Land"
+repository = "https://github.com/CodeEditorLand/Environment"
