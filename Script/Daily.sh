@@ -6,7 +6,7 @@
 
 Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
 
-# "$Directory"/Cache/Get.sh
+"$Directory"/Cache/Get.sh
 
 # "$Directory"/Clone/Repository.sh
 # "$Directory"/Module/Git.sh
