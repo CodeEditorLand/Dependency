@@ -22,6 +22,7 @@ Omit=(
 	"CodeEditorLand/Commonality"
 	"CodeEditorLand/debugger-libs"
 	"CodeEditorLand/DemoRepository"
+	"CodeEditorLand/Environment"
 	"CodeEditorLand/EnvironmentLand"
 	"CodeEditorLand/JavaScript"
 	"CodeEditorLand/Land"
