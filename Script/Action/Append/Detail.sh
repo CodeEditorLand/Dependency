@@ -28,7 +28,7 @@
 		\"access\": \"public\"
 	},
 	\"author\": {
-		\"name\": \"Nikola Hristov\",
+		\"name\": \"Nikola R. Hristov\",
 		\"email\": \"nikola@nikolahristov.tech\",
 		\"url\": \"https://nikolahristov.tech\"
 	},
