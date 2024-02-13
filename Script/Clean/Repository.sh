@@ -13,15 +13,7 @@ for Repository in "${Repository[@]}"; do
 
 	\pwd
 
-	\git --no-pager fetch --all --tags
-
-	Tags=$(\git --no-pager tag)
-
-	for Tag in $Tags; do
-		echo "Deleting tag: $Tag"
-		\git push --delete origin "$Tag"
-		\git tag --delete "$Tag"
-	done
+	\git fetch --all --tags
 
 	\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o \
 		\( \
