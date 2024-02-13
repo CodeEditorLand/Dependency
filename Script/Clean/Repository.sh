@@ -13,7 +13,7 @@ for Repository in "${Repository[@]}"; do
 
 	\pwd
 
-	\git fetch --all --tags
+	# \git fetch --all --tags
 
 	\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o \
 		\( \
