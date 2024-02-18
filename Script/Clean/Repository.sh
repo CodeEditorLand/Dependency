@@ -13,8 +13,6 @@ for Repository in "${Repository[@]}"; do
 
 	\pwd
 
-	# \git fetch --all --tags
-
 	\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o \
 		\( \
 		-iname .prettierrc \
@@ -54,10 +52,10 @@ for Repository in "${Repository[@]}"; do
 		-o -iname yarn.lock \
 		\) -exec rm -rf {} \;
 
-	\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o \
-		-iname '*test*' \
-		-type d \
-		-exec rm -rf {} \;
+	# \find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o \
+	# 	-iname '*test*' \
+	# 	-type d \
+	# 	-exec rm -rf {} \;
 
 	\cd - || \exit
 done
