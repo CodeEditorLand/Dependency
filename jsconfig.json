@@ -6,10 +6,10 @@
 		"jsx": "react",
 		"esversion": 6,
 		"strictNullChecks": true,
-		"strictFunctionTypes": true,
+		"strictFunctionTypes": true
 	},
 	"exclude": ["node_modules"],
 	"jshint.options": {
-		"esversion": 6,
-	},
+		"esversion": 6
+	}
 }
