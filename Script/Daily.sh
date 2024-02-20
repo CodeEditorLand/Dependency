@@ -16,9 +16,9 @@ Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 "$Directory"/Rename/Repository.sh
 
 # "$Directory"/Sync/Repository.sh
-# "$Directory"/Switch/Branch/Stream.sh
-# "$Directory"/Reset/Repository.sh
-# "$Directory"/Switch/Branch/Repository.sh
+"$Directory"/Switch/Branch/Stream.sh
+"$Directory"/Reset/Repository.sh
+"$Directory"/Switch/Branch/Repository.sh
 # "$Directory"/Reset/Repository.sh
 
 "$Directory"/Default/Branch/Repository.sh
@@ -34,3 +34,5 @@ Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 Maintain Workflow
 
 biome check . --apply-unsafe
+
+"$Directory"/Restore/.gitignore.sh
