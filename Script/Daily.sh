@@ -33,6 +33,6 @@ Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
 Maintain Workflow
 
-biome check . --apply-unsafe
+# biome check "$Directory" --apply-unsafe
 
 "$Directory"/Restore/.gitignore.sh
