@@ -36,3 +36,4 @@ Maintain Workflow
 # biome check "$Directory" --apply-unsafe
 
 "$Directory"/Restore/.gitignore.sh
+"$Directory"/Restore/package.json.sh
