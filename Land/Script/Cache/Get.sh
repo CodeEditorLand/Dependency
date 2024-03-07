@@ -152,58 +152,60 @@ Omit=(
 	"CodeEditorLand/tauri-toml"
 )
 
-for ((Page = 1; Page <= 20; Page++)); do
-	\mapfile -t TemporaryRepository < <(\printf "%s" "$(
-		\gh api \
-			-H "Accept: application/vnd.github+json" \
-			-H "X-GitHub-Api-Version: 2022-11-28" \
-			orgs/"${Organization}"/repos?per_page=100\&page=${Page} | \jq -r '.[].full_name'
-	)" | \tr -d '\r')
+for Organization in "${Organization[@]}"; do
+	for ((Page = 1; Page <= 20; Page++)); do
+		\mapfile -t Temporary < <(\printf "%s" "$(
+			\gh api \
+				-H "Accept: application/vnd.github+json" \
+				-H "X-GitHub-Api-Version: 2022-11-28" \
+				orgs/"${Organization}"/repos?per_page=100\&page=${Page} | \jq -r '.[].full_name'
+		)" | \tr -d '\r')
 
-	for Temporary in "${TemporaryRepository[@]}"; do
-		Flag=false
+		for Temporary in "${Temporary[@]}"; do
+			Flag=false
 
-		for RepositoryOmit in "${Omit[@]}"; do
-			if [ "$Temporary" = "$RepositoryOmit" ]; then
-				Flag=true
+			for RepositoryOmit in "${Omit[@]}"; do
+				if [ "$Temporary" = "$RepositoryOmit" ]; then
+					Flag=true
 
-				break
+					break
+				fi
+			done
+
+			if [ "$Flag" = false ]; then
+				Repository+=("$Temporary")
 			fi
+
+			# TODO: Add these to the cache
+			# Sync/Repository
+
+			# ```sh
+			# Main=$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/')
+			# Main=$(\echo "$Main" | \sed 's/\/$//')
+			# Main=$(\gh repo view "$Main" --json defaultBranchRef | \jq -r -c '.defaultBranchRef.name')
+			# ```
+
+			# # Configure/Repository
+
+			# ```sh
+			# Upstream=$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/')
+
+			# if [[ "$Upstream" != "null/null" ]]; then
+			# 	Upstream="ssh://git@github.com/${Upstream}"
+			# 	Upstream=$(\echo "$Upstream" | \sed 's/\/$/\.git/')
+
+			# 	\echo "Upstream: "
+			# 	\echo "$Upstream"
+
+			# 	\git remote remove upstream
+			# 	\git remote add upstream "$Upstream"
+			# 	\git remote set-url upstream "$Upstream"
+			# fi
+			# ```
 		done
-
-		if [ "$Flag" = false ]; then
-			Repository+=("$Temporary")
-		fi
-
-		# TODO: Add these to the cache
-		# Sync/Repository
-
-		# ```sh
-		# Main=$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/')
-		# Main=$(\echo "$Main" | \sed 's/\/$//')
-		# Main=$(\gh repo view "$Main" --json defaultBranchRef | \jq -r -c '.defaultBranchRef.name')
-		# ```
-
-		# # Configure/Repository
-
-		# ```sh
-		# Upstream=$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/')
-
-		# if [[ "$Upstream" != "null/null" ]]; then
-		# 	Upstream="ssh://git@github.com/${Upstream}"
-		# 	Upstream=$(\echo "$Upstream" | \sed 's/\/$/\.git/')
-
-		# 	\echo "Upstream: "
-		# 	\echo "$Upstream"
-
-		# 	\git remote remove upstream
-		# 	\git remote add upstream "$Upstream"
-		# 	\git remote set-url upstream "$Upstream"
-		# fi
-		# ```
 	done
+
+	\mapfile -t Repository < <(\printf "%s\n" "${Repository[@]}" | \sort)
+
+	\printf "%s\n" "${Repository[@]}" >"$Directory"/Repository/CodeEditorLand
 done
-
-\mapfile -t Repository < <(\printf "%s\n" "${Repository[@]}" | \sort)
-
-\printf "%s\n" "${Repository[@]}" >"$Directory"/Repository/CodeEditorLand
