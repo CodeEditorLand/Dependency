@@ -3,7 +3,7 @@ use std::process::Command;
 fn main() {
 	println!("Process: Sync/Repository.sh");
 
-	// Context: CodeEditorLand/Property/Stream
+	// Context: CodeEditorLand/Property/Foundation
 	for repository in read_array(
 		&std::fs::read_to_string(
 			std::env::current_dir()

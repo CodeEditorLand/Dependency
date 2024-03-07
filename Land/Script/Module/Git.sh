@@ -2,13 +2,13 @@
 
 \echo "Process: Module/Git.sh"
 
-# Context: CodeEditorLand/Property/Stream
+# Context: CodeEditorLand/Property/Foundation
 
 Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
 \readarray -t Repository <"$Directory"/../Cache/Repository/CodeEditorLand
 
-\rm -rf "$Directory"/../../Stream/.gitmodules
+\rm -rf "$Directory"/../../Foundation/.gitmodules
 
 for Repository in "${Repository[@]}"; do
 	Folder="${Repository/'CodeEditorLand/'/}"
@@ -34,7 +34,7 @@ for Repository in "${Repository[@]}"; do
 
 	EOM
 
-	\echo "$Submodule" >>"$Directory"/../../Stream/.gitmodules
+	\echo "$Submodule" >>"$Directory"/../../Foundation/.gitmodules
 
 	\cd - || \exit
 done

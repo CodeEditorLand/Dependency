@@ -3,7 +3,7 @@ use std::{env, fs, process::Command};
 fn main() {
 	println!("Process: Setting/Repository.sh");
 
-	// Context: CodeEditorLand/Property/Stream
+	// Context: CodeEditorLand/Property/Foundation
 
 	for repository in std::fs::read_to_string(
 		std::env::current_dir()

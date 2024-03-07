@@ -2,7 +2,7 @@
 
 \echo "Process: Move/package.sh"
 
-# Context: CodeEditorLand/Property/Stream
+# Context: CodeEditorLand/Property/Foundation
 
 Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 

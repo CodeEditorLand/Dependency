@@ -3,7 +3,7 @@ use std::{fs::File, io::prelude::*, process::Command};
 fn main() {
 	println!("Process: Module/Git.sh");
 
-	// Context: CodeEditorLand/Property/Stream
+	// Context: CodeEditorLand/Property/Foundation
 	let directory = std::env::current_dir().expect("Failed to get current directory");
 	let cache_path = directory.join("../Cache/Repository/Build.md");
 
