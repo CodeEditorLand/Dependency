@@ -1,6 +1,6 @@
 #!/bin/bash
 
-\echo "Process: Switch/Branch/Stream.sh"
+\echo "Process: Switch/Branch/Previous.sh"
 
 # Context: CodeEditorLand/Property/Foundation
 
@@ -16,9 +16,9 @@ for Repository in "${Repository[@]}"; do
 	# Upstream=$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/')
 
 	# if [[ "$Upstream" != "null/null" ]]; then
-	\git switch -c stream
-	\git switch stream
-	\git push --set-upstream origin stream --force
+	\git switch -c previous
+	\git switch previous
+	\git push --set-upstream origin previous --force
 	# fi
 
 	\cd - || \exit

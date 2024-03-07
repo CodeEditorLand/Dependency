@@ -16,9 +16,9 @@ for Repository in "${Repository[@]}"; do
 	# Upstream=$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/')
 
 	# if [[ "$Upstream" != "null/null" ]]; then
-	\git switch -c repository
-	\git switch repository
-	\git push --set-upstream origin repository --force
+	\git switch -c current
+	\git switch current
+	\git push --set-upstream origin current --force
 	# fi
 
 	\cd - || \exit
