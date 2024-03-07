@@ -6,7 +6,7 @@
 
 Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 
-Organization="CodeEditorLand"
+Organization=("CodeEditorLand")
 
 Repository=()
 
@@ -152,7 +152,7 @@ Omit=(
 	"CodeEditorLand/tauri-toml"
 )
 
-for ((Page = 1; Page <= 10; Page++)); do
+for ((Page = 1; Page <= 20; Page++)); do
 	\mapfile -t TemporaryRepository < <(\printf "%s" "$(
 		\gh api \
 			-H "Accept: application/vnd.github+json" \
