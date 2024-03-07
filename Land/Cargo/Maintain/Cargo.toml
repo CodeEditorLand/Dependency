@@ -1,0 +1,30 @@
+[package]
+autobenches = false
+autobins = false
+autoexamples = false
+autotests = false
+default-run = "Maintain"
+documentation = "https://docs.maintain.land.playform.cloud"
+edition = "2021"
+homepage = "https://maintain.land.playform.cloud"
+license-file = "LICENSE"
+name = "Maintain"
+publish = false
+repository = "https://github.com/CodeEditorLand/CargoMaintain"
+version = "0.0.1"
+
+[[bin]]
+name = "Maintain"
+path = "Source/Fn/Binary/Maintain.rs"
+
+[lib]
+name = "Library"
+path = "Source/Library.rs"
+
+[dependencies]
+clap = { version = "4.5.2", features = ["cargo"] }
+proc_use = "0.2.1"
+rayon = "1.9.0"
+serde = { version = "1.0.197", features = ["derive"] }
+serde_json = "1.0.114"
+toml = "0.8.10"

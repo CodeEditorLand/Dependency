@@ -1,0 +1,11 @@
+[submodule "Document"]
+path = Document
+url = ssh://git@github.com/CodeEditorLand/CargoDocument.git
+
+[submodule "Maintain"]
+path = Maintain
+url = ssh://git@github.com/CodeEditorLand/CargoMaintain.git
+
+[submodule "Runtime"]
+path = Runtime
+url = ssh://git@github.com/CodeEditorLand/CargoRuntime.git

@@ -1,0 +1,11 @@
+[submodule "Stream"]
+path = Stream
+url = ssh://git@github.com/CodeEditorLand/StreamLand.git
+
+[submodule "Cargo"]
+path = Cargo
+url = ssh://git@github.com/CodeEditorLand/CargoLand.git
+
+[submodule "NPM"]
+path = NPM
+url = ssh://git@github.com/CodeEditorLand/NPMLand.git

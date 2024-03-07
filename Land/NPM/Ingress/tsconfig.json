@@ -1,0 +1,10 @@
+{
+	"compilerOptions": {
+		"baseUrl": "./",
+		"lib": ["ESNext"],
+		"outDir": "Target",
+		"types": ["@cloudflare/workers-types/experimental", "@types/node"],
+	},
+	"extends": "typescript-esbuild/Target/Notation/TypeScript",
+	"include": ["Source"],
+}

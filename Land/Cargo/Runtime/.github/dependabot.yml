@@ -1,0 +1,32 @@
+version: 2
+enable-beta-ecosystems: true
+
+updates:
+    - package-ecosystem: "github-actions"
+      directory: "/"
+      schedule:
+          interval: "daily"
+
+    - package-ecosystem: "cargo"
+      directory: "/"
+      schedule:
+          interval: "daily"
+      versioning-strategy: lockfile-only
+
+    - package-ecosystem: "npm"
+      directory: "/example/functions"
+      schedule:
+          interval: "daily"
+      versioning-strategy: increase
+
+    - package-ecosystem: "npm"
+      directory: "/example/infrastructure"
+      schedule:
+          interval: "daily"
+      versioning-strategy: increase
+
+    - package-ecosystem: "npm"
+      directory: "/"
+      schedule:
+          interval: "daily"
+      versioning-strategy: increase
