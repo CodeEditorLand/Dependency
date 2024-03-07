@@ -1,6 +1,6 @@
 #!/bin/bash
 
-\echo "Process: Switch/Branch/Repository.sh"
+\echo "Process: Switch/Branch/Current.sh"
 
 # Context: CodeEditorLand/Property/Foundation
 
