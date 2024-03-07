@@ -2,7 +2,7 @@
 
 \echo "Process: Rename/Repository.sh"
 
-# Context: CodeEditorLand/Environment/Stream
+# Context: CodeEditorLand/Tauri/Stream
 
 Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 

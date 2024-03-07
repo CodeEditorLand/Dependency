@@ -6,7 +6,7 @@
 
 Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
-\readarray -t Repository <"$Directory"/../Cache/Repository/CodeEditorLand.md
+\readarray -t Repository <"$Directory"/../Cache/Repository/CodeEditorLand
 
 \rm -rf "$Directory"/../../Stream/.gitmodules
 

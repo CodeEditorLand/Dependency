@@ -321,10 +321,6 @@ Repository=(
 
 # 3) Fork
 
-Script() {
-	\gh repo fork "$1" --org CodeEditorLand
-}
-
-export -f Script
-
-parallel --jobs 6 Script ::: "${Repository[@]}"
+for Repository in "${Repository[@]}"; do
+	\gh repo fork "$Repository" --org CodeEditorLand
+done
