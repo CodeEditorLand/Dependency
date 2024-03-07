@@ -2,7 +2,7 @@
 
 \echo "Process: Restore/package.json.sh"
 
-# Context: CodeEditorLand/Property/Foundation
+# Context: CodeEditorLand/Property/Land/Foundation
 
 Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 

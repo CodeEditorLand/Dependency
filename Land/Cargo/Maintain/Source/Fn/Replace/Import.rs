@@ -3,7 +3,7 @@ use std::process::Command;
 fn main() {
 	println!("Process: Replace/Import.sh");
 
-	// Context: CodeEditorLand/Property/Foundation
+	// Context: CodeEditorLand/Property/Land/Foundation
 
 	for repository in read_array(
 		&std::env::current_dir()

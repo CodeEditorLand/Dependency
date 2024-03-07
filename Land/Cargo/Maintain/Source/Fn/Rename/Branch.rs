@@ -3,7 +3,7 @@ use std::process::Command;
 fn main() {
 	println!("Process: Rename/Branch.sh");
 
-	// Context: CodeEditorLand/Property/Foundation
+	// Context: CodeEditorLand/Property/Land/Foundation
 	let directory = std::env::current_dir().expect("Failed to get current directory");
 	let cache_path = directory.join("../Cache/Repository/Build.md");
 
