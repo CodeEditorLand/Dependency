@@ -3,7 +3,7 @@ use std::process::Command;
 fn main() {
 	println!("Process: Replace/Copyright.sh");
 
-	// Context: CodeEditorLand/Environment/Stream
+	// Context: CodeEditorLand/Property/Stream
 
 	for repository in read_array(
 		&std::env::current_dir()

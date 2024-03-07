@@ -1,5 +1,5 @@
 [workspace]
-members = ["Cargo/Maintain"]
+members = ["Land/Cargo/Document", "Land/Cargo/Maintain", "Land/Cargo/Runtime"]
 resolver = "2"
 
 [workspace.package]
@@ -10,4 +10,4 @@ homepage = "https://land.playform.cloud/"
 license-file = "LICENSE"
 publish = false
 readme = "README.md"
-repository = "https://github.com/CodeEditorLand/Environment"
+repository = "https://github.com/CodeEditorLand/Property"

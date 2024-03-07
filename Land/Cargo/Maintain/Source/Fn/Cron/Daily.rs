@@ -3,7 +3,7 @@ use std::{env, fs, path::Path};
 fn main() {
 	println!("Process: Daily.rs");
 
-	// Context: CodeEditorLand/Environment/Stream
+	// Context: CodeEditorLand/Property/Stream
 	let current = env::current_dir().expect("Failed to get current directory");
 
 	run_script(&current.join("Cache").join("Get.sh"));

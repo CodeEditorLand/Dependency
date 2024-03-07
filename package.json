@@ -2,13 +2,13 @@
 	"name": "codeeditorland",
 	"version": "0.0.1",
 	"private": false,
-	"homepage": "https://github.com/CodeEditorLand/Environment#readme",
+	"homepage": "https://github.com/CodeEditorLand/Property#readme",
 	"bugs": {
-		"url": "https://github.com/CodeEditorLand/Environment/issues"
+		"url": "https://github.com/CodeEditorLand/Property/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/CodeEditorLand/Environment.git"
+		"url": "git+https://github.com/CodeEditorLand/Property.git"
 	},
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {

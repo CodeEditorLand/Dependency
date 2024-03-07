@@ -3,7 +3,7 @@ use std::process::Command;
 fn main() {
 	println!("Process: Sort/Detail.sh");
 
-	// Context: CodeEditorLand/Environment/Stream
+	// Context: CodeEditorLand/Property/Stream
 
 	for repository in std::fs::read_to_string(
 		std::env::current_dir()
