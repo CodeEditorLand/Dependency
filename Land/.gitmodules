@@ -1,6 +1,6 @@
-[submodule "Foundation"]
-path = Foundation
-url = ssh://git@github.com/CodeEditorLand/FoundationLand.git
+[submodule "Component"]
+path = Component
+url = ssh://git@github.com/CodeEditorLand/ComponentLand.git
 
 [submodule "Cargo"]
 path = Cargo
