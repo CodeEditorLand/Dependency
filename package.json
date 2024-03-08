@@ -35,10 +35,10 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.5.3",
-		"@yesmaintain/cli": "0.0.1",
+		"@yesmaintain/cli": "0.0.2",
 		"sort-package-json": "2.8.0",
 		"turbo": "1.12.5",
-		"typescript-esbuild": "0.3.11"
+		"typescript-esbuild": "0.3.12"
 	},
 	"publishConfig": {
 		"access": "public"
