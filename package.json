@@ -35,7 +35,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.5.3",
-		"@yesmaintain/cli": "0.0.11",
+		"@yesmaintain/cli": "0.0.1",
 		"sort-package-json": "2.8.0",
 		"turbo": "1.12.5",
 		"typescript-esbuild": "0.3.11"
