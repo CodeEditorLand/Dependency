@@ -21,15 +21,15 @@ Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 # "$Directory"/Switch/Branch/Current.sh
 # "$Directory"/Reset/Service.sh
 
-# "$Directory"/Default/Branch/Repository.sh
+# "$Directory"/Default/Branch/Service.sh
 
-"$Directory"/Clean/Repository.sh
-"$Directory"/Clean/Detail.sh
-"$Directory"/Move/license.sh
-"$Directory"/Move/package.sh
-"$Directory"/Move/src.sh
-"$Directory"/Append/Detail.sh
-"$Directory"/Sort/Detail.sh
+# "$Directory"/Clean/Repository.sh
+# "$Directory"/Clean/Detail.sh
+# "$Directory"/Move/license.sh
+# "$Directory"/Move/package.sh
+# "$Directory"/Move/src.sh
+# "$Directory"/Append/Detail.sh
+# "$Directory"/Sort/Detail.sh
 
 Maintain Workflow
 

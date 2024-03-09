@@ -1,6 +1,6 @@
 #!/bin/bash
 
-\echo "Process: Reset/Repository.sh"
+\echo "Process: Reset/Service.sh"
 
 # Contextless
 

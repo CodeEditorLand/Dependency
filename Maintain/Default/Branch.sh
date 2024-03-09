@@ -1,6 +1,6 @@
 #!/bin/bash
 
-\echo "Process: Clean/Detail.sh"
+\echo "Process: Default/Branch/Repository.sh"
 
 # Contextless
 
@@ -27,6 +27,13 @@ if [ $# -gt 0 ]; then
 		\echo "Cannot Foundation."
 		\exit 1
 	fi
+
+	if [ -n "$4" ]; then
+		Branch=$4
+	else
+		\echo "Cannot Branch."
+		\exit 1
+	fi
 fi
 
 Git="$Current"/../../"$Foundation"/Service
@@ -39,7 +46,7 @@ for Organization in "${Organization[@]}"; do
 
 		\pwd
 
-		\find . -type d \( -iname node_modules -o -iname vendor -o -iname dist -o -iname target -o -iname \.git -o -iname \.next \) -prune -false -o -iname package.json -type f -execdir bash -c "$Current"/../Action/Clean/Detail.sh \;
+		\gh repo edit --default-branch "$Branch"
 
 		\cd - || \exit
 	done
