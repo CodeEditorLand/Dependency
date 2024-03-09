@@ -3,7 +3,7 @@
 Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
 # shellcheck disable=SC1091
-source "$Current"/../Fn/Argument.sh
+\source "$Current"/../Fn/Argument.sh
 
 Fn "$@"
 
@@ -16,6 +16,7 @@ if [ $# -gt 0 ]; then
 	fi
 fi
 
+# shellcheck disable=SC2154
 Git="$Current"/../../"$Foundation"/Service
 
 for Organization in "${Organization[@]}"; do
