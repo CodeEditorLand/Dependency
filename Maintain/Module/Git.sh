@@ -37,12 +37,18 @@ for Service in "${Service[@]}"; do
 	\echo "Origin: "
 	\echo "$Origin"
 
-	\read -r -d '' Submodule <<-EOM
-		[submodule "${Folder}"]
-		path = ${Folder}
-		url = ${Origin}
+	\cd "$Git" || \exit
 
-	EOM
+	git submodule add "$Origin" "$Folder"
 
-	\echo "$Submodule" >>"$Git"/.gitmodules
+	\cd - || \exit
+
+	# \read -r -d '' Submodule <<-EOM
+	# 	[submodule "${Folder}"]
+	# 	path = ${Folder}
+	# 	url = ${Origin}
+
+	# EOM
+
+	# \echo "$Submodule" >>"$Git"/.gitmodules
 done
