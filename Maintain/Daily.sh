@@ -11,7 +11,7 @@ Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 # "$Directory"/Clone/Service.sh
 # "$Directory"/Module/Foundation.sh
 
-# "$Directory"/Configure/Repository.sh
+# "$Directory"/Configure/Service.sh
 # "$Directory"/Setting/Repository.sh
 # "$Directory"/Rename/Repository.sh
 
