@@ -1,7 +1,6 @@
 #!/bin/bash
 
 \echo "Process: Cache/Get.sh"
-\printf "Arguments: %s\n" "$*"
 
 # Contextless
 
@@ -11,21 +10,21 @@ if [ $# -gt 0 ]; then
 	if [ -f "$1" ]; then
 		\mapfile -t Organization < <(jq -r '.[]' "$1" | \tr -d '\r')
 	else
-		\echo "Error: Organization file not found: $1"
+		\echo "Cannot Organization."
 		\exit 1
 	fi
 
 	if [ -f "$2" ]; then
 		mapfile -t Omit < <(jq -r '.[]' "$2" | \tr -d '\r')
 	else
-		\echo "Error: Omit file not found: $2"
+		\echo "Cannot Omit."
 		\exit 1
 	fi
 
 	if [ -n "$3" ]; then
 		Service=$3
 	else
-		\echo "Error: No Service specificed: $3"
+		\echo "Cannot Service."
 		\exit 1
 	fi
 fi

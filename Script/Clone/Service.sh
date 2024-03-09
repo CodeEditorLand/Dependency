@@ -8,7 +8,7 @@ if [ $# -gt 0 ]; then
 	if [ -f "$1" ]; then
 		\mapfile -t Service < <(jq -r '.[]' "$1" | \tr -d '\r')
 	else
-		\echo "Error: Service file not found: $1"
+		\echo "Cannot Service."
 		\exit 1
 	fi
 fi

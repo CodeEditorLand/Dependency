@@ -10,12 +10,19 @@ if [ $# -gt 0 ]; then
 	if [ -f "$1" ]; then
 		\mapfile -t Service < <(jq -r '.[]' "$1" | \tr -d '\r')
 	else
-		\echo "Error: Service file not found: $1"
+		\echo "Cannot Service."
 		\exit 1
+	fi
+
+	if [ -n "$2" ]; then
+		Foundation=$2
+	else
+		\echo "Cannot Foundation."
+		\exit 2
 	fi
 fi
 
-\rm -rf "$Current"/../../Foundation/.gitmodules
+\rm -rf "$Current"/../../Foundation/"$Foundation"/Service/.gitmodules
 
 for Service in "${Service[@]}"; do
 	Folder="${Service/'CodeEditorLand/'/}"
@@ -41,7 +48,7 @@ for Service in "${Service[@]}"; do
 
 	EOM
 
-	\echo "$Submodule" >>"$Current"/../../Foundation/.gitmodules
+	\echo "$Submodule" >>"$Current"/../../Foundation/"$Foundation"/Service/.gitmodules
 
 	\cd - || \exit
 done
