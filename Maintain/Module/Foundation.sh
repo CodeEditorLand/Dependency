@@ -1,6 +1,6 @@
 #!/bin/bash
 
-\echo "Process: Clone/Service.sh"
+\echo "Process: Module/Foundation.sh"
 
 # Contextless
 
@@ -33,9 +33,19 @@ Git="$Current"/../../"$Foundation"/Service
 
 for Organization in "${Organization[@]}"; do
 	for Service in "${Service[@]}"; do
+		Origin="ssh://git@github.com/${Service}.git"
+
+		Folder="${Service/"${Organization}/"/}"
+
+		\echo "Folder: "
+		\echo "$Folder"
+
+		\echo "Origin: "
+		\echo "$Origin"
+
 		\cd "$Git" || \exit
 
-		\git clone --filter=tree:0 --depth=1 --recurse-submodules --shallow-submodules "ssh://git@github.com/${Service}.git" "$Service"
+		git submodule add --depth=1 "$Origin" "$Folder"
 
 		\cd - || \exit
 	done
