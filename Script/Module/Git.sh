@@ -22,36 +22,27 @@ if [ $# -gt 0 ]; then
 	fi
 fi
 
-Git="$Current"/../../Foundation/"$Foundation"/Service
+Git="$Current"/../../"$Foundation"/Service
 
 \rm -rf "$Git"/.gitmodules
 
 for Service in "${Service[@]}"; do
-	Folder=$Git/"${Service/'CodeEditorLand/'/}"
+	Folder="${Service/'CodeEditorLand/'/}"
 
-	echo "$Folder"
-	# \cd "$Folder" || \exit
+	Origin="ssh://git@github.com/${Service}.git"
 
-	# \pwd
+	\echo "Folder: "
+	\echo "$Folder"
 
-	# \gh repo set-default "$(\git remote get-url origin)"
+	\echo "Origin: "
+	\echo "$Origin"
 
-	# Origin="ssh://git@github.com/${Service}.git"
+	\read -r -d '' Submodule <<-EOM
+		[submodule "${Folder}"]
+		path = ${Folder}
+		url = ${Origin}
 
-	# \echo "Folder: "
-	# \echo "$Folder"
+	EOM
 
-	# \echo "Origin: "
-	# \echo "$Origin"
-
-	# \read -r -d '' Submodule <<-EOM
-	# 	[submodule "${Folder}"]
-	# 	path = ${Folder}
-	# 	url = ${Origin}
-
-	# EOM
-
-	# \echo "$Submodule" >>"$Git"/.gitmodules
-
-	\cd - || \exit
+	\echo "$Submodule" >>"$Git"/.gitmodules
 done
