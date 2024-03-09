@@ -39,8 +39,8 @@ for Organization in "${Organization[@]}"; do
 		for Temporary in "${Temporary[@]}"; do
 			Flag=false
 
-			for RepositoryOmit in "${Omit[@]}"; do
-				if [ "$Temporary" = "$RepositoryOmit" ]; then
+			for Omit in "${Omit[@]}"; do
+				if [ "$Temporary" = "$Omit" ]; then
 					Flag=true
 
 					break
