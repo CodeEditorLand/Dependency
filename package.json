@@ -34,7 +34,7 @@
 		"start": "turbo run start"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "1.5.3",
+		"@biomejs/biome": "1.6.0",
 		"@yesmaintain/cli": "0.0.2",
 		"sort-package-json": "2.8.0",
 		"turbo": "1.12.5",

@@ -18,9 +18,9 @@ if [ $# -gt 0 ]; then
 	fi
 
 	if [ -n "$3" ]; then
-		Service=$3
+		Foundation=$3
 	else
-		\echo "Cannot Service."
+		\echo "Cannot Foundation."
 		\exit 1
 	fi
 fi
@@ -82,5 +82,5 @@ for Organization in "${Organization[@]}"; do
 
 	\mapfile -t Repository < <(\printf "%s\n" "${Repository[@]}" | \sort)
 
-	\printf '%s\n' "${Repository[@]}" | jq -R . | jq -s . >"$Current"/Service/"$Service".json
+	\printf '%s\n' "${Repository[@]}" | jq -R . | jq -s . >"$Current"/Service/"$Foundation".json
 done
