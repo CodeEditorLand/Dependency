@@ -2,7 +2,7 @@
 
 \echo "Process: Module/Git.sh"
 
-# Context: CodeEditorLand/Foundation/$Foundation/Service
+# Contextless
 
 Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
@@ -22,33 +22,36 @@ if [ $# -gt 0 ]; then
 	fi
 fi
 
-\rm -rf "$Current"/../../Foundation/"$Foundation"/Service/.gitmodules
+Git="$Current"/../../Foundation/"$Foundation"/Service
+
+\rm -rf "$Git"/.gitmodules
 
 for Service in "${Service[@]}"; do
-	Folder="${Service/'CodeEditorLand/'/}"
+	Folder=$Git/"${Service/'CodeEditorLand/'/}"
 
-	\cd "$Folder" || \exit
+	echo "$Folder"
+	# \cd "$Folder" || \exit
 
-	\pwd
+	# \pwd
 
-	\gh repo set-default "$(\git remote get-url origin)"
+	# \gh repo set-default "$(\git remote get-url origin)"
 
-	Origin="ssh://git@github.com/${Service}.git"
+	# Origin="ssh://git@github.com/${Service}.git"
 
-	\echo "Folder: "
-	\echo "$Folder"
+	# \echo "Folder: "
+	# \echo "$Folder"
 
-	\echo "Origin: "
-	\echo "$Origin"
+	# \echo "Origin: "
+	# \echo "$Origin"
 
-	\read -r -d '' Submodule <<-EOM
-		[submodule "${Folder}"]
-		path = ${Folder}
-		url = ${Origin}
+	# \read -r -d '' Submodule <<-EOM
+	# 	[submodule "${Folder}"]
+	# 	path = ${Folder}
+	# 	url = ${Origin}
 
-	EOM
+	# EOM
 
-	\echo "$Submodule" >>"$Current"/../../Foundation/"$Foundation"/Service/.gitmodules
+	# \echo "$Submodule" >>"$Git"/.gitmodules
 
 	\cd - || \exit
 done
