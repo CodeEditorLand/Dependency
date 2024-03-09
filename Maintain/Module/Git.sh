@@ -24,31 +24,20 @@ fi
 
 Git="$Current"/../../"$Foundation"/Service
 
-\rm -rf "$Git"/.gitmodules
-
 for Service in "${Service[@]}"; do
-	Folder="${Service/'CodeEditorLand/'/}"
+	Service="${Service/'CodeEditorLand/'/}"
 
 	Origin="ssh://git@github.com/${Service}.git"
 
-	\echo "Folder: "
-	\echo "$Folder"
+	\echo "Service: "
+	\echo "$Service"
 
 	\echo "Origin: "
 	\echo "$Origin"
 
 	\cd "$Git" || \exit
 
-	git submodule add "$Origin" "$Folder"
+	git submodule add --depth=1 "$Origin" "$Service"
 
 	\cd - || \exit
-
-	# \read -r -d '' Submodule <<-EOM
-	# 	[submodule "${Folder}"]
-	# 	path = ${Folder}
-	# 	url = ${Origin}
-
-	# EOM
-
-	# \echo "$Submodule" >>"$Git"/.gitmodules
 done
