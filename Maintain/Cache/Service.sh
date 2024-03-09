@@ -25,7 +25,7 @@ if [ $# -gt 0 ]; then
 	fi
 fi
 
-Repository=()
+Service=()
 
 for Organization in "${Organization[@]}"; do
 	for ((Page = 1; Page <= 20; Page++)); do
@@ -39,8 +39,8 @@ for Organization in "${Organization[@]}"; do
 		for Temporary in "${Temporary[@]}"; do
 			Flag=false
 
-			for Omit in "${Omit[@]}"; do
-				if [ "$Temporary" = "$Omit" ]; then
+			for ServiceOmit in "${Omit[@]}"; do
+				if [ "$Temporary" = "$ServiceOmit" ]; then
 					Flag=true
 
 					break
@@ -48,11 +48,11 @@ for Organization in "${Organization[@]}"; do
 			done
 
 			if [ "$Flag" = false ]; then
-				Repository+=("$Temporary")
+				Service+=("$Temporary")
 			fi
 
 			# TODO: Add these to the cache
-			# Sync/Repository
+			# Sync/Service
 
 			# ```sh
 			# Main=$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/')
@@ -60,7 +60,7 @@ for Organization in "${Organization[@]}"; do
 			# Main=$(\gh repo view "$Main" --json defaultBranchRef | \jq -r -c '.defaultBranchRef.name')
 			# ```
 
-			# # Configure/Repository
+			# # Configure/Service
 
 			# ```sh
 			# Upstream=$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/')
@@ -80,7 +80,7 @@ for Organization in "${Organization[@]}"; do
 		done
 	done
 
-	\mapfile -t Repository < <(\printf "%s\n" "${Repository[@]}" | \sort)
+	\mapfile -t Service < <(\printf "%s\n" "${Service[@]}" | \sort)
 
-	\printf '%s\n' "${Repository[@]}" | jq -R . | jq -s . >"$Current"/Service/"$Foundation".json
+	\printf '%s\n' "${Service[@]}" | jq -R . | jq -s . >"$Current"/Service/"$Foundation".json
 done
