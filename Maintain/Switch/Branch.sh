@@ -1,6 +1,6 @@
 #!/bin/bash
 
-\echo "Process: Rename/Service.sh"
+\echo "Process: Switch/Branch.sh"
 
 # Contextless
 
@@ -27,6 +27,13 @@ if [ $# -gt 0 ]; then
 		\echo "Cannot Foundation."
 		\exit 1
 	fi
+
+	if [ -n "$4" ]; then
+		Branch=$4
+	else
+		\echo "Cannot Branch."
+		\exit 1
+	fi
 fi
 
 Git="$Current"/../../"$Foundation"/Service
@@ -39,31 +46,9 @@ for Organization in "${Organization[@]}"; do
 
 		\pwd
 
-		Rename=""
-
-		Rename=$(\tr '[:lower:]' '[:upper:]' <<<"${Folder:0:1}")
-
-		for ((i = 1; i < ${#Folder}; i++)); do
-			if [ "${Folder:i:1}" = "-" ]; then
-				Next="${Folder:i+1:1}"
-				if [[ "$Next" =~ [a-z] ]]; then
-					Upper=$(\tr '[:lower:]' '[:upper:]' <<<"$Next")
-					Rename="${Rename}${Upper}"
-					((i++))
-				else
-					Rename="${Rename}-"
-				fi
-			else
-				Rename="${Rename}${Folder:i:1}"
-			fi
-		done
-
-		Rename=$(\echo "$Rename" | \sed -E "s/vscode/Land/gI")
-
-		\echo "Rename: "
-		\echo "$Rename"
-
-		\gh repo rename "$Rename" --yes
+		\git switch -c "$Branch"
+		\git switch "$Branch"
+		\git push --set-upstream origin "$Branch" --force
 
 		\cd - || \exit
 	done

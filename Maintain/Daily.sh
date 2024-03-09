@@ -12,14 +12,14 @@ Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 # "$Directory"/Module/Foundation.sh
 
 # "$Directory"/Configure/Service.sh
-# "$Directory"/Setting/Repository.sh
-# "$Directory"/Rename/Repository.sh
+# "$Directory"/Setting/Service.sh
+# "$Directory"/Rename/Service.sh
 
-# "$Directory"/Sync/Repository.sh
+# "$Directory"/Sync/Service.sh
 # "$Directory"/Switch/Branch/Previous.sh
-# "$Directory"/Reset/Repository.sh
-"$Directory"/Switch/Branch/Current.sh
-# "$Directory"/Reset/Repository.sh
+# "$Directory"/Reset/Service.sh
+# "$Directory"/Switch/Branch/Current.sh
+# "$Directory"/Reset/Service.sh
 
 # "$Directory"/Default/Branch/Repository.sh
 

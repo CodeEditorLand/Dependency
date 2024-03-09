@@ -1,6 +1,6 @@
 #!/bin/bash
 
-\echo "Process: Rename/Service.sh"
+\echo "Process: Sync/Repository.sh"
 
 # Contextless
 
@@ -39,31 +39,18 @@ for Organization in "${Organization[@]}"; do
 
 		\pwd
 
-		Rename=""
+		\git add .
+		\git commit -m "squash!"
+		\git pull
+		\git push
 
-		Rename=$(\tr '[:lower:]' '[:upper:]' <<<"${Folder:0:1}")
+		\git fetch upstream --depth 1 --no-tags
 
-		for ((i = 1; i < ${#Folder}; i++)); do
-			if [ "${Folder:i:1}" = "-" ]; then
-				Next="${Folder:i+1:1}"
-				if [[ "$Next" =~ [a-z] ]]; then
-					Upper=$(\tr '[:lower:]' '[:upper:]' <<<"$Next")
-					Rename="${Rename}${Upper}"
-					((i++))
-				else
-					Rename="${Rename}-"
-				fi
-			else
-				Rename="${Rename}${Folder:i:1}"
-			fi
-		done
+		Main=$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/')
+		Main=$(\echo "$Main" | \sed 's/\/$//')
+		Main=$(\gh repo view "$Main" --json defaultBranchRef | \jq -r -c '.defaultBranchRef.name')
 
-		Rename=$(\echo "$Rename" | \sed -E "s/vscode/Land/gI")
-
-		\echo "Rename: "
-		\echo "$Rename"
-
-		\gh repo rename "$Rename" --yes
+		\git merge upstream/"$Main" --allow-unrelated-histories
 
 		\cd - || \exit
 	done
