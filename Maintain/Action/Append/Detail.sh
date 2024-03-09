@@ -1,9 +1,5 @@
 #!/bin/bash
 
-\echo "Process: Action/Append/Detail.sh"
-
-# Context: CodeEditorLand/Foundation/$Foundation/Service
-
 \pwd
 
 # TODO: Add dynamic { "repository": { "directory": Foundation/$Foundation/Service/$Service } }

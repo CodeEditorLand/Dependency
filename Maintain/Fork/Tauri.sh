@@ -1,7 +1,5 @@
 #!/bin/bash
 
-\echo "Process: Fork/Organization.sh"
-
 # 1) Page by page on https://github.com/orgs/microsoft/repositories?q=vscode&type=all&language=&sort= do:
 
 # document.querySelectorAll('.Link.d-inline-block[itemprop="name codeRepository"]').forEach(el => console.log(el.getAttribute('href')))

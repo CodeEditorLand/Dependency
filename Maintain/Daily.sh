@@ -1,9 +1,5 @@
 #!/bin/bash
 
-\echo "Process: Daily.sh"
-
-# Context: CodeEditorLand/Foundation/$Foundation/Service
-
 Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
 "$Directory"/Cache/Get.sh

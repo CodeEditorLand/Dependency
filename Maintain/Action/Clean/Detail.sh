@@ -1,9 +1,5 @@
 #!/bin/bash
 
-\echo "Process: Action/Clean/Detail.sh"
-
-# Context: CodeEditorLand/Foundation/$Foundation/Service
-
 \pwd
 
 \jq -S "del(.eslintConfig,.prettier,.peerDependencies,.engines,.tags,.categories,.keywords,.scripts.lint,.scripts.[\"lint-fix\"],.scripts.[\"lint:fix\"],.scripts.[\"lint:eslint\"],.scripts.[\"lint:client\"],.scripts.[\"lint:scripts\"],.scripts.[\"lint:server\"],.scripts.pretest,.scripts.test,.scripts.[\"test:lint\"],.scripts.[\"test:eslint-rules\"],.scripts.posttest,.test,.tslint,.check,.fix)" package.json >|package.json.tmp

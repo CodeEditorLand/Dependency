@@ -1,19 +1,42 @@
 #!/bin/bash
 
-\echo "Process: Append/Detail.sh"
+Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
-# Context: CodeEditorLand/Foundation/$Foundation/Service
+if [ $# -gt 0 ]; then
+	if [ -f "$1" ]; then
+		\mapfile -t Organization < <(jq -r '.[]' "$1" | \tr -d '\r')
+	else
+		\echo "Cannot Organization."
+		\exit 1
+	fi
 
-Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
+	if [ -f "$2" ]; then
+		\mapfile -t Service < <(jq -r '.[]' "$2" | \tr -d '\r')
+	else
+		\echo "Cannot Service."
+		\exit 1
+	fi
 
-\readarray -t Repository <"$Directory"/../Cache/Repository/CodeEditorLand
+	if [ -n "$3" ]; then
+		Foundation=$3
+	else
+		\echo "Cannot Foundation."
+		\exit 1
+	fi
+fi
 
-for Repository in "${Repository[@]}"; do
-	\cd "${Repository/'CodeEditorLand/'/}" || \exit
+Git="$Current"/../../"$Foundation"/Service
 
-	\pwd
+for Organization in "${Organization[@]}"; do
+	for Service in "${Service[@]}"; do
+		Folder="${Service/"${Organization}/"/}"
 
-	\find . -type d \( -iname node_modules -o -iname vendor -o -iname dist -o -iname target -o -iname \.git -o -iname \.next \) -prune -false -o -iname package.json -type f -execdir bash -c "$Directory"/../Action/Append/Detail.sh \;
+		\cd "$Git"/"$Folder" || \exit
 
-	\cd - || \exit
+		\pwd
+
+		\find . -type d \( -iname node_modules -o -iname vendor -o -iname dist -o -iname target -o -iname \.git -o -iname \.next \) -prune -false -o -iname package.json -type f -execdir bash -c "$Current"/../Action/Append/Detail.sh \;
+
+		\cd - || \exit
+	done
 done

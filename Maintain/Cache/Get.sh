@@ -1,9 +1,5 @@
 #!/bin/bash
 
-\echo "Process: Cache/Get.sh"
-
-# Contextless
-
 Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 
 if [ $# -gt 0 ]; then
@@ -15,7 +11,7 @@ if [ $# -gt 0 ]; then
 	fi
 
 	if [ -f "$2" ]; then
-		mapfile -t Omit < <(jq -r '.[]' "$2" | \tr -d '\r')
+		\mapfile -t Omit < <(jq -r '.[]' "$2" | \tr -d '\r')
 	else
 		\echo "Cannot Omit."
 		\exit 1

@@ -1,9 +1,5 @@
 #!/bin/bash
 
-\echo "Process: Configure/Service.sh"
-
-# Contextless
-
 Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
 if [ $# -gt 0 ]; then

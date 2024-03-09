@@ -1,21 +1,40 @@
 #!/bin/bash
 
-\echo "Process: Replace/Copyright.sh"
+Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
-# Context: CodeEditorLand/Foundation/$Foundation/Service
+if [ $# -gt 0 ]; then
+	if [ -f "$1" ]; then
+		\mapfile -t Organization < <(jq -r '.[]' "$1" | \tr -d '\r')
+	else
+		\echo "Cannot Organization."
+		\exit 1
+	fi
 
-Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
+	if [ -f "$2" ]; then
+		\mapfile -t Service < <(jq -r '.[]' "$2" | \tr -d '\r')
+	else
+		\echo "Cannot Service."
+		\exit 1
+	fi
 
-\readarray -t Repository <"$Directory"/../Cache/Repository/CodeEditorLand
+	if [ -n "$3" ]; then
+		Foundation=$3
+	else
+		\echo "Cannot Foundation."
+		\exit 1
+	fi
+fi
 
-Script() {
-	\cd "${1/'CodeEditorLand/'/}" || \exit
+Git="$Current"/../../"$Foundation"/Service
 
-	\pwd
+for Organization in "${Organization[@]}"; do
+	for Service in "${Service[@]}"; do
+		Folder="${Service/"${Organization}/"/}"
 
-	\cd - || \exit
-}
+		\cd "$Git"/"$Folder" || \exit
 
-export -f Script
+		\pwd
 
-parallel --jobs 6 Script ::: "${Repository[@]}"
+		\cd - || \exit
+	done
+done

@@ -1,32 +1,53 @@
 #!/bin/bash
 
-\echo "Process: Restore/.gitignore.sh"
+Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
-# Context: CodeEditorLand/Foundation/$Foundation/Service
+if [ $# -gt 0 ]; then
+	if [ -f "$1" ]; then
+		\mapfile -t Organization < <(jq -r '.[]' "$1" | \tr -d '\r')
+	else
+		\echo "Cannot Organization."
+		\exit 1
+	fi
 
-Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
+	if [ -f "$2" ]; then
+		\mapfile -t Service < <(jq -r '.[]' "$2" | \tr -d '\r')
+	else
+		\echo "Cannot Service."
+		\exit 1
+	fi
 
-\readarray -t Repository <"$Directory"/../Cache/Repository/CodeEditorLand
+	if [ -n "$3" ]; then
+		Foundation=$3
+	else
+		\echo "Cannot Foundation."
+		\exit 1
+	fi
+fi
 
-for Repository in "${Repository[@]}"; do
-	Folder="${Repository/'CodeEditorLand/'/}"
+Git="$Current"/../../"$Foundation"/Service
 
-	\cd "$Folder" || \exit
+for Organization in "${Organization[@]}"; do
+	for Service in "${Service[@]}"; do
+		Folder="${Service/"${Organization}/"/}"
 
-	\pwd
+		\cd "$Git"/"$Folder" || \exit
 
-	\git add .
-	\git commit -m "squash!"
-	\git pull
-	\git push
+		\pwd
 
-	\git fetch upstream --depth 1 --no-tags
+		\git add .
+		\git commit -m "squash!"
+		\git pull
+		\git push
 
-	Main=$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/')
-	Main=$(\echo "$Main" | \sed 's/\/$//')
-	Main=$(\gh repo view "$Main" --json defaultBranchRef | \jq -r -c '.defaultBranchRef.name')
+		\git fetch upstream --depth 1 --no-tags
 
-	\find . -type d \( -iname node_modules -o -iname vendor -o -iname dist -o -iname target -o -iname \.git -o -iname \.next \) -prune -false -o -iname .gitignore -type f -execdir bash -c "\git restore --source upstream/\"$Main\" .gitignore" \;
+		Main=$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/')
+		Main=$(\echo "$Main" | \sed 's/\/$//')
+		Main=$(\gh repo view "$Main" --json defaultBranchRef | \jq -r -c '.defaultBranchRef.name')
 
-	\cd - || \exit
+		\find . -type d \( -iname node_modules -o -iname vendor -o -iname dist -o -iname target -o -iname \.git -o -iname \.next \) -prune -false -o -iname .gitignore -type f -execdir bash -c "\git restore --source upstream/\"$Main\" .gitignore" \;
+
+		\cd - || \exit
+	done
 done
