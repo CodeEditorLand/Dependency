@@ -2,21 +2,46 @@
 
 \echo "Process: Move/license.sh"
 
-# Context: CodeEditorLand/Foundation/$Foundation/Service
+# Contextless
 
-Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
+Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
-\readarray -t Repository <"$Directory"/../Cache/Repository/CodeEditorLand
+if [ $# -gt 0 ]; then
+	if [ -f "$1" ]; then
+		\mapfile -t Organization < <(jq -r '.[]' "$1" | \tr -d '\r')
+	else
+		\echo "Cannot Organization."
+		\exit 1
+	fi
 
-for Repository in "${Repository[@]}"; do
-	Folder="${Repository/'CodeEditorLand/'/}"
+	if [ -f "$2" ]; then
+		\mapfile -t Service < <(jq -r '.[]' "$2" | \tr -d '\r')
+	else
+		\echo "Cannot Service."
+		\exit 1
+	fi
 
-	\cd "$Folder" || \exit
+	if [ -n "$3" ]; then
+		Foundation=$3
+	else
+		\echo "Cannot Foundation."
+		\exit 1
+	fi
+fi
 
-	\pwd
+Git="$Current"/../../"$Foundation"/Service
 
-	\find . -type d \( -iname node_modules -o -iname vendor -o -iname dist -o -iname target -o -iname \.git -o -iname \.next \) -prune -false -o -iname license.txt -type f -execdir mv {} LICENSE \;
-	\find . -type d \( -iname node_modules -o -iname vendor -o -iname dist -o -iname target -o -iname \.git -o -iname \.next \) -prune -false -o -iname license.md -type f -execdir mv {} LICENSE \;
+for Organization in "${Organization[@]}"; do
+	for Service in "${Service[@]}"; do
+		Folder="${Service/"${Organization}/"/}"
 
-	\cd - || \exit
+		\cd "$Git"/"$Folder" || \exit
+
+		\pwd
+
+		\find . -type d \( -iname node_modules -o -iname vendor -o -iname dist -o -iname target -o -iname \.git -o -iname \.next \) -prune -false -o -iname license.txt -type f -execdir mv {} LICENSE \;
+		\find . -type d \( -iname node_modules -o -iname vendor -o -iname dist -o -iname target -o -iname \.git -o -iname \.next \) -prune -false -o -iname license.md -type f -execdir mv {} LICENSE \;
+
+		\cd - || \exit
+	done
 done
