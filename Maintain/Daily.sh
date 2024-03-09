@@ -1,35 +1,116 @@
 #!/bin/bash
 
-Directory=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
+Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
-"$Directory"/Cache/Service.sh
+Foundation=(
+	"Land"
+	"Tauri"
+)
 
-# "$Directory"/Clone/Service.sh
-# "$Directory"/Module/Foundation.sh
+for Foundation in "${Foundation[@]}"; do
+	Organization="$Current"/Cache/Organization/"$Foundation".json
+	Omit="$Current"/Cache/Omit/"$Foundation".json
+	Service="$Current"/Cache/Service/"$Foundation".json
 
-# "$Directory"/Configure/Service.sh
-# "$Directory"/Setting/Service.sh
-# "$Directory"/Rename/Service.sh
+	"$Current"/Cache/Service.sh \
+		"$Organization" \
+		"$Omit" \
+		"$Foundation"
 
-# "$Directory"/Sync/Service.sh
-# "$Directory"/Switch/Branch/Previous.sh
-# "$Directory"/Reset/Service.sh
-# "$Directory"/Switch/Branch/Current.sh
-# "$Directory"/Reset/Service.sh
+	"$Current"/Module/Foundation.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
 
-# "$Directory"/Default/Branch/Service.sh
+	"$Current"/Configure/Service.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
 
-# "$Directory"/Clean/Repository.sh
-# "$Directory"/Clean/Detail.sh
-# "$Directory"/Move/license.sh
-# "$Directory"/Move/package.sh
-# "$Directory"/Move/src.sh
-# "$Directory"/Append/Detail.sh
-# "$Directory"/Sort/Detail.sh
+	"$Current"/Setting/Service.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
+
+	"$Current"/Rename/Service.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
+
+	"$Current"/Sync/Service.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
+
+	"$Current"/Switch/Branch.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation" \
+		"Previous"
+
+	"$Current"/Reset/Service.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
+
+	"$Current"/Switch/Branch.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation" \
+		"Current"
+
+	"$Current"/Default/Branch.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation" \
+		"Current"
+
+	"$Current"/Clean/Service.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
+
+	"$Current"/Clean/Detail.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
+
+	"$Current"/Move/license.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
+
+	"$Current"/Move/package.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
+
+	"$Current"/Move/src.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
+
+	"$Current"/Append/Detail.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
+
+	"$Current"/Sort/Detail.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
+
+	biome check "$Current"/../"$Foundation" --apply-unsafe
+
+	"$Current"/Restore/.gitignore.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
+
+	"$Current"/Restore/package.json.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
+done
 
 Maintain Workflow
-
-# # biome check "$Directory" --apply-unsafe
-
-"$Directory"/Restore/.gitignore.sh
-"$Directory"/Restore/package.json.sh
