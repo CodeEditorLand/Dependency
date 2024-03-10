@@ -28,7 +28,7 @@ fi
 Service=()
 
 for Organization in "${Organization[@]}"; do
-	for ((Page = 1; Page <= 20; Page++)); do
+	for ((Page = 1; Page <= 50; Page++)); do
 		\mapfile -t Temporary < <(\printf "%s" "$(
 			\gh api \
 				-H "Accept: application/vnd.github+json" \
