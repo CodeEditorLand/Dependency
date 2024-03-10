@@ -37,10 +37,10 @@ for Foundation in "${Foundation[@]}"; do
 		"$Service" \
 		"$Foundation"
 
-	"$Current"/Sync/Service.sh \
-		"$Organization" \
-		"$Service" \
-		"$Foundation"
+	# "$Current"/Sync/Service.sh \
+	# 	"$Organization" \
+	# 	"$Service" \
+	# 	"$Foundation"
 
 	"$Current"/Switch/Branch.sh \
 		"$Organization" \
