@@ -9,10 +9,8 @@ Fn "$@"
 
 for Organization in "${Organization[@]}"; do
 	for Service in "${Service[@]}"; do
-		Folder="${Service/"${Organization}/"/}"
-
 		# shellcheck disable=SC2154
-		\cd "$Current"/../../"$Foundation"/Service/"$Folder" || \exit
+		\cd "$Folder"/"${Service/"${Organization}/"/}" || \exit
 
 		\pwd
 

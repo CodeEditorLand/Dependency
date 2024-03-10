@@ -10,7 +10,7 @@ Fn "$@"
 for Organization in "${Organization[@]}"; do
 	for Service in "${Service[@]}"; do
 		# shellcheck disable=SC2154
-		\cd "$Current"/../../"$Foundation"/Service || \exit
+		\cd "$Folder" || \exit
 
 		\git clone --filter=tree:0 --depth=1 --recurse-submodules --shallow-submodules "ssh://git@github.com/${Service}.git" "$Service"
 

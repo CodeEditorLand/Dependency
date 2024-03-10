@@ -9,20 +9,20 @@ Fn "$@"
 
 for Organization in "${Organization[@]}"; do
 	for Service in "${Service[@]}"; do
-		Folder="${Service/"${Organization}/"/}"
+		Name="${Service/"${Organization}/"/}"
 
 		# shellcheck disable=SC2154
-		\cd "$Current"/../../"$Foundation"/Service/"$Folder" || \exit
+		\cd "$Folder"/"${Service/"${Organization}/"/}" || \exit
 
 		\pwd
 
 		Rename=""
 
-		Rename=$(\tr '[:lower:]' '[:upper:]' <<<"${Folder:0:1}")
+		Rename=$(\tr '[:lower:]' '[:upper:]' <<<"${Name:0:1}")
 
-		for ((i = 1; i < ${#Folder}; i++)); do
-			if [ "${Folder:i:1}" = "-" ]; then
-				Next="${Folder:i+1:1}"
+		for ((i = 1; i < ${#Name}; i++)); do
+			if [ "${Name:i:1}" = "-" ]; then
+				Next="${Name:i+1:1}"
 				if [[ "$Next" =~ [a-z] ]]; then
 					Upper=$(\tr '[:lower:]' '[:upper:]' <<<"$Next")
 					Rename="${Rename}${Upper}"
@@ -31,7 +31,7 @@ for Organization in "${Organization[@]}"; do
 					Rename="${Rename}-"
 				fi
 			else
-				Rename="${Rename}${Folder:i:1}"
+				Rename="${Rename}${Name:i:1}"
 			fi
 		done
 

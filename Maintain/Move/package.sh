@@ -9,14 +9,14 @@ Fn "$@"
 
 for Organization in "${Organization[@]}"; do
 	for Service in "${Service[@]}"; do
-		Folder="${Service/"${Organization}/"/}"
+		Name="${Service/"${Organization}/"/}"
 
 		# shellcheck disable=SC2154
-		\cd "$Current"/../../"$Foundation"/Service/"$Folder" || \exit
+		\cd "$Folder"/"${Service/"${Organization}/"/}" || \exit
 
 		\pwd
 
-		if [[ $Folder == "LandGeneratorCode" ]]; then
+		if [[ $Name == "LandGeneratorCode" ]]; then
 			mv generators/app/templates/ext-colortheme/package.json generators/app/templates/ext-colortheme/template.package.json
 			mv generators/app/templates/ext-command-js/package.json generators/app/templates/ext-command-js/template.package.json
 			mv generators/app/templates/ext-command-ts/package.json generators/app/templates/ext-command-ts/template.package.json

@@ -12,7 +12,7 @@ for Organization in "${Organization[@]}"; do
 		Origin="ssh://git@github.com/${Service}.git"
 
 		# shellcheck disable=SC2154
-		\cd "$Current"/../../"$Foundation"/Service || \exit
+		\cd "$Folder" || \exit
 
 		git submodule add --depth=1 "$Origin" "${Service/"${Organization}/"/}"
 
