@@ -11,17 +11,10 @@ for Organization in "${Organization[@]}"; do
 	for Service in "${Service[@]}"; do
 		Origin="ssh://git@github.com/${Service}.git"
 
-		Folder="${Service/"${Organization}/"/}"
-
-		\echo "Folder: "
-		\echo "$Folder"
-
-		\echo "Origin: "
-		\echo "$Origin"
-
+		# shellcheck disable=SC2154
 		\cd "$Current"/../../"$Foundation"/Service || \exit
 
-		git submodule add --depth=1 "$Origin" "$Folder"
+		git submodule add --depth=1 "$Origin" "${Service/"${Organization}/"/}"
 
 		\cd - || \exit
 	done
