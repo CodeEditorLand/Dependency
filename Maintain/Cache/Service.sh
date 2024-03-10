@@ -82,5 +82,5 @@ for Organization in "${Organization[@]}"; do
 
 	\mapfile -t Service < <(\printf "%s\n" "${Service[@]}" | \sort)
 
-	\printf '%s\n' "${Service[@]}" | jq -R . | jq -s . >"$Current"/Service/"$Foundation".json
+	\printf '%s\n' "${Service[@]}" | jq -R . | jq -s --tab . >"$Current"/Service/"$Foundation".json
 done
