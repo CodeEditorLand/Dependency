@@ -7,14 +7,11 @@
 
 # Fn "$@"
 
-# # shellcheck disable=SC2154
-# Git="$Current"/../../"$Foundation"/Service
-
 # for Organization in "${Organization[@]}"; do
 # 	for Service in "${Service[@]}"; do
 # 		Folder="${Service/"${Organization}/"/}"
 
-# 		\cd "$Git"/"$Folder" || \exit
+# 		\cd "$Current"/../../"$Foundation"/Service/"$Folder" || \exit
 
 # 		\pwd
 

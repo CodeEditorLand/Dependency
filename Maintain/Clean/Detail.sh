@@ -7,14 +7,10 @@ Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
 Fn "$@"
 
-# shellcheck disable=SC2154
-Git="$Current"/../../"$Foundation"/Service
-
 for Organization in "${Organization[@]}"; do
 	for Service in "${Service[@]}"; do
-		Folder="${Service/"${Organization}/"/}"
-
-		\cd "$Git"/"$Folder" || \exit
+		# shellcheck disable=SC2154
+		\cd "$Current"/../../"$Foundation"/Service/"${Service/"${Organization}/"/}" || \exit
 
 		\pwd
 
