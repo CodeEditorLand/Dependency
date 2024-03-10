@@ -16,7 +16,7 @@ for Foundation in "${Foundation[@]}"; do
 		"$Omit" \
 		"$Foundation"
 
-	"$Current"/Setting/Service/None.sh \
+	"$Current"/Setting/Service.sh \
 		"$Organization" \
 		"$Service" \
 		"$Foundation"
