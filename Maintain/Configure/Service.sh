@@ -12,8 +12,6 @@ for Organization in "${Organization[@]}"; do
 		# shellcheck disable=SC2154
 		\cd "$Folder"/"${Service/"${Organization}/"/}" || \exit
 
-		\pwd
-
 		Origin=$(\git remote get-url origin)
 		Origin=$(\echo "$Origin" | \sed 's/git@github.com:/ssh:\/\/git@github.com\//')
 

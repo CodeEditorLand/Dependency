@@ -1,7 +1,5 @@
 #!/bin/bash
 
-\pwd
-
 # TODO: Add dynamic { "repository": { "directory": Foundation/$Foundation/Service/$Service } }
 # The path is always CodeEditorLand/Foundation/$Foundation/Service/$SUBMODULE.name
 # or fetch the correct submodule URL

@@ -12,8 +12,6 @@ for Organization in "${Organization[@]}"; do
 		# shellcheck disable=SC2154
 		\cd "$Folder"/"${Service/"${Organization}/"/}" || \exit
 
-		\pwd
-
 		"$Current"/../Fn/Save/Service.sh
 
 		\git fetch upstream --depth 1 --no-tags

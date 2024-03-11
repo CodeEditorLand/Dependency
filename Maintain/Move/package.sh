@@ -14,8 +14,6 @@ for Organization in "${Organization[@]}"; do
 		# shellcheck disable=SC2154
 		\cd "$Folder"/"${Service/"${Organization}/"/}" || \exit
 
-		\pwd
-
 		if [[ $Name == "LandGeneratorCode" ]]; then
 			mv generators/app/templates/ext-colortheme/package.json generators/app/templates/ext-colortheme/template.package.json
 			mv generators/app/templates/ext-command-js/package.json generators/app/templates/ext-command-js/template.package.json

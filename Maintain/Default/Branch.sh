@@ -21,8 +21,6 @@ for Organization in "${Organization[@]}"; do
 		# shellcheck disable=SC2154
 		\cd "$Folder"/"${Service/"${Organization}/"/}" || \exit
 
-		\pwd
-
 		\gh repo edit --default-branch "$Branch"
 
 		\cd - || \exit

@@ -14,8 +14,6 @@ for Organization in "${Organization[@]}"; do
 		# shellcheck disable=SC2154
 		\cd "$Folder"/"${Service/"${Organization}/"/}" || \exit
 
-		\pwd
-
 		Rename=""
 
 		Rename=$(\tr '[:lower:]' '[:upper:]' <<<"${Name:0:1}")

@@ -21,8 +21,6 @@ for Organization in "${Organization[@]}"; do
 		# shellcheck disable=SC2154
 		\cd "$Folder"/"${Service/"${Organization}/"/}" || \exit
 
-		\pwd
-
 		\git switch -c "$Branch"
 		\git switch "$Branch"
 		\git push --set-upstream origin "$Branch" --force

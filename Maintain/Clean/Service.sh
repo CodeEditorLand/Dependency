@@ -12,8 +12,6 @@ for Organization in "${Organization[@]}"; do
 		# shellcheck disable=SC2154
 		\cd "$Folder"/"${Service/"${Organization}/"/}" || \exit
 
-		\pwd
-
 		\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o \
 			\( \
 			-iname .prettierrc \

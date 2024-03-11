@@ -12,24 +12,16 @@ for Organization in "${Organization[@]}"; do
 		# shellcheck disable=SC2154
 		\cd "$Folder"/"${Service/"${Organization}/"/}" || \exit
 
-		\pwd
-
 		Upstream=$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/')
 
 		if [[ "$Upstream" != "null/null" ]]; then
 			Upstream=$(\echo "$Upstream" | \sed 's/\/$//')
-
-			\echo "Upstream: "
-			\echo "$Upstream"
 
 			\git fetch upstream --depth 1 --no-tags
 
 			Main=$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/')
 			Main=$(\echo "$Main" | \sed 's/\/$//')
 			Main=$(\gh repo view "$Main" --json defaultBranchRef | \jq -r -c '.defaultBranchRef.name')
-
-			\echo "Main: "
-			\echo "$Main"
 
 			\git reset --hard upstream/"$Main"
 			\git clean -dfx

@@ -12,8 +12,6 @@ for Organization in "${Organization[@]}"; do
 		# shellcheck disable=SC2154
 		\cd "$Folder"/"${Service/"${Organization}/"/}" || \exit
 
-		\pwd
-
 		if [[ -d "src" ]]; then
 			\mkdir -p Source
 			\cp -rf src/* Source/
