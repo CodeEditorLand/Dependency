@@ -33,8 +33,9 @@ for Organization in "${Organization[@]}"; do
 
 			\git reset --hard upstream/"$Main"
 			\git clean -dfx
-			\git add .
-			\git commit -m "squash!"
+
+			"$Current"/../Fn/Save/Service.sh
+
 			\git push --force
 		fi
 

@@ -14,10 +14,7 @@ for Organization in "${Organization[@]}"; do
 
 		\pwd
 
-		\git add .
-		\git commit -m "squash!"
-		\git pull
-		\git push
+		"$Current"/../Fn/Save/Service.sh
 
 		\git fetch upstream --depth 1 --no-tags
 
