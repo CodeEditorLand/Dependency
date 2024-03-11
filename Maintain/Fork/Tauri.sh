@@ -108,8 +108,6 @@ Repository=(
 	"tauri-apps/tauri-toml"
 )
 
-# 3) Fork
-
 for Repository in "${Repository[@]}"; do
 	\gh repo fork "$Repository" --org CodeEditorLand
 done

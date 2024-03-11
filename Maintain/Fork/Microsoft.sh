@@ -311,8 +311,6 @@ Service=(
 	"microsoft/vscodetestcover"
 )
 
-# 3) Fork
-
 for Service in "${Service[@]}"; do
 	\gh repo fork "$Service" --org CodeEditorLand
 done

@@ -3,7 +3,6 @@
 Service=(
 	"oxc-project/oxc"
 	"oxc-project/unicode-id-start"
-	"oxc-project/oxc-project.github.io"
 	"oxc-project/oxc-resolver"
 	"oxc-project/bench-javascript-parser-written-in-rust"
 	"oxc-project/eslint-plugin-oxlint"
