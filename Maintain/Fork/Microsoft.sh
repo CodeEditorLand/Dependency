@@ -1,12 +1,6 @@
 #!/bin/bash
 
-# 1) Page by page on https://github.com/orgs/microsoft/repositories?q=vscode&type=all&language=&sort= do:
-
-# document.querySelectorAll('.Link.d-inline-block[itemprop="name codeRepository"]').forEach(el => console.log(el.getAttribute('href')))
-
-# 2) Found repositories
-
-Repository=(
+Service=(
 	"microsoft/applicationinsights-vscode"
 	"microsoft/azure-boards-vscode"
 	"microsoft/azure-iot-developer-kit"
@@ -319,6 +313,6 @@ Repository=(
 
 # 3) Fork
 
-for Repository in "${Repository[@]}"; do
-	\gh repo fork "$Repository" --org CodeEditorLand
+for Service in "${Service[@]}"; do
+	\gh repo fork "$Service" --org CodeEditorLand
 done
