@@ -3,8 +3,8 @@
 Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
 Foundation=(
-	"Land"
-	"Tauri"
+	# "Land"
+	# "Tauri"
 	"OXC"
 )
 
@@ -20,15 +20,15 @@ for Foundation in "${Foundation[@]}"; do
 		"$Omit" \
 		"$Foundation"
 
-	# "$Current"/Module/Foundation.sh \
-	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation"
+	"$Current"/Module/Foundation.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
 
-	# "$Current"/Configure/Service.sh \
-	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation"
+	"$Current"/Configure/Service.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
 
 	# "$Current"/Setting/Service.sh \
 	# 	"$Organization" \
