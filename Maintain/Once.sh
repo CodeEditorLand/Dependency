@@ -7,9 +7,11 @@ Foundation=(
 )
 
 for Foundation in "${Foundation[@]}"; do
-	Organization="$Current"/Cache/Organization/"$Foundation".json
-	Omit="$Current"/Cache/Omit/"$Foundation".json
-	Service="$Current"/Cache/Service/"$Foundation".json
+	Cache="$Current"/Cache
+
+	Organization="$Cache"/Organization/"$Foundation".json
+	Omit="$Cache"/Omit/"$Foundation".json
+	Service="$Cache"/Service/"$Foundation".json
 
 	"$Current"/Cache/Service.sh \
 		"$Organization" \
