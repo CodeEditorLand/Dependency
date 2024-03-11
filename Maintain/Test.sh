@@ -3,24 +3,24 @@
 Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
 Foundation=(
-	"None"
+	# "None"
 	"OXC"
 )
 
 for Foundation in "${Foundation[@]}"; do
 	Organization="$Current"/Cache/Organization/"$Foundation".json
 	Omit="$Current"/Cache/Omit/"$Foundation".json
-	# Service="$Current"/Cache/Service/"$Foundation".json
+	Service="$Current"/Cache/Service/"$Foundation".json
 
 	"$Current"/Cache/Service.sh \
 		"$Organization" \
 		"$Omit" \
 		"$Foundation"
 
-	# "$Current"/Module/Foundation.sh \
-	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation"
+	"$Current"/Module/Foundation.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
 
 	# "$Current"/Configure/Service.sh \
 	# 	"$Organization" \
