@@ -20,7 +20,7 @@ for Organization in "${Organization[@]}"; do
 			\rm -rf src/
 		fi
 
-		\find . -type d \( -iname node_modules -o -iname vendor -o -iname dist -o -iname target -o -iname \.git -o -iname \.next \) -prune -false -o -name src -type d -execdir bash -c '\cp -rf src/* Source/ ; \rm -rf src/' \;
+		\find . -type d \( -iname node_modules -o -iname vendor -o -iname dist -o -iname target -o -iname \.git -o -iname \.next \) -prune -false -o -name src -type d -execdir bash -c '\mkdir -p Source ; \cp -rf src/* Source/ ; \rm -rf src/' \;
 
 		\cd - || \exit
 	done
