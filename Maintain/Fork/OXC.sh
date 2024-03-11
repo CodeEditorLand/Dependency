@@ -8,7 +8,6 @@ Service=(
 	"oxc-project/eslint-plugin-oxlint"
 	"oxc-project/oxc-intellij-plugin"
 	"oxc-project/mirrors-oxlint"
-	"oxc-project/oxc-simd"
 	"oxc-project/benchmark-files"
 	"oxc-project/json-strip-comments"
 	"oxc-project/aria-query"
