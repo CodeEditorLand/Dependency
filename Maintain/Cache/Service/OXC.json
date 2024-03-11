@@ -1,0 +1,18 @@
+[
+	"CodeEditorLand/aria-query",
+	"CodeEditorLand/bench-javascript-linter",
+	"CodeEditorLand/bench-javascript-parser-written-in-rust",
+	"CodeEditorLand/benchmark-files",
+	"CodeEditorLand/bench-nodejs-resolver",
+	"CodeEditorLand/eslint-plugin-oxlint",
+	"CodeEditorLand/javascript-parser-in-rust",
+	"CodeEditorLand/json-strip-comments",
+	"CodeEditorLand/mirrors-oxlint",
+	"CodeEditorLand/oxc",
+	"CodeEditorLand/oxc-assets",
+	"CodeEditorLand/oxc-fuzz-parser",
+	"CodeEditorLand/oxc-intellij-plugin",
+	"CodeEditorLand/oxc-resolver",
+	"CodeEditorLand/unicode-id",
+	"CodeEditorLand/unicode-id-start"
+]
