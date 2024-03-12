@@ -1,0 +1,13 @@
+[
+	"CodeEditorLand/biome",
+	"CodeEditorLand/biome-intellij",
+	"CodeEditorLand/biome-vscode",
+	"CodeEditorLand/discord-utils-bot",
+	"CodeEditorLand/FoundationBiome",
+	"CodeEditorLand/FoundationBiomeCargo",
+	"CodeEditorLand/FoundationBiomeNPM",
+	"CodeEditorLand/FoundationBiomeService",
+	"CodeEditorLand/pre-commit",
+	"CodeEditorLand/resources",
+	"CodeEditorLand/setup-biome"
+]
