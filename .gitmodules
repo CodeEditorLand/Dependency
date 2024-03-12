@@ -9,3 +9,7 @@ url = ssh://git@github.com/CodeEditorLand/FoundationOXC.git
 [submodule "Tauri"]
 path = Tauri
 url = ssh://git@github.com/CodeEditorLand/FoundationTauri.git
+
+[submodule "Biome"]
+path = Biome
+url = ssh://git@github.com/CodeEditorLand/FoundationBiome.git
