@@ -1,9 +1,9 @@
 [
-	"CodeEditorLand/biome",
-	"CodeEditorLand/biome-intellij",
-	"CodeEditorLand/biome-vscode",
-	"CodeEditorLand/discord-utils-bot",
-	"CodeEditorLand/pre-commit",
-	"CodeEditorLand/resources",
-	"CodeEditorLand/setup-biome"
+	"CodeEditorLand/Biome",
+	"CodeEditorLand/BiomeIntellij",
+	"CodeEditorLand/BiomeLand",
+	"CodeEditorLand/DiscordUtilsBot",
+	"CodeEditorLand/PreCommit",
+	"CodeEditorLand/Resources",
+	"CodeEditorLand/SetupBiome"
 ]
