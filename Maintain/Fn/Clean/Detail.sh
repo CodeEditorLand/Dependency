@@ -1,6 +1,7 @@
 #!/bin/bash
 
 \jq -S "del(.eslintConfig,.prettier,.peerDependencies,.engines,.tags,.categories,.keywords,.scripts.lint,.scripts.[\"lint-fix\"],.scripts.[\"lint:fix\"],.scripts.[\"lint:eslint\"],.scripts.[\"lint:client\"],.scripts.[\"lint:scripts\"],.scripts.[\"lint:server\"],.scripts.pretest,.scripts.test,.scripts.[\"test:lint\"],.scripts.[\"test:eslint-rules\"],.scripts.posttest,.test,.tslint,.check,.fix)" package.json >|package.json.tmp
+
 \mv package.json.tmp package.json
 
 Omit=(
@@ -71,10 +72,8 @@ Omit=(
 )
 
 Key() {
-	local Type="$1"
-
 	for Dependency in "${Omit[@]}"; do
-		\jq -S "del(.[\"${Type}\"].[\"${Dependency}\"])" package.json >|package.json.tmp
+		\jq -S "del(.[\"$1\"].[\"${Dependency}\"])" package.json >|package.json.tmp
 		\mv package.json.tmp package.json
 	done
 }

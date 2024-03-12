@@ -73,16 +73,6 @@ for Foundation in "${Foundation[@]}"; do
 		"$Foundation" \
 		"Current"
 
-	"$Current"/Clean/Service.sh \
-		"$Organization" \
-		"$Service" \
-		"$Foundation"
-
-	"$Current"/Clean/Detail.sh \
-		"$Organization" \
-		"$Service" \
-		"$Foundation"
-
 	"$Current"/Move/license.sh \
 		"$Organization" \
 		"$Service" \
@@ -94,6 +84,16 @@ for Foundation in "${Foundation[@]}"; do
 		"$Foundation"
 
 	"$Current"/Move/src.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
+
+	"$Current"/Clean/Service.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
+
+	"$Current"/Clean/Detail.sh \
 		"$Organization" \
 		"$Service" \
 		"$Foundation"
