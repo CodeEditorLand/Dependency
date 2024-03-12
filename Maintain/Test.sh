@@ -11,15 +11,15 @@ for Foundation in "${Foundation[@]}"; do
 
 	Organization="$Cache"/Organization/"$Foundation".json
 	Omit="$Cache"/Omit/"$Foundation".json
-	# Service="$Cache"/Service/"$Foundation".json
+	Service="$Cache"/Service/"$Foundation".json
 
 	"$Current"/Cache/Service.sh \
 		"$Organization" \
 		"$Omit" \
 		"$Foundation"
 
-	# "$Current"/Setting/Service.sh \
-	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation"
+	"$Current"/Rename/Service.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
 done
