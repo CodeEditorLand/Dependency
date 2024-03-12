@@ -11,9 +11,6 @@ for Organization in "${Organization[@]}"; do
 	for Service in "${Service[@]}"; do
 		Name="${Service/"${Organization}/"/}"
 
-		# shellcheck disable=SC2154
-		\cd "$Folder"/"${Service/"${Organization}/"/}" || \exit
-
 		Rename=""
 
 		Rename=$(\tr '[:lower:]' '[:upper:]' <<<"${Name:0:1}")
@@ -35,11 +32,6 @@ for Organization in "${Organization[@]}"; do
 
 		Rename=$(\echo "$Rename" | \sed -E "s/vscode/Land/gI")
 
-		\echo "Rename: "
-		\echo "$Rename"
-
-		\gh repo rename "$Rename" --yes
-
-		\cd - || \exit
+		\gh repo rename --repo "$Service" "$Rename" --yes
 	done
 done
