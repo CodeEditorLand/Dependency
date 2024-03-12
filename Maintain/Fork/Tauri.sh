@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Repository=(
+Service=(
 	"tauri-apps/plugins-workspace"
 	"tauri-apps/tray-icon"
 	"tauri-apps/tauri-bindgen"
@@ -108,6 +108,6 @@ Repository=(
 	"tauri-apps/tauri-toml"
 )
 
-for Repository in "${Repository[@]}"; do
-	\gh repo fork "$Repository" --org CodeEditorLand
+for Service in "${Service[@]}"; do
+	\gh repo fork "$Service" --org CodeEditorLand
 done
