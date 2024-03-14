@@ -1,20 +1,20 @@
-# DESTRUCTIVE OPERATIONS
+# DESTRUCTIVE OPERATION
 
-1. Adds organizational details to all of the `package.json` inside `Application`
+1. Add organizational details to all of the `package.json` inside `Application`
    (The Context)
 
     ```bash
     ../Append/Detail.sh
     ```
 
-2. Removes all of the tags and (Prettier, Biome, Rome, ) from the repositories
+2. Remove all of the tags and (Prettier, Biome, Rome, ) from the repositories
    inside `Application` (The Context)
 
     ```bash
     ../Clean/Repository.sh
     ```
 
-3. Syncs repositories with their upstream:
+3. Sync repositories with their upstream:
 
     ```bash
     cd Land # (The Context)
@@ -26,7 +26,7 @@
     ../Script/Sync/Repository.sh
     ```
 
-4. Moves src into the Source folder:
+4. Move src into the Source folder:
 
     ```bash
     cd Land # (The Context)
@@ -38,7 +38,7 @@
     ../Script/Move/src.sh
     ```
 
-5. Resets repositories to their their upstream breanches:
+5. Reset repositories to their their upstream breanches:
 
     ```bash
     cd Land # (The Context)
