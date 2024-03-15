@@ -84,30 +84,30 @@ for Foundation in "${Foundation[@]}"; do
 		"$Service" \
 		"$Foundation"
 
-	# "$Current"/Move/src.sh \
-	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation"
+	"$Current"/Move/src.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
 
-	# "$Current"/Clean/Service.sh \
-	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation"
+	"$Current"/Clean/Service.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
 
-	# "$Current"/Clean/Detail.sh \
-	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation"
+	"$Current"/Clean/Detail.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
 
 	# "$Current"/Append/Detail.sh \
 	# 	"$Organization" \
 	# 	"$Service" \
 	# 	"$Foundation"
 
-	# "$Current"/Sort/Detail.sh \
-	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation"
+	"$Current"/Sort/Detail.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
 
 	# # "$Current"/Restore/.gitignore.sh \
 	# # 	"$Organization" \
@@ -125,10 +125,10 @@ for Foundation in "${Foundation[@]}"; do
 	# # 	"$Foundation"
 done
 
-# \cd "$Current"/../ || \exit
+\cd "$Current"/../ || \exit
 
-# \biome check . --apply
+\biome check . --apply
 
-# Maintain Workflow
+Maintain Workflow
 
-# \cd - || \exit
+\cd - || \exit
