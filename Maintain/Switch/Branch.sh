@@ -23,7 +23,6 @@ for Organization in "${Organization[@]}"; do
 
 		\git switch -c "$Branch"
 		\git switch "$Branch"
-		\git push --set-upstream origin "$Branch" --force
 
 		\cd - || \exit
 	done
