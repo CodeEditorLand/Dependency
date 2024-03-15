@@ -23,7 +23,7 @@
 	},
 	\"author\": {
 		\"name\": \"Nikola R. Hristov\",
-		\"email\": \"nikola@nikolahristov.tech\",
+		\"email\": \"Nikola@Playform.Cloud\",
 		\"url\": \"https://nikolahristov.tech\"
 	},
 	\"scripts\": {

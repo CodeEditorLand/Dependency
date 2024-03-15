@@ -1,7 +1,12 @@
 {
 	"$schema": "https://biomejs.dev/schemas/1.6.1/schema.json",
 	"files": {
-		"ignore": ["**/Target/**/*", "**/Documentation/**/*", "**/dist/**/*"],
+		"ignore": [
+			"**/Target/**/*",
+			"**/Documentation/**/*",
+			"**/dist/**/*",
+			"**/*.astro"
+		],
 		"maxSize": 10000000
 	},
 	"formatter": {
@@ -62,7 +67,10 @@
 			"nursery": {
 				"all": true,
 				"noNodejsModules": "off",
-				"useImportRestrictions": "off"
+				"useImportRestrictions": "off",
+				"noUndeclaredDependencies": "off",
+				"noConsole": "off",
+				"useSortedClasses": "off"
 			},
 			"performance": {
 				"all": true
