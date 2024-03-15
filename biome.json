@@ -1,5 +1,5 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.6.0/schema.json",
+	"$schema": "https://biomejs.dev/schemas/1.6.1/schema.json",
 	"files": {
 		"ignore": ["**/Target/**/*", "**/Documentation/**/*", "**/dist/**/*"],
 		"maxSize": 10000000
@@ -52,7 +52,8 @@
 				"all": true,
 				"noExcessiveCognitiveComplexity": "off",
 				"noForEach": "off",
-				"useLiteralKeys": "off"
+				"useLiteralKeys": "off",
+				"noUselessLoneBlockStatements": "off"
 			},
 			"correctness": {
 				"all": true,
@@ -73,7 +74,10 @@
 				"all": true,
 				"noDefaultExport": "off",
 				"noUselessElse": "off",
-				"useNamingConvention": "off"
+				"useNamingConvention": "off",
+				"useShorthandFunctionType": "off",
+				"useFilenamingConvention": "off",
+				"useNodejsImportProtocol": "off"
 			},
 			"suspicious": {
 				"all": true,
