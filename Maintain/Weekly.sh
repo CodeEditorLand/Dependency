@@ -26,10 +26,10 @@ for Foundation in "${Foundation[@]}"; do
 		"$Service" \
 		"$Foundation"
 
-	# "$Current"/Configure/Service.sh \
-	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation"
+	"$Current"/Configure/Service.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
 
 	# "$Current"/Setting/Service.sh \
 	# 	"$Organization" \
@@ -46,43 +46,43 @@ for Foundation in "${Foundation[@]}"; do
 	# # 	"$Service" \
 	# # 	"$Foundation"
 
-	# "$Current"/Switch/Branch.sh \
-	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation" \
-	# 	"Previous"
+	"$Current"/Switch/Branch.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation" \
+		"Previous"
 
-	# "$Current"/Reset/Service.sh \
-	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation"
+	"$Current"/Reset/Service.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
 
-	# "$Current"/Switch/Branch.sh \
-	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation" \
-	# 	"Current"
+	"$Current"/Switch/Branch.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation" \
+		"Current"
 
-	# "$Current"/Reset/Service.sh \
-	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation"
+	"$Current"/Reset/Service.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
 
-	# "$Current"/Default/Branch.sh \
-	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation" \
-	# 	"Current"
+	"$Current"/Default/Branch.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation" \
+		"Current"
 
-	# "$Current"/Move/license.sh \
-	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation"
+	"$Current"/Move/license.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
 
-	# "$Current"/Move/package.sh \
-	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation"
+	"$Current"/Move/package.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
 
 	# "$Current"/Move/src.sh \
 	# 	"$Organization" \
