@@ -3,9 +3,10 @@
 Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
 Foundation=(
+	"Biome"
 	"Land"
-	"Tauri"
 	"OXC"
+	"Tauri"
 )
 
 for Foundation in "${Foundation[@]}"; do
@@ -30,15 +31,15 @@ for Foundation in "${Foundation[@]}"; do
 		"$Service" \
 		"$Foundation"
 
-	# "$Current"/Setting/Service.sh \
-	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation"
+	"$Current"/Setting/Service.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
 
-	# "$Current"/Rename/Service.sh \
-	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation"
+	"$Current"/Rename/Service.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
 
 	# "$Current"/Sync/Service.sh \
 	# 	"$Organization" \
@@ -126,7 +127,7 @@ done
 
 \cd "$Current"/../ || \exit
 
-\biome check . --apply-unsafe
+\biome check . --apply
 
 Maintain Workflow
 
