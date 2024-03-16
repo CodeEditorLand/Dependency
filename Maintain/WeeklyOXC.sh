@@ -3,10 +3,10 @@
 Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
 Foundation=(
-	"Biome"
-	"Land"
+	# "Biome"
+	# "Land"
 	"OXC"
-	"Tauri"
+	# "Tauri"
 )
 
 for Foundation in "${Foundation[@]}"; do
@@ -124,11 +124,3 @@ for Foundation in "${Foundation[@]}"; do
 	# # 	"$Service" \
 	# # 	"$Foundation"
 done
-
-\cd "$Current"/../ || \exit
-
-\biome check . --apply
-
-Maintain Workflow
-
-\cd - || \exit
