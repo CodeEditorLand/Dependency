@@ -28,6 +28,16 @@ for Organization in "${Organization[@]}"; do
 			mv generators/app/templates/ext-snippets/package.json generators/app/templates/ext-snippets/template.package.json
 		fi
 
+		# ./Application/CodeEditorLand/Foundation/Land/Service/Codetour/package.json
+		# ./Application/CodeEditorLand/Foundation/Land/Service/LandJsAtomGrammar/package.json
+		# ./Application/CodeEditorLand/Foundation/Land/Service/LandJsDebugBrowsers/package.json
+		# ./Application/CodeEditorLand/Foundation/Land/Service/LandJsonLanguageservice/package.json
+		# ./Application/CodeEditorLand/Foundation/Land/Service/LandLanguageserverNode/tools/package.json
+		# ./Application/CodeEditorLand/Foundation/OXC/Service/Oxc/crates/oxc_linter/fixtures/import/with-syntax-error/package.json
+		# ./Application/CodeEditorLand/Foundation/OXC/Service/OxcResolver/fixtures/enhanced_resolve/test/fixtures/incorrect-package/pack1/package.json
+		# ./Application/CodeEditorLand/Foundation/OXC/Service/OxcResolver/fixtures/enhanced_resolve/test/fixtures/incorrect-package/pack2/package.json
+		# ./Application/CodeEditorLand/Foundation/Tauri/Service/Tauri/tooling/cli/node/npm/linux-arm-gnueabihf/package.json
+
 		\cd - || \exit
 	done
 done
