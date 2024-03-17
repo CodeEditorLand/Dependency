@@ -4,7 +4,7 @@
 # The path is always CodeEditorLand/Foundation/$Foundation/Service/$SUBMODULE.name
 # or fetch the correct submodule URL
 
-\jq -S ". * {
+\jq -S --tab ". * {
 	\"homepage\": \"https://github.com/CodeEditorLand/Foundation#readme\",
 	\"bugs\": {
 		\"url\": \"https://github.com/CodeEditorLand/Foundation/issues\"
