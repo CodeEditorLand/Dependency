@@ -24,7 +24,7 @@
 	\"author\": {
 		\"name\": \"Nikola R. Hristov\",
 		\"email\": \"Nikola@Playform.Cloud\",
-		\"url\": \"https://nikolahristov.tech\"
+		\"url\": \"https://playform.cloud\"
 	},
 	\"scripts\": {
 		\"prepublishOnly\": \"TypeScriptESBuild 'Source/**/*.ts'\"
