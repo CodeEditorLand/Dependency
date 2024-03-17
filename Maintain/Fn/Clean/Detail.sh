@@ -43,7 +43,7 @@
 	.test,\
 	.tslint\
 	.type,\
-	.version,\
+	.version\
 )" package.json >|package.json.tmp
 
 \mv package.json.tmp package.json

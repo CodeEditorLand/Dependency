@@ -94,10 +94,10 @@ for Foundation in "${Foundation[@]}"; do
 		"$Service" \
 		"$Foundation"
 
-	"$Current"/Clean/Detail.sh \
-		"$Organization" \
-		"$Service" \
-		"$Foundation"
+	# "$Current"/Clean/Detail.sh \
+	# 	"$Organization" \
+	# 	"$Service" \
+	# 	"$Foundation"
 
 	# "$Current"/Append/Detail.sh \
 	# 	"$Organization" \
@@ -114,10 +114,10 @@ for Foundation in "${Foundation[@]}"; do
 	# # 	"$Service" \
 	# # 	"$Foundation"
 
-	# # "$Current"/Restore/package.json.sh \
-	# # 	"$Organization" \
-	# # 	"$Service" \
-	# # 	"$Foundation"
+	"$Current"/Restore/package.json.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
 
 	# # "$Current"/Restore/src.sh \
 	# # 	"$Organization" \
