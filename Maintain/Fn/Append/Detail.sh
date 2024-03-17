@@ -22,8 +22,8 @@
 		\"access\": \"public\"
 	},
 	\"author\": {
-		\"name\": \"Nikola R. Hristov\",
-		\"email\": \"Nikola@Playform.Cloud\",
+		\"name\": \"Playform\",
+		\"email\": \"Hello@Playform.Cloud\",
 		\"url\": \"https://playform.cloud\"
 	},
 	\"scripts\": {
