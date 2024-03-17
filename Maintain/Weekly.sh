@@ -3,10 +3,10 @@
 Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
 Foundation=(
-	# "Biome"
-	# "Land"
+	"Biome"
+	"Land"
 	"OXC"
-	# "Tauri"
+	"Tauri"
 )
 
 for Foundation in "${Foundation[@]}"; do
@@ -26,15 +26,15 @@ for Foundation in "${Foundation[@]}"; do
 		"$Service" \
 		"$Foundation"
 
-	"$Current"/Configure/Service.sh \
-		"$Organization" \
-		"$Service" \
-		"$Foundation"
+	# "$Current"/Configure/Service.sh \
+	# 	"$Organization" \
+	# 	"$Service" \
+	# 	"$Foundation"
 
-	"$Current"/Setting/Service.sh \
-		"$Organization" \
-		"$Service" \
-		"$Foundation"
+	# "$Current"/Setting/Service.sh \
+	# 	"$Organization" \
+	# 	"$Service" \
+	# 	"$Foundation"
 
 	# "$Current"/Rename/Service.sh \
 	# 	"$Organization" \
@@ -46,33 +46,33 @@ for Foundation in "${Foundation[@]}"; do
 	# # 	"$Service" \
 	# # 	"$Foundation"
 
-	"$Current"/Switch/Branch.sh \
-		"$Organization" \
-		"$Service" \
-		"$Foundation" \
-		"Previous"
+	# "$Current"/Switch/Branch.sh \
+	# 	"$Organization" \
+	# 	"$Service" \
+	# 	"$Foundation" \
+	# 	"Previous"
 
-	"$Current"/Reset/Service.sh \
-		"$Organization" \
-		"$Service" \
-		"$Foundation"
+	# "$Current"/Reset/Service.sh \
+	# 	"$Organization" \
+	# 	"$Service" \
+	# 	"$Foundation"
 
-	"$Current"/Switch/Branch.sh \
-		"$Organization" \
-		"$Service" \
-		"$Foundation" \
-		"Current"
+	# "$Current"/Switch/Branch.sh \
+	# 	"$Organization" \
+	# 	"$Service" \
+	# 	"$Foundation" \
+	# 	"Current"
 
-	"$Current"/Reset/Service.sh \
-		"$Organization" \
-		"$Service" \
-		"$Foundation"
+	# "$Current"/Reset/Service.sh \
+	# 	"$Organization" \
+	# 	"$Service" \
+	# 	"$Foundation"
 
-	"$Current"/Default/Branch.sh \
-		"$Organization" \
-		"$Service" \
-		"$Foundation" \
-		"Current"
+	# "$Current"/Default/Branch.sh \
+	# 	"$Organization" \
+	# 	"$Service" \
+	# 	"$Foundation" \
+	# 	"Current"
 
 	"$Current"/Move/license.sh \
 		"$Organization" \
