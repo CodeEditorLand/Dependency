@@ -1,14 +1,23 @@
 #!/bin/bash
 
 \jq -S --tab "del(\
+	.author,\
+	.bugs,\
 	.categories,\
 	.check,\
 	.engines,\
 	.eslintConfig,\
 	.fix,\
+	.homepage,\
 	.keywords,\
+	.license,\
 	.peerDependencies,\
 	.prettier,\
+	.private,\
+	.publishConfig,\
+	.publisher,\
+	.repository,\
+	.scripts.[\"fmt:js\"],\
 	.scripts.[\"format-check\"],\
 	.scripts.[\"format:check\"],\
 	.scripts.[\"lint-fix\"],\
@@ -24,7 +33,6 @@
 	.scripts.[\"test:eslint-rules\"],\
 	.scripts.[\"test:fmt\"],\
 	.scripts.[\"test:lint\"],\
-	.scripts.[\"fmt:js\"],\
 	.scripts.fmt,\
 	.scripts.format,\
 	.scripts.lint,\
@@ -34,6 +42,8 @@
 	.tags,\
 	.test,\
 	.tslint\
+	.type,\
+	.version,\
 )" package.json >|package.json.tmp
 
 \mv package.json.tmp package.json
