@@ -16,7 +16,6 @@
 	\"version\": \"0.0.1\",
 	\"license\": \"SEE LICENSE IN LICENSE\",
 	\"type\": \"module\",
-	\"publisher\": \"playform\",
 	\"private\": false,
 	\"publishConfig\": {
 		\"access\": \"public\"
