@@ -36,6 +36,7 @@
 	"CodeEditorLand/FoundationTauriComponent",
 	"CodeEditorLand/FoundationTauriNPM",
 	"CodeEditorLand/FoundationTauriService",
+	"CodeEditorLand/Grok",
 	"CodeEditorLand/JavaScript",
 	"CodeEditorLand/LLRT",
 	"CodeEditorLand/Land",
