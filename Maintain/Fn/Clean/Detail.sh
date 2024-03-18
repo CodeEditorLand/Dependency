@@ -4,7 +4,6 @@
 	.author,\
 	.bugs,\
 	.categories,\
-	.check,\
 	.engines,\
 	.eslintConfig,\
 	.fix,\
@@ -17,6 +16,7 @@
 	.publishConfig,\
 	.publisher,\
 	.repository,\
+	.scripts.[\"check:apply\"],\
 	.scripts.[\"fmt:js\"],\
 	.scripts.[\"format-check\"],\
 	.scripts.[\"format:check\"],\
@@ -33,12 +33,14 @@
 	.scripts.[\"test:eslint-rules\"],\
 	.scripts.[\"test:fmt\"],\
 	.scripts.[\"test:lint\"],\
+	.scripts.check,\
 	.scripts.fmt,\
 	.scripts.format,\
 	.scripts.lint,\
 	.scripts.posttest,\
 	.scripts.pretest,\
 	.scripts.test,\
+	.scripts.typecheck,\
 	.tags,\
 	.test,\
 	.tslint\
