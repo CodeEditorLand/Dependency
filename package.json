@@ -38,7 +38,7 @@
 		"@yesmaintain/cli": "0.0.4",
 		"sort-package-json": "2.8.0",
 		"turbo": "1.12.5",
-		"typescript-esbuild": "0.4.2"
+		"typescript-esbuild": "0.4.3"
 	},
 	"publishConfig": {
 		"access": "public"
