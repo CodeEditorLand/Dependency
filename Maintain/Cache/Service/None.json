@@ -72,6 +72,7 @@
 	"CodeEditorLand/Glutin",
 	"CodeEditorLand/Gnls",
 	"CodeEditorLand/GovernanceAndGuidance",
+	"CodeEditorLand/Grok",
 	"CodeEditorLand/JavaScript",
 	"CodeEditorLand/JavascriptcoreRs",
 	"CodeEditorLand/JavascriptParserInRust",
