@@ -1,9 +1,10 @@
 [
 	"CodeEditorLand/.github",
 	"CodeEditorLand/ActionsNetlify",
-	"CodeEditorLand/ApplicationinsightsLand",
 	"CodeEditorLand/AppRun",
+	"CodeEditorLand/ApplicationinsightsLand",
 	"CodeEditorLand/AriaQuery",
+	"CodeEditorLand/Asset",
 	"CodeEditorLand/Automation",
 	"CodeEditorLand/AwesomeTauri",
 	"CodeEditorLand/AzureBoardsLand",

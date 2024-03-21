@@ -1,5 +1,6 @@
 [
 	"CodeEditorLand/.github",
+	"CodeEditorLand/Asset",
 	"CodeEditorLand/Babel",
 	"CodeEditorLand/Cargo",
 	"CodeEditorLand/CargoDocument",
