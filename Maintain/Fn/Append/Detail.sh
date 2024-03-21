@@ -4,6 +4,8 @@
 # The path is always CodeEditorLand/Foundation/$Foundation/Service/$SUBMODULE.name
 # or fetch the correct submodule URL
 
+Version=$(\npm show typescript-esbuild version)
+
 \jq -S --tab ". * {
 	\"homepage\": \"https://github.com/CodeEditorLand/Foundation#readme\",
 	\"bugs\": {
@@ -29,7 +31,7 @@
 		\"prepublishOnly\": \"TypeScriptESBuild 'Source/**/*.ts'\"
 	},
 	\"devDependencies\": {
-		\"typescript-esbuild\": \"latest\"
+		\"typescript-esbuild\": \"${Version}\"
 	}
 }" package.json >|package.json.tmp
 
