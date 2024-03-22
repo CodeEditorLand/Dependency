@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # TODO: Add dynamic { "repository": { "directory": Foundation/$Foundation/Service/$Service } }
-# The path is always CodeEditorLand/Foundation/$Foundation/Service/$SUBMODULE.name
-# or fetch the correct submodule URL
 
-Version=$(\npm show typescript-esbuild version)
+# The path is always CodeEditorLand/Foundation/$Foundation/Service/$SUBMODULE.name or fetch the correct submodule URL
+
+# Version=$(\npm show typescript-esbuild version)
 
 \jq -S --tab ". * {
 	\"homepage\": \"https://github.com/CodeEditorLand/Foundation#readme\",
@@ -31,7 +31,7 @@ Version=$(\npm show typescript-esbuild version)
 		\"prepublishOnly\": \"TypeScriptESBuild 'Source/**/*.ts'\"
 	},
 	\"devDependencies\": {
-		\"typescript-esbuild\": \"${Version}\"
+		\"typescript-esbuild\": \"0.4.5\"
 	}
 }" package.json >|package.json.tmp
 
