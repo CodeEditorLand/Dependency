@@ -3,10 +3,10 @@
 Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
 Foundation=(
-	"Biome"
+	# "Biome"
 	"Land"
-	"OXC"
-	"Tauri"
+	# "OXC"
+	# "Tauri"
 )
 
 for Foundation in "${Foundation[@]}"; do
