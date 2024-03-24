@@ -1,4 +1,4 @@
 #!/bin/bash
 
-\git add .
-\git commit -m "squash!"
+\git add . --no-verbose
+\git commit -q --no-status --short -m "squash!"
