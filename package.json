@@ -2,19 +2,19 @@
 	"name": "@codeeditorland/foundation",
 	"version": "0.0.1",
 	"private": false,
-	"homepage": "https://github.com/CodeEditorLand/Foundation#readme",
+	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/Foundation#readme",
 	"bugs": {
-		"url": "https://github.com/CodeEditorLand/Foundation/issues"
+		"url": "HTTPS://GitHub.Com/CodeEditorLand/Foundation/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/CodeEditorLand/Foundation.git"
+		"url": "git+HTTPS://GitHub.Com/CodeEditorLand/Foundation.git"
 	},
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
 		"name": "Nikola R. Hristov",
 		"email": "Nikola@Playform.Cloud",
-		"url": "https://nikolahristov.tech"
+		"url": "https://NikolaHristov.Tech"
 	},
 	"type": "module",
 	"workspaces": [

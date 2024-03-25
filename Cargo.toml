@@ -4,10 +4,10 @@ resolver = "2"
 
 [workspace.package]
 authors = ["Nikola R. Hristov <Nikola@Playform.Cloud>"]
-documentation = "https://docs.land.playform.cloud/"
+documentation = "https://Docs.Land.Playform.Cloud/"
 edition = "2021"
-homepage = "https://land.playform.cloud/"
+homepage = "https://Land.Playform.Cloud/"
 license-file = "LICENSE"
 publish = false
 readme = "README.md"
-repository = "https://github.com/CodeEditorLand/Foundation"
+repository = "HTTPS://GitHub.Com/CodeEditorLand/Foundation"

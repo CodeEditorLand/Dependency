@@ -7,13 +7,13 @@
 # Version=$(\npm show typescript-esbuild version)
 
 \jq -S --tab ". * {
-	\"homepage\": \"https://github.com/CodeEditorLand/Foundation#readme\",
+	\"homepage\": \"HTTPS://GitHub.Com/CodeEditorLand/Foundation#readme\",
 	\"bugs\": {
-		\"url\": \"https://github.com/CodeEditorLand/Foundation/issues\"
+		\"url\": \"HTTPS://GitHub.Com/CodeEditorLand/Foundation/issues\"
 	},
 	\"repository\": {
 		\"type\": \"git\",
-		\"url\": \"git+https://github.com/CodeEditorLand/Foundation.git\"
+		\"url\": \"git+HTTPS://GitHub.Com/CodeEditorLand/Foundation.git\"
 	},
 	\"version\": \"0.0.1\",
 	\"license\": \"SEE LICENSE IN LICENSE\",
@@ -25,7 +25,7 @@
 	\"author\": {
 		\"name\": \"Playform\",
 		\"email\": \"Hello@Playform.Cloud\",
-		\"url\": \"https://playform.cloud\"
+		\"url\": \"HTTPS://Playform.Cloud\"
 	},
 	\"scripts\": {
 		\"prepublishOnly\": \"TypeScriptESBuild 'Source/**/*.ts'\"
