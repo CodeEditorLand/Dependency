@@ -14,7 +14,7 @@
 		"@aws-sdk/client-cloudwatch-events": "3.535.0",
 		"@aws-sdk/client-cloudwatch-logs": "3.537.0",
 		"@aws-sdk/client-cognito-identity": "3.535.0",
-		"@aws-sdk/client-dynamodb": "3.535.0",
+		"@aws-sdk/client-dynamodb": "3.540.0",
 		"@aws-sdk/client-eventbridge": "3.535.0",
 		"@aws-sdk/client-kms": "3.536.0",
 		"@aws-sdk/client-lambda": "3.536.0",
