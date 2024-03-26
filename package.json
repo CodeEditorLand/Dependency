@@ -37,7 +37,7 @@
 		"@biomejs/biome": "1.6.3",
 		"@yesmaintain/cli": "0.0.4",
 		"sort-package-json": "2.9.0",
-		"turbo": "1.12.5",
+		"turbo": "1.13.0",
 		"typescript-esbuild": "0.4.5"
 	},
 	"publishConfig": {
