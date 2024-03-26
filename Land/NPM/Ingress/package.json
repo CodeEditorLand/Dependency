@@ -16,7 +16,7 @@
         "@cloudflare/workers-types": "4.20240320.1",
         "@miniflare/tre": "3.0.0-next.14",
         "@types/dotenv": "8.2.0",
-        "@typescript-eslint/eslint-plugin": "7.3.1",
+        "@typescript-eslint/eslint-plugin": "7.4.0",
         "@typescript-eslint/parser": "7.4.0",
         "eslint": "8.57.0",
         "miniflare": "3.20240320.0",
