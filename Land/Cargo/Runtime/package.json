@@ -20,7 +20,7 @@
 		"@aws-sdk/client-lambda": "3.536.0",
 		"@aws-sdk/client-s3": "3.540.0",
 		"@aws-sdk/client-secrets-manager": "3.535.0",
-		"@aws-sdk/client-ses": "3.535.0",
+		"@aws-sdk/client-ses": "3.540.0",
 		"@aws-sdk/client-sfn": "3.535.0",
 		"@aws-sdk/client-sns": "3.535.0",
 		"@aws-sdk/client-sqs": "3.536.0",
