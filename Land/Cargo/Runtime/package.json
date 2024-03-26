@@ -12,7 +12,7 @@
 	"side-effects": false,
 	"devDependencies": {
 		"@aws-sdk/client-cloudwatch-events": "3.540.0",
-		"@aws-sdk/client-cloudwatch-logs": "3.537.0",
+		"@aws-sdk/client-cloudwatch-logs": "3.540.0",
 		"@aws-sdk/client-cognito-identity": "3.540.0",
 		"@aws-sdk/client-dynamodb": "3.540.0",
 		"@aws-sdk/client-eventbridge": "3.540.0",
