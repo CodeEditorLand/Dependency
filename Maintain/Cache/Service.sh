@@ -4,14 +4,14 @@ Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 
 if [ $# -gt 0 ]; then
 	if [ -f "$1" ]; then
-		\mapfile -t Organization < <(jq -r '.[]' "$1" | \tr -d '\r')
+		\mapfile -t Organization < <(jq -r '.[]' "$1" | \tr -d '\r\n')
 	else
 		\echo "Cannot Organization."
 		\exit 1
 	fi
 
 	if [ -f "$2" ]; then
-		\mapfile -t Omit < <(jq -r '.[]' "$2" | \tr -d '\r')
+		\mapfile -t Omit < <(jq -r '.[]' "$2" | \tr -d '\r\n')
 	else
 		\echo "Cannot Omit."
 		\exit 1
@@ -34,7 +34,7 @@ for Organization in "${Organization[@]}"; do
 				-H "Accept: application/vnd.github+json" \
 				-H "X-GitHub-Api-Version: 2022-11-28" \
 				orgs/"${Organization}"/repos?per_page=100\&page=${Page} | \jq -r '.[].full_name'
-		)" | \tr -d '\r')
+		)" | \tr -d '\r\n')
 
 		for Temporary in "${Temporary[@]}"; do
 			Flag=false
