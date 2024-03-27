@@ -22,7 +22,7 @@
         "miniflare": "3.20240320.0",
         "typescript-document": "0.0.5",
         "typescript-esbuild": "0.4.5",
-        "wrangler": "3.38.0"
+        "wrangler": "3.39.0"
     },
     "homepage": "https://Ingress.Land.Playform.Cloud",
     "license": "SEE LICENSE IN LICENSE",
