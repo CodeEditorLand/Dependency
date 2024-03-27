@@ -1,21 +1,25 @@
 {
 	"$schema": "https://turbo.build/schema.json",
 	"pipeline": {
-		"dev": {
-			"dependsOn": ["^prepublishOnly"],
-			"cache": false
-		},
-		"start": {
-			"dependsOn": ["^prepublishOnly"],
-			"cache": false
-		},
-		"prepublishOnly": {
-			"dependsOn": ["^build", "^prepublishOnly"],
-			"outputs": ["Target/**"]
+		"Document": {
+			"dependsOn": ["^Document", "^build", "^prepublishOnly"],
+			"outputs": ["Target/**", "Document/**"]
 		},
 		"build": {
 			"dependsOn": ["^prepublishOnly", "^build"],
 			"outputs": ["Target/**"]
+		},
+		"dev": {
+			"cache": false,
+			"dependsOn": ["^prepublishOnly"]
+		},
+		"prepublishOnly": {
+			"dependsOn": ["^Document", "^build", "^prepublishOnly"],
+			"outputs": ["Target/**"]
+		},
+		"start": {
+			"cache": false,
+			"dependsOn": ["^prepublishOnly"]
 		}
 	}
 }

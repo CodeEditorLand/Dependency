@@ -34,17 +34,19 @@ for Organization in "${Organization[@]}"; do
 			-o -iname .nvmrc \
 			-o -iname .pnpm-store \
 			-o -iname .prettierignore \
+			-o -iname .prettierrc.cjs \
 			-o -iname .prettierrc.js \
 			-o -iname .prettierrc.json \
 			-o -iname .prettierrc.yaml \
 			-o -iname .stylua.toml \
 			-o -iname .vscode \
 			-o -iname .yarnrc \
-			-o -iname biome.json \
 			-o -iname Cargo.lock \
+			-o -iname biome.json \
 			-o -iname jsconfig.json \
 			-o -iname package-lock.json \
 			-o -iname pnpm-lock.yaml \
+			-o -iname prettier.config.cjs \
 			-o -iname prettier.config.js \
 			-o -iname rome.json \
 			-o -iname rustfmt.toml \

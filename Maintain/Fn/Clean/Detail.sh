@@ -33,14 +33,22 @@
 	.scripts.[\"test:eslint-rules\"],\
 	.scripts.[\"test:fmt\"],\
 	.scripts.[\"test:lint\"],\
+	.scripts.[\"vscode:prepublish\"],\
+	.scripts.bump,\
 	.scripts.check,\
+	.scripts.eslint,\
 	.scripts.fmt,\
 	.scripts.format,\
 	.scripts.lint,\
+	.scripts.nodemon,\
+	.scripts.package,\
 	.scripts.posttest,\
+	.scripts.prepublish,\
 	.scripts.pretest,\
 	.scripts.test,\
+	.scripts.tslint,\
 	.scripts.typecheck,\
+	.scripts.watch,\
 	.tags,\
 	.test,\
 	.tslint\
