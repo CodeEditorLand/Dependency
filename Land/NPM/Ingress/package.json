@@ -21,7 +21,7 @@
         "eslint": "8.57.0",
         "miniflare": "3.20240320.0",
         "typescript-document": "0.0.5",
-        "typescript-esbuild": "0.4.5",
+        "typescript-esbuild": "0.4.8",
         "wrangler": "3.38.0"
     },
     "homepage": "https://Ingress.Land.Playform.Cloud",
