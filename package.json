@@ -13,8 +13,8 @@
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
 		"name": "Nikola R. Hristov",
-		"email": "Nikola@Playform.Cloud",
-		"url": "https://NikolaHristov.Tech"
+		"email": "Nikola@playform.cloud",
+		"url": "https://nikolahristov.tech"
 	},
 	"type": "module",
 	"workspaces": [
@@ -38,7 +38,7 @@
 		"@yesmaintain/cli": "0.0.4",
 		"sort-package-json": "2.9.0",
 		"turbo": "1.13.0",
-		"typescript-esbuild": "0.4.7"
+		"typescript-esbuild": "0.4.9"
 	},
 	"publishConfig": {
 		"access": "public"

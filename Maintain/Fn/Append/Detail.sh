@@ -24,8 +24,8 @@
 	},
 	\"author\": {
 		\"name\": \"Playform\",
-		\"email\": \"Hello@Playform.Cloud\",
-		\"url\": \"https://Playform.Cloud\"
+		\"email\": \"Hello@playform.cloud\",
+		\"url\": \"https://playform.cloud\"
 	},
 	\"scripts\": {
 		\"prepublishOnly\": \"TypeScriptESBuild 'Source/**/*.ts'\"

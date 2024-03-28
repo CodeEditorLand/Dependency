@@ -3,10 +3,10 @@ members = []
 resolver = "2"
 
 [workspace.package]
-authors = ["Nikola R. Hristov <Nikola@Playform.Cloud>"]
-documentation = "https://Docs.Land.Playform.Cloud/"
+authors = ["Nikola R. Hristov <Nikola@playform.cloud>"]
+documentation = "https://Docs.Land.playform.cloud/"
 edition = "2021"
-homepage = "https://Land.Playform.Cloud/"
+homepage = "https://Land.playform.cloud/"
 license-file = "LICENSE"
 publish = false
 readme = "README.md"
