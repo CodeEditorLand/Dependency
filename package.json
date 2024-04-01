@@ -36,9 +36,9 @@
 	"devDependencies": {
 		"@biomejs/biome": "1.6.3",
 		"@yesmaintain/cli": "0.0.4",
-		"sort-package-json": "2.9.0",
+		"sort-package-json": "2.10.0",
 		"turbo": "1.13.0",
-		"typescript-esbuild": "0.4.9"
+		"typescript-esbuild": "0.4.10"
 	},
 	"publishConfig": {
 		"access": "public"

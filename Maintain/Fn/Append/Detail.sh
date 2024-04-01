@@ -31,7 +31,8 @@
 		\"prepublishOnly\": \"TypeScriptESBuild 'Source/**/*.ts'\"
 	},
 	\"devDependencies\": {
-		\"typescript-esbuild\": \"0.4.5\"
+		\"typescript-document\": \"0.0.8\",
+		\"typescript-esbuild\": \"0.4.10\"
 	}
 }" package.json >|package.json.tmp
 
