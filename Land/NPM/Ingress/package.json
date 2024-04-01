@@ -1,0 +1,48 @@
+{
+	"name": "@codeeditorland/ingress",
+	"version": "0.0.4",
+	"private": false,
+	"description": "💾 Ingress Worker for Land.",
+	"homepage": "https://Ingress.Land.playform.cloud",
+	"bugs": {
+		"url": "https://github.com/CodeEditorLand/FoundationLandNPMIngress/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/CodeEditorLand/FoundationLandNPMIngress.git"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "Nikola R. Hristov",
+		"email": "nikola@playform.cloud",
+		"url": "https://nikolahristov.tech"
+	},
+	"type": "module",
+	"main": "./Target/Variable/Worker.js",
+	"types": "./Target/Variable/Worker.d.ts",
+	"scripts": {
+		"Document": "TypeScriptDocument 'Source/**/*.ts'",
+		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts' -ES Configuration/ESBuild.ts"
+	},
+	"dependencies": {
+		"@codeeditorland/common": "0.0.4",
+		"itty-router": "5.0.4"
+	},
+	"devDependencies": {
+		"@cloudflare/workers-types": "4.20240329.0",
+		"@miniflare/tre": "3.0.0-next.14",
+		"@types/dotenv": "8.2.0",
+		"@typescript-eslint/eslint-plugin": "7.4.0",
+		"@typescript-eslint/parser": "7.4.0",
+		"eslint": "8.57.0",
+		"miniflare": "3.20240320.1",
+		"@playform/build": "0.0.1",
+		"wrangler": "3.42.0"
+	},
+	"optionalDependencies": {
+		"@playform/document": "0.0.2"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}
