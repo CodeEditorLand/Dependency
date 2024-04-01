@@ -8,5 +8,5 @@
 	"watchOptions": {
 		"excludeDirectories": ["**/node_modules/**", "**/Target/**"]
 	},
-	"extends": "typescript-esbuild/Target/Notation/TypeScript"
+	"extends": "@playform/build/Target/Notation/TypeScript"
 }

@@ -123,6 +123,7 @@ Omit=(
 	"prettier-eslint-cli"
 	"tslint"
 	"tslint-eslint-rules"
+	"@playform/document"
 	"vue-eslint-parser"
 )
 

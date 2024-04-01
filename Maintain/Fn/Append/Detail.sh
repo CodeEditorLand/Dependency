@@ -4,16 +4,16 @@
 
 # The path is always CodeEditorLand/Foundation/$Foundation/Service/$SUBMODULE.name or fetch the correct submodule URL
 
-# Version=$(\npm show typescript-esbuild version)
+# Version=$(\npm show @playform/build version)
 
 \jq -S --tab ". * {
-	\"homepage\": \"https://GitHub.Com/CodeEditorLand/Foundation#readme\",
+	\"homepage\": \"https://github.com/CodeEditorLand/Foundation#readme\",
 	\"bugs\": {
-		\"url\": \"https://GitHub.Com/CodeEditorLand/Foundation/issues\"
+		\"url\": \"https://github.com/CodeEditorLand/Foundation/issues\"
 	},
 	\"repository\": {
 		\"type\": \"git\",
-		\"url\": \"git+https://GitHub.Com/CodeEditorLand/Foundation.git\"
+		\"url\": \"git+https://github.com/CodeEditorLand/Foundation.git\"
 	},
 	\"version\": \"0.0.1\",
 	\"license\": \"SEE LICENSE IN LICENSE\",
@@ -31,8 +31,10 @@
 		\"prepublishOnly\": \"TypeScriptESBuild 'Source/**/*.ts'\"
 	},
 	\"devDependencies\": {
-		\"typescript-document\": \"0.0.8\",
-		\"typescript-esbuild\": \"0.4.10\"
+		\"@playform/build\": \"0.0.1\"
+	},
+	\"optionalDependencies\": {
+		\"@playform/document\": \"0.0.2\"
 	}
 }" package.json >|package.json.tmp
 
