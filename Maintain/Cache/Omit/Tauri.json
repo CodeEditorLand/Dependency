@@ -43,6 +43,7 @@
 	"CodeEditorLand/Land",
 	"CodeEditorLand/Maintain",
 	"CodeEditorLand/Moon",
+	"CodeEditorLand/PrivateMoon",
 	"CodeEditorLand/NPM",
 	"CodeEditorLand/NPMCommon",
 	"CodeEditorLand/NPMIngress",
