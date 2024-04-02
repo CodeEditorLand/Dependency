@@ -20,15 +20,26 @@
 	.scripts.[\"fmt:js\"],\
 	.scripts.[\"format-check\"],\
 	.scripts.[\"format:check\"],\
+	.scripts.[\"format:eslint\"],\
+	.scripts.[\"format:prettier\"],\
+	.scripts.[\"format:stylelint\"],\
+	.scripts.[\"lint-fix:format\"],\
+	.scripts.[\"lint-fix:js\"],\
+	.scripts.[\"lint-fix:styles\"],\
 	.scripts.[\"lint-fix\"],\
 	.scripts.[\"lint-format\"],\
 	.scripts.[\"lint:client\"],\
 	.scripts.[\"lint:eslint\"],\
 	.scripts.[\"lint:fix:prettier\"],\
 	.scripts.[\"lint:fix\"],\
+	.scripts.[\"lint:format\"],\
+	.scripts.[\"lint:js\"],\
 	.scripts.[\"lint:prettier\"],\
 	.scripts.[\"lint:scripts\"],\
 	.scripts.[\"lint:server\"],\
+	.scripts.[\"lint:styles\"],\
+	.scripts.[\"lint:tsc\"],\
+	.scripts.[\"lint:types\"],\
 	.scripts.[\"prettier-fix\"],\
 	.scripts.[\"test:eslint-rules\"],\
 	.scripts.[\"test:fmt\"],\
@@ -40,12 +51,16 @@
 	.scripts.fmt,\
 	.scripts.format,\
 	.scripts.lint,\
+	.scripts.lint-fix,\
 	.scripts.nodemon,\
 	.scripts.package,\
 	.scripts.posttest,\
 	.scripts.prepublish,\
 	.scripts.pretest,\
+	.scripts.prettier,\
+	.scripts.stylelint,\
 	.scripts.test,\
+	.scripts.tsc,\
 	.scripts.tslint,\
 	.scripts.typecheck,\
 	.scripts.watch,\
