@@ -2,11 +2,11 @@
 	"$schema": "https://turbo.build/schema.json",
 	"pipeline": {
 		"Document": {
-			"dependsOn": ["^Document", "^build", "^prepublishOnly"],
+			"dependsOn": ["^Document"],
 			"outputs": ["Target/**", "Document/**"]
 		},
 		"build": {
-			"dependsOn": ["^prepublishOnly", "^build"],
+			"dependsOn": ["^build"],
 			"outputs": ["Target/**"]
 		},
 		"dev": {
@@ -14,7 +14,7 @@
 			"dependsOn": ["^prepublishOnly"]
 		},
 		"prepublishOnly": {
-			"dependsOn": ["^Document", "^build", "^prepublishOnly"],
+			"dependsOn": ["^prepublishOnly"],
 			"outputs": ["Target/**"]
 		},
 		"start": {
