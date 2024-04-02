@@ -37,7 +37,7 @@
 		"eslint": "8.57.0",
 		"miniflare": "3.20240329.0",
 		"@playform/build": "0.0.1",
-		"wrangler": "3.41.0"
+		"wrangler": "3.43.0"
 	},
 	"optionalDependencies": {
 		"@playform/document": "0.0.2"
