@@ -37,7 +37,7 @@
 		"@biomejs/biome": "1.6.3",
 		"@yesmaintain/cli": "0.0.4",
 		"sort-package-json": "2.10.0",
-		"turbo": "1.13.0",
+		"turbo": "1.13.2",
 		"@playform/build": "0.0.1"
 	},
 	"publishConfig": {
