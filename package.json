@@ -35,7 +35,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.6.3",
-		"@playform/build": "0.0.1",
+		"@playform/build": "0.0.2",
 		"@playform/maintain": "0.0.4",
 		"sort-package-json": "2.10.0",
 		"turbo": "1.13.1"

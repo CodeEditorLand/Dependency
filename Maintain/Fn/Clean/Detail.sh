@@ -51,7 +51,6 @@
 	.scripts.fmt,\
 	.scripts.format,\
 	.scripts.lint,\
-	.scripts.lint-fix,\
 	.scripts.nodemon,\
 	.scripts.package,\
 	.scripts.posttest,\

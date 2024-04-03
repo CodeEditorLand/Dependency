@@ -28,10 +28,10 @@
 		\"url\": \"https://playform.cloud\"
 	},
 	\"scripts\": {
-		\"prepublishOnly\": \"TypeScriptESBuild 'Source/**/*.ts'\"
+		\"prepublishOnly\": \"Build 'Source/**/*.ts'\"
 	},
 	\"devDependencies\": {
-		\"@playform/build\": \"0.0.1\"
+		\"@playform/build\": \"0.0.2\"
 	},
 	\"optionalDependencies\": {
 		\"@playform/document\": \"0.0.2\"

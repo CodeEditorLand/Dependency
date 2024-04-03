@@ -13,7 +13,6 @@
 	"CodeEditorLand/OxcFuzzParser",
 	"CodeEditorLand/OxcIntellijPlugin",
 	"CodeEditorLand/OxcResolver",
-	"CodeEditorLand/PrivateMoon",
 	"CodeEditorLand/UnicodeId",
 	"CodeEditorLand/UnicodeIdStart"
 ]
