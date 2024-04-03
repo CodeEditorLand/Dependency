@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# TODO: Run once after repository creation 
+
 Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
 Foundation=(
