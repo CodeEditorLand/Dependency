@@ -28,10 +28,9 @@
 		"!NPM/**/Target/"
 	],
 	"scripts": {
-		"build": "turbo run build",
-		"dev": "turbo run dev",
-		"prepublishOnly": "turbo run prepublishOnly",
-		"start": "turbo run start"
+		"Build": "turbo run Build",
+		"Document": "turbo run Document",
+		"Maintain": "turbo run Maintain"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.6.3",
