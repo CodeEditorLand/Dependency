@@ -3,23 +3,11 @@
 	"pipeline": {
 		"Document": {
 			"dependsOn": ["^Document"],
-			"outputs": ["Target/**", "Document/**"]
+			"outputs": ["Documentation/**"]
 		},
-		"build": {
-			"dependsOn": ["^build"],
+		"Build": {
+			"dependsOn": ["^Build"],
 			"outputs": ["Target/**"]
-		},
-		"dev": {
-			"cache": false,
-			"dependsOn": ["^prepublishOnly"]
-		},
-		"prepublishOnly": {
-			"dependsOn": ["^prepublishOnly"],
-			"outputs": ["Target/**"]
-		},
-		"start": {
-			"cache": false,
-			"dependsOn": ["^prepublishOnly"]
 		}
 	}
 }

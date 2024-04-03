@@ -12,9 +12,9 @@
 	},
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
-		"name": "Nikola R. Hristov",
-		"email": "nikola@playform.cloud",
-		"url": "https://nikolahristov.tech"
+		"name": "Playform",
+		"email": "hello@playform.cloud",
+		"url": "https://playform.cloud"
 	},
 	"type": "module",
 	"workspaces": [
@@ -29,8 +29,7 @@
 	],
 	"scripts": {
 		"Build": "turbo run Build",
-		"Document": "turbo run Document",
-		"Maintain": "turbo run Maintain"
+		"Document": "turbo run Document"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.6.3",
