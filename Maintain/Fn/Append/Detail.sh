@@ -4,8 +4,6 @@
 
 # The path is always CodeEditorLand/Foundation/$Foundation/Service/$SUBMODULE.name or fetch the correct submodule URL
 
-# Version=$(\npm show @playform/build version)
-
 \jq -S --tab ". * {
 	\"homepage\": \"https://github.com/CodeEditorLand/Foundation#ReadMe\",
 	\"bugs\": {
@@ -32,10 +30,10 @@
 		\"Build\": \"Build 'Source/**/*.ts'\",
 	},
 	\"devDependencies\": {
-		\"@playform/build\": \"0.0.2\"
+		\"@playform/build\": \"$(\npm show @playform/build version)\"
 	},
 	\"optionalDependencies\": {
-		\"@playform/document\": \"0.0.2\"
+		\"@playform/document\": \"$(\npm show @playform/document version)\"
 	}
 }" package.json >|package.json.tmp
 
