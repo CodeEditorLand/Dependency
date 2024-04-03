@@ -7,7 +7,7 @@
 # Version=$(\npm show @playform/build version)
 
 \jq -S --tab ". * {
-	\"homepage\": \"https://github.com/CodeEditorLand/Foundation#readme\",
+	\"homepage\": \"https://github.com/CodeEditorLand/Foundation#ReadMe\",
 	\"bugs\": {
 		\"url\": \"https://github.com/CodeEditorLand/Foundation/issues\"
 	},
