@@ -24,11 +24,12 @@
 	},
 	\"author\": {
 		\"name\": \"Playform\",
-		\"email\": \"Hello@playform.cloud\",
+		\"email\": \"hello@playform.cloud\",
 		\"url\": \"https://playform.cloud\"
 	},
 	\"scripts\": {
-		\"prepublishOnly\": \"Build 'Source/**/*.ts'\"
+		\"Document\": \"Document 'Source/**/*.ts'\",
+		\"Build\": \"Build 'Source/**/*.ts'\",
 	},
 	\"devDependencies\": {
 		\"@playform/build\": \"0.0.2\"
