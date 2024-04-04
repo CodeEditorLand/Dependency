@@ -32,7 +32,7 @@
 	},
 	\"scripts\": {
 		\"Document\": \"Document 'Source/**/*.ts'\",
-		\"Build\": \"Build 'Source/**/*.ts'\",
+		\"prepublishOnly\": \"Build 'Source/**/*.ts'\",
 	},
 	\"devDependencies\": {
 		\"@playform/build\": \"0.0.2\"
