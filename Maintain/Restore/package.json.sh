@@ -20,7 +20,7 @@ for Organization in "${Organization[@]}"; do
 		Main=$(\echo "$Main" | \sed 's/\/$//')
 		Main=$(\gh repo view "$Main" --json defaultBranchRef | \jq -r -c '.defaultBranchRef.name')
 
-		\find . -type d \( -iname node_modules -o -iname vendor -o -iname dist -o -iname target -o -iname \.git -o -iname \.next \) -prune -false -o -iname package.json -type f -execdir bash -c "\git restore --source upstream/\"$Main\" package.json" \;
+		\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o -iname package.json -type f -execdir bash -c "\git restore --source upstream/\"$Main\" package.json" \;
 
 		\cd - || \exit
 	done
