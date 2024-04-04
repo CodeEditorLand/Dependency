@@ -18,7 +18,7 @@
 	},
 	"type": "module",
 	"scripts": {
-		"Build": "turbo run Build",
+		"prepublishOnly": "turbo run prepublishOnly",
 		"Document": "turbo run Document"
 	},
 	"devDependencies": {
