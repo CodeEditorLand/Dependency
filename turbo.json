@@ -5,8 +5,8 @@
 			"dependsOn": ["^Document"],
 			"outputs": ["Documentation/**"]
 		},
-		"Build": {
-			"dependsOn": ["^Build"],
+		"prepublishOnly": {
+			"dependsOn": ["^prepublishOnly"],
 			"outputs": ["Target/**"]
 		}
 	}
