@@ -29,14 +29,13 @@ Package="$Current"/../../../package.json
 		\"email\": \"hello@playform.cloud\",
 		\"url\": \"https://playform.cloud\"
 	},
-
 	\"scripts\": {
 		\"Document\": \"Document 'Source/**/*.ts'\",
 		\"prepublishOnly\": \"Build 'Source/**/*.ts'\",
 	},
 	\"devDependencies\": {
-		\"@playform/build\": \"$(\jq -r '.devDependencies["@playform/build"]' $Package)\",
-		\"@playform/document\": \"$(\jq -r '.devDependencies["@playform/document"]' $Package)\"
+		\"@playform/build\": \"$(\jq -r '.devDependencies["@playform/build"]' "$Package")\",
+		\"@playform/document\": \"$(\jq -r '.devDependencies["@playform/document"]' "$Package")\"
 	}
 }" package.json >|package.json.tmp
 
