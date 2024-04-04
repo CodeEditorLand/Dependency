@@ -24,8 +24,7 @@
 	"devDependencies": {
 		"@biomejs/biome": "1.6.4",
 		"@commonalityco/studio": "0.2.57",
-		"@playform/build": "0.0.2",
-		"@playform/document": "0.0.3",
+		"@playform/build": "0.0.3",
 		"@playform/maintain": "0.0.1",
 		"@prettier/plugin-lua": "0.0.3",
 		"@prettier/plugin-php": "0.22.2",
