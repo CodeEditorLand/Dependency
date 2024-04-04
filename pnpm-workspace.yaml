@@ -1,12 +1,5 @@
 packages:
-    - "Land/**"
-    - "!Land/**/build"
-    - "!Land/**/dist"
-    - "!Land/**/Target"
-    - "!Land/**/target"
-
-    - "NPM/**"
-    - "!NPM/**/build"
-    - "!NPM/**/dist"
-    - "!NPM/**/Target"
-    - "!NPM/**/target"
+    - "Biome/NPM/**"
+    - "Land/NPM/**"
+    - "OXC/NPM/**"
+    - "Tauri/NPM/**"
