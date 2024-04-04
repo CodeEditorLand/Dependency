@@ -8,5 +8,6 @@
 	"watchOptions": {
 		"excludeDirectories": ["**/node_modules/**", "**/Target/**"]
 	},
-	"extends": "@playform/build/tsconfig"
+	"extends": "@playform/build/tsconfig",
+	"include": ["Source"]
 }
