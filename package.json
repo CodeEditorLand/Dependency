@@ -33,8 +33,8 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.6.3",
-		"@playform/maintain": "0.0.2",
 		"@playform/build": "0.0.2",
+		"@playform/document": "0.0.3",
 		"@playform/maintain": "0.0.1",
 		"sort-package-json": "2.10.0",
 		"turbo": "1.13.1"
