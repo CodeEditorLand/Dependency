@@ -1,14 +1,13 @@
 #!/bin/bash
 
-# Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
-
-# echo $(jq -r '.devDependencies' "$Current"/../../../package.json)
+Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
 # TODO: Add dynamic { "repository": { "directory": Foundation/$Foundation/Service/$Service } }
 
 # # The path is always CodeEditorLand/Foundation/$Foundation/Service/$SUBMODULE.name or fetch the correct submodule URL
 
-# TODO: Get package version from ../../../package.json
+Package="$Current"/../../../package.json
+
 \jq -S --tab ". * {
 	\"homepage\": \"https://github.com/CodeEditorLand/Foundation#ReadMe\",
 	\"bugs\": {
@@ -30,15 +29,14 @@
 		\"email\": \"hello@playform.cloud\",
 		\"url\": \"https://playform.cloud\"
 	},
+
 	\"scripts\": {
 		\"Document\": \"Document 'Source/**/*.ts'\",
 		\"prepublishOnly\": \"Build 'Source/**/*.ts'\",
 	},
 	\"devDependencies\": {
-		\"@playform/build\": \"0.0.2\"
-	},
-	\"optionalDependencies\": {
-		\"@playform/document\": \"0.0.3\"
+		\"@playform/build\": \"$(\jq -r '.devDependencies["@playform/build"]' $Package)\",
+		\"@playform/document\": \"$(\jq -r '.devDependencies["@playform/document"]' $Package)\"
 	}
 }" package.json >|package.json.tmp
 

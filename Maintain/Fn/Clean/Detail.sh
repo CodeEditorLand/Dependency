@@ -10,6 +10,7 @@
 	.homepage,\
 	.keywords,\
 	.license,\
+	.packageManager,\
 	.peerDependencies,\
 	.prettier,\
 	.private,\
@@ -65,7 +66,7 @@
 	.scripts.watch,\
 	.tags,\
 	.test,\
-	.tslint\
+	.tslint,\
 	.type,\
 	.version\
 )" package.json >|package.json.tmp
