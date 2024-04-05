@@ -5,13 +5,13 @@
 			"dependsOn": ["^Document"],
 			"outputs": ["Documentation/**"]
 		},
-		"prepublishOnly": {
-			"dependsOn": ["^prepublishOnly"],
-			"outputs": ["Target/**"]
-		},
 		"Start": {
 			"cache": false,
 			"dependsOn": ["^Start"]
+		},
+		"prepublishOnly": {
+			"dependsOn": ["^prepublishOnly"],
+			"outputs": ["Target/**"]
 		}
 	}
 }
