@@ -8,6 +8,10 @@
 		"prepublishOnly": {
 			"dependsOn": ["^prepublishOnly"],
 			"outputs": ["Target/**"]
+		},
+		"Start": {
+			"cache": false,
+			"dependsOn": ["^Start"]
 		}
 	}
 }
