@@ -9,7 +9,7 @@ Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 Package="$Current"/../../../package.json
 
 \jq -S --tab ". * {
-	\"homepage\": \"https://github.com/CodeEditorLand/Foundation#ReadMe\",
+	\"homepage\": \"https://github.com/CodeEditorLand/Foundation#readme\",
 	\"bugs\": {
 		\"url\": \"https://github.com/CodeEditorLand/Foundation/issues\"
 	},
