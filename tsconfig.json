@@ -4,10 +4,9 @@
 		"noEmit": true
 	},
 	"exclude": ["**/node_modules/**", "**/Target/**"],
-	"include": ["./Land/", "./NPM/"],
+	"include": ["./Biome/", "./Land/", "./OXC/", "./Tauri/"],
 	"watchOptions": {
 		"excludeDirectories": ["**/node_modules/**", "**/Target/**"]
 	},
-	"extends": "@playform/build/tsconfig",
-	"include": ["Source"]
+	"extends": "@playform/build/tsconfig"
 }
