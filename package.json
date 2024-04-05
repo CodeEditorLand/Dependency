@@ -18,13 +18,14 @@
 	},
 	"type": "module",
 	"scripts": {
-		"prepublishOnly": "turbo run prepublishOnly",
-		"Document": "turbo run Document"
+		"Document": "turbo run Document",
+		"prepublishOnly": "turbo run prepublishOnly"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.6.4",
 		"@commonalityco/studio": "0.2.57",
 		"@playform/build": "0.0.5",
+		"@playform/document": "0.0.6",
 		"@playform/maintain": "0.0.2",
 		"@prettier/plugin-lua": "0.0.3",
 		"@prettier/plugin-php": "0.22.2",
