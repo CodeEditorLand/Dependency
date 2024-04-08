@@ -53,6 +53,36 @@ for Organization in "${Organization[@]}"; do
 			-o -iname yarn.lock \
 			\) -exec rm -rf {} \;
 
+		\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o \
+			\( \
+			-name test \
+			-o -name '__snapshot__' \
+			-o -name '__snapshots__' \
+			-o -name '__test__' \
+			-o -name '__tests__' \
+			-o -name 'tests' \
+			\) -type d -exec rm -rf {} \;
+
+		\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o \
+			\( \
+			-iname '*.unit.test.ts' \
+			-o -iname '*.js.snap' \
+			-o -iname '*.jsx.snap' \
+			-o -iname '*.spec.*.map' \
+			-o -iname '*.spec.*.snap' \
+			-o -iname '*.spec.js' \
+			-o -iname '*.spec.ts' \
+			-o -iname '*.spec.tsx' \
+			-o -iname '*.test.*.map' \
+			-o -iname '*.test.data.*' \
+			-o -iname '*.test.js' \
+			-o -iname '*.test.json' \
+			-o -iname '*.test.ts' \
+			-o -iname '*.ts.snap' \
+			-o -iname '*.tsx.snap' \
+			-o -iname '*.unit.test.js' \
+			\) -exec rm -rf {} \;
+
 		\cd - || \exit
 	done
 done
