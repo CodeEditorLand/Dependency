@@ -25,7 +25,7 @@ Fn() {
 	fi
 
 	# shellcheck disable=SC2034
-	Folder=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)/../../"$Foundation"/Service
+	Folder=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)/../../"$Foundation"/Service
 }
 
 export Fn
