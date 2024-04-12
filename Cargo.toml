@@ -3,7 +3,7 @@ members = []
 resolver = "2"
 
 [workspace.package]
-authors = ["Nikola R. Hristov <nikola@playform.cloud>"]
+authors = ["Nikola R. Hristov <nikola@nikolahristov.tech>"]
 documentation = "https://Docs.Land.playform.cloud/"
 edition = "2021"
 homepage = "https://Land.playform.cloud/"
