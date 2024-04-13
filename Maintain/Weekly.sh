@@ -21,30 +21,30 @@ for Foundation in "${Foundation[@]}"; do
 		"$Omit" \
 		"$Foundation"
 
-	"$Current"/Module/Foundation.sh \
+	# "$Current"/Module/Foundation.sh \
+	# 	"$Organization" \
+	# 	"$Service" \
+	# 	"$Foundation"
+
+	# "$Current"/Configure/Service.sh \
+	# 	"$Organization" \
+	# 	"$Service" \
+	# 	"$Foundation"
+
+	# "$Current"/Setting/Service.sh \
+	# 	"$Organization" \
+	# 	"$Service" \
+	# 	"$Foundation"
+
+	# "$Current"/Rename/Service.sh \
+	# 	"$Organization" \
+	# 	"$Service" \
+	# 	"$Foundation"
+
+	"$Current"/Sync/Service.sh \
 		"$Organization" \
 		"$Service" \
 		"$Foundation"
-
-	"$Current"/Configure/Service.sh \
-		"$Organization" \
-		"$Service" \
-		"$Foundation"
-
-	"$Current"/Setting/Service.sh \
-		"$Organization" \
-		"$Service" \
-		"$Foundation"
-
-	"$Current"/Rename/Service.sh \
-		"$Organization" \
-		"$Service" \
-		"$Foundation"
-
-	# # "$Current"/Sync/Service.sh \
-	# # 	"$Organization" \
-	# # 	"$Service" \
-	# # 	"$Foundation"
 
 	"$Current"/Save/Service.sh \
 		"$Organization" \
@@ -78,11 +78,11 @@ for Foundation in "${Foundation[@]}"; do
 	# 	"$Service" \
 	# 	"$Foundation"
 
-	"$Current"/Default/Branch.sh \
-		"$Organization" \
-		"$Service" \
-		"$Foundation" \
-		"Current"
+	# "$Current"/Default/Branch.sh \
+	# 	"$Organization" \
+	# 	"$Service" \
+	# 	"$Foundation" \
+	# 	"Current"
 
 	"$Current"/Move/license.sh \
 		"$Organization" \

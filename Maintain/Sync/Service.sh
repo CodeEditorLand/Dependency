@@ -20,7 +20,7 @@ for Organization in "${Organization[@]}"; do
 		Main=$(\echo "$Main" | \sed 's/\/$//')
 		Main=$(\gh repo view "$Main" --json defaultBranchRef | \jq -r -c '.defaultBranchRef.name')
 
-		\git merge upstream/"$Main" --allow-unrelated-histories
+		\git merge upstream/"$Main" --no-edit --allow-unrelated-histories -X ours
 
 		\cd - || \exit
 	done
