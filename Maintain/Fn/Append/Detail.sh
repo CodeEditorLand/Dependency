@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
+Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
 
 # TODO: Add dynamic { "repository": { "directory": Foundation/$Foundation/Service/$Service } }
 
@@ -37,6 +37,6 @@ Package="$Current"/../../../package.json
 		\"@playform/document\": \"$(\jq -r '.devDependencies["@playform/document"]' "$Package")\",
 		\"@playform/build\": \"$(\jq -r '.devDependencies["@playform/build"]' "$Package")\"
 	}
-}" package.json >|package.json.tmp
+}" package.json >| package.json.tmp
 
 \mv package.json.tmp package.json
