@@ -69,7 +69,7 @@
 	.tslint,\
 	.type,\
 	.version\
-)" package.json >|package.json.tmp
+)" package.json >| package.json.tmp
 
 \mv package.json.tmp package.json
 
@@ -84,11 +84,16 @@ Omit=(
 	"@microsoft/eslint-config-fast-dna"
 	"@mixer/parallel-prettier"
 	"@nicolo-ribaudo/eslint-scope-5-internals"
+	"@playform/document"
+	"@types/copy-webpack-plugin"
+	"@types/mocha"
+	"@types/terser-webpack-plugin"
 	"@typescript-eslint/eslint-plugin"
 	"@typescript-eslint/eslint-plugin-tslint"
 	"@typescript-eslint/experimental-utils"
 	"@typescript-eslint/parser"
 	"@typescript-eslint/utils"
+	"@vscode/test-electron"
 	"eslint"
 	"eslint-cli"
 	"eslint-config-airbnb"
@@ -133,20 +138,24 @@ Omit=(
 	"eslint-utils"
 	"eslint-visitor-keys"
 	"gulp-eslint"
+	"mocha"
+	"mocha-junit-reporter"
+	"mocha-multi-reporters"
 	"prettier"
 	"prettier-eslint"
 	"prettier-eslint-cli"
+	"terser-webpack-plugin"
 	"tslint"
 	"tslint-eslint-rules"
-	"@playform/document"
 	"vue-eslint-parser"
+	"webpack"
 )
 
 Key() {
 	for Dependency in "${Omit[@]}"; do
 		\jq -S --tab "del(\
 			.[\"$1\"].[\"${Dependency}\"]\
-		)" package.json >|package.json.tmp
+		)" package.json >| package.json.tmp
 
 		\mv package.json.tmp package.json
 	done
