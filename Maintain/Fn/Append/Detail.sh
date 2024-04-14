@@ -11,13 +11,13 @@ Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
 Package="$Current"/../../../package.json
 
 \jq -S --tab ". * {
-	\"homepage\": \"https://github.com/CodeEditorLand/Foundation#readme\",
+	\"homepage\": \"HTTPS://github.com/CodeEditorLand/Foundation#readme\",
 	\"bugs\": {
-		\"url\": \"https://github.com/CodeEditorLand/Foundation/issues\"
+		\"url\": \"HTTPS://github.com/CodeEditorLand/Foundation/issues\"
 	},
 	\"repository\": {
 		\"type\": \"git\",
-		\"url\": \"git+https://github.com/CodeEditorLand/Foundation.git\"
+		\"url\": \"git+HTTPS://github.com/CodeEditorLand/Foundation.git\"
 	},
 	\"version\": \"0.0.1\",
 	\"license\": \"SEE LICENSE IN LICENSE\",
@@ -27,9 +27,9 @@ Package="$Current"/../../../package.json
 		\"access\": \"public\"
 	},
 	\"author\": {
-		\"name\": \"Playform\",
-		\"email\": \"hello@playform.cloud\",
-		\"url\": \"https://playform.cloud\"
+		\"name\": \"Land\",
+		\"email\": \"Land@Playform.Cloud\",
+		\"url\": \"HTTPS://Land.Playform.Cloud\"
 	},
 	\"scripts\": {
 		\"Document\": \"Document 'Source/**/*.ts'\",

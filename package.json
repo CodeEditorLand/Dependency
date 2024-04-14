@@ -8,13 +8,13 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/CodeEditorLand/Foundation.git"
+		"url": "git+HTTPS://github.com/CodeEditorLand/Foundation.git"
 	},
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
-		"name": "Playform",
-		"email": "hello@playform.cloud",
-		"url": "https://playform.cloud"
+		"name": "Source/Open",
+		"email": "Source/Open@Playform.Cloud",
+		"url": "HTTPS://Playform.Cloud"
 	},
 	"type": "module",
 	"scripts": {
