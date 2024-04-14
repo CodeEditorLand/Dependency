@@ -1,5 +1,7 @@
 #!/bin/bash
 
+\pwd
+
 JSON=$(< package.json)
 
 JSON=$(echo "$JSON" | \jq -S --tab "del(\
@@ -723,16 +725,29 @@ Omit=(
 	"yeoman-test"
 )
 
+Length=${#Omit[@]}
+Size=210
+
 Key() {
 	JSON=$(< package.json)
 
-	for Omit in "${Omit[@]}"; do
-		JSON=$(echo "$JSON" | \jq -S --tab "del(\
-			.[\"$1\"].[\"${Omit}\"]\
-		)")
-	done
+	for ((Start = 0; Start < Length; Start += Size)); do
+		Chunk=("${Omit[@]:Start:Size}")
 
-	echo "$JSON" >| package.json
+		JQ="del("
+
+		for Omit in "${Chunk[@]}"; do
+			JQ+=".[\"$1\"].[\"${Omit}\"],"
+		done
+
+		JQ=${JQ%,}
+
+		JQ+=")"
+
+		JSON=$(echo "$JSON" | \jq -S --tab "$JQ")
+
+		echo "$JSON" >| package.json
+	done
 }
 
 Key "dependencies"

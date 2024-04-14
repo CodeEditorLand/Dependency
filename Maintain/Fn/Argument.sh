@@ -1,5 +1,7 @@
 #!/bin/bash
 
+\pwd
+
 Fn() {
 	if [ $# -gt 0 ]; then
 		if [ -f "$1" ]; then

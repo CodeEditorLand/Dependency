@@ -1,5 +1,7 @@
 #!/bin/bash
 
+\pwd
+
 if [ $# -gt 0 ]; then
 	if [ -n "$1" ]; then
 		Service=$1
