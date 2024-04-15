@@ -9,15 +9,16 @@ Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
 # # The path is always CodeEditorLand/Foundation/$Foundation/Service/$SUBMODULE.name or fetch the correct submodule URL
 
 Package="$Current"/../../../package.json
+Slug=$(\gh repo view --json nameWithOwner | \jq -r .nameWithOwner)
 
 \jq -S --tab ". * {
-	\"homepage\": \"HTTPS://github.com/CodeEditorLand/Foundation#readme\",
+	\"homepage\": \"HTTPS://GitHub.Com/$Slug#readme\",
 	\"bugs\": {
-		\"url\": \"HTTPS://github.com/CodeEditorLand/Foundation/issues\"
+		\"url\": \"HTTPS://GitHub.Com/$Slug/issues\"
 	},
 	\"repository\": {
 		\"type\": \"git\",
-		\"url\": \"git+HTTPS://github.com/CodeEditorLand/Foundation.git\"
+		\"url\": \"git+HTTPS://github.com/$Slug.git\"
 	},
 	\"version\": \"0.0.1\",
 	\"license\": \"SEE LICENSE IN LICENSE\",
