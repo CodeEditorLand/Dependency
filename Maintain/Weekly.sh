@@ -13,23 +13,23 @@ for Foundation in "${Foundation[@]}"; do
 	Cache="$Current"/Cache
 
 	Organization="$Cache"/Organization/"$Foundation".json
-	Exclude="$Cache"/Exclude/"$Foundation".json
+	# Exclude="$Cache"/Exclude/"$Foundation".json
 	Service="$Cache"/Service/"$Foundation".json
 
-	"$Current"/Cache/Service.sh \
-		"$Organization" \
-		"$Exclude" \
-		"$Foundation"
+	# "$Current"/Cache/Service.sh \
+	# 	"$Organization" \
+	# 	"$Exclude" \
+	# 	"$Foundation"
 
 	# "$Current"/Module/Foundation.sh \
 	# 	"$Organization" \
 	# 	"$Service" \
 	# 	"$Foundation"
 
-	# "$Current"/Configure/Service.sh \
-	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation"
+	"$Current"/Configure/Service.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
 
 	# "$Current"/Setting/Service.sh \
 	# 	"$Organization" \
@@ -78,21 +78,21 @@ for Foundation in "${Foundation[@]}"; do
 		"$Foundation" \
 		"Current"
 
-	# "$Current"/Save/Service.sh \
-	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation"
+	"$Current"/Save/Service.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
 
 	# "$Current"/Reset/Service.sh \
 	# 	"$Organization" \
 	# 	"$Service" \
 	# 	"$Foundation"
 
-	# "$Current"/Default/Branch.sh \
-	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation" \
-	# 	"Current"
+	"$Current"/Default/Branch.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation" \
+		"Current"
 
 	"$Current"/Move/license.sh \
 		"$Organization" \
