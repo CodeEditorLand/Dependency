@@ -13,12 +13,12 @@ for Foundation in "${Foundation[@]}"; do
 	Cache="$Current"/Cache
 
 	Organization="$Cache"/Organization/"$Foundation".json
-	Omit="$Cache"/Omit/"$Foundation".json
+	Exclude="$Cache"/Exclude/"$Foundation".json
 	Service="$Cache"/Service/"$Foundation".json
 
 	"$Current"/Cache/Service.sh \
 		"$Organization" \
-		"$Omit" \
+		"$Exclude" \
 		"$Foundation"
 
 	"$Current"/Setting/Service.sh \

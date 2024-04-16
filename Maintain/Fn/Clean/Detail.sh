@@ -78,7 +78,7 @@ JSON=$(echo "$JSON" | \jq -S --tab "del(\
 
 echo "$JSON" >| package.json
 
-Omit=(
+Exclude=(
 	"@antfu/eslint-config"
 	"@astrojs/react"
 	"@azure-rest/ai-translation-text"
@@ -725,19 +725,19 @@ Omit=(
 	"yeoman-test"
 )
 
-Length=${#Omit[@]}
+Length=${#Exclude[@]}
 Size=210
 
 Key() {
 	JSON=$(< package.json)
 
 	for ((Start = 0; Start < Length; Start += Size)); do
-		Chunk=("${Omit[@]:Start:Size}")
+		Chunk=("${Exclude[@]:Start:Size}")
 
 		JQ="del("
 
-		for Omit in "${Chunk[@]}"; do
-			JQ+=".[\"$1\"].[\"${Omit}\"],"
+		for Exclude in "${Chunk[@]}"; do
+			JQ+=".[\"$1\"].[\"${Exclude}\"],"
 		done
 
 		JQ=${JQ%,}

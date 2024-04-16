@@ -11,9 +11,9 @@ if [ $# -gt 0 ]; then
 	fi
 
 	if [ -f "$2" ]; then
-		\mapfile -t Omit < <(jq -r '.[]' "$2" | \tr -d '\r')
+		\mapfile -t Exclude < <(jq -r '.[]' "$2" | \tr -d '\r')
 	else
-		\echo "Cannot Omit."
+		\echo "Cannot Exclude."
 		\exit 1
 	fi
 
@@ -39,8 +39,8 @@ for Organization in "${Organization[@]}"; do
 		for Temporary in "${Temporary[@]}"; do
 			Flag=false
 
-			for ServiceOmit in "${Omit[@]}"; do
-				if [ "$Temporary" = "$ServiceOmit" ]; then
+			for ServiceExclude in "${Exclude[@]}"; do
+				if [ "$Temporary" = "$ServiceExclude" ]; then
 					Flag=true
 
 					break
