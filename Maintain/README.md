@@ -7,14 +7,14 @@
     ../Append/Detail.sh
     ```
 
-2. Remove all of the tags and (Prettier, Biome, Rome, ) from the repositories
-   inside `Application` (The Context)
+2. Remove all of the tags and (Prettier, Biome, Rome, ) from the `Source` inside
+   `Application` (The Context)
 
     ```sh
     ../Clean/Repository.sh
     ```
 
-3. Sync repositories with their upstream:
+3. Sync `Source` with their `Parent`:
 
     ```sh
     cd Land # (The Context)
@@ -26,7 +26,7 @@
     ../Script/Sync/Repository.sh
     ```
 
-4. Move src into the Source folder:
+4. Move src into the `Source` folder:
 
     ```sh
     cd Land # (The Context)
@@ -38,7 +38,7 @@
     ../Script/Move/src.sh
     ```
 
-5. Reset repositories to their their upstream breanches:
+5. Reset `Source` to their their `Parent` breanches:
 
     ```sh
     cd Land # (The Context)
@@ -52,7 +52,7 @@
 
 # Organization
 
-1. (Owner) Fork all of the repositories from the Microsoft organization
+1. (Owner) Fork all of the `Source` from the Microsoft organization
 
     ```sh
     ../Script/Fork/Organization.sh
@@ -73,7 +73,7 @@
     ../Script/Cache/Get.sh
     ```
 
-2. After the cache is populated clone all of the repositories:
+2. After the cache is populated clone all of the `Source`:
 
     ```sh
     cd Land # (The Context)
@@ -85,7 +85,7 @@
     ../Script/Clone/Repository.sh
     ```
 
-3. After all of the repositories are cloned configure their upstream:
+3. After all of the `Source` are cloned configure their `Parent`:
 
     ```sh
     cd Land # (The Context)
@@ -97,7 +97,7 @@
     ../Script/Configure/Repository.sh
     ```
 
-4. (Owner) Set the permissions for all the repositories and common settings:
+4. (Owner) Set the permissions for all the `Source` and common settings:
 
     ```sh
     cd Land # (The Context)

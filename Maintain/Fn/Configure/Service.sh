@@ -2,27 +2,27 @@
 
 \pwd
 
-Origin=$(\git remote get-url origin)
-Origin=$(\echo "$Origin" | \sed 's/git@github.com:/ssh:\/\/git@github.com\//')
+Source=$(\git remote get-url Source)
+Source=$(\echo "$Source" | \sed 's/git@github.com:/ssh:\/\/git@github.com\//')
 
-\git remote set-url origin "$Origin"
+\git remote set-url Source "$Source"
 
-\echo "Origin: "
-\echo "$Origin"
+\echo "Source: "
+\echo "$Source"
 
-\gh repo set-default "$(\git remote get-url origin)"
+\gh repo set-default "$(\git remote get-url Source)"
 
-Upstream=$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/')
+Parent=$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/')
 
-\git remote remove upstream
+\git remote remove Parent
 
-if [[ "$Upstream" != "null/null" && "$Upstream" != "null/null/" ]]; then
-	Upstream="ssh://git@github.com/${Upstream}"
-	Upstream=$(\echo "$Upstream" | \sed 's/\/$/\.git/')
+if [[ "$Parent" != "null/null" && "$Parent" != "null/null/" ]]; then
+	Parent="ssh://git@github.com/${Parent}"
+	Parent=$(\echo "$Parent" | \sed 's/\/$/\.git/')
 
-	\echo "Upstream: "
-	\echo "$Upstream"
+	\echo "Parent: "
+	\echo "$Parent"
 
-	\git remote add upstream "$Upstream"
-	\git remote set-url upstream "$Upstream"
+	\git remote add Parent "$Parent"
+	\git remote set-url Parent "$Parent"
 fi

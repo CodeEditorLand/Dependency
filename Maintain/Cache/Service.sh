@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
+Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 
 if [ $# -gt 0 ]; then
 	if [ -f "$1" ]; then
@@ -55,26 +55,24 @@ for Organization in "${Organization[@]}"; do
 			# Sync/Service
 
 			# ```sh
-			# Main=$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/')
-			# Main=$(\echo "$Main" | \sed 's/\/$//')
-			# Main=$(\gh repo view "$Main" --json defaultBranchRef | \jq -r -c '.defaultBranchRef.name')
+			# Branch=$(\gh repo view "$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/' | \sed 's/\/$//')" --json defaultBranchRef | \jq -r -c '.defaultBranchRef.name')
 			# ```
 
 			# # Configure/Service
 
 			# ```sh
-			# Upstream=$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/')
+			# Parent=$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/')
 
-			# if [[ "$Upstream" != "null/null" ]]; then
-			# 	Upstream="ssh://git@github.com/${Upstream}"
-			# 	Upstream=$(\echo "$Upstream" | \sed 's/\/$/\.git/')
+			# if [[ "$Parent" != "null/null" ]]; then
+			# 	Parent="ssh://git@github.com/${Parent}"
+			# 	Parent=$(\echo "$Parent" | \sed 's/\/$/\.git/')
 
-			# 	\echo "Upstream: "
-			# 	\echo "$Upstream"
+			# 	\echo "Parent: "
+			# 	\echo "$Parent"
 
-			# 	\git remote remove upstream
-			# 	\git remote add upstream "$Upstream"
-			# 	\git remote set-url upstream "$Upstream"
+			# 	\git remote remove Parent
+			# 	\git remote add Parent "$Parent"
+			# 	\git remote set-url Parent "$Parent"
 			# fi
 			# ```
 		done
@@ -82,5 +80,5 @@ for Organization in "${Organization[@]}"; do
 
 	\mapfile -t Service < <(\printf "%s\n" "${Service[@]}" | \sort)
 
-	\printf '%s\n' "${Service[@]}" | \jq -R . | \jq -s --tab . > "$Current"/Service/"$Foundation".json
+	\printf '%s\n' "${Service[@]}" | \jq -R . | \jq -s --tab . >"$Current"/Service/"$Foundation".json
 done
