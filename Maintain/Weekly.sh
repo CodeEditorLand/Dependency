@@ -99,7 +99,7 @@ for Foundation in "${Foundation[@]}"; do
 		"$Service" \
 		"$Foundation"
 
-	"$Current"/Move/package.sh \
+	"$Current"/Move/package.json.sh \
 		"$Organization" \
 		"$Service" \
 		"$Foundation"
