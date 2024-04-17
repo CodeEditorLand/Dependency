@@ -14,16 +14,15 @@ Origin=$(\echo "$Origin" | \sed 's/git@github.com:/ssh:\/\/git@github.com\//')
 
 Upstream=$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/')
 
-echo "$Upstream"
+\git remote remove upstream
 
-if [[ "$Upstream" != "null/null" ]]; then
+if [[ "$Upstream" != "null/null" && "$Upstream" != "null/null/" ]]; then
 	Upstream="ssh://git@github.com/${Upstream}"
 	Upstream=$(\echo "$Upstream" | \sed 's/\/$/\.git/')
 
 	\echo "Upstream: "
 	\echo "$Upstream"
 
-	\git remote remove upstream
 	\git remote add upstream "$Upstream"
 	\git remote set-url upstream "$Upstream"
 fi
