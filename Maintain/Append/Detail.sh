@@ -12,7 +12,9 @@ for Organization in "${Organization[@]}"; do
 		# shellcheck disable=SC2154
 		\cd "$Folder"/"${Service/"${Organization}/"/}" || \exit
 
-		\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o -iname package.json -type f -execdir bash -c "$Current"/../Fn/Append/Detail.sh \;
+		\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o -iname package.json -type f -execdir bash -c "$Current"/../Fn/Append/package.json.sh \;
+
+		\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o -iname tsconfig.json -type f -execdir bash -c "$Current"/../Fn/Append/tsconfig.json.sh \;
 
 		\cd - || \exit
 	done
