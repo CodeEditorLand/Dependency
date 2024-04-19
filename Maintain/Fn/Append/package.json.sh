@@ -27,6 +27,9 @@ Slug=$(\gh repo view --json nameWithOwner | \jq -r .nameWithOwner)
 	\"publishConfig\": {
 		\"access\": \"public\"
 	},
+	\"keywords\": [
+		\"land\"
+	],
 	\"author\": {
 		\"name\": \"Land\",
 		\"email\": \"Land@Playform.Cloud\",
