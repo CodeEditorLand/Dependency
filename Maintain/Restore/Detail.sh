@@ -14,7 +14,9 @@ for Organization in "${Organization[@]}"; do
 
 		\git fetch Parent --depth 1 --no-tags
 
-		\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o -iname src -type d -execdir bash -c "" \;
+		\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o -iname package.json -type f -execdir bash -c "$Current"/../Fn/Restore/package.json.sh \;
+
+		\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o -iname package.json -type f -execdir bash -c "$Current"/../Fn/Restore/tsconfig.json.sh \;
 
 		\cd - || \exit
 	done

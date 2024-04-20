@@ -135,17 +135,7 @@ for Foundation in "${Foundation[@]}"; do
 		"$Service" \
 		"$Foundation"
 
-	# "$Current"/Restore/.gitignore.sh \
-	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation"
-
-	# "$Current"/Restore/package.json.sh \
-	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation"
-
-	# "$Current"/Restore/src.sh \
+	# "$Current"/Restore/Detail.sh \
 	# 	"$Organization" \
 	# 	"$Service" \
 	# 	"$Foundation"
