@@ -12,7 +12,8 @@ for Organization in "${Organization[@]}"; do
 		# shellcheck disable=SC2154
 		\cd "$Folder"/"${Service/"${Organization}/"/}" || \exit
 
-		"$Current"/../Fn/Configure/Service.sh
+		"$Current"/../Fn/Configure/Remote.sh
+		"$Current"/../Fn/Configure/Branch.sh
 
 		\cd - || \exit
 	done

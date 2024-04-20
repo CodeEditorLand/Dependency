@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
+Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
 Foundation=(
 	"Biome"
@@ -27,10 +27,10 @@ for Foundation in "${Foundation[@]}"; do
 	# 	"$Service" \
 	# 	"$Foundation"
 
-	# "$Current"/Configure/Service.sh \
-	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation"
+	"$Current"/Configure/Service.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
 
 	# "$Current"/Setting/Service.sh \
 	# 	"$Organization" \
