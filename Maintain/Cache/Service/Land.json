@@ -96,7 +96,7 @@
 	"CodeEditorLand/LandEmbeddedTools",
 	"CodeEditorLand/LandEmmetHelper",
 	"CodeEditorLand/LandEmmetLegacy",
-	"CodeEditorLand/LandESlint",
+	"CodeEditorLand/LandESLint",
 	"CodeEditorLand/LandExplorerCommand",
 	"CodeEditorLand/LandExtensionLand",
 	"CodeEditorLand/LandExtensionRecommender",
