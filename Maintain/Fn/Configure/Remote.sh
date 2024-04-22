@@ -6,14 +6,15 @@ Remote() {
 	git remote get-url "$1" 2>/dev/null || git remote get-url origin
 }
 
-Source=$(Remote Source)
-
-Source=$(\echo "$Source" | \sed 's/git@github.com:/ssh:\/\/git@github.com\//')
-
-\git remote set-url Source "$Source"
+Source=$(Remote Source | \sed 's/git@github.com:/ssh:\/\/git@github.com\//')
 
 \echo "Source: "
 \echo "$Source"
+
+\git remote remove origin
+
+\git remote add Source "$Source"
+\git remote set-url Source "$Source"
 
 \gh repo set-default "$(\git remote get-url Source)"
 
