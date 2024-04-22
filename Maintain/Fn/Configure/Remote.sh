@@ -2,12 +2,7 @@
 
 \pwd
 
-Source=$(\git remote get-url Source)
-
-if [[ -z "$Source" ]]; then
-	Source=$(\git remote get-url origin)
-fi
-
+Source=$(\git remote get-url Source 2>/dev/null || git remote get-url origin)
 Source=$(\echo "$Source" | \sed 's/git@github.com:/ssh:\/\/git@github.com\//')
 
 \git remote set-url Source "$Source"
