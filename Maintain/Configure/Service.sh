@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
+Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
 # shellcheck disable=SC1091
 \source "$Current"/../Fn/Argument.sh
@@ -13,6 +13,7 @@ for Organization in "${Organization[@]}"; do
 		\cd "$Folder"/"${Service/"${Organization}/"/}" || \exit
 
 		"$Current"/../Fn/Configure/Remote.sh
+		"$Current"/../Fn/Configure/Fetch.sh
 		"$Current"/../Fn/Configure/Branch.sh
 
 		\cd - || \exit
