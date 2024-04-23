@@ -73,6 +73,11 @@ for Foundation in "${Foundation[@]}"; do
 		"$Foundation" \
 		"Previous"
 
+	"$Current"/Configure/Service.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
+
 	"$Current"/Reset/Service.sh \
 		"$Organization" \
 		"$Service" \

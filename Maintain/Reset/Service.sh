@@ -22,9 +22,7 @@ for Organization in "${Organization[@]}"; do
 			\git reset --hard Parent/"$(\gh repo view "$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/' | \sed 's/\/$//')" --json defaultBranchRef | \jq -r -c '.defaultBranchRef.name')"
 			\git clean -dfx
 
-			"$Current"/../Fn/Save/Service.sh
-
-			\git push --force
+			\git push --set-upstream Source Previous --force
 		fi
 
 		\cd - || \exit
