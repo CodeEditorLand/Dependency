@@ -11,6 +11,6 @@
 	\"extends\": \"@playform/build/tsconfig\",
 	\"include\": [\"Source\"]
 }
-" tsconfig.json >| tsconfig.json.tmp
+" tsconfig.json >|tsconfig.json.tmp
 
 \mv tsconfig.json.tmp tsconfig.json
