@@ -2,14 +2,13 @@
 
 \pwd
 
-\jq -S --tab ". * {
+\jq -S --tab ".include += [\"Source\"] | . * {
 	\"compilerOptions\": {
 		\"baseUrl\": \"./\",
 		\"outDir\": \"Target\",
 		\"rootDir\": \"Source\"
 	},
-	\"extends\": \"@playform/build/tsconfig\",
-	\"include\": [\"Source\"]
+	\"extends\": \"@playform/build/tsconfig\"
 }
 " tsconfig.json >|tsconfig.json.tmp
 

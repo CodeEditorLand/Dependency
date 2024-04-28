@@ -14,7 +14,7 @@ for Organization in "${Organization[@]}"; do
 		# shellcheck disable=SC2154
 		\cd "$Folder" || \exit
 
-		git submodule add --depth=1 "$Origin" "${Service/"${Organization}/"/}"
+		\git submodule add --depth=1 "$Origin" "${Service/"${Organization}/"/}"
 
 		\cd - || \exit
 	done

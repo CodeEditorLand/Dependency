@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
+Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
 # shellcheck disable=SC1091
 \source "$Current"/../Fn/Argument.sh
@@ -60,6 +60,7 @@ for Organization in "${Organization[@]}"; do
 			-o -name '__snapshots__' \
 			-o -name '__test__' \
 			-o -name '__tests__' \
+			-o -name 'fixtures' \
 			-o -name 'tests' \
 			\) -type d -exec rm -rf {} \;
 
