@@ -73,11 +73,6 @@ for Foundation in "${Foundation[@]}"; do
 		"$Foundation" \
 		"Previous"
 
-	"$Current"/Configure/Service.sh \
-		"$Organization" \
-		"$Service" \
-		"$Foundation"
-
 	"$Current"/Reset/Service.sh \
 		"$Organization" \
 		"$Service" \
@@ -115,11 +110,6 @@ for Foundation in "${Foundation[@]}"; do
 		"$Service" \
 		"$Foundation"
 
-	"$Current"/Save/Service.sh \
-		"$Organization" \
-		"$Service" \
-		"$Foundation"
-
 	"$Current"/Clean/Service.sh \
 		"$Organization" \
 		"$Service" \
@@ -146,11 +136,6 @@ for Foundation in "${Foundation[@]}"; do
 		"$Foundation"
 
 	"$Current"/Sync/Service.sh \
-		"$Organization" \
-		"$Service" \
-		"$Foundation"
-
-	"$Current"/Save/Service.sh \
 		"$Organization" \
 		"$Service" \
 		"$Foundation"
