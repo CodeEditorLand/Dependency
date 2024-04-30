@@ -52,15 +52,10 @@ for Foundation in "${Foundation[@]}"; do
 		"$Service" \
 		"$Foundation"
 
-	"$Current"/Save/Service.sh \
-		"$Organization" \
-		"$Service" \
-		"$Foundation"
-
-	"$Current"/Merge/Service.sh \
-		"$Organization" \
-		"$Service" \
-		"$Foundation"
+	# "$Current"/Merge/Service.sh \
+	# 	"$Organization" \
+	# 	"$Service" \
+	# 	"$Foundation"
 
 	"$Current"/Save/Service.sh \
 		"$Organization" \
@@ -83,6 +78,11 @@ for Foundation in "${Foundation[@]}"; do
 		"$Service" \
 		"$Foundation" \
 		"Current"
+
+	"$Current"/Reset/Service.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
 
 	"$Current"/Save/Service.sh \
 		"$Organization" \
