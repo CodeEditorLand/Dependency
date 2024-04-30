@@ -63,7 +63,7 @@ for Organization in "${Organization[@]}"; do
 			# ```sh
 			# Parent=$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/')
 
-			# if [[ "$Parent" != "null/null" ]]; then
+			# if [[ "$Parent" != "null/null" && "$Parent" != "null/null/" ]]; then
 			# 	Parent="ssh://git@github.com/${Parent}"
 			# 	Parent=$(\echo "$Parent" | \sed 's/\/$/\.git/')
 
