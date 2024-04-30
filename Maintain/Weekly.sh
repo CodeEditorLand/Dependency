@@ -22,35 +22,35 @@ for Foundation in "${Foundation[@]}"; do
 	# 	"$Exclude" \
 	# 	"$Foundation"
 
-	# "$Current"/Module/Foundation.sh \
-	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation"
+	"$Current"/Module/Foundation.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
 
-	# "$Current"/Configure/Service.sh \
-	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation"
+	"$Current"/Configure/Service.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
 
-	# "$Current"/Setting/Service.sh \
-	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation"
+	"$Current"/Setting/Service.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
 
 	# # "$Current"/Rename/Service.sh \
 	# # 	"$Organization" \
 	# # 	"$Service" \
 	# # 	"$Foundation"
 
-	# "$Current"/Save/Service.sh \
-	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation"
+	"$Current"/Save/Service.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
 
-	# "$Current"/Sync/Service.sh \
-	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation"
+	"$Current"/Sync/Service.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
 
 	# "$Current"/Merge/Service.sh \
 	# 	"$Organization" \
