@@ -28,7 +28,7 @@ Slug=$(\gh repo view --json nameWithOwner | \jq -r .nameWithOwner)
 		\"access\": \"public\"
 	},
 	\"author\": {
-		\"name\": \"🌆 Land —\",
+		\"name\": \"🌆 — Land —\",
 		\"email\": \"Land@PlayForm.Cloud\",
 		\"url\": \"HTTPS://Land.PlayForm.Cloud\"
 	},
