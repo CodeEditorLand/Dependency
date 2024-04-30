@@ -91,56 +91,56 @@ for Foundation in "${Foundation[@]}"; do
 		"$Service" \
 		"$Foundation"
 
-	# "$Current"/Default/Branch.sh \
-	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation" \
-	# 	"Current"
+	"$Current"/Default/Branch.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation" \
+		"Current"
 
-	# "$Current"/Move/license.sh \
-	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation"
+	"$Current"/Move/license.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
 
-	# "$Current"/Move/package.json.sh \
-	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation"
+	"$Current"/Move/package.json.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
 
-	# "$Current"/Move/src.sh \
-	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation"
+	"$Current"/Move/src.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
 
-	# "$Current"/Clean/Service.sh \
-	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation"
+	"$Current"/Clean/Service.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
 
-	# "$Current"/Clean/Detail.sh \
-	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation"
+	"$Current"/Clean/Detail.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
 
-	# "$Current"/Append/Detail.sh \
-	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation"
+	"$Current"/Append/Detail.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
 
-	# "$Current"/Sort/Detail.sh \
-	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation"
+	"$Current"/Sort/Detail.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
 
-	# "$Current"/Save/Service.sh \
-	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation"
+	"$Current"/Save/Service.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
 
-	# "$Current"/Sync/Service.sh \
-	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation"
+	"$Current"/Sync/Service.sh \
+		"$Organization" \
+		"$Service" \
+		"$Foundation"
 
 	# "$Current"/Restore/Detail.sh \
 	# 	"$Organization" \
