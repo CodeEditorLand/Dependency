@@ -31,6 +31,8 @@ for Organization in "${Organization[@]}"; do
 			-o -iname .eslintrc.yml \
 			-o -iname .github \
 			-o -iname .husky \
+			-o -iname .mailmap \
+			-o -iname .mention-bot \
 			-o -iname .nvmrc \
 			-o -iname .pnpm-store \
 			-o -iname .prettierignore \
@@ -40,6 +42,7 @@ for Organization in "${Organization[@]}"; do
 			-o -iname .prettierrc.yaml \
 			-o -iname .stylua.toml \
 			-o -iname .vscode \
+			-o -iname .vscode-test.js \
 			-o -iname .yarnrc \
 			-o -iname Cargo.lock \
 			-o -iname biome.json \
