@@ -4,9 +4,9 @@
 
 Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
-# TODO: Add dynamic { "repository": { "directory": Foundation/$Foundation/Service/$Service } }
+# TODO: Add dynamic { "repository": { "directory": Dependency/$Dependency/Dependency/$Dependency } }
 
-# # The path is always CodeEditorLand/Dependency/$Foundation/Service/$Service or fetch the correct submodule URL
+# # The path is always CodeEditorLand/Dependency/$Dependency/Dependency/$Dependency or fetch the correct submodule URL
 
 Package="$Current"/../../../package.json
 Slug=$(\gh repo view --json nameWithOwner | \jq -r .nameWithOwner)
