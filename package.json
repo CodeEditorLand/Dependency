@@ -2,13 +2,13 @@
 	"name": "@codeeditorland/foundation",
 	"version": "0.0.1",
 	"private": false,
-	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/Foundation#readme",
+	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/Dependency#readme",
 	"bugs": {
-		"url": "HTTPS://GitHub.Com/CodeEditorLand/Foundation/issues"
+		"url": "HTTPS://GitHub.Com/CodeEditorLand/Dependency/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+HTTPS://github.com/CodeEditorLand/Foundation.git"
+		"url": "git+HTTPS://github.com/CodeEditorLand/Dependency.git"
 	},
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {

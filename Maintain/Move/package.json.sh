@@ -37,12 +37,12 @@ for Organization in "${Organization[@]}"; do
 			mv fixtures/enhanced_resolve/test/fixtures/incorrect-package/pack2/package.json fixtures/enhanced_resolve/test/fixtures/incorrect-package/pack2/fixture.package.json
 		fi
 
-		# ignore ./Application/CodeEditorLand/Foundation/Land/Service/Codetour/package.json
-		# ignore ./Application/CodeEditorLand/Foundation/Land/Service/LandJsAtomGrammar/package.json
-		# ignore ./Application/CodeEditorLand/Foundation/Land/Service/LandJsDebugBrowsers/package.json
-		# ignore ./Application/CodeEditorLand/Foundation/Land/Service/LandJsonLanguageservice/package.json
-		# ignore ./Application/CodeEditorLand/Foundation/Land/Service/LandLanguageserverNode/tools/package.json
-		# ignore ./Application/CodeEditorLand/Foundation/Tauri/Service/Tauri/tooling/cli/node/npm/linux-arm-gnueabihf/package.json
+		# ignore ./Application/CodeEditorLand/Dependency/Land/Service/Codetour/package.json
+		# ignore ./Application/CodeEditorLand/Dependency/Land/Service/LandJsAtomGrammar/package.json
+		# ignore ./Application/CodeEditorLand/Dependency/Land/Service/LandJsDebugBrowsers/package.json
+		# ignore ./Application/CodeEditorLand/Dependency/Land/Service/LandJsonLanguageservice/package.json
+		# ignore ./Application/CodeEditorLand/Dependency/Land/Service/LandLanguageserverNode/tools/package.json
+		# ignore ./Application/CodeEditorLand/Dependency/Tauri/Service/Tauri/tooling/cli/node/npm/linux-arm-gnueabihf/package.json
 
 		\cd - || \exit
 	done
