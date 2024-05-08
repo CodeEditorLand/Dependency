@@ -1,3 +1,7 @@
+[submodule "Biome"]
+path = Biome
+url = ssh://git@github.com/CodeEditorLand/DependencyBiome.git
+
 [submodule "Land"]
 path = Land
 url = ssh://git@github.com/CodeEditorLand/DependencyLand.git
@@ -9,7 +13,3 @@ url = ssh://git@github.com/CodeEditorLand/DependencyOXC.git
 [submodule "Tauri"]
 path = Tauri
 url = ssh://git@github.com/CodeEditorLand/DependencyTauri.git
-
-[submodule "Biome"]
-path = Biome
-url = ssh://git@github.com/CodeEditorLand/DependencyBiome.git
