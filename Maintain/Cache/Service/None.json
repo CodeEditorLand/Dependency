@@ -57,7 +57,7 @@
 	"CodeEditorLand/DependencyLandNPM",
 	"CodeEditorLand/DependencyLandCommon",
 	"CodeEditorLand/DependencyLandIngest",
-	"CodeEditorLand/DependencyLandService",
+	"CodeEditorLand/DependencyLandDependency",
 	"CodeEditorLand/DependencyOXC",
 	"CodeEditorLand/DependencyOXCCargo",
 	"CodeEditorLand/DependencyOXCNPM",

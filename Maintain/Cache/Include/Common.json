@@ -26,7 +26,7 @@
 	"CodeEditorLand/DependencyLandMaintain",
 	"CodeEditorLand/DependencyLandNPM",
 	"CodeEditorLand/DependencyLandRuntime",
-	"CodeEditorLand/DependencyLandService",
+	"CodeEditorLand/DependencyLandDependency",
 	"CodeEditorLand/DependencyOXC",
 	"CodeEditorLand/DependencyOXCCargo",
 	"CodeEditorLand/DependencyOXCComponent",
