@@ -46,6 +46,7 @@
 	"CodeEditorLand/NPM",
 	"CodeEditorLand/NPMCommon",
 	"CodeEditorLand/NPMIngress",
+	"CodeEditorLand/NPMIngest",
 	"CodeEditorLand/NPMLand",
 	"CodeEditorLand/NRefactory",
 	"CodeEditorLand/Oniguruma",
