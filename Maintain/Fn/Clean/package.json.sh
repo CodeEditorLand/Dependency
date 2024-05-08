@@ -2,7 +2,7 @@
 
 \pwd
 
-JSON=$(< package.json)
+JSON=$(<package.json)
 
 JSON=$(echo "$JSON" | \jq -S --tab "del(\
 	.author,\
@@ -77,7 +77,7 @@ JSON=$(echo "$JSON" | \jq -S --tab "del(\
 	.version\
 )")
 
-echo "$JSON" >| package.json
+echo "$JSON" >|package.json
 
 Exclude=(
 	"@antfu/eslint-config"
@@ -730,7 +730,7 @@ Length=${#Exclude[@]}
 Size=210
 
 Key() {
-	JSON=$(< package.json)
+	JSON=$(<package.json)
 
 	for ((Start = 0; Start < Length; Start += Size)); do
 		Chunk=("${Exclude[@]:Start:Size}")
@@ -747,7 +747,7 @@ Key() {
 
 		JSON=$(echo "$JSON" | \jq -S --tab "$JQ")
 
-		echo "$JSON" >| package.json
+		echo "$JSON" >|package.json
 	done
 }
 

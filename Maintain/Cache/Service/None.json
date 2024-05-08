@@ -56,7 +56,7 @@
 	"CodeEditorLand/DependencyLandRuntime",
 	"CodeEditorLand/DependencyLandNPM",
 	"CodeEditorLand/DependencyLandCommon",
-	"CodeEditorLand/DependencyLandIngress",
+	"CodeEditorLand/DependencyLandIngest",
 	"CodeEditorLand/DependencyLandService",
 	"CodeEditorLand/DependencyOXC",
 	"CodeEditorLand/DependencyOXCCargo",

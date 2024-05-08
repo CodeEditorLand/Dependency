@@ -18,15 +18,24 @@ for Organization in "${Organization[@]}"; do
 		for ((i = 1; i < ${#Name}; i++)); do
 			if [ "${Name:i:1}" = "-" ]; then
 				Next="${Name:i+1:1}"
+
 				if [[ "$Next" =~ [a-z] ]]; then
+
 					Upper=$(\tr '[:lower:]' '[:upper:]' <<<"$Next")
+
 					Rename="${Rename}${Upper}"
+
 					((i++))
+
 				else
+
 					Rename="${Rename}-"
+
 				fi
 			else
+
 				Rename="${Rename}${Name:i:1}"
+
 			fi
 		done
 

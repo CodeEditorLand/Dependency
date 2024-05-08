@@ -54,6 +54,7 @@ for Organization in "${Organization[@]}"; do
 			-o -iname prettier.config.js \
 			-o -iname rome.json \
 			-o -iname rustfmt.toml \
+			-o -iname webpack.config.js \
 			-o -iname yarn.lock \
 			\) -exec rm -rf {} \;
 

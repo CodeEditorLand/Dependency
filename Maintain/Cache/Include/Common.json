@@ -22,7 +22,7 @@
 	"CodeEditorLand/DependencyLandCommon",
 	"CodeEditorLand/DependencyLandComponent",
 	"CodeEditorLand/DependencyLandDocument",
-	"CodeEditorLand/DependencyLandIngress",
+	"CodeEditorLand/DependencyLandIngest",
 	"CodeEditorLand/DependencyLandMaintain",
 	"CodeEditorLand/DependencyLandNPM",
 	"CodeEditorLand/DependencyLandRuntime",
