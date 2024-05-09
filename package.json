@@ -8,7 +8,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+HTTPS://github.com/CodeEditorLand/Dependency.git"
+		"url": "git+https://github.com/CodeEditorLand/Dependency.git"
 	},
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {

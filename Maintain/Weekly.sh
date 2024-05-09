@@ -2,148 +2,148 @@
 
 Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
-Foundation=(
+_Dependency=(
 	"Biome"
 	"Land"
 	"OXC"
 	"Tauri"
 )
 
-for Foundation in "${Foundation[@]}"; do
+for _Dependency in "${_Dependency[@]}"; do
 	Cache="$Current"/Cache
 
-	Organization="$Cache"/Organization/"$Foundation".json
-	# Exclude="$Cache"/Exclude/"$Foundation".json
-	Service="$Cache"/Service/"$Foundation".json
+	Organization="$Cache"/Organization/"$_Dependency".json
+	# Exclude="$Cache"/Exclude/"$_Dependency".json
+	Dependency="$Cache"/Dependency/"$_Dependency".json
 
 	# ! NOT CURRENTLY WORKING
-	# "$Current"/Cache/Service.sh \
+	# "$Current"/Cache/Dependency.sh \
 	# 	"$Organization" \
 	# 	"$Exclude" \
-	# 	"$Foundation"
+	# 	"$_Dependency"
 
-	"$Current"/Module/Foundation.sh \
+	"$Current"/Module/Dependency.sh \
 		"$Organization" \
-		"$Service" \
-		"$Foundation"
+		"$Dependency" \
+		"$_Dependency"
 
-	"$Current"/Configure/Service.sh \
+	"$Current"/Configure/Dependency.sh \
 		"$Organization" \
-		"$Service" \
-		"$Foundation"
+		"$Dependency" \
+		"$_Dependency"
 
-	"$Current"/Setting/Service.sh \
+	"$Current"/Setting/Dependency.sh \
 		"$Organization" \
-		"$Service" \
-		"$Foundation"
+		"$Dependency" \
+		"$_Dependency"
 
-	# # "$Current"/Rename/Service.sh \
+	# # "$Current"/Rename/Dependency.sh \
 	# # 	"$Organization" \
-	# # 	"$Service" \
-	# # 	"$Foundation"
+	# # 	"$Dependency" \
+	# # 	"$_Dependency"
 
-	"$Current"/Save/Service.sh \
+	"$Current"/Save/Dependency.sh \
 		"$Organization" \
-		"$Service" \
-		"$Foundation"
+		"$Dependency" \
+		"$_Dependency"
 
-	"$Current"/Sync/Service.sh \
+	"$Current"/Sync/Dependency.sh \
 		"$Organization" \
-		"$Service" \
-		"$Foundation"
+		"$Dependency" \
+		"$_Dependency"
 
-	# "$Current"/Merge/Service.sh \
+	# "$Current"/Merge/Dependency.sh \
 	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation"
+	# 	"$Dependency" \
+	# 	"$_Dependency"
 
-	# "$Current"/Save/Service.sh \
+	# "$Current"/Save/Dependency.sh \
 	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation"
+	# 	"$Dependency" \
+	# 	"$_Dependency"
 
 	"$Current"/Switch/Branch.sh \
 		"$Organization" \
-		"$Service" \
-		"$Foundation" \
+		"$Dependency" \
+		"$_Dependency" \
 		"Previous"
 
-	"$Current"/Reset/Service.sh \
+	"$Current"/Reset/Dependency.sh \
 		"$Organization" \
-		"$Service" \
-		"$Foundation" \
+		"$Dependency" \
+		"$_Dependency" \
 		"Previous"
 
 	"$Current"/Switch/Branch.sh \
 		"$Organization" \
-		"$Service" \
-		"$Foundation" \
+		"$Dependency" \
+		"$_Dependency" \
 		"Current"
 
-	# "$Current"/Reset/Service.sh \
+	# "$Current"/Reset/Dependency.sh \
 	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation" \
+	# 	"$Dependency" \
+	# 	"$_Dependency" \
 	# 	"Current"
 
-	"$Current"/Save/Service.sh \
+	"$Current"/Save/Dependency.sh \
 		"$Organization" \
-		"$Service" \
-		"$Foundation"
+		"$Dependency" \
+		"$_Dependency"
 
 	"$Current"/Default/Branch.sh \
 		"$Organization" \
-		"$Service" \
-		"$Foundation" \
+		"$Dependency" \
+		"$_Dependency" \
 		"Current"
 
 	"$Current"/Move/license.sh \
 		"$Organization" \
-		"$Service" \
-		"$Foundation"
+		"$Dependency" \
+		"$_Dependency"
 
 	"$Current"/Move/package.json.sh \
 		"$Organization" \
-		"$Service" \
-		"$Foundation"
+		"$Dependency" \
+		"$_Dependency"
 
 	"$Current"/Move/src.sh \
 		"$Organization" \
-		"$Service" \
-		"$Foundation"
+		"$Dependency" \
+		"$_Dependency"
 
-	"$Current"/Clean/Service.sh \
+	"$Current"/Clean/Dependency.sh \
 		"$Organization" \
-		"$Service" \
-		"$Foundation"
+		"$Dependency" \
+		"$_Dependency"
 
 	"$Current"/Clean/Detail.sh \
 		"$Organization" \
-		"$Service" \
-		"$Foundation"
+		"$Dependency" \
+		"$_Dependency"
 
 	"$Current"/Append/Detail.sh \
 		"$Organization" \
-		"$Service" \
-		"$Foundation"
+		"$Dependency" \
+		"$_Dependency"
 
 	"$Current"/Sort/Detail.sh \
 		"$Organization" \
-		"$Service" \
-		"$Foundation"
+		"$Dependency" \
+		"$_Dependency"
 
-	"$Current"/Save/Service.sh \
+	"$Current"/Save/Dependency.sh \
 		"$Organization" \
-		"$Service" \
-		"$Foundation"
+		"$Dependency" \
+		"$_Dependency"
 
-	"$Current"/Sync/Service.sh \
+	"$Current"/Sync/Dependency.sh \
 		"$Organization" \
-		"$Service" \
-		"$Foundation"
+		"$Dependency" \
+		"$_Dependency"
 
 	# "$Current"/Restore/Detail.sh \
 	# 	"$Organization" \
-	# 	"$Service" \
-	# 	"$Foundation"
+	# 	"$Dependency" \
+	# 	"$_Dependency"
 done

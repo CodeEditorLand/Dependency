@@ -5,24 +5,24 @@
 
 Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
-Foundation=(
+_Dependency=(
 	"None"
 )
 
-for Foundation in "${Foundation[@]}"; do
+for _Dependency in "${_Dependency[@]}"; do
 	Cache="$Current"/Cache
 
-	Organization="$Cache"/Organization/"$Foundation".json
-	Exclude="$Cache"/Exclude/"$Foundation".json
-	Service="$Cache"/Service/"$Foundation".json
+	Organization="$Cache"/Organization/"$_Dependency".json
+	Exclude="$Cache"/Exclude/"$_Dependency".json
+	Dependency="$Cache"/Dependency/"$_Dependency".json
 
-	"$Current"/Cache/Service.sh \
+	"$Current"/Cache/Dependency.sh \
 		"$Organization" \
 		"$Exclude" \
-		"$Foundation"
+		"$_Dependency"
 
-	"$Current"/Setting/Service.sh \
+	"$Current"/Setting/Dependency.sh \
 		"$Organization" \
-		"$Service" \
-		"$Foundation"
+		"$Dependency" \
+		"$_Dependency"
 done

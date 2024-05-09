@@ -12,26 +12,26 @@ Fn() {
 		fi
 
 		if [ -f "$2" ]; then
-			\mapfile -t Service < <(jq -r '.[]' "$2" | \tr -d '\r')
+			\mapfile -t _Dependency < <(jq -r '.[]' "$2" | \tr -d '\r')
 		else
-			\echo "Cannot Service."
+			\echo "Cannot _Dependency."
 			\exit 1
 		fi
 
 		if [ -n "$3" ]; then
-			Foundation=$3
+			Dependency=$3
 		else
-			\echo "Cannot Foundation."
+			\echo "Cannot Dependency."
 			\exit 1
 		fi
 	fi
 
 	# shellcheck disable=SC2034
-	Folder=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)/../../"$Foundation"/Service
+	Folder=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)/../../"$Dependency"/Dependency
 }
 
 export Fn
 export Folder
 export Organization
-export Service
-export Foundation
+export _Dependency
+export Dependency
