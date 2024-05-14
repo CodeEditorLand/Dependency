@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Service=(
+Dependency=(
 	"tauri-apps/plugins-workspace"
 	"tauri-apps/tray-icon"
 	"tauri-apps/tauri-bindgen"
@@ -108,6 +108,6 @@ Service=(
 	"tauri-apps/tauri-toml"
 )
 
-for Service in "${Service[@]}"; do
-	\gh repo fork "$Service" --org CodeEditorLand
+for Dependency in "${Dependency[@]}"; do
+	\gh repo fork "$Dependency" --org CodeEditorLand
 done

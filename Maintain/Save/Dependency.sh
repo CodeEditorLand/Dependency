@@ -8,7 +8,12 @@ Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 Fn "$@"
 
 for Organization in "${Organization[@]}"; do
-	for Service in "${Service[@]}"; do
-		"$Current"/../Fn/Setting/Service.sh "$Service"
+	for Dependency in "${Dependency[@]}"; do
+		# shellcheck disable=SC2154
+		\cd "$Folder"/"${Dependency/"${Organization}/"/}" || \exit
+
+		"$Current"/../Fn/Save/Dependency.sh
+
+		\cd - || \exit
 	done
 done

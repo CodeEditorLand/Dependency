@@ -8,11 +8,11 @@ Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 Fn "$@"
 
 for Organization in "${Organization[@]}"; do
-	for Service in "${Service[@]}"; do
-		Name="${Service/"${Organization}/"/}"
+	for Dependency in "${Dependency[@]}"; do
+		Name="${Dependency/"${Organization}/"/}"
 
 		# shellcheck disable=SC2154
-		\cd "$Folder"/"${Service/"${Organization}/"/}" || \exit
+		\cd "$Folder"/"${Dependency/"${Organization}/"/}" || \exit
 
 		if [[ $Name == "LandGeneratorCode" ]]; then
 			mv generators/app/templates/ext-colortheme/package.json generators/app/templates/ext-colortheme/template.package.json
@@ -37,12 +37,12 @@ for Organization in "${Organization[@]}"; do
 			mv fixtures/enhanced_resolve/test/fixtures/incorrect-package/pack2/package.json fixtures/enhanced_resolve/test/fixtures/incorrect-package/pack2/fixture.package.json
 		fi
 
-		# ignore ./Application/CodeEditorLand/Dependency/Land/Service/Codetour/package.json
-		# ignore ./Application/CodeEditorLand/Dependency/Land/Service/LandJsAtomGrammar/package.json
-		# ignore ./Application/CodeEditorLand/Dependency/Land/Service/LandJsDebugBrowsers/package.json
-		# ignore ./Application/CodeEditorLand/Dependency/Land/Service/LandJsonLanguageservice/package.json
-		# ignore ./Application/CodeEditorLand/Dependency/Land/Service/LandLanguageserverNode/tools/package.json
-		# ignore ./Application/CodeEditorLand/Dependency/Tauri/Service/Tauri/tooling/cli/node/npm/linux-arm-gnueabihf/package.json
+		# ignore ./Application/CodeEditorLand/Dependency/Land/Dependency/Codetour/package.json
+		# ignore ./Application/CodeEditorLand/Dependency/Land/Dependency/LandJsAtomGrammar/package.json
+		# ignore ./Application/CodeEditorLand/Dependency/Land/Dependency/LandJsDebugBrowsers/package.json
+		# ignore ./Application/CodeEditorLand/Dependency/Land/Dependency/LandJsonLanguageservice/package.json
+		# ignore ./Application/CodeEditorLand/Dependency/Land/Dependency/LandLanguageserverNode/tools/package.json
+		# ignore ./Application/CodeEditorLand/Dependency/Tauri/Dependency/Tauri/tooling/cli/node/npm/linux-arm-gnueabihf/package.json
 
 		\cd - || \exit
 	done

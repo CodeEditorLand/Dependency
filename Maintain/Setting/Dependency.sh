@@ -9,9 +9,6 @@ Fn "$@"
 
 for Organization in "${Organization[@]}"; do
 	for Dependency in "${Dependency[@]}"; do
-		# shellcheck disable=SC2154
-		\cd "$Folder"/"${Dependency/"${Organization}/"/}" || \exit
-
-		\cd - || \exit
+		"$Current"/../Fn/Setting/Dependency.sh "$Dependency"
 	done
 done

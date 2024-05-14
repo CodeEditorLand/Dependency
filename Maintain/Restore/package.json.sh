@@ -8,11 +8,11 @@ Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 Fn "$@"
 
 for Organization in "${Organization[@]}"; do
-	for Service in "${Service[@]}"; do
+	for Dependency in "${Dependency[@]}"; do
 		# shellcheck disable=SC2154
-		\cd "$Folder"/"${Service/"${Organization}/"/}" || \exit
+		\cd "$Folder"/"${Dependency/"${Organization}/"/}" || \exit
 
-		"$Current"/../Fn/Save/Service.sh
+		"$Current"/../Fn/Save/Dependency.sh
 
 		\git fetch Parent --depth 1 --no-tags
 

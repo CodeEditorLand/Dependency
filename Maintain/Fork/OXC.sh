@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Service=(
+Dependency=(
 	"oxc-project/oxc"
 	"oxc-project/unicode-id-start"
 	"oxc-project/oxc-resolver"
@@ -19,6 +19,6 @@ Service=(
 	"oxc-project/oxc-fuzz-parser"
 )
 
-for Service in "${Service[@]}"; do
-	\gh repo fork "$Service" --org CodeEditorLand
+for Dependency in "${Dependency[@]}"; do
+	\gh repo fork "$Dependency" --org CodeEditorLand
 done

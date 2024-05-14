@@ -4,9 +4,9 @@
 
 if [ $# -gt 0 ]; then
 	if [ -n "$1" ]; then
-		Service=$1
+		Dependency=$1
 	else
-		\echo "Cannot Service."
+		\echo "Cannot Dependency."
 		\exit 1
 	fi
 fi
@@ -15,21 +15,21 @@ fi
 	--method DELETE \
 	-H "Accept: application/vnd.github+json" \
 	-H "X-GitHub-Api-Version: 2022-11-28" \
-	repos/"${Service}"/branches/Current/protection \
+	repos/"${Dependency}"/branches/Current/protection \
 	--silent
 
 \gh api \
 	--method DELETE \
 	-H "Accept: application/vnd.github+json" \
 	-H "X-GitHub-Api-Version: 2022-11-28" \
-	repos/"${Service}"/branches/Previous/protection \
+	repos/"${Dependency}"/branches/Previous/protection \
 	--silent
 
 \gh api \
 	--method PUT \
 	-H "Accept: application/vnd.github+json" \
 	-H "X-GitHub-Api-Version: 2022-11-28" \
-	repos/"${Service}"/actions/permissions/access \
+	repos/"${Dependency}"/actions/permissions/access \
 	-f access_level='organization' \
 	--silent
 
@@ -37,14 +37,14 @@ fi
 	--method PUT \
 	-H "Accept: application/vnd.github+json" \
 	-H "X-GitHub-Api-Version: 2022-11-28" \
-	user/starred/"${Service}" \
+	user/starred/"${Dependency}" \
 	--silent
 
 \gh api \
 	--method PUT \
 	-H "Accept: application/vnd.github+json" \
 	-H "X-GitHub-Api-Version: 2022-11-28" \
-	repos/"${Service}"/actions/permissions/workflow \
+	repos/"${Dependency}"/actions/permissions/workflow \
 	-f default_workflow_permissions='write' \
 	-F can_approve_pull_request_reviews=true \
 	--silent
@@ -53,7 +53,7 @@ fi
 	--method PUT \
 	-H "Accept: application/vnd.github+json" \
 	-H "X-GitHub-Api-Version: 2022-11-28" \
-	repos/"${Service}"/actions/permissions \
+	repos/"${Dependency}"/actions/permissions \
 	-F enabled=true \
 	-f allowed_actions='all' \
 	--silent
@@ -62,21 +62,21 @@ fi
 	--method PUT \
 	-H "Accept: application/vnd.github+json" \
 	-H "X-GitHub-Api-Version: 2022-11-28" \
-	repos/"${Service}"/vulnerability-alerts \
+	repos/"${Dependency}"/vulnerability-alerts \
 	--silent
 
 \gh api \
 	--method PUT \
 	-H "Accept: application/vnd.github+json" \
 	-H "X-GitHub-Api-Version: 2022-11-28" \
-	repos/"${Service}"/automated-security-fixes \
+	repos/"${Dependency}"/automated-security-fixes \
 	--silent
 
 \gh api \
 	--method PATCH \
 	-H "Accept: application/vnd.github+json" \
 	-H "X-GitHub-Api-Version: 2022-11-28" \
-	repos/"${Service}" \
+	repos/"${Dependency}" \
 	-F has_issues=true \
 	-F has_projects=false \
 	-F has_wiki=false \
@@ -90,7 +90,7 @@ fi
 	-F web_commit_signoff_required=true \
 	--silent
 
-\gh repo edit "$Service" \
+\gh repo edit "$Dependency" \
 	--allow-update-branch \
 	--delete-branch-on-merge \
 	--enable-auto-merge \

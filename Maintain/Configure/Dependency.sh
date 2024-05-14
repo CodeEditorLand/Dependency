@@ -8,11 +8,13 @@ Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 Fn "$@"
 
 for Organization in "${Organization[@]}"; do
-	for Service in "${Service[@]}"; do
+	for Dependency in "${Dependency[@]}"; do
 		# shellcheck disable=SC2154
-		\cd "$Folder"/"${Service/"${Organization}/"/}" || \exit
+		\cd "$Folder"/"${Dependency/"${Organization}/"/}" || \exit
 
-		"$Current"/../Fn/Merge/Service.sh
+		"$Current"/../Fn/Configure/Remote.sh
+		"$Current"/../Fn/Configure/Fetch.sh
+		"$Current"/../Fn/Configure/Branch.sh
 
 		\cd - || \exit
 	done

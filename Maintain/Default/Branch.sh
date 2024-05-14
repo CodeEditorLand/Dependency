@@ -17,9 +17,9 @@ if [ $# -gt 0 ]; then
 fi
 
 for Organization in "${Organization[@]}"; do
-	for Service in "${Service[@]}"; do
+	for Dependency in "${Dependency[@]}"; do
 		# shellcheck disable=SC2154
-		\cd "$Folder"/"${Service/"${Organization}/"/}" || \exit
+		\cd "$Folder"/"${Dependency/"${Organization}/"/}" || \exit
 
 		\gh repo edit --default-branch "$Branch"
 
