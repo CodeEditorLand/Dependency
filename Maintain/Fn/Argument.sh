@@ -12,9 +12,9 @@ Fn() {
 		fi
 
 		if [ -f "$2" ]; then
-			\mapfile -t _Dependency < <(jq -r '.[]' "$2" | \tr -d '\r')
+			\mapfile -t SubDependency < <(jq -r '.[]' "$2" | \tr -d '\r')
 		else
-			\echo "Cannot _Dependency."
+			\echo "Cannot SubDependency."
 			\exit 1
 		fi
 
@@ -33,5 +33,5 @@ Fn() {
 export Fn
 export Folder
 export Organization
-export _Dependency
+export SubDependency
 export Dependency
