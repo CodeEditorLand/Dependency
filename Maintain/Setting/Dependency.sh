@@ -8,7 +8,7 @@ Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 Fn "$@"
 
 for Organization in "${Organization[@]}"; do
-	for Dependency in "${Dependency[@]}"; do
-		"$Current"/../Fn/Setting/Dependency.sh "$Dependency"
+	for SubDependency in "${SubDependency[@]}"; do
+		"$Current"/../Fn/Setting/Dependency.sh "$SubDependency"
 	done
 done

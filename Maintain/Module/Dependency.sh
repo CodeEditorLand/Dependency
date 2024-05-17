@@ -8,13 +8,13 @@ Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 Fn "$@"
 
 for Organization in "${Organization[@]}"; do
-	for Dependency in "${Dependency[@]}"; do
-		Origin="ssh://git@github.com/${Dependency}.git"
+	for SubDependency in "${SubDependency[@]}"; do
+		Origin="ssh://git@github.com/${SubDependency}.git"
 
 		# shellcheck disable=SC2154
 		\cd "$Folder" || \exit
 
-		\git submodule add --depth=1 "$Origin" "${Dependency/"${Organization}/"/}"
+		\git submodule add --depth=1 "$Origin" "${SubDependency/"${Organization}/"/}"
 
 		\cd - || \exit
 	done

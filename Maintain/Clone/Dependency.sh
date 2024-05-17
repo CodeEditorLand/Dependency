@@ -8,11 +8,11 @@ Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 Fn "$@"
 
 for Organization in "${Organization[@]}"; do
-	for Dependency in "${Dependency[@]}"; do
+	for SubDependency in "${SubDependency[@]}"; do
 		# shellcheck disable=SC2154
 		\cd "$Folder" || \exit
 
-		\git clone --filter=tree:0 --depth=1 --recurse-submodules --shallow-submodules "ssh://git@github.com/${Dependency}.git" "$Dependency"
+		\git clone --filter=tree:0 --depth=1 --recurse-submodules --shallow-submodules "ssh://git@github.com/${SubDependency}.git" "$SubDependency"
 
 		\cd - || \exit
 	done

@@ -17,9 +17,9 @@ if [ $# -gt 0 ]; then
 fi
 
 for Organization in "${Organization[@]}"; do
-	for Dependency in "${Dependency[@]}"; do
+	for SubDependency in "${SubDependency[@]}"; do
 		# shellcheck disable=SC2154
-		\cd "$Folder"/"${Dependency/"${Organization}/"/}" || \exit
+		\cd "$Folder"/"${SubDependency/"${Organization}/"/}" || \exit
 
 		\git switch -c "$Branch"
 

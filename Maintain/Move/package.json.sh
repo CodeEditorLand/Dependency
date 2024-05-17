@@ -8,11 +8,11 @@ Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 Fn "$@"
 
 for Organization in "${Organization[@]}"; do
-	for Dependency in "${Dependency[@]}"; do
-		Name="${Dependency/"${Organization}/"/}"
+	for SubDependency in "${SubDependency[@]}"; do
+		Name="${SubDependency/"${Organization}/"/}"
 
 		# shellcheck disable=SC2154
-		\cd "$Folder"/"${Dependency/"${Organization}/"/}" || \exit
+		\cd "$Folder"/"${SubDependency/"${Organization}/"/}" || \exit
 
 		if [[ $Name == "LandGeneratorCode" ]]; then
 			mv generators/app/templates/ext-colortheme/package.json generators/app/templates/ext-colortheme/template.package.json

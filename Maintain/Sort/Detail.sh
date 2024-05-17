@@ -8,9 +8,9 @@ Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 Fn "$@"
 
 for Organization in "${Organization[@]}"; do
-	for Dependency in "${Dependency[@]}"; do
+	for SubDependency in "${SubDependency[@]}"; do
 		# shellcheck disable=SC2154
-		\cd "$Folder"/"${Dependency/"${Organization}/"/}" || \exit
+		\cd "$Folder"/"${SubDependency/"${Organization}/"/}" || \exit
 
 		\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o -iname package.json -type f -execdir sort-package-json \;
 
