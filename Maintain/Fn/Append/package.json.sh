@@ -30,7 +30,7 @@ Slug=$(\gh repo view --json nameWithOwner | \jq -r .nameWithOwner)
 	\"author\": {
 		\"name\": \"🛬 Land —\",
 		\"email\": \"Land@PlayForm.Cloud\",
-		\"url\": \"HTTPS://Land.PlayForm.Cloud\"
+		\"url\": \"HTTPS://Editor.Land\"
 	},
 	\"scripts\": {
 		\"Document\": \"Document 'Source/**/*.ts'\",
