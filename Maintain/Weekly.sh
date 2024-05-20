@@ -52,11 +52,6 @@ for Dependency in "${Dependency[@]}"; do
 		"$SubDependency" \
 		"$Dependency"
 
-	# "$Current"/Merge/Dependency.sh \
-	# 	"$Organization" \
-	# 	"$SubDependency" \
-	# 	"$Dependency"
-
 	# "$Current"/Save/Dependency.sh \
 	# 	"$Organization" \
 	# 	"$SubDependency" \
@@ -79,6 +74,11 @@ for Dependency in "${Dependency[@]}"; do
 		"$SubDependency" \
 		"$Dependency" \
 		"Current"
+
+	"$Current"/Merge/Dependency.sh \
+		"$Organization" \
+		"$SubDependency" \
+		"$Dependency"
 
 	# "$Current"/Reset/Dependency.sh \
 	# 	"$Organization" \
