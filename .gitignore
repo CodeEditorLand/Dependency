@@ -11,8 +11,6 @@ out/
 # build
 
 # misc
-.DS_Store
-*.pem
 
 # debug
 npm-debug.log*
@@ -21,20 +19,10 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # local env files
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-.env
 .dev.vars
 
 # turbo
-.turbo
 
-Cargo.lock
-pnpm-lock.yaml
-yarn.lock
-package-lock.json
 .pnpm-store
 
 # Added by cargo
