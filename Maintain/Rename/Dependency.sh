@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
+Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
 
 # shellcheck disable=SC1091
 \source "$Current"/../Fn/Argument.sh
@@ -13,7 +13,7 @@ for Organization in "${Organization[@]}"; do
 
 		Rename=""
 
-		Rename=$(\tr '[:lower:]' '[:upper:]' <<<"${Name:0:1}")
+		Rename=$(\tr '[:lower:]' '[:upper:]' <<< "${Name:0:1}")
 
 		for ((i = 1; i < ${#Name}; i++)); do
 			if [ "${Name:i:1}" = "-" ]; then
@@ -21,7 +21,7 @@ for Organization in "${Organization[@]}"; do
 
 				if [[ "$Next" =~ [a-z] ]]; then
 
-					Upper=$(\tr '[:lower:]' '[:upper:]' <<<"$Next")
+					Upper=$(\tr '[:lower:]' '[:upper:]' <<< "$Next")
 
 					Rename="${Rename}${Upper}"
 
