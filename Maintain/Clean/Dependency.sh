@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
+Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
 # shellcheck disable=SC1091
 \source "$Current"/../Fn/Argument.sh
@@ -29,7 +29,6 @@ for Organization in "${Organization[@]}"; do
 			-o -iname .eslintrc.json \
 			-o -iname .eslintrc.yaml \
 			-o -iname .eslintrc.yml \
-			-o -iname .github \
 			-o -iname .husky \
 			-o -iname .mailmap \
 			-o -iname .mention-bot \

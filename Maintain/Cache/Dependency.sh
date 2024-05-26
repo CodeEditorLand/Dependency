@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
+Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 
 if [ $# -gt 0 ]; then
 	if [ -f "$1" ]; then
@@ -80,5 +80,5 @@ for Organization in "${Organization[@]}"; do
 
 	\mapfile -t _Dependency < <(\printf "%s\n" "${_Dependency[@]}" | \sort)
 
-	\printf '%s\n' "${_Dependency[@]}" | \jq -R . | \jq -s --tab . > "$Current"/Dependency/"$Dependency".json
+	\printf '%s\n' "${_Dependency[@]}" | \jq -R . | \jq -s --tab . >"$Current"/Dependency/"$Dependency".json
 done
