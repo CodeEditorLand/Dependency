@@ -18,14 +18,14 @@ if [ $# -gt 0 ]; then
 	fi
 
 	if [ -n "$3" ]; then
-		Foundation=$3
+		Dependency=$3
 	else
-		\echo "Cannot Foundation."
+		\echo "Cannot Dependency."
 		\exit 1
 	fi
 fi
 
-Service=()
+_Dependency=()
 
 for Organization in "${Organization[@]}"; do
 	for ((Page = 1; Page <= 20; Page++)); do
@@ -39,8 +39,8 @@ for Organization in "${Organization[@]}"; do
 		for Temporary in "${Temporary[@]}"; do
 			Flag=false
 
-			for ServiceExclude in "${Exclude[@]}"; do
-				if [ "$Temporary" = "$ServiceExclude" ]; then
+			for _DependencyExclude in "${Exclude[@]}"; do
+				if [ "$Temporary" = "$_DependencyExclude" ]; then
 					Flag=true
 
 					break
@@ -48,22 +48,22 @@ for Organization in "${Organization[@]}"; do
 			done
 
 			if [ "$Flag" = false ]; then
-				Service+=("$Temporary")
+				_Dependency+=("$Temporary")
 			fi
 
 			# TODO: Add these to the cache
-			# Sync/Service
+			# Sync/_Dependency
 
 			# ```sh
 			# Branch=$(\gh repo view "$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/' | \sed 's/\/$//')" --json defaultBranchRef | \jq -r -c '.defaultBranchRef.name')
 			# ```
 
-			# # Configure/Service
+			# # Configure/_Dependency
 
 			# ```sh
 			# Parent=$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/')
 
-			# if [[ "$Parent" != "null/null" ]]; then
+			# if [[ "$Parent" != "null/null" && "$Parent" != "null/null/" ]]; then
 			# 	Parent="ssh://git@github.com/${Parent}"
 			# 	Parent=$(\echo "$Parent" | \sed 's/\/$/\.git/')
 
@@ -78,7 +78,7 @@ for Organization in "${Organization[@]}"; do
 		done
 	done
 
-	\mapfile -t Service < <(\printf "%s\n" "${Service[@]}" | \sort)
+	\mapfile -t _Dependency < <(\printf "%s\n" "${_Dependency[@]}" | \sort)
 
-	\printf '%s\n' "${Service[@]}" | \jq -R . | \jq -s --tab . >"$Current"/Service/"$Foundation".json
+	\printf '%s\n' "${_Dependency[@]}" | \jq -R . | \jq -s --tab . >"$Current"/Dependency/"$Dependency".json
 done

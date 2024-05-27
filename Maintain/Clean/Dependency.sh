@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
+Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
 # shellcheck disable=SC1091
 \source "$Current"/../Fn/Argument.sh
@@ -8,9 +8,9 @@ Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
 Fn "$@"
 
 for Organization in "${Organization[@]}"; do
-	for Service in "${Service[@]}"; do
+	for SubDependency in "${SubDependency[@]}"; do
 		# shellcheck disable=SC2154
-		\cd "$Folder"/"${Service/"${Organization}/"/}" || \exit
+		\cd "$Folder"/"${SubDependency/"${Organization}/"/}" || \exit
 
 		\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o \
 			\( \
@@ -29,8 +29,9 @@ for Organization in "${Organization[@]}"; do
 			-o -iname .eslintrc.json \
 			-o -iname .eslintrc.yaml \
 			-o -iname .eslintrc.yml \
-			-o -iname .github \
 			-o -iname .husky \
+			-o -iname .mailmap \
+			-o -iname .mention-bot \
 			-o -iname .nvmrc \
 			-o -iname .pnpm-store \
 			-o -iname .prettierignore \
@@ -40,16 +41,19 @@ for Organization in "${Organization[@]}"; do
 			-o -iname .prettierrc.yaml \
 			-o -iname .stylua.toml \
 			-o -iname .vscode \
+			-o -iname .vscode-test.js \
 			-o -iname .yarnrc \
 			-o -iname Cargo.lock \
 			-o -iname biome.json \
 			-o -iname jsconfig.json \
 			-o -iname package-lock.json \
+			-o -iname pnpm-global \
 			-o -iname pnpm-lock.yaml \
 			-o -iname prettier.config.cjs \
 			-o -iname prettier.config.js \
 			-o -iname rome.json \
 			-o -iname rustfmt.toml \
+			-o -iname webpack.config.js \
 			-o -iname yarn.lock \
 			\) -exec rm -rf {} \;
 
@@ -60,6 +64,7 @@ for Organization in "${Organization[@]}"; do
 			-o -name '__snapshots__' \
 			-o -name '__test__' \
 			-o -name '__tests__' \
+			-o -name 'fixtures' \
 			-o -name 'tests' \
 			\) -type d -exec rm -rf {} \;
 

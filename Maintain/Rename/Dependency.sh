@@ -8,8 +8,8 @@ Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 Fn "$@"
 
 for Organization in "${Organization[@]}"; do
-	for Service in "${Service[@]}"; do
-		Name="${Service/"${Organization}/"/}"
+	for SubDependency in "${SubDependency[@]}"; do
+		Name="${SubDependency/"${Organization}/"/}"
 
 		Rename=""
 
@@ -18,20 +18,29 @@ for Organization in "${Organization[@]}"; do
 		for ((i = 1; i < ${#Name}; i++)); do
 			if [ "${Name:i:1}" = "-" ]; then
 				Next="${Name:i+1:1}"
+
 				if [[ "$Next" =~ [a-z] ]]; then
+
 					Upper=$(\tr '[:lower:]' '[:upper:]' <<<"$Next")
+
 					Rename="${Rename}${Upper}"
+
 					((i++))
+
 				else
+
 					Rename="${Rename}-"
+
 				fi
 			else
+
 				Rename="${Rename}${Name:i:1}"
+
 			fi
 		done
 
 		Rename=$(\echo "$Rename" | \sed -E "s/vscode/Land/gI")
 
-		\gh repo rename --repo "$Service" "$Rename" --yes
+		\gh repo rename --repo "$SubDependency" "$Rename" --yes
 	done
 done

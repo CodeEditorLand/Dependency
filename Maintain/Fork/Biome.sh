@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Service=(
+Dependency=(
 	"biomejs/biome"
 	"biomejs/setup-biome"
 	"biomejs/biome-vscode"
@@ -10,6 +10,6 @@ Service=(
 	"biomejs/pre-commit"
 )
 
-for Service in "${Service[@]}"; do
-	\gh repo fork "$Service" --org CodeEditorLand
+for Dependency in "${Dependency[@]}"; do
+	\gh repo fork "$Dependency" --org CodeEditorLand
 done

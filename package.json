@@ -2,19 +2,19 @@
 	"name": "@codeeditorland/foundation",
 	"version": "0.0.1",
 	"private": false,
-	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/Foundation#readme",
+	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/Dependency#readme",
 	"bugs": {
-		"url": "HTTPS://GitHub.Com/CodeEditorLand/Foundation/issues"
+		"url": "HTTPS://GitHub.Com/CodeEditorLand/Dependency/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+HTTPS://github.com/CodeEditorLand/Foundation.git"
+		"url": "git+https://github.com/CodeEditorLand/Dependency.git"
 	},
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
-		"name": "Source/Open",
-		"email": "Source/Open@Playform.Cloud",
-		"url": "HTTPS://Playform.Cloud"
+		"name": "🖋️ Source — �🏻 Open —",
+		"email": "Source/Open@PlayForm.Cloud",
+		"url": "HTTPS://PlayForm.Cloud"
 	},
 	"type": "module",
 	"scripts": {
@@ -22,20 +22,20 @@
 		"prepublishOnly": "turbo run prepublishOnly"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "1.7.1",
+		"@biomejs/biome": "1.7.3",
 		"@commonalityco/studio": "0.2.57",
-		"@playform/build": "0.0.7",
-		"@playform/document": "0.0.6",
+		"@playform/build": "0.0.9",
+		"@playform/document": "0.0.7",
 		"@playform/maintain": "0.0.3",
 		"@prettier/plugin-lua": "0.0.3",
 		"@prettier/plugin-php": "0.22.2",
 		"@tailwindcss/aspect-ratio": "0.4.2",
 		"@tailwindcss/forms": "0.5.7",
-		"@tailwindcss/typography": "0.5.12",
+		"@tailwindcss/typography": "0.5.13",
 		"@trivago/prettier-plugin-sort-imports": "4.3.0",
 		"commonality": "0.2.63",
 		"prettier": "3.2.5",
-		"prettier-plugin-astro": "0.13.0",
+		"prettier-plugin-astro": "0.14.0",
 		"prettier-plugin-autocorrect": "0.4.1",
 		"prettier-plugin-java": "2.6.0",
 		"prettier-plugin-kotlin": "2.1.0",
@@ -49,7 +49,7 @@
 		"prettier-plugin-tailwindcss": "0.5.14",
 		"prettier-plugin-toml": "2.0.1",
 		"tailwindcss": "3.4.3",
-		"turbo": "1.13.2"
+		"turbo": "1.13.3"
 	},
 	"publishConfig": {
 		"access": "public"

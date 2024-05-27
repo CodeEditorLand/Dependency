@@ -9,10 +9,12 @@ Fn "$@"
 
 for Organization in "${Organization[@]}"; do
 	for SubDependency in "${SubDependency[@]}"; do
-		# shellcheck disable=SC2154
-		\cd "$Folder"/"${SubDependency/"${Organization}/"/}" || \exit
+		Origin="ssh://git@github.com/${SubDependency}.git"
 
-		\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o -iname package.json -type f -execdir bash -c "$Current"/../Fn/Clean/package.json.sh \;
+		# shellcheck disable=SC2154
+		\cd "$Folder" || \exit
+
+		\git submodule add --depth=1 "$Origin" "${SubDependency/"${Organization}/"/}"
 
 		\cd - || \exit
 	done

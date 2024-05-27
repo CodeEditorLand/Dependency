@@ -61,7 +61,7 @@
 # Repository
 
 1. After cloning the repository
-   `ssh://git@github.com/CodeEditorLand/Foundation.git`:
+   `ssh://git@github.com/CodeEditorLand/Dependency.git`:
 
     ```sh
     cd Land # (The Context)

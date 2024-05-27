@@ -2,16 +2,16 @@
 
 \pwd
 
-Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
+Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
-# TODO: Add dynamic { "repository": { "directory": Foundation/$Foundation/Service/$Service } }
+# TODO: Add dynamic { "repository": { "directory": Dependency/$Dependency/Dependency/$Dependency } }
 
-# # The path is always CodeEditorLand/Foundation/$Foundation/Service/$SUBMODULE.name or fetch the correct submodule URL
+# # The path is always CodeEditorLand/Dependency/$Dependency/Dependency/$Dependency or fetch the correct submodule URL
 
 Package="$Current"/../../../package.json
 Slug=$(\gh repo view --json nameWithOwner | \jq -r .nameWithOwner)
 
-\jq -S --tab ". * {
+\jq -S --tab ".keywords += [\"land\"] | . * {
 	\"homepage\": \"HTTPS://GitHub.Com/$Slug#readme\",
 	\"bugs\": {
 		\"url\": \"HTTPS://GitHub.Com/$Slug/issues\"
@@ -27,13 +27,10 @@ Slug=$(\gh repo view --json nameWithOwner | \jq -r .nameWithOwner)
 	\"publishConfig\": {
 		\"access\": \"public\"
 	},
-	\"keywords\": [
-		\"land\"
-	],
 	\"author\": {
-		\"name\": \"Land\",
-		\"email\": \"Land@Playform.Cloud\",
-		\"url\": \"HTTPS://Land.Playform.Cloud\"
+		\"name\": \"🛬 Land —\",
+		\"email\": \"Land@PlayForm.Cloud\",
+		\"url\": \"HTTPS://Editor.Land\"
 	},
 	\"scripts\": {
 		\"Document\": \"Document 'Source/**/*.ts'\",
@@ -43,6 +40,6 @@ Slug=$(\gh repo view --json nameWithOwner | \jq -r .nameWithOwner)
 		\"@playform/document\": \"$(\jq -r '.devDependencies["@playform/document"]' "$Package")\",
 		\"@playform/build\": \"$(\jq -r '.devDependencies["@playform/build"]' "$Package")\"
 	}
-}" package.json >| package.json.tmp
+}" package.json >|package.json.tmp
 
 \mv package.json.tmp package.json

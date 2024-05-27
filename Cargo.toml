@@ -3,11 +3,11 @@ members = []
 resolver = "2"
 
 [workspace.package]
-authors = ["Nikola R. Hristov"]
-documentation = "https://Docs.Land.playform.cloud/"
+authors = ["Nikola Hristov"]
+documentation = "https://Documentation.Editor.Land/"
 edition = "2021"
-homepage = "https://Land.playform.cloud/"
+homepage = "https://Editor.Land/"
 license-file = "LICENSE"
 publish = false
 readme = "README.md"
-repository = "https://github.com/CodeEditorLand/Foundation"
+repository = "https://github.com/CodeEditorLand/Dependency"

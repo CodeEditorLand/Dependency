@@ -10,9 +10,9 @@ Fn "$@"
 for Organization in "${Organization[@]}"; do
 	for SubDependency in "${SubDependency[@]}"; do
 		# shellcheck disable=SC2154
-		\cd "$Folder"/"${SubDependency/"${Organization}/"/}" || \exit
+		\cd "$Folder" || \exit
 
-		\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o -iname package.json -type f -execdir bash -c "$Current"/../Fn/Clean/package.json.sh \;
+		\git clone --filter=tree:0 --depth=1 --recurse-submodules --shallow-submodules "ssh://git@github.com/${SubDependency}.git" "$SubDependency"
 
 		\cd - || \exit
 	done

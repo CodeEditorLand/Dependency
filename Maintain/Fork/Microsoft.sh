@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Service=(
+Dependency=(
 	"microsoft/applicationinsights-vscode"
 	"microsoft/azure-boards-vscode"
 	"microsoft/azure-iot-developer-kit"
@@ -311,6 +311,6 @@ Service=(
 	"microsoft/vscodetestcover"
 )
 
-for Service in "${Service[@]}"; do
-	\gh repo fork "$Service" --org CodeEditorLand
+for Dependency in "${Dependency[@]}"; do
+	\gh repo fork "$Dependency" --org CodeEditorLand
 done
