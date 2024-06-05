@@ -52,6 +52,11 @@ for Dependency in "${Dependency[@]}"; do
 		"$SubDependency" \
 		"$Dependency"
 
+	"$Current"/Save/Dependency.sh \
+		"$Organization" \
+		"$SubDependency" \
+		"$Dependency"
+
 	# # "$Current"/Save/Dependency.sh \
 	# # 	"$Organization" \
 	# # 	"$SubDependency" \
