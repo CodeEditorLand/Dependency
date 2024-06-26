@@ -18,6 +18,7 @@ for Organization in "${Organization[@]}"; do
 			mv generators/app/templates/ext-colortheme/package.json generators/app/templates/ext-colortheme/template.package.json
 			mv generators/app/templates/ext-command-js/package.json generators/app/templates/ext-command-js/template.package.json
 			mv generators/app/templates/ext-command-ts/package.json generators/app/templates/ext-command-ts/template.package.json
+			mv generators/app/templates/ext-command-ts/vscode-esbuild/package.json generators/app/templates/ext-command-ts/vscode-esbuild/template.package.json
 			mv generators/app/templates/ext-command-ts/vscode-webpack/package.json generators/app/templates/ext-command-ts/vscode-webpack/template.package.json
 			mv generators/app/templates/ext-command-web/package.json generators/app/templates/ext-command-web/template.package.json
 			mv generators/app/templates/ext-extensionpack/package.json generators/app/templates/ext-extensionpack/template.package.json

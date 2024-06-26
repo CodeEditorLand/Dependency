@@ -27,15 +27,15 @@ for Dependency in "${Dependency[@]}"; do
 	# 	"$SubDependency" \
 	# 	"$Dependency"
 
-	"$Current"/Configure/Dependency.sh \
-		"$Organization" \
-		"$SubDependency" \
-		"$Dependency"
+	# "$Current"/Configure/Dependency.sh \
+	# 	"$Organization" \
+	# 	"$SubDependency" \
+	# 	"$Dependency"
 
-	"$Current"/Setting/Dependency.sh \
-		"$Organization" \
-		"$SubDependency" \
-		"$Dependency"
+	# "$Current"/Setting/Dependency.sh \
+	# 	"$Organization" \
+	# 	"$SubDependency" \
+	# 	"$Dependency"
 
 	# # "$Current"/Rename/Dependency.sh \
 	# # 	"$Organization" \
@@ -62,17 +62,17 @@ for Dependency in "${Dependency[@]}"; do
 	# # 	"$SubDependency" \
 	# # 	"$Dependency"
 
-	"$Current"/Switch/Branch.sh \
-		"$Organization" \
-		"$SubDependency" \
-		"$Dependency" \
-		"Previous"
+	# "$Current"/Switch/Branch.sh \
+	# 	"$Organization" \
+	# 	"$SubDependency" \
+	# 	"$Dependency" \
+	# 	"Previous"
 
-	"$Current"/Reset/Dependency.sh \
-		"$Organization" \
-		"$SubDependency" \
-		"$Dependency" \
-		"Previous"
+	# "$Current"/Reset/Dependency.sh \
+	# 	"$Organization" \
+	# 	"$SubDependency" \
+	# 	"$Dependency" \
+	# 	"Previous"
 
 	"$Current"/Switch/Branch.sh \
 		"$Organization" \
@@ -96,11 +96,11 @@ for Dependency in "${Dependency[@]}"; do
 		"$SubDependency" \
 		"$Dependency"
 
-	"$Current"/Default/Branch.sh \
-		"$Organization" \
-		"$SubDependency" \
-		"$Dependency" \
-		"Current"
+	# "$Current"/Default/Branch.sh \
+	# 	"$Organization" \
+	# 	"$SubDependency" \
+	# 	"$Dependency" \
+	# 	"Current"
 
 	"$Current"/Move/license.sh \
 		"$Organization" \

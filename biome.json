@@ -1,11 +1,12 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.7.3/schema.json",
+	"$schema": "https://biomejs.dev/schemas/1.8.2/schema.json",
 	"files": {
 		"ignore": [
 			"**/Target/**/*",
 			"**/Documentation/**/*",
 			"**/dist/**/*",
-			"**/*.astro"
+			"**/*.astro",
+			"package.json"
 		],
 		"maxSize": 10000000
 	},
@@ -31,7 +32,7 @@
 			"quoteProperties": "asNeeded",
 			"quoteStyle": "double",
 			"semicolons": "always",
-			"trailingComma": "all"
+			"trailingCommas": "all"
 		}
 	},
 	"json": {
@@ -62,11 +63,11 @@
 			},
 			"correctness": {
 				"all": true,
-				"noUnusedVariables": "off"
+				"noUnusedVariables": "off",
+				"noNodejsModules": "off"
 			},
 			"nursery": {
 				"all": true,
-				"noNodejsModules": "off",
 				"useImportRestrictions": "off",
 				"noUndeclaredDependencies": "off",
 				"noConsole": "off",
@@ -84,8 +85,7 @@
 				"noUselessElse": "off",
 				"useNamingConvention": "off",
 				"useShorthandFunctionType": "off",
-				"useFilenamingConvention": "off",
-				"useNodejsImportProtocol": "off"
+				"useFilenamingConvention": "off"
 			},
 			"suspicious": {
 				"all": true,
