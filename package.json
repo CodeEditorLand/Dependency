@@ -23,7 +23,7 @@
 		"prepublishOnly": "turbo run prepublishOnly"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "1.8.2",
+		"@biomejs/biome": "1.8.3",
 		"@commonalityco/studio": "0.2.57",
 		"@playform/build": "0.0.11",
 		"@playform/document": "0.0.11",
