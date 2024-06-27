@@ -33,11 +33,9 @@ Slug=$(\gh repo view --json nameWithOwner | \jq -r .nameWithOwner)
 		\"url\": \"HTTPS://Editor.Land\"
 	},
 	\"scripts\": {
-		\"Document\": \"Document 'Source/**/*.ts'\",
 		\"prepublishOnly\": \"Build 'Source/**/*.ts'\"
 	},
 	\"devDependencies\": {
-		\"@playform/document\": \"$(\jq -r '.devDependencies["@playform/document"]' "$Package")\",
 		\"@playform/build\": \"$(\jq -r '.devDependencies["@playform/build"]' "$Package")\"
 	}
 }" package.json >|package.json.tmp

@@ -26,7 +26,6 @@
 		"@biomejs/biome": "1.8.3",
 		"@commonalityco/studio": "0.2.57",
 		"@playform/build": "0.0.11",
-		"@playform/document": "0.0.11",
 		"@playform/maintain": "0.0.7",
 		"@prettier/plugin-lua": "0.0.3",
 		"@prettier/plugin-php": "0.22.2",
