@@ -11,7 +11,7 @@ Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 Package="$Current"/../../../package.json
 Slug=$(\gh repo view --json nameWithOwner | \jq -r .nameWithOwner)
 
-\jq -S --tab ".keywords += [\"land\"] | . * {
+\jq -S --tab ".keywords += [ \"codeeditorland\", \"land\", \"playform\"] | . * {
 	\"homepage\": \"HTTPS://GitHub.Com/$Slug#readme\",
 	\"bugs\": {
 		\"url\": \"HTTPS://GitHub.Com/$Slug/issues\"
