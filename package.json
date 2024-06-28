@@ -18,20 +18,25 @@
 	},
 	"type": "module",
 	"scripts": {
-		"Document": "turbo run Document",
 		"Start": "turbo run Start",
-		"prepublishOnly": "turbo run prepublishOnly"
+		"prepublishOnly": "turbo run prepublishOnly",
+		"tauri": "tauri",
+		"turbo": "turbo"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.8.3",
 		"@commonalityco/studio": "0.2.57",
 		"@playform/build": "0.0.11",
+		"@playform/document": "0.0.11",
 		"@playform/maintain": "0.0.7",
 		"@prettier/plugin-lua": "0.0.3",
 		"@prettier/plugin-php": "0.22.2",
 		"@tailwindcss/aspect-ratio": "0.4.2",
 		"@tailwindcss/forms": "0.5.7",
 		"@tailwindcss/typography": "0.5.13",
+		"@tauri-apps/api": "2.0.0-beta.13",
+		"@tauri-apps/cli": "2.0.0-beta.20",
+		"@tauri-apps/plugin-shell": "2.0.0-beta.6",
 		"@trivago/prettier-plugin-sort-imports": "4.3.0",
 		"commonality": "0.2.63",
 		"prettier": "3.3.2",
