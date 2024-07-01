@@ -19,9 +19,7 @@
 	"type": "module",
 	"scripts": {
 		"Start": "turbo run Start",
-		"prepublishOnly": "turbo run prepublishOnly",
-		"tauri": "tauri",
-		"turbo": "turbo"
+		"prepublishOnly": "turbo run prepublishOnly"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.8.3",
