@@ -18,8 +18,8 @@
 	},
 	"type": "module",
 	"scripts": {
-		"Start": "turbo run Start",
-		"prepublishOnly": "turbo run prepublishOnly",
+		"Start": "turbo run Start --concurrency=100% --continue",
+		"prepublishOnly": "turbo run prepublishOnly --concurrency=100% --continue",
 		"tauri": "tauri",
 		"turbo": "turbo"
 	},
