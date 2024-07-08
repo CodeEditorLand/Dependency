@@ -1,15 +1,16 @@
 {
+	"$schema": "https://json.schemastore.org/jsconfig",
 	"compilerOptions": {
-		"module": "ESNext",
-		"moduleResolution": "Node",
-		"target": "ES2020",
-		"jsx": "react",
-		"esversion": 6,
-		"strictNullChecks": true,
-		"strictFunctionTypes": true
+		"emitDeclarationOnly": false,
+		"noEmit": true,
+		"outDir": "Target",
+		"baseUrl": "./",
+		"rootDir": "."
 	},
-	"exclude": ["node_modules"],
-	"jshint.options": {
-		"esversion": 6
-	}
+	"exclude": ["**/node_modules/**", "**/Target/**"],
+	"include": ["./Elements/"],
+	"watchOptions": {
+		"excludeDirectories": ["**/node_modules/**", "**/Target/**"]
+	},
+	"extends": "@playform/build/jsconfig"
 }
