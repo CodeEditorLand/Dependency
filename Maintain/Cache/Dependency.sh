@@ -29,18 +29,18 @@ _Dependency=()
 
 for Organization in "${Organization[@]}"; do
 	for ((Page = 1; Page <= 20; Page++)); do
-		\mapfile -t Temporary < <(\printf "%s" "$(
+		\mapfile -t __Dependency < <(\printf "%s" "$(
 			\gh api \
 				-H "Accept: application/vnd.github+json" \
 				-H "X-GitHub-Api-Version: 2022-11-28" \
 				orgs/"${Organization}"/repos?per_page=100\&page=${Page} | \jq -r '.[].full_name'
 		)" | \tr -d '\r')
 
-		for Temporary in "${Temporary[@]}"; do
+		for __Dependency in "${__Dependency[@]}"; do
 			Flag=false
 
 			for _DependencyExclude in "${Exclude[@]}"; do
-				if [ "$Temporary" = "$_DependencyExclude" ]; then
+				if [ "$__Dependency" = "$_DependencyExclude" ]; then
 					Flag=true
 
 					break
@@ -48,7 +48,7 @@ for Organization in "${Organization[@]}"; do
 			done
 
 			if [ "$Flag" = false ]; then
-				_Dependency+=("$Temporary")
+				_Dependency+=("$__Dependency")
 			fi
 
 			# TODO: Add these to the cache
