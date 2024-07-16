@@ -13,7 +13,7 @@ for Dependency in "${Dependency[@]}"; do
 	Cache="$Current"/Cache
 
 	Exclude="$Cache"/Exclude/"$Dependency".json
-	Include="$Cache"/Include/"$Dependency".json
+	# Include="$Cache"/Include/"$Dependency".json
 	Organization="$Cache"/Organization/"$Dependency".json
 	SubDependency="$Cache"/Dependency/"$Dependency".json
 
@@ -28,10 +28,10 @@ for Dependency in "${Dependency[@]}"; do
 	# 	"$SubDependency" \
 	# 	"$Dependency"
 
-	# "$Current"/Configure/Dependency.sh \
-	# 	"$Organization" \
-	# 	"$SubDependency" \
-	# 	"$Dependency"
+	"$Current"/Configure/Dependency.sh \
+		"$Organization" \
+		"$SubDependency" \
+		"$Dependency"
 
 	# "$Current"/Setting/Dependency.sh \
 	# 	"$Organization" \

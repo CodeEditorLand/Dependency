@@ -17,10 +17,10 @@ for Dependency in "${Dependency[@]}"; do
 	SubDependency="$Cache"/Dependency/"$Dependency".json
 
 	# ! NOT CURRENTLY WORKING
-	"$Current"/Cache/Dependency.sh \
-		"$Organization" \
-		"$Exclude" \
-		"$Dependency"
+	# "$Current"/Cache/Dependency.sh \
+	# 	"$Organization" \
+	# 	"$Exclude" \
+	# 	"$Dependency"
 
 	"$Current"/Setting/Dependency.sh \
 		"$Organization" \
