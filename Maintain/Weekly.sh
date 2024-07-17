@@ -12,7 +12,7 @@ Dependency=(
 for Dependency in "${Dependency[@]}"; do
 	Cache="$Current"/Cache
 
-	Exclude="$Cache"/Exclude/"$Dependency".json
+	# Exclude="$Cache"/Exclude/"$Dependency".json
 	# Include="$Cache"/Include/"$Dependency".json
 	Organization="$Cache"/Organization/"$Dependency".json
 	SubDependency="$Cache"/Dependency/"$Dependency".json
@@ -20,7 +20,7 @@ for Dependency in "${Dependency[@]}"; do
 	# ! NOT CURRENTLY WORKING
 	# "$Current"/Cache/Dependency.sh \
 	# 	"$Organization" \
-	# 	"$Exclude" \
+	#	"$Exclude" \
 	# 	"$Dependency"
 
 	# "$Current"/Module/Dependency.sh \
