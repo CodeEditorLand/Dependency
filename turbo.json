@@ -1,9 +1,10 @@
 {
 	"$schema": "https://turbo.build/schema.json",
 	"tasks": {
-		"Start": {
+		"Run": {
 			"cache": false,
-			"dependsOn": ["^prepublishOnly", "^Start"]
+			"dependsOn": ["^prepublishOnly"],
+			"persistent": true
 		},
 		"prepublishOnly": {
 			"dependsOn": ["^prepublishOnly"],
