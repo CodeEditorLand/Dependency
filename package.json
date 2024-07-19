@@ -24,7 +24,7 @@
 		"turbo": "turbo"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "1.8.3",
+		"@biomejs/biome": "1.8.4-nightly.a579bf7",
 		"@commonalityco/studio": "0.2.57",
 		"@playform/build": "0.1.1",
 		"@playform/document": "0.0.12",
@@ -34,12 +34,12 @@
 		"@tailwindcss/aspect-ratio": "0.4.2",
 		"@tailwindcss/forms": "0.5.7",
 		"@tailwindcss/typography": "0.5.13",
-		"@tauri-apps/api": "2.0.0-beta.13",
-		"@tauri-apps/cli": "2.0.0-beta.20",
+		"@tauri-apps/api": "2.0.0-beta.15",
+		"@tauri-apps/cli": "2.0.0-beta.22",
 		"@tauri-apps/plugin-shell": "2.0.0-beta.8",
 		"@trivago/prettier-plugin-sort-imports": "4.3.0",
 		"commonality": "0.2.63",
-		"prettier": "3.3.3",
+		"prettier": "4.0.0-alpha.9",
 		"prettier-plugin-astro": "0.14.1",
 		"prettier-plugin-autocorrect": "0.4.1",
 		"prettier-plugin-java": "2.6.4",
@@ -53,9 +53,9 @@
 		"prettier-plugin-svelte": "3.2.6",
 		"prettier-plugin-tailwindcss": "0.6.5",
 		"prettier-plugin-toml": "2.0.1",
-		"tailwindcss": "3.4.6",
+		"tailwindcss": "4.0.0-alpha.17",
 		"turbo": "2.0.7",
-		"typescript": "5.5.3"
+		"typescript": "5.6.0-dev.20240718"
 	},
 	"packageManager": "pnpm@9.5.0",
 	"publishConfig": {
