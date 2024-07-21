@@ -33,10 +33,10 @@ for Dependency in "${Dependency[@]}"; do
 		"$SubDependency" \
 		"$Dependency"
 
-	"$Current"/Setting/Dependency.sh \
-		"$Organization" \
-		"$SubDependency" \
-		"$Dependency"
+	# "$Current"/Setting/Dependency.sh \
+	# 	"$Organization" \
+	# 	"$SubDependency" \
+	# 	"$Dependency"
 
 	# # "$Current"/Rename/Dependency.sh \
 	# # 	"$Organization" \
