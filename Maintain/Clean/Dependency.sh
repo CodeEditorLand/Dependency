@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
+Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
 
 # shellcheck disable=SC1091
 \source "$Current"/../Fn/Argument.sh
@@ -55,6 +55,22 @@ for Organization in "${Organization[@]}"; do
 			-o -iname rustfmt.toml \
 			-o -iname webpack.config.js \
 			-o -iname yarn.lock \
+			-o -iwholename '*/.github/cloudflare.yml' \
+			-o -iwholename '*/.github/codeql.yml' \
+			-o -iwholename '*/.github/dependabot.yml' \
+			-o -iwholename '*/.github/github.yml' \
+			-o -iwholename '*/.github/innerdependabot.yml' \
+			-o -iwholename '*/.github/node.yml' \
+			-o -iwholename '*/.github/npm.yml' \
+			-o -iwholename '*/.github/rust.yml' \
+			-o -iwholename '*/.github/workflows/cloudflare.yml' \
+			-o -iwholename '*/.github/workflows/codeql.yml' \
+			-o -iwholename '*/.github/workflows/dependabot.yml' \
+			-o -iwholename '*/.github/workflows/github.yml' \
+			-o -iwholename '*/.github/workflows/innerdependabot.yml' \
+			-o -iwholename '*/.github/workflows/node.yml' \
+			-o -iwholename '*/.github/workflows/npm.yml' \
+			-o -iwholename '*/.github/workflows/rust.yml' \
 			\) -exec rm -rf {} \;
 
 		\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o \
