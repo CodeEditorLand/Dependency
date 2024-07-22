@@ -1,16 +1,16 @@
 {
 	"$schema": "https://json.schemastore.org/jsconfig",
 	"compilerOptions": {
+		"baseUrl": "./",
 		"emitDeclarationOnly": false,
 		"noEmit": true,
 		"outDir": "Target",
-		"baseUrl": "./",
 		"rootDir": "."
 	},
 	"exclude": ["**/node_modules/**", "**/Target/**"],
+	"extends": "@playform/build/jsconfig",
 	"include": ["./Elements/"],
 	"watchOptions": {
 		"excludeDirectories": ["**/node_modules/**", "**/Target/**"]
-	},
-	"extends": "@playform/build/jsconfig"
+	}
 }
