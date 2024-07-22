@@ -2,7 +2,7 @@
 
 \pwd
 
-JSON=$(<package.json)
+JSON=$(< package.json)
 
 JSON=$(echo "$JSON" | \jq -S --tab "del(\
 	.author,\
@@ -77,7 +77,7 @@ JSON=$(echo "$JSON" | \jq -S --tab "del(\
 	.version\
 )")
 
-echo "$JSON" >|package.json
+echo "$JSON" >| package.json
 
 Exclude=(
 	"@antfu/eslint-config"
@@ -600,6 +600,10 @@ Exclude=(
 	"rollup-plugin-transform-tagged-template"
 	"rollup-plugin-ts"
 	"rollup-plugin-typescript2"
+	"@rollup/plugin-commonjs"
+	"@rollup/plugin-node-resolve"
+	"@rollup/plugin-terser"
+	"@rollup/plugin-typescript"
 	"sinon-test"
 	"solid-js"
 	"string-replace-webpack-plugin"
@@ -621,8 +625,12 @@ Exclude=(
 	"tslint-react"
 	"tslint-react-hooks"
 	"tslint-to-eslint-config"
+	"@types/jest"
+	"@types/vscode"
 	"typescript"
 	"typescript-eslint"
+	"@typescript-eslint/eslint-plugin"
+	"@typescript-eslint/parser"
 	"typescript-react-intl"
 	"unplugin-vue-components"
 	"v8-inspect-profiler"
@@ -679,7 +687,6 @@ Exclude=(
 	"vscode-markdown-languageservice"
 	"vscode-nls"
 	"vscode-nls-dev"
-	"vscode-nls-devdownload/2.0.2/build.tar.gz,"
 	"vscode-notebook-error-overlay"
 	"vscode-oniguruma"
 	"vscode-regexpp"
@@ -692,6 +699,7 @@ Exclude=(
 	"vscode-uri"
 	"vscode-webhint"
 	"vscode-webview-tools"
+	"@vscode/vsce"
 	"vue"
 	"vue-cli-plugin-tauri"
 	"vue-demi"
@@ -730,7 +738,7 @@ Length=${#Exclude[@]}
 Size=210
 
 Key() {
-	JSON=$(<package.json)
+	JSON=$(< package.json)
 
 	for ((Start = 0; Start < Length; Start += Size)); do
 		Chunk=("${Exclude[@]:Start:Size}")
@@ -747,7 +755,7 @@ Key() {
 
 		JSON=$(echo "$JSON" | \jq -S --tab "$JQ")
 
-		echo "$JSON" >|package.json
+		echo "$JSON" >| package.json
 	done
 }
 
