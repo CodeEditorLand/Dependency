@@ -154,6 +154,7 @@ Exclude=(
 	"@babel/preset-typescript"
 	"@babel/runtime"
 	"@babel/traverse"
+	"@biomejs/biome"
 	"@c4312/chromehash"
 	"@electron-forge/cli"
 	"@electron-forge/maker-deb"
