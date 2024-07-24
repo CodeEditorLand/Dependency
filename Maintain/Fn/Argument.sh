@@ -5,14 +5,14 @@
 Fn() {
 	if [ $# -gt 0 ]; then
 		if [ -f "$1" ]; then
-			\mapfile -t Organization < <(jq -r '.[]' "$1" | \tr -d '\r')
+			\mapfile -t Organization < <(\jq -r '.[]' "$1" | \tr -d '\r')
 		else
 			\echo "Cannot Organization."
 			\exit 1
 		fi
 
 		if [ -f "$2" ]; then
-			\mapfile -t SubDependency < <(jq -r '.[]' "$2" | \tr -d '\r')
+			\mapfile -t SubDependency < <(\jq -r '.[]' "$2" | \tr -d '\r')
 		else
 			\echo "Cannot SubDependency."
 			\exit 1

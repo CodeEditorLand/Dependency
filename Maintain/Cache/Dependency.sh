@@ -4,14 +4,14 @@ Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 
 if [ $# -gt 0 ]; then
 	if [ -f "$1" ]; then
-		\mapfile -t Organization < <(jq -r '.[]' "$1" | \tr -d '\r')
+		\mapfile -t Organization < <(\jq -r '.[]' "$1" | \tr -d '\r')
 	else
 		\echo "Cannot Organization."
 		\exit 1
 	fi
 
 	if [ -f "$2" ]; then
-		\mapfile -t Exclude < <(jq -r '.[]' "$2" | \tr -d '\r')
+		\mapfile -t Exclude < <(\jq -r '.[]' "$2" | \tr -d '\r')
 	else
 		\echo "Cannot Exclude."
 		\exit 1
