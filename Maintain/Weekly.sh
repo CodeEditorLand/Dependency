@@ -133,10 +133,10 @@ for Dependency in "${Dependency[@]}"; do
 		"$SubDependency" \
 		"$Dependency"
 
-	"$Current"/Sort/Detail.sh \
-		"$Organization" \
-		"$SubDependency" \
-		"$Dependency"
+	# "$Current"/Sort/Detail.sh \
+	# 	"$Organization" \
+	# 	"$SubDependency" \
+	# 	"$Dependency"
 
 	"$Current"/Save/Dependency.sh \
 		"$Organization" \
