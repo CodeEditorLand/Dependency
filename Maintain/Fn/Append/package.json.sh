@@ -2,7 +2,7 @@
 
 \pwd
 
-Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
+Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
 
 # TODO: Add dynamic { "repository": { "directory": Dependency/$Dependency/Dependency/$Dependency } }
 
@@ -38,6 +38,6 @@ Slug=$(\gh repo view --json nameWithOwner | \jq -r .nameWithOwner)
 	\"devDependencies\": {
 		\"@playform/build\": \"$(\jq -r '.devDependencies["@playform/build"]' "$Package")\"
 	}
-}" package.json >|package.json.tmp
+}" package.json >| package.json.tmp
 
 \mv package.json.tmp package.json

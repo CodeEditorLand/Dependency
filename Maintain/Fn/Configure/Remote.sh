@@ -3,7 +3,7 @@
 \pwd
 
 Remote() {
-	git remote get-url "$1" 2>/dev/null || git remote get-url origin
+	git remote get-url "$1" 2> /dev/null || git remote get-url origin
 }
 
 Source=$(Remote Source | \sed 's/git@github.com:/ssh:\/\/git@github.com\//')
