@@ -1,4 +1,5 @@
 <a href="https://app.fossa.com/projects/git%2Bgithub.com%2FCodeEditorLand%2FDependency?ref=badge_small"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2FCodeEditorLand%2FDependency.svg?type=small" alt="FOSSA Status"></a><table><tr>
+
 <td colspan="1"> <h3 align="center"> <picture>
 <source media="(prefers-color-scheme: dark)" srcset="https://nikolahristov.tech/Dark/Image/GitHub/Land.svg">
 <source media="(prefers-color-scheme: light)" srcset="https://nikolahristov.tech/Image/GitHub/Land.svg">
