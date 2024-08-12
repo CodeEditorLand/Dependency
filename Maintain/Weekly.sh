@@ -23,10 +23,10 @@ for Dependency in "${Dependency[@]}"; do
 	#	"$Exclude" \
 	# 	"$Dependency"
 
-	# "$Current"/Module/Dependency.sh \
-	# 	"$Organization" \
-	# 	"$SubDependency" \
-	# 	"$Dependency"
+	"$Current"/Module/Dependency.sh \
+		"$Organization" \
+		"$SubDependency" \
+		"$Dependency"
 
 	# "$Current"/Configure/Dependency.sh \
 	# 	"$Organization" \
@@ -38,118 +38,118 @@ for Dependency in "${Dependency[@]}"; do
 	# 	"$SubDependency" \
 	# 	"$Dependency"
 
-	# # "$Current"/Rename/Dependency.sh \
-	# # 	"$Organization" \
-	# # 	"$SubDependency" \
-	# # 	"$Dependency"
+	# # # "$Current"/Rename/Dependency.sh \
+	# # # 	"$Organization" \
+	# # # 	"$SubDependency" \
+	# # # 	"$Dependency"
 
-	"$Current"/Save/Dependency.sh \
-		"$Organization" \
-		"$SubDependency" \
-		"$Dependency"
+	# "$Current"/Save/Dependency.sh \
+	# 	"$Organization" \
+	# 	"$SubDependency" \
+	# 	"$Dependency"
 
-	"$Current"/Sync/Dependency.sh \
-		"$Organization" \
-		"$SubDependency" \
-		"$Dependency"
+	# "$Current"/Sync/Dependency.sh \
+	# 	"$Organization" \
+	# 	"$SubDependency" \
+	# 	"$Dependency"
 
-	"$Current"/Save/Dependency.sh \
-		"$Organization" \
-		"$SubDependency" \
-		"$Dependency"
+	# "$Current"/Save/Dependency.sh \
+	# 	"$Organization" \
+	# 	"$SubDependency" \
+	# 	"$Dependency"
 
-	# # "$Current"/Save/Dependency.sh \
-	# # 	"$Organization" \
-	# # 	"$SubDependency" \
-	# # 	"$Dependency"
+	# # # "$Current"/Save/Dependency.sh \
+	# # # 	"$Organization" \
+	# # # 	"$SubDependency" \
+	# # # 	"$Dependency"
 
-	"$Current"/Switch/Branch.sh \
-		"$Organization" \
-		"$SubDependency" \
-		"$Dependency" \
-		"Previous"
+	# "$Current"/Switch/Branch.sh \
+	# 	"$Organization" \
+	# 	"$SubDependency" \
+	# 	"$Dependency" \
+	# 	"Previous"
 
-	"$Current"/Reset/Dependency.sh \
-		"$Organization" \
-		"$SubDependency" \
-		"$Dependency" \
-		"Previous"
+	# "$Current"/Reset/Dependency.sh \
+	# 	"$Organization" \
+	# 	"$SubDependency" \
+	# 	"$Dependency" \
+	# 	"Previous"
 
-	"$Current"/Switch/Branch.sh \
-		"$Organization" \
-		"$SubDependency" \
-		"$Dependency" \
-		"Current"
-
-	"$Current"/Merge/Dependency.sh \
-		"$Organization" \
-		"$SubDependency" \
-		"$Dependency"
-
-	# # "$Current"/Reset/Dependency.sh \
-	# # 	"$Organization" \
-	# # 	"$SubDependency" \
-	# # 	"$Dependency" \
-	# # 	"Current"
-
-	"$Current"/Save/Dependency.sh \
-		"$Organization" \
-		"$SubDependency" \
-		"$Dependency"
-
-	# "$Current"/Default/Branch.sh \
+	# "$Current"/Switch/Branch.sh \
 	# 	"$Organization" \
 	# 	"$SubDependency" \
 	# 	"$Dependency" \
 	# 	"Current"
 
-	"$Current"/Move/license.sh \
-		"$Organization" \
-		"$SubDependency" \
-		"$Dependency"
-
-	"$Current"/Move/package.json.sh \
-		"$Organization" \
-		"$SubDependency" \
-		"$Dependency"
-
-	"$Current"/Move/src.sh \
-		"$Organization" \
-		"$SubDependency" \
-		"$Dependency"
-
-	"$Current"/Clean/Dependency.sh \
-		"$Organization" \
-		"$SubDependency" \
-		"$Dependency"
-
-	"$Current"/Clean/Detail.sh \
-		"$Organization" \
-		"$SubDependency" \
-		"$Dependency"
-
-	"$Current"/Append/Detail.sh \
-		"$Organization" \
-		"$SubDependency" \
-		"$Dependency"
-
-	# "$Current"/Sort/Detail.sh \
+	# "$Current"/Merge/Dependency.sh \
 	# 	"$Organization" \
 	# 	"$SubDependency" \
 	# 	"$Dependency"
 
-	"$Current"/Save/Dependency.sh \
-		"$Organization" \
-		"$SubDependency" \
-		"$Dependency"
+	# # # "$Current"/Reset/Dependency.sh \
+	# # # 	"$Organization" \
+	# # # 	"$SubDependency" \
+	# # # 	"$Dependency" \
+	# # # 	"Current"
 
-	"$Current"/Sync/Dependency.sh \
-		"$Organization" \
-		"$SubDependency" \
-		"$Dependency"
+	# "$Current"/Save/Dependency.sh \
+	# 	"$Organization" \
+	# 	"$SubDependency" \
+	# 	"$Dependency"
 
-	# # "$Current"/Restore/Detail.sh \
+	# # "$Current"/Default/Branch.sh \
+	# # 	"$Organization" \
+	# # 	"$SubDependency" \
+	# # 	"$Dependency" \
+	# # 	"Current"
+
+	# "$Current"/Move/license.sh \
+	# 	"$Organization" \
+	# 	"$SubDependency" \
+	# 	"$Dependency"
+
+	# "$Current"/Move/package.json.sh \
+	# 	"$Organization" \
+	# 	"$SubDependency" \
+	# 	"$Dependency"
+
+	# "$Current"/Move/src.sh \
+	# 	"$Organization" \
+	# 	"$SubDependency" \
+	# 	"$Dependency"
+
+	# "$Current"/Clean/Dependency.sh \
+	# 	"$Organization" \
+	# 	"$SubDependency" \
+	# 	"$Dependency"
+
+	# "$Current"/Clean/Detail.sh \
+	# 	"$Organization" \
+	# 	"$SubDependency" \
+	# 	"$Dependency"
+
+	# "$Current"/Append/Detail.sh \
+	# 	"$Organization" \
+	# 	"$SubDependency" \
+	# 	"$Dependency"
+
+	# # "$Current"/Sort/Detail.sh \
 	# # 	"$Organization" \
 	# # 	"$SubDependency" \
 	# # 	"$Dependency"
+
+	# "$Current"/Save/Dependency.sh \
+	# 	"$Organization" \
+	# 	"$SubDependency" \
+	# 	"$Dependency"
+
+	# "$Current"/Sync/Dependency.sh \
+	# 	"$Organization" \
+	# 	"$SubDependency" \
+	# 	"$Dependency"
+
+	# # # "$Current"/Restore/Detail.sh \
+	# # # 	"$Organization" \
+	# # # 	"$SubDependency" \
+	# # # 	"$Dependency"
 done
