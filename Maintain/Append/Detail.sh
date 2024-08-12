@@ -14,7 +14,7 @@ for Organization in "${Organization[@]}"; do
 
 		\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o -iname package.json -type f -execdir bash -c "$Current"/../Fn/Append/package.json.sh \;
 
-		# \find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o -iname tsconfig.json -type f -execdir bash -c "$Current"/../Fn/Append/tsconfig.json.sh \;
+		\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o -iname tsconfig.json -type f -execdir bash -c "$Current"/../Fn/Append/tsconfig.json.sh \;
 
 		\cd - || \exit
 	done
