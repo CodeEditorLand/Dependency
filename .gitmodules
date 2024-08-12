@@ -6,6 +6,10 @@ url = ssh://git@github.com/CodeEditorLand/DependencyBiome.git
 path = Land
 url = ssh://git@github.com/CodeEditorLand/DependencyLand.git
 
+[submodule "OXC"]
+path = OXC
+url = ssh://git@github.com/CodeEditorLand/DependencyOXC.git
+
 [submodule "Tauri"]
 path = Tauri
 url = ssh://git@github.com/CodeEditorLand/DependencyTauri.git
