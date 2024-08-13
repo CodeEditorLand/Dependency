@@ -1,5 +1,7 @@
 [workspace]
-members = []
+members = [
+	"Land/Cargo/Maintain"
+]
 resolver = "2"
 
 [workspace.package]
