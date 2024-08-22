@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # TODO: Run once after repository creation
 # TODO: Event Log
