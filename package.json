@@ -25,7 +25,7 @@
 		"turbo": "turbo"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "1.8.4-nightly.a579bf7",
+		"@biomejs/biome": "1.8.3",
 		"@commonalityco/studio": "0.2.57",
 		"@playform/build": "0.1.1",
 		"@playform/document": "0.0.12",
