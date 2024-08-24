@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
@@ -8,7 +8,13 @@ Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 Fn "$@"
 
 for Organization in "${Organization[@]}"; do
-	for SubDependency in "${SubDependency[@]}"; do
-		"$Current"/../Fn/Setting/Dependency.sh "$SubDependency"
-	done
+	(
+		for SubDependency in "${SubDependency[@]}"; do
+			("$Current"/../Fn/Setting/Dependency.sh "$SubDependency") &
+		done
+
+		wait
+	) &
 done
+
+wait

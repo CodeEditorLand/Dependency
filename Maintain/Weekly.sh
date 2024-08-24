@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
@@ -10,6 +10,7 @@ Dependency=(
 )
 
 for Dependency in "${Dependency[@]}"; do
+	(
 	Cache="$Current"/Cache
 
 	# Exclude="$Cache"/Exclude/"$Dependency".json
@@ -152,4 +153,9 @@ for Dependency in "${Dependency[@]}"; do
 	# # 	"$Organization" \
 	# # 	"$SubDependency" \
 	# # 	"$Dependency"
+	) &
 done
+
+wait 
+
+echo "Weekly completed."

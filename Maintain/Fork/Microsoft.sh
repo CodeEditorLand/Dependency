@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 Dependency=(
 	"microsoft/applicationinsights-vscode"

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 Dependency=(
 	"biomejs/biome"
@@ -11,5 +11,7 @@ Dependency=(
 )
 
 for Dependency in "${Dependency[@]}"; do
-	\gh repo fork "$Dependency" --org CodeEditorLand
+	(\gh repo fork "$Dependency" --org CodeEditorLand) &
 done
+
+wait

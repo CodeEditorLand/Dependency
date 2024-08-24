@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # git ecommit is an alias for:
 # commit -a --allow-empty-message -m \"\"

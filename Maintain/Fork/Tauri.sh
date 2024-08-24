@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 Dependency=(
 	"tauri-apps/plugins-workspace"

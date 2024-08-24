@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
@@ -17,24 +17,31 @@ if [ $# -gt 0 ]; then
 fi
 
 for Organization in "${Organization[@]}"; do
-	for SubDependency in "${SubDependency[@]}"; do
-		# shellcheck disable=SC2154
-		\cd "$Folder"/"${SubDependency/"${Organization}/"/}" || \exit
+	(
+		for SubDependency in "${SubDependency[@]}"; do
+			( # shellcheck disable=SC2154
+				\cd "$Folder"/"${SubDependency/"${Organization}/"/}" || \exit
 
-		Upstream=$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/')
+				Upstream=$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/')
 
-		if [[ "$Upstream" != "null/null" && "$Upstream" != "null/null/" ]]; then
-			Upstream=$(\echo "$Upstream" | \sed 's/\/$//')
+				if [[ "$Upstream" != "null/null" && "$Upstream" != "null/null/" ]]; then
+					Upstream=$(\echo "$Upstream" | \sed 's/\/$//')
 
-			\git fetch Parent --depth 1 --no-tags
+					\git fetch Parent --depth 1 --no-tags
 
-			\git reset --hard Parent/"$(\gh repo view "$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/' | \sed 's/\/$//')" --json defaultBranchRef | \jq -r -c '.defaultBranchRef.name')"
+					\git reset --hard Parent/"$(\gh repo view "$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/' | \sed 's/\/$//')" --json defaultBranchRef | \jq -r -c '.defaultBranchRef.name')"
 
-			\git clean -dfx
+					\git clean -dfx
 
-			\git push --set-upstream Source "$Branch" --force
-		fi
+					\git push --set-upstream Source "$Branch" --force
+				fi
 
-		\cd - || \exit
-	done
+				\cd - || \exit
+			) &
+		done
+
+		wait
+	) &
 done
+
+wait
