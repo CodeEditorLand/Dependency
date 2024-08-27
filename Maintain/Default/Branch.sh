@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
+Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
 
 # shellcheck disable=SC1091
 \source "$Current"/../Fn/Argument.sh
@@ -19,12 +19,13 @@ fi
 for Organization in "${Organization[@]}"; do
 	(
 		for SubDependency in "${SubDependency[@]}"; do
-			(# shellcheck disable=SC2154
-			\cd "$Folder"/"${SubDependency/"${Organization}/"/}" || \exit
+			( # shellcheck disable=SC2154
+				\cd "$Folder"/"${SubDependency/"${Organization}/"/}" || \exit
 
-			\gh repo edit --default-branch "$Branch"
+				\gh repo edit --default-branch "$Branch"
 
-			\cd - || \exit) &
+				\cd - || \exit
+			) &
 		done
 
 		wait
