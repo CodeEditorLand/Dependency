@@ -2,11 +2,11 @@
 
 \pwd
 
-\jq -S --tab ".include += [\"Source\"] | . * {
+\jq -S --tab ".include += [\"src\"] | . * {
 	\"compilerOptions\": {
 		\"baseUrl\": \"./\",
 		\"outDir\": \"Target\",
-		\"rootDir\": \"Source\"
+		\"rootDir\": \"src\"
 	},
 	\"extends\": \"@playform/build/tsconfig\"
 }
