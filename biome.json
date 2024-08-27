@@ -80,13 +80,14 @@
 				"all": true
 			},
 			"style": {
-				"all": true,
-				"noDefaultExport": "off",
-				"noUselessElse": "off",
-				"useNamingConvention": "off",
-				"useShorthandFunctionType": "off",
-				"useFilenamingConvention": "off"
-			},
+                                "all": true,
+                                "noDefaultExport": "off",
+                                "noUselessElse": "off",
+                                "useNamingConvention": "off",
+                                "useShorthandFunctionType": "off",
+                                "useFilenamingConvention": "off",
+                                "useNodejsImportProtocol": "off"
+                        },
 			"suspicious": {
 				"all": true,
 				"noConsoleLog": "off"
