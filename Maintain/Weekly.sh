@@ -6,6 +6,7 @@ Dependency=(
 	"Biome"
 	"Land"
 	"OXC"
+	"Rolldown"
 	"Tauri"
 )
 
