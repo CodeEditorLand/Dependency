@@ -134,11 +134,6 @@ for Dependency in "${Dependency[@]}"; do
 			"$SubDependency" \
 			"$Dependency"
 
-		# # "$Current"/Sort/Detail.sh \
-		# # 	"$Organization" \
-		# # 	"$SubDependency" \
-		# # 	"$Dependency"
-
 		"$Current"/Save/Dependency.sh \
 			"$Organization" \
 			"$SubDependency" \
@@ -148,14 +143,15 @@ for Dependency in "${Dependency[@]}"; do
 			"$Organization" \
 			"$SubDependency" \
 			"$Dependency"
-
-		# # # "$Current"/Restore/Detail.sh \
-		# # # 	"$Organization" \
-		# # # 	"$SubDependency" \
-		# # # 	"$Dependency"
 	) &
 done
 
 wait
 
 echo "Weekly completed."
+
+# TODO: Implement
+# Maintain Workflow
+# Document Source/*
+# sort-package-json
+# bump_dependencies
