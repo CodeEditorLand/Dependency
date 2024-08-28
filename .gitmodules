@@ -13,3 +13,7 @@ url = ssh://git@github.com/CodeEditorLand/DependencyOXC.git
 [submodule "Tauri"]
 path = Tauri
 url = ssh://git@github.com/CodeEditorLand/DependencyTauri.git
+
+[submodule "Rolldown"]
+path = Rolldown
+url = ssh://git@github.com/CodeEditorLand/DependencyRolldown.git
