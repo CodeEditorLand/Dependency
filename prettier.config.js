@@ -1,5 +1,4 @@
 export default {
-	editorConfig: true,
 	arrowParens: "always",
 	bracketSameLine: true,
 	bracketSpacing: true,
@@ -20,12 +19,27 @@ export default {
 	useTabs: true,
 	vueIndentScriptAndStyle: true,
 	plugins: [
+		"@ianvs/prettier-plugin-sort-imports",
+		"prettier-plugin-astro",
 		"prettier-plugin-organize-attributes",
-		"prettier-plugin-sh",
-		"prettier-plugin-toml",
 		"prettier-plugin-packagejson",
+		"prettier-plugin-sh",
+		"prettier-plugin-tailwindcss",
+		"prettier-plugin-toml",
 	],
 	overrides: [
+		{
+			files: "*.astro",
+			options: {
+				parser: "astro",
+			},
+		},
+		{
+			files: "*.svelte",
+			options: {
+				parser: "svelte",
+			},
+		},
 		{
 			files: "*.lua",
 			options: {
@@ -45,16 +59,18 @@ export default {
 			},
 		},
 	],
-	importOrder: [
-		"^@(.*)/(.*)$",
-		"^@core/(.*)$",
-		"^@server/(.*)$",
-		"^@ui/(.*)$",
-		"^[./]",
-	],
-	importOrderSeparation: true,
-	importOrderSortSpecifiers: true,
 	attributeGroups: ["$DEFAULT", "^data-"],
 	attributeSort: "ASC",
 	attributeIgnoreCase: false,
+	importOrder: [
+		"^@core/(.*)$",
+		"",
+		"^@server/(.*)$",
+		"",
+		"^@ui/(.*)$",
+		"",
+		"^[./]",
+	],
+	importOrderParserPlugins: ["typescript", "jsx", "decorators-legacy"],
+	importOrderTypeScriptVersion: "5.5.4",
 };

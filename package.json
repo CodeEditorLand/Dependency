@@ -27,6 +27,7 @@
 	"devDependencies": {
 		"@biomejs/biome": "1.8.3",
 		"@commonalityco/studio": "0.2.57",
+		"@ianvs/prettier-plugin-sort-imports": "4.3.1",
 		"@playform/build": "0.1.3",
 		"@playform/document": "0.1.0",
 		"@playform/maintain": "0.1.0",
