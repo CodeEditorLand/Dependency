@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
+Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
 Dependency=(
 	"Biome"
@@ -143,6 +143,7 @@ echo "Weekly completed."
 
 # TODO: Implement
 # Maintain Workflow
-# Document Source/*
+# Document 'Source/**/*.ts' 'Source/**/*.tsx' 'Source/**/*.js' 'Source/**/*.jsx' \
+# 	'src/**/*.ts' 'src/**/*.tsx' 'src/**/*.js' 'src/**/*.jsx'
 # sort-package-json
 # bump_dependencies
