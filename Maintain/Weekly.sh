@@ -25,10 +25,10 @@ for Dependency in "${Dependency[@]}"; do
 		#	"$Exclude" \
 		# 	"$Dependency"
 
-		# "$Current"/Module/Dependency.sh \
-		# 	"$Organization" \
-		# 	"$SubDependency" \
-		# 	"$Dependency"
+		"$Current"/Module/Dependency.sh \
+			"$Organization" \
+			"$SubDependency" \
+			"$Dependency"
 
 		"$Current"/Configure/Dependency.sh \
 			"$Organization" \
