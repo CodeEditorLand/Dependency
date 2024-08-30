@@ -19,7 +19,6 @@ for Dependency in "${Dependency[@]}"; do
 		Organization="$Cache"/Organization/"$Dependency".json
 		SubDependency="$Cache"/Dependency/"$Dependency".json
 
-		# ! NOT CURRENTLY WORKING
 		# "$Current"/Cache/Dependency.sh \
 		# 	"$Organization" \
 		#	"$Exclude" \
