@@ -151,3 +151,7 @@ Land/MonacoEditor/website/lib/
 Land/MonacoEditor/website/typedoc/monaco.d.ts
 Land/MonacoEditor/test/smoke/vite/dist
 Land/MonacoEditor/test/smoke/parcel/dist
+
+Target
+Documentation
+vendor
