@@ -109,6 +109,11 @@ for Dependency in "${Dependency[@]}"; do
 			"$SubDependency" \
 			"$Dependency"
 
+		"$Current"/Move/src.sh \
+			"$Organization" \
+			"$SubDependency" \
+			"$Dependency"
+
 		"$Current"/Clean/Dependency.sh \
 			"$Organization" \
 			"$SubDependency" \
