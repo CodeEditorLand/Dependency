@@ -40,7 +40,7 @@
 		"@tauri-apps/cli": "2.0.0-rc.7",
 		"@tauri-apps/plugin-shell": "2.0.0-rc.1",
 		"@trivago/prettier-plugin-sort-imports": "4.3.0",
-		"@turbo/codemod": "2.1.0",
+		"@turbo/codemod": "2.1.1",
 		"@vue/compiler-sfc": "3.4.38",
 		"commonality": "0.2.63",
 		"prettier": "3.3.3",
@@ -58,7 +58,7 @@
 		"prettier-plugin-tailwindcss": "0.6.6",
 		"prettier-plugin-toml": "2.0.1",
 		"tailwindcss": "3.4.10",
-		"turbo": "2.1.0",
+		"turbo": "2.1.1",
 		"typescript": "5.5.4"
 	},
 	"packageManager": "pnpm@9.6.0",
