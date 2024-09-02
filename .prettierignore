@@ -152,6 +152,10 @@ Land/MonacoEditor/website/typedoc/monaco.d.ts
 Land/MonacoEditor/test/smoke/vite/dist
 Land/MonacoEditor/test/smoke/parcel/dist
 
-Target
 Documentation
+Target
+WordPress
+docs
+test
+test_data
 vendor
