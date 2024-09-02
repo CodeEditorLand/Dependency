@@ -3,3 +3,4 @@ packages:
     - "Land/NPM/**"
     - "OXC/NPM/**"
     - "Tauri/NPM/**"
+    - "Rolldown/NPM/**"
