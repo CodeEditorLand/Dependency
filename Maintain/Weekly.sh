@@ -77,10 +77,10 @@ for Dependency in "${Dependency[@]}"; do
 			"$Dependency" \
 			"Current"
 
-		# # "$Current"/Merge/Dependency.sh \
-		# # 	"$Organization" \
-		# # 	"$SubDependency" \
-		# # 	"$Dependency"
+		"$Current"/Merge/Dependency.sh \
+			"$Organization" \
+			"$SubDependency" \
+			"$Dependency"
 
 		# # # "$Current"/Reset/Dependency.sh \
 		# # # 	"$Organization" \
