@@ -8,6 +8,6 @@ for File in $File; do
 	(
 		cd "$(dirname "$File")" || exit
 
-		ncu -u --deep --dep "dev,optional,peer,prod,bundle" --color --concurrency 12 -f /.*tauri.*/ --target greatest
+		ncu -u --dep "dev,optional,peer,prod,bundle" --color --concurrency 12 -f /.*tauri.*/ --target greatest
 	)
 done

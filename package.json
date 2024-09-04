@@ -41,7 +41,7 @@
 		"@tauri-apps/plugin-shell": "2.0.0-rc.1",
 		"@trivago/prettier-plugin-sort-imports": "4.3.0",
 		"@turbo/codemod": "2.1.1",
-		"@vue/compiler-sfc": "3.4.38",
+		"@vue/compiler-sfc": "3.5.1",
 		"commonality": "0.2.63",
 		"prettier": "3.3.3",
 		"prettier-plugin-astro": "0.14.1",
