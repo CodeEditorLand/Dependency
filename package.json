@@ -18,11 +18,9 @@
 	},
 	"type": "module",
 	"scripts": {
-		"Run": "turbo run Run",
+		"Run": "turbo run Run --framework-inference=false --no-daemon",
 		"codemod": "node ./node_modules/@turbo/codemod/dist/cli.js",
-		"prepublishOnly": "turbo run prepublishOnly",
-		"tauri": "tauri",
-		"turbo": "turbo"
+		"prepublishOnly": "turbo run prepublishOnly --framework-inference=false --no-daemon"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.8.3",
