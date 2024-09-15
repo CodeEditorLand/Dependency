@@ -3,11 +3,12 @@
 Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
 
 Dependency=(
-	"Biome"
-	"Land"
-	"OXC"
-	"Rolldown"
-	"Tauri"
+	# "Biome"
+	# "Land"
+	# "OXC"
+	# "Rolldown"
+	# "Tauri"
+	"SWC"
 )
 
 for Dependency in "${Dependency[@]}"; do
@@ -21,7 +22,7 @@ for Dependency in "${Dependency[@]}"; do
 
 		# "$Current"/Cache/Dependency.sh \
 		# 	"$Organization" \
-		#	"$Exclude" \
+		# 	"$Exclude" \
 		# 	"$Dependency"
 
 		"$Current"/Module/Dependency.sh \
