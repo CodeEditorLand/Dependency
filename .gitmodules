@@ -17,3 +17,6 @@ url = ssh://git@github.com/CodeEditorLand/DependencyTauri.git
 [submodule "Rolldown"]
 path = Rolldown
 url = ssh://git@github.com/CodeEditorLand/DependencyRolldown.git
+[submodule "SWC"]
+	path = SWC
+	url = ssh://git@github.com/CodeEditorLand/DependencySWC.git
