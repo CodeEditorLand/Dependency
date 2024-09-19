@@ -4,7 +4,14 @@
 		"noEmit": true
 	},
 	"exclude": ["**/node_modules/**", "**/Target/**"],
-	"include": ["./Biome/", "./Land/", "./OXC/", "./Tauri/"],
+	"include": [
+		"./Biome/",
+		"./Land/",
+		"./OXC/",
+		"./Rolldown/",
+		"./SWC/",
+		"./Tauri/"
+	],
 	"watchOptions": {
 		"excludeDirectories": ["**/node_modules/**", "**/Target/**"]
 	},
