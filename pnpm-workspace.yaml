@@ -2,5 +2,6 @@ packages:
     - "Biome/NPM/**"
     - "Land/NPM/**"
     - "OXC/NPM/**"
-    - "Tauri/NPM/**"
     - "Rolldown/NPM/**"
+    - "SWC/NPM/**"
+    - "Tauri/NPM/**"
