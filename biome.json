@@ -1,5 +1,5 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.8.2/schema.json",
+	"$schema": "https://raw.githubusercontent.com/biomejs/biome/main/packages/%40biomejs/biome/configuration_schema.json",
 	"files": {
 		"ignore": [
 			"**/Target/**/*",
@@ -33,6 +33,10 @@
 			"quoteStyle": "double",
 			"semicolons": "always",
 			"trailingCommas": "all"
+		},
+		"jsxRuntime": "transparent",
+		"parser": {
+			"unsafeParameterDecoratorsEnabled": true
 		}
 	},
 	"json": {
@@ -69,8 +73,6 @@
 			"nursery": {
 				"all": true,
 				"useImportRestrictions": "off",
-				"noUndeclaredDependencies": "off",
-				"noConsole": "off",
 				"useSortedClasses": "off"
 			},
 			"performance": {
@@ -80,14 +82,21 @@
 				"all": true
 			},
 			"style": {
-                                "all": true,
-                                "noDefaultExport": "off",
-                                "noUselessElse": "off",
-                                "useNamingConvention": "off",
-                                "useShorthandFunctionType": "off",
-                                "useFilenamingConvention": "off",
-                                "useNodejsImportProtocol": "off"
-                        },
+				"all": true,
+				"noDefaultExport": "off",
+				"noUselessElse": "off",
+				"useNamingConvention": "off",
+				"useShorthandFunctionType": "off",
+				"useFilenamingConvention": {
+					"level": "error",
+					"options": {
+						"strictCase": true,
+						"requireAscii": true,
+						"filenameCases": ["PascalCase"]
+					}
+				},
+				"useImportType": "off"
+			},
 			"suspicious": {
 				"all": true,
 				"noConsoleLog": "off"
@@ -95,7 +104,7 @@
 		}
 	},
 	"organizeImports": {
-		"enabled": true
+		"enabled": false
 	},
 	"vcs": {
 		"clientKind": "git",

@@ -22,14 +22,21 @@ for Organization in "${Organization[@]}"; do
 			( # shellcheck disable=SC2154
 				\cd "$Folder"/"${SubDependency/"${Organization}/"/}" || \exit
 
-				Upstream=$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/')
+				# shellcheck disable=SC1091
+				\source "$Current"/../Cache.sh
 
-				if [[ "$Upstream" != "null/null" && "$Upstream" != "null/null/" ]]; then
-					Upstream=$(\echo "$Upstream" | \sed 's/\/$//')
+				Fn
+
+				# shellcheck disable=SC2154
+				Parent="$OwnerParent/$NameParent"
+
+				if [[ "$Parent" != "null/null" ]]; then
+					Parent=$(\echo "$Parent" | \sed 's/\/$//')
 
 					\git fetch Parent --depth 1 --no-tags
 
-					\git reset --hard Parent/"$(\gh repo view "$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/' | \sed 's/\/$//')" --json defaultBranchRef | \jq -r -c '.defaultBranchRef.name')"
+					# shellcheck disable=SC2154
+					\git reset --hard Parent/"$BranchParent"
 
 					\git clean -dfx
 

@@ -15,9 +15,7 @@ for Organization in "${Organization[@]}"; do
 
 				# "$Current"/../Fn/Save/Dependency.sh
 
-				Run -P .git pwd
-				Run -P .git git add .
-				Run -P .git git ecommit
+				Run -P .git -C 'pwd' -C 'git add .' -C 'git ecommit'
 
 				\cd - || \exit
 			) &

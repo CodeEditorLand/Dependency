@@ -4,12 +4,19 @@
 
 Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
 
+# shellcheck disable=SC1091
+\source "$Current"/../Cache.sh
+
+Fn
+
 # TODO: Add dynamic { "repository": { "directory": Dependency/$Dependency/Dependency/$Dependency } }
 
 # # The path is always CodeEditorLand/Dependency/$Dependency/Dependency/$Dependency or fetch the correct submodule URL
 
 Package="$Current"/../../../package.json
-Slug=$(\gh repo view --json nameWithOwner | \jq -r .nameWithOwner)
+
+# shellcheck disable=SC2154
+Slug="$Owner/$Name"
 
 \jq -S --tab ".keywords += [ \"codeeditorland\", \"land\", \"playform\"] | . * {
 	\"homepage\": \"HTTPS://GitHub.Com/$Slug#readme\",

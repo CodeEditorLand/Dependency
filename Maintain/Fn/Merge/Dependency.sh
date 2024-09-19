@@ -2,6 +2,14 @@
 
 \pwd
 
+Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
+
+# shellcheck disable=SC1091
+\source "$Current"/../Cache.sh
+
+Fn
+
 \git fetch Parent --no-tags
 
-\git merge Parent/"$(\gh repo view "$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/' | \sed 's/\/$//')" --json defaultBranchRef | \jq -r -c '.defaultBranchRef.name')" --no-edit --allow-unrelated-histories -X theirs
+# shellcheck disable=SC2154
+\git merge Parent/"$BranchParent" --no-edit --allow-unrelated-histories -X theirs

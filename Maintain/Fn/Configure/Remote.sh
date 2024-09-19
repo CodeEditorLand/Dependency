@@ -2,6 +2,13 @@
 
 \pwd
 
+Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
+
+# shellcheck disable=SC1091
+\source "$Current"/../Cache.sh
+
+Fn
+
 Remote() {
 	git remote get-url "$1" 2> /dev/null || git remote get-url origin
 }
@@ -18,11 +25,12 @@ Source=$(Remote Source | \sed 's/git@github.com:/ssh:\/\/git@github.com\//')
 
 \gh repo set-default "$(\git remote get-url Source)"
 
-Parent=$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/')
+# shellcheck disable=SC2154
+Parent="$OwnerParent/$NameParent"
 
 \git remote remove Parent
 
-if [[ "$Parent" != "null/null" && "$Parent" != "null/null/" ]]; then
+if [[ "$Parent" != "null/null" ]]; then
 	Parent="ssh://git@github.com/${Parent}"
 	Parent=$(\echo "$Parent" | \sed 's/\/$/\.git/')
 

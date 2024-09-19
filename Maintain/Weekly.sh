@@ -3,11 +3,11 @@
 Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
 
 Dependency=(
-	# "Biome"
-	# "Land"
-	# "OXC"
-	# "Rolldown"
-	# "Tauri"
+	"Biome"
+	"Land"
+	"OXC"
+	"Rolldown"
+	"Tauri"
 	"SWC"
 )
 

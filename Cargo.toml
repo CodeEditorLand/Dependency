@@ -10,7 +10,7 @@ homepage = "https://Editor.Land/"
 license-file = "LICENSE"
 publish = false
 readme = "README.md"
-repository = "HTTPS://GitHub.Com/CodeEditorLand/Dependency"
+repository = "https://github.com/CodeEditorLand/Dependency"
 
 [workspace.dependencies]
 prun = { version = "*" }
