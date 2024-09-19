@@ -2,7 +2,7 @@
 
 \pwd
 
-Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
+Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
 # shellcheck disable=SC1091
 \source "$Current"/../Cache.sh
@@ -45,6 +45,6 @@ Slug="$Owner/$Name"
 	\"devDependencies\": {
 		\"@playform/build\": \"$(\jq -r '.devDependencies["@playform/build"]' "$Package")\"
 	}
-}" package.json >| package.json.tmp
+}" package.json >|package.json.tmp
 
 \mv package.json.tmp package.json
