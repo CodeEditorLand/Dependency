@@ -35,7 +35,7 @@ for Organization in "${Organization[@]}"; do
 					mv crates/oxc_linter/fixtures/import/with-syntax-error/package.json crates/oxc_linter/fixtures/import/with-syntax-error/fixture.package.json
 				fi
 
-				if [[ $Name == "OxcResolver" ]]; then
+				if [[ $Name == "OXCResolver" ]]; then
 					mv fixtures/enhanced_resolve/test/fixtures/incorrect-package/pack1/package.json fixtures/enhanced_resolve/test/fixtures/incorrect-package/pack1/fixture.package.json
 					mv fixtures/enhanced_resolve/test/fixtures/incorrect-package/pack2/package.json fixtures/enhanced_resolve/test/fixtures/incorrect-package/pack2/fixture.package.json
 				fi

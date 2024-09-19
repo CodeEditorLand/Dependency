@@ -8,11 +8,11 @@
 	"CodeEditorLand/JavascriptParserInRust",
 	"CodeEditorLand/JsonStripComments",
 	"CodeEditorLand/MirrorsOxlint",
-	"CodeEditorLand/Oxc",
-	"CodeEditorLand/OxcAssets",
-	"CodeEditorLand/OxcFuzzParser",
-	"CodeEditorLand/OxcIntellijPlugin",
-	"CodeEditorLand/OxcResolver",
+	"CodeEditorLand/OXC",
+	"CodeEditorLand/OXCAssets",
+	"CodeEditorLand/OXCFuzzParser",
+	"CodeEditorLand/OXCIntellijPlugin",
+	"CodeEditorLand/OXCResolver",
 	"CodeEditorLand/UniCodeId",
 	"CodeEditorLand/UniCodeIdStart"
 ]
