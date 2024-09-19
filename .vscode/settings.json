@@ -1,3 +1,23 @@
 {
-    "dotnet.defaultSolution": "disable"
+    "dotnet.defaultSolution": "disable",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/.trunk/*actions/": true,
+        "**/.trunk/*logs/": true,
+        "**/.trunk/*notifications/": true,
+        "**/.trunk/*out/": true,
+        "**/.trunk/*plugins/": true,
+        "**/cache": true,
+        "**/target": true,
+        "**/temp": true,
+        "**/tmp": true,
+        "**/vendor": true,
+        "**/node_modules": true
+    },
+    "explorer.excludeGitIgnore": true
 }
