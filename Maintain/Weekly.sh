@@ -4,11 +4,11 @@ Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
 
 Dependency=(
 	"Biome"
-	"Land"
-	"OXC"
-	"Rolldown"
-	"SWC"
-	"Tauri"
+	# "Land"
+	# "OXC"
+	# "Rolldown"
+	# "SWC"
+	# "Tauri"
 )
 
 for Dependency in "${Dependency[@]}"; do

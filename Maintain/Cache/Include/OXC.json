@@ -1,11 +1,11 @@
 [
 	"CodeEditorLand/AriaQuery",
-	"CodeEditorLand/BenchJavascriptLinter",
-	"CodeEditorLand/BenchJavascriptParserWrittenInRust",
+	"CodeEditorLand/BenchJavaScriptLinter",
+	"CodeEditorLand/BenchJavaScriptParserWrittenInRust",
 	"CodeEditorLand/BenchMarkFiles",
 	"CodeEditorLand/BenchNodeJSResolver",
 	"CodeEditorLand/EslintPluginOxlint",
-	"CodeEditorLand/JavascriptParserInRust",
+	"CodeEditorLand/JavaScriptParserInRust",
 	"CodeEditorLand/JsonStripComments",
 	"CodeEditorLand/MirrorsOxlint",
 	"CodeEditorLand/OXC",
@@ -13,6 +13,6 @@
 	"CodeEditorLand/OXCFuzzParser",
 	"CodeEditorLand/OXCIntellijPlugin",
 	"CodeEditorLand/OXCResolver",
-	"CodeEditorLand/UniCodeId",
-	"CodeEditorLand/UniCodeIdStart"
+	"CodeEditorLand/UniCodeID",
+	"CodeEditorLand/UniCodeIDStart"
 ]
