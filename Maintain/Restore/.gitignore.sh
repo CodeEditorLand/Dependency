@@ -16,7 +16,7 @@ for Organization in "${Organization[@]}"; do
 
 		\git fetch Parent --depth 1 --no-tags
 
-		\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o -iname .gitignore -type f -execdir bash -c "\git restore --source Parent/\"$(\gh repo view "$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/' | \sed 's/\/$//')" --json defaultBranchRef | \jq -r -c '.defaultBranchRef.name')\" .gitignore" \;
+		\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o -iname .gitignore -type f -execdir bash -c "$Current"/../Fn/Restore/.gitignore.sh \;
 
 		\cd - || \exit
 	done
