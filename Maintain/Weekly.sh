@@ -7,8 +7,8 @@ Dependency=(
 	"Land"
 	"OXC"
 	"Rolldown"
-	"Tauri"
 	"SWC"
+	"Tauri"
 )
 
 for Dependency in "${Dependency[@]}"; do
