@@ -2,5 +2,5 @@
 
 \pwd
 
-\git fetch --no-tags --depth=1 Source
-\git fetch --no-tags --depth=1 Parent
+\git fetch --no-tags Source
+\git fetch --no-tags Parent
