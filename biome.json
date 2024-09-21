@@ -2,10 +2,10 @@
 	"$schema": "https://raw.githubusercontent.com/biomejs/biome/main/packages/%40biomejs/biome/configuration_schema.json",
 	"files": {
 		"ignore": [
-			"**/Target/**/*",
-			"**/Documentation/**/*",
-			"**/dist/**/*",
 			"**/*.astro",
+			"**/Documentation/**/*",
+			"**/Target/**/*",
+			"**/dist/**/*",
 			"package.json"
 		],
 		"maxSize": 10000000
@@ -62,13 +62,13 @@
 				"all": true,
 				"noExcessiveCognitiveComplexity": "off",
 				"noForEach": "off",
-				"useLiteralKeys": "off",
-				"noUselessLoneBlockStatements": "off"
+				"noUselessLoneBlockStatements": "off",
+				"useLiteralKeys": "off"
 			},
 			"correctness": {
 				"all": true,
-				"noUnusedVariables": "off",
-				"noNodejsModules": "off"
+				"noNodejsModules": "off",
+				"noUnusedVariables": "off"
 			},
 			"nursery": {
 				"all": true,
@@ -85,17 +85,17 @@
 				"all": true,
 				"noDefaultExport": "off",
 				"noUselessElse": "off",
-				"useNamingConvention": "off",
-				"useShorthandFunctionType": "off",
 				"useFilenamingConvention": {
 					"level": "error",
 					"options": {
-						"strictCase": true,
+						"filenameCases": ["PascalCase"],
 						"requireAscii": true,
-						"filenameCases": ["PascalCase"]
+						"strictCase": true
 					}
 				},
-				"useImportType": "off"
+				"useImportType": "off",
+				"useNamingConvention": "off",
+				"useShorthandFunctionType": "off"
 			},
 			"suspicious": {
 				"all": true,
