@@ -53,6 +53,7 @@ for Organization in "${Organization[@]}"; do
 					-o -iname pnpm-lock.yaml \
 					-o -iname prettier.config.cjs \
 					-o -iname prettier.config.js \
+					-o -iname prettier.config.mjs \
 					-o -iname rome.json \
 					-o -iname rustfmt.toml \
 					-o -iname webpack.config.js \
