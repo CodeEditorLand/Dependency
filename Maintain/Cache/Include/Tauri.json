@@ -13,7 +13,7 @@
 	"CodeEditorLand/Deno",
 	"CodeEditorLand/DNSAutomation",
 	"CodeEditorLand/DocusaurusMeiliSearchIndexer",
-	"CodeEditorLand/Egui",
+	"CodeEditorLand/EGUI",
 	"CodeEditorLand/FixPathENVRS",
 	"CodeEditorLand/GHTangleRelease",
 	"CodeEditorLand/GipFS",
