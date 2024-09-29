@@ -23,7 +23,7 @@ for Organization in "${Organization[@]}"; do
 				\cd "$Folder"/"${SubDependency/"${Organization}/"/}" || \exit
 
 				# shellcheck disable=SC1091
-				\source "$Current"/../Cache.sh
+				\source "$Current"/../Fn/Cache.sh
 
 				Fn
 
