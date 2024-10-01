@@ -13,8 +13,8 @@ for Organization in "${Organization[@]}"; do
 			("$Current"/../Fn/Setting/Dependency.sh "$SubDependency") &
 		done
 
-		wait
+		\wait
 	) &
 done
 
-wait
+\wait

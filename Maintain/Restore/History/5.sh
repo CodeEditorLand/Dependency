@@ -82,4 +82,4 @@ for File in "${File[@]}"; do
 	) &
 done
 
-wait
+\wait

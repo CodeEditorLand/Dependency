@@ -14,4 +14,4 @@ for Dependency in "${Dependency[@]}"; do
 	(\gh repo fork "$Dependency" --org CodeEditorLand) &
 done
 
-wait
+\wait

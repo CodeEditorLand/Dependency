@@ -51,8 +51,8 @@ for Organization in "${Organization[@]}"; do
 			) &
 		done
 
-		wait
+		\wait
 	) &
 done
 
-wait
+\wait

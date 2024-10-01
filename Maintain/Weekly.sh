@@ -142,7 +142,7 @@ for Dependency in "${Dependency[@]}"; do
 	) &
 done
 
-wait
+\wait
 
 echo "Weekly completed."
 
