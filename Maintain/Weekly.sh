@@ -100,10 +100,10 @@ for Dependency in "${Dependency[@]}"; do
 			"$Dependency" \
 			"Current"
 
-		"$Current"/Move/license.sh \
-			"$Organization" \
-			"$SubDependency" \
-			"$Dependency"
+		# "$Current"/Move/license.sh \
+		# 	"$Organization" \
+		# 	"$SubDependency" \
+		# 	"$Dependency"
 
 		"$Current"/Move/package.json.sh \
 			"$Organization" \
