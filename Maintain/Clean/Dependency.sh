@@ -16,6 +16,7 @@ for Organization in "${Organization[@]}"; do
 				\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o \
 					\( \
 					-iname .prettierrc \
+					-o -iname '.changes' \
 					-o -iname '.github' \
 					-o -iname .azure-pipelines \
 					-o -iname .clang-format \
@@ -46,6 +47,7 @@ for Organization in "${Organization[@]}"; do
 					-o -iname .vscode-test.js \
 					-o -iname .yarnrc \
 					-o -iname Cargo.lock \
+					-o -iname README.md \
 					-o -iname biome.json \
 					-o -iname jsconfig.json \
 					-o -iname package-lock.json \
