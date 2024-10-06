@@ -92,6 +92,7 @@
 	"CodeEditorLand/TypeDocusaurus",
 	"CodeEditorLand/VueCLIPluginTauri",
 	"CodeEditorLand/WebKit2GTKRS",
+	"CodeEditorLand/TauriDocs",
 	"CodeEditorLand/WebView",
 	"CodeEditorLand/Win7Notifications",
 	"CodeEditorLand/WindowShadows",

@@ -41,6 +41,7 @@
 	"CodeEditorLand/Tao",
 	"CodeEditorLand/Tauri",
 	"CodeEditorLand/TauriStudio",
+	"CodeEditorLand/TauriDocs",
 	"CodeEditorLand/TauriAction",
 	"CodeEditorLand/TauriBindgen",
 	"CodeEditorLand/TauriCon",
