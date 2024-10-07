@@ -19,11 +19,10 @@ for Organization in "${Organization[@]}"; do
 					-o -iname '.changes' \
 					-o -iname '.github' \
 					-o -iname .azure-pipelines \
+					-o -iname .changeset \
 					-o -iname .clang-format \
 					-o -iname .configurations \
 					-o -iname .csharpierrc \
-					-o -iname .changeset \
-					-o -iname rust-toolchain \
 					-o -iname .devcontainer \
 					-o -iname .editorconfig \
 					-o -iname .eslintignore \
@@ -69,6 +68,9 @@ for Organization in "${Organization[@]}"; do
 					-o -iname SECURITY -type f \
 					-o -iname SECURITY.md \
 					-o -iname SECURITY.txt \
+					-o -iname SUPPORT -type f \
+					-o -iname SUPPORT.md \
+					-o -iname SUPPORT.txt \
 					-o -iname biome.json \
 					-o -iname jsconfig.json \
 					-o -iname package-lock.json \
@@ -79,6 +81,7 @@ for Organization in "${Organization[@]}"; do
 					-o -iname prettier.config.mjs \
 					-o -iname renovate.json \
 					-o -iname rome.json \
+					-o -iname rust-toolchain \
 					-o -iname rustfmt.toml \
 					-o -iname tsfmt.json \
 					-o -iname webpack.config.js \
