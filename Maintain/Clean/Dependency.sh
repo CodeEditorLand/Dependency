@@ -42,6 +42,9 @@ for Organization in "${Organization[@]}"; do
 					-o -iname .prettierrc.js \
 					-o -iname .prettierrc.json \
 					-o -iname .prettierrc.yaml \
+					-o -iname CHANGELOG.md \
+					-o -iname CHANGELOG.txt \
+					-o -iname CHANGELOG \
 					-o -iname .stylua.toml \
 					-o -iname .vscode \
 					-o -iname .vscode-test.js \
