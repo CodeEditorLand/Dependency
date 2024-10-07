@@ -68,6 +68,7 @@ for Organization in "${Organization[@]}"; do
 					-o -iname jsconfig.json \
 					-o -iname package-lock.json \
 					-o -iname pnpm-global \
+					-o -iname tsfmt.json \
 					-o -iname pnpm-lock.yaml \
 					-o -iname prettier.config.cjs \
 					-o -iname prettier.config.js \
