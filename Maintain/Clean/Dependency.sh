@@ -45,6 +45,15 @@ for Organization in "${Organization[@]}"; do
 					-o -iname CHANGELOG.md \
 					-o -iname CHANGELOG.txt \
 					-o -iname CHANGELOG \
+					-o -iname CODE_OF_CONDUCT.md -type f \
+					-o -iname CODE_OF_CONDUCT.txt -type f \
+					-o -iname CODE_OF_CONDUCT -type f \
+					-o -iname CONTRIBUTING.md -type f \
+					-o -iname CONTRIBUTING.txt -type f \
+					-o -iname CONTRIBUTING -type f \
+					-o -iname SECURITY.md -type f \
+					-o -iname SECURITY.txt -type f \
+					-o -iname SECURITY -type f \
 					-o -iname .stylua.toml \
 					-o -iname .vscode \
 					-o -iname .vscode-test.js \
