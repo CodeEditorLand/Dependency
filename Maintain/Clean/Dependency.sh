@@ -80,8 +80,10 @@ for Organization in "${Organization[@]}"; do
 					-o -iname prettier.config.js \
 					-o -iname prettier.config.mjs \
 					-o -iname renovate.json \
+					-o -iname .node-version \
 					-o -iname rome.json \
-					-o -iname rust-toolchain \
+					-o -iname rust-toolchain -type f \
+					-o -iname rust-toolchain.toml \
 					-o -iname rustfmt.toml \
 					-o -iname tsfmt.json \
 					-o -iname webpack.config.js \

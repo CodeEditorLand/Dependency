@@ -33,6 +33,12 @@ for Filter in "${Filter[@]}"; do
 			"$Dependency" \
 			"$Filter"
 
+		"$Current"/Default/Branch.sh \
+			"$Organization" \
+			"$Dependency" \
+			"$Filter" \
+			"Current"
+
 		"$Current"/Merge/Dependency.sh \
 			"$Organization" \
 			"$Filter" \
@@ -46,5 +52,3 @@ for Filter in "${Filter[@]}"; do
 done
 
 \wait
-
-echo "Weekly completed."

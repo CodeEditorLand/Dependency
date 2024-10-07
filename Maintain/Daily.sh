@@ -59,5 +59,3 @@ for Dependency in "${Dependency[@]}"; do
 done
 
 \wait
-
-echo "Daily completed."
