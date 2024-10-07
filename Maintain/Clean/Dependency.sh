@@ -44,16 +44,20 @@ for Organization in "${Organization[@]}"; do
 					-o -iname .prettierrc.yaml \
 					-o -iname CHANGELOG.md \
 					-o -iname CHANGELOG.txt \
-					-o -iname CHANGELOG \
-					-o -iname CODE_OF_CONDUCT.md -type f \
-					-o -iname CODE_OF_CONDUCT.txt -type f \
+					-o -iname CHANGELOG -type f \
+					-o -iname CODE_OF_CONDUCT.md \
+					-o -iname CODE_OF_CONDUCT.txt \
 					-o -iname CODE_OF_CONDUCT -type f \
-					-o -iname CONTRIBUTING.md -type f \
-					-o -iname CONTRIBUTING.txt -type f \
+					-o -iname CONTRIBUTING.md \
+					-o -iname CONTRIBUTING.txt \
 					-o -iname CONTRIBUTING -type f \
-					-o -iname SECURITY.md -type f \
-					-o -iname SECURITY.txt -type f \
+					-o -iname SECURITY.md \
+					-o -iname SECURITY.txt \
 					-o -iname SECURITY -type f \
+					-o -iname ARCHITECTURE.md \
+					-o -iname ARCHITECTURE.txt \
+					-o -iname ARCHITECTURE -type f \
+					-o -iname renovate.json \
 					-o -iname .stylua.toml \
 					-o -iname .vscode \
 					-o -iname .vscode-test.js \
