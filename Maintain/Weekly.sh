@@ -2,7 +2,7 @@
 
 Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
-Dependency=(
+Filter=(
 	"Biome"
 	"Land"
 	"OXC"
@@ -11,134 +11,95 @@ Dependency=(
 	"Tauri"
 )
 
-for Dependency in "${Dependency[@]}"; do
+for Filter in "${Filter[@]}"; do
 	(
 		Cache="$Current"/Cache
 
-		# Exclude="$Cache"/Exclude/"$Dependency".json
-		# Include="$Cache"/Include/"$Dependency".json
-		Organization="$Cache"/Organization/"$Dependency".json
-		SubDependency="$Cache"/Dependency/"$Dependency".json
+		Organization="$Cache"/Organization/"$Filter".json
+		Dependency="$Cache"/Dependency/"$Filter".json
 
-		# "$Current"/Cache/Dependency.sh \
-		# 	"$Organization" \
-		# 	"$Exclude" \
-		# 	"$Dependency"
+		"$Current"/Module/Dependency.sh \
+			"$Organization" \
+			"$Dependency" \
+			"$Filter"
 
-		# "$Current"/Module/Dependency.sh \
-		# 	"$Organization" \
-		# 	"$SubDependency" \
-		# 	"$Dependency"
+		"$Current"/Configure/Dependency.sh \
+			"$Organization" \
+			"$Dependency" \
+			"$Filter"
 
-		# "$Current"/Configure/Dependency.sh \
-		# 	"$Organization" \
-		# 	"$SubDependency" \
-		# 	"$Dependency"
+		"$Current"/Setting/Dependency.sh \
+			"$Organization" \
+			"$Dependency" \
+			"$Filter"
 
-		# "$Current"/Setting/Dependency.sh \
-		# 	"$Organization" \
-		# 	"$SubDependency" \
-		# 	"$Dependency"
+		"$Current"/Save/Dependency.sh \
+			"$Organization" \
+			"$Dependency" \
+			"$Filter"
 
-		# # "$Current"/Rename/Dependency.sh \
-		# # 	"$Organization" \
-		# # 	"$SubDependency" \
-		# # 	"$Dependency"
-
-		# "$Current"/Save/Dependency.sh \
-		# 	"$Organization" \
-		# 	"$SubDependency" \
-		# 	"$Dependency"
-
-		# "$Current"/Sync/Dependency.sh \
-		# 	"$Organization" \
-		# 	"$SubDependency" \
-		# 	"$Dependency"
-
-		# "$Current"/Save/Dependency.sh \
-		# 	"$Organization" \
-		# 	"$SubDependency" \
-		# 	"$Dependency"
-
-		# "$Current"/Switch/Branch.sh \
-		# 	"$Organization" \
-		# 	"$SubDependency" \
-		# 	"$Dependency" \
-		# 	"Previous"
-
-		# "$Current"/Reset/Dependency.sh \
-		# 	"$Organization" \
-		# 	"$SubDependency" \
-		# 	"$Dependency" \
-		# 	"Previous"
-
-		# "$Current"/Switch/Branch.sh \
-		# 	"$Organization" \
-		# 	"$SubDependency" \
-		# 	"$Dependency" \
-		# 	"Current"
-
-		# "$Current"/Merge/Dependency.sh \
-		# 	"$Organization" \
-		# 	"$SubDependency" \
-		# 	"$Dependency"
+		"$Current"/Switch/Branch.sh \
+			"$Organization" \
+			"$Dependency" \
+			"$Filter" \
+			"Current"
 
 		# # # # "$Current"/Reset/Dependency.sh \
 		# # # # 	"$Organization" \
-		# # # # 	"$SubDependency" \
 		# # # # 	"$Dependency" \
+		# # # # 	"$Filter" \
 		# # # # 	"Current"
 
 		# "$Current"/Save/Dependency.sh \
 		# 	"$Organization" \
-		# 	"$SubDependency" \
-		# 	"$Dependency"
+		# 	"$Dependency" \
+		# 	"$Filter"
 
 		# "$Current"/Default/Branch.sh \
 		# 	"$Organization" \
-		# 	"$SubDependency" \
 		# 	"$Dependency" \
+		# 	"$Filter" \
 		# 	"Current"
 
 		# # "$Current"/Move/license.sh \
 		# # 	"$Organization" \
-		# # 	"$SubDependency" \
-		# # 	"$Dependency"
+		# # 	"$Dependency" \
+		# # 	"$Filter"
 
 		# "$Current"/Move/package.json.sh \
 		# 	"$Organization" \
-		# 	"$SubDependency" \
-		# 	"$Dependency"
+		# 	"$Dependency" \
+		# 	"$Filter"
 
 		# "$Current"/Move/src.sh \
 		# 	"$Organization" \
-		# 	"$SubDependency" \
-		# 	"$Dependency"
+		# 	"$Dependency" \
+		# 	"$Filter"
 
 		"$Current"/Clean/Dependency.sh \
 			"$Organization" \
-			"$SubDependency" \
-			"$Dependency"
+			"$Dependency" \
+			"$Filter"
 
 		# "$Current"/Clean/Detail.sh \
 		# 	"$Organization" \
-		# 	"$SubDependency" \
-		# 	"$Dependency"
+		# 	"$Dependency" \
+		# 	"$Filter"
 
 		# "$Current"/Append/Detail.sh \
 		# 	"$Organization" \
-		# 	"$SubDependency" \
-		# 	"$Dependency"
+		# 	"$Dependency" \
+		# 	"$Filter"
 
 		# "$Current"/Save/Dependency.sh \
 		# 	"$Organization" \
-		# 	"$SubDependency" \
-		# 	"$Dependency"
+		# 	"$Dependency" \
+		# 	"$Filter"
 
 		# "$Current"/Sync/Dependency.sh \
 		# 	"$Organization" \
-		# 	"$SubDependency" \
-		# 	"$Dependency"
+		# 	"$Dependency" \
+		# 	"$Filter"
 	) &
 done
 

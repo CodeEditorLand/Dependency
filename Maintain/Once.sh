@@ -1,28 +1,19 @@
 #!/bin/bash
 
-# TODO: Run once after repository creation
-# TODO: Event Log
-
 Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
-Dependency=(
+Filter=(
 	"None"
 )
 
-for Dependency in "${Dependency[@]}"; do
+for Filter in "${Filter[@]}"; do
 	Cache="$Current"/Cache
 
-	Organization="$Cache"/Organization/"$Dependency".json
-	# Exclude="$Cache"/Exclude/"$Dependency".json
-	SubDependency="$Cache"/Dependency/"$Dependency".json
-
-	# "$Current"/Cache/Dependency.sh \
-	# 	"$Organization" \
-	# 	"$Exclude" \
-	# 	"$Dependency"
+	Organization="$Cache"/Organization/"$Filter".json
+	Dependency="$Cache"/Dependency/"$Filter".json
 
 	"$Current"/Setting/Dependency.sh \
 		"$Organization" \
-		"$SubDependency" \
-		"$Dependency"
+		"$Dependency" \
+		"$Filter"
 done
