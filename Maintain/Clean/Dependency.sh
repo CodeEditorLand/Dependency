@@ -22,6 +22,8 @@ for Organization in "${Organization[@]}"; do
 					-o -iname .clang-format \
 					-o -iname .configurations \
 					-o -iname .csharpierrc \
+					-o -iname .changeset \
+					-o -iname rust-toolchain \
 					-o -iname .devcontainer \
 					-o -iname .editorconfig \
 					-o -iname .eslintignore \
@@ -42,39 +44,43 @@ for Organization in "${Organization[@]}"; do
 					-o -iname .prettierrc.js \
 					-o -iname .prettierrc.json \
 					-o -iname .prettierrc.yaml \
-					-o -iname CHANGELOG.md \
-					-o -iname CHANGELOG.txt \
-					-o -iname CHANGELOG -type f \
-					-o -iname CODE_OF_CONDUCT.md \
-					-o -iname CODE_OF_CONDUCT.txt \
-					-o -iname CODE_OF_CONDUCT -type f \
-					-o -iname CONTRIBUTING.md \
-					-o -iname CONTRIBUTING.txt \
-					-o -iname CONTRIBUTING -type f \
-					-o -iname SECURITY.md \
-					-o -iname SECURITY.txt \
-					-o -iname SECURITY -type f \
-					-o -iname ARCHITECTURE.md \
-					-o -iname ARCHITECTURE.txt \
-					-o -iname ARCHITECTURE -type f \
-					-o -iname renovate.json \
+					-o -iname .rustfmt.toml \
 					-o -iname .stylua.toml \
 					-o -iname .vscode \
 					-o -iname .vscode-test.js \
 					-o -iname .yarnrc \
+					-o -iname ARCHITECTURE -type f \
+					-o -iname ARCHITECTURE.md \
+					-o -iname ARCHITECTURE.txt \
+					-o -iname CHANGELOG -type f \
+					-o -iname CHANGELOG.md \
+					-o -iname CHANGELOG.txt \
+					-o -iname CODE_OF_CONDUCT -type f \
+					-o -iname CODE_OF_CONDUCT.md \
+					-o -iname CODE_OF_CONDUCT.txt \
+					-o -iname CONTRIBUTING -type f \
+					-o -iname CONTRIBUTING.md \
+					-o -iname CONTRIBUTING.txt \
 					-o -iname Cargo.lock \
+					-o -iname MAINTENANCE -type f \
+					-o -iname MAINTENANCE.md \
+					-o -iname MAINTENANCE.txt \
 					-o -iname README.md \
+					-o -iname SECURITY -type f \
+					-o -iname SECURITY.md \
+					-o -iname SECURITY.txt \
 					-o -iname biome.json \
 					-o -iname jsconfig.json \
 					-o -iname package-lock.json \
 					-o -iname pnpm-global \
-					-o -iname tsfmt.json \
 					-o -iname pnpm-lock.yaml \
 					-o -iname prettier.config.cjs \
 					-o -iname prettier.config.js \
 					-o -iname prettier.config.mjs \
+					-o -iname renovate.json \
 					-o -iname rome.json \
 					-o -iname rustfmt.toml \
+					-o -iname tsfmt.json \
 					-o -iname webpack.config.js \
 					-o -iname yarn.lock \
 					\) -exec rm -rf {} \;
