@@ -48,6 +48,11 @@ for Dependency in "${Dependency[@]}"; do
 			"$Organization" \
 			"$SubDependency" \
 			"$Dependency"
+
+		"$Current"/Sync/Dependency.sh \
+			"$Organization" \
+			"$SubDependency" \
+			"$Dependency"
 	) &
 done
 
