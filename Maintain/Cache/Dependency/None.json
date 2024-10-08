@@ -36,7 +36,7 @@
 	"CodeEditorLand/Bot",
 	"CodeEditorLand/CargoMobile2",
 	"CodeEditorLand/ChromiumBuild",
-	"CodeEditorLand/Cli",
+	"CodeEditorLand/CLI",
 	"CodeEditorLand/Codetour",
 	"CodeEditorLand/Commonality",
 	"CodeEditorLand/ComposeLanguageService",

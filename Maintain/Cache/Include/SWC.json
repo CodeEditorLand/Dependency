@@ -12,7 +12,7 @@
 	"CodeEditorLand/Pkgs",
 	"CodeEditorLand/Ddt",
 	"CodeEditorLand/Jest",
-	"CodeEditorLand/Cli",
+	"CodeEditorLand/CLI",
 	"CodeEditorLand/Bot",
 	"CodeEditorLand/SWCify",
 	"CodeEditorLand/PluginUtils",
