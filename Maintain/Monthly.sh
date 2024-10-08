@@ -2,7 +2,7 @@
 
 Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
-Filter=(
+Dependency=(
 	"Biome"
 	"Land"
 	"OXC"
@@ -11,43 +11,43 @@ Filter=(
 	"Tauri"
 )
 
-for Filter in "${Filter[@]}"; do
+for Dependency in "${Dependency[@]}"; do
 	(
 		Cache="$Current"/Cache
 
-		Organization="$Cache"/Organization/"$Filter".json
-		Dependency="$Cache"/Dependency/"$Filter".json
+		Organization="$Cache"/Organization/"$Dependency".json
+		SubDependency="$Cache"/Dependency/"$Dependency".json
 
 		"$Current"/Module/Dependency.sh \
 			"$Organization" \
-			"$Dependency" \
-			"$Filter"
+			"$SubDependency" \
+			"$Dependency"
 
 		"$Current"/Configure/Dependency.sh \
 			"$Organization" \
-			"$Dependency" \
-			"$Filter"
+			"$SubDependency" \
+			"$Dependency"
 
 		"$Current"/Setting/Dependency.sh \
 			"$Organization" \
-			"$Dependency" \
-			"$Filter"
+			"$SubDependency" \
+			"$Dependency"
 
 		"$Current"/Default/Branch.sh \
 			"$Organization" \
+			"$SubDependency" \
 			"$Dependency" \
-			"$Filter" \
 			"Current"
 
 		"$Current"/Merge/Dependency.sh \
 			"$Organization" \
-			"$Filter" \
-			"$Filter"
+			"$SubDependency" \
+			"$Dependency"
 
 		"$Current"/Save/Dependency.sh \
 			"$Organization" \
-			"$Dependency" \
-			"$Filter"
+			"$SubDependency" \
+			"$Dependency"
 	) &
 done
 

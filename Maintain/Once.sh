@@ -2,16 +2,15 @@
 
 Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
-Filter=(
+Dependency=(
 	"None"
 )
 
-for Filter in "${Filter[@]}"; do
+for Dependency in "${Dependency[@]}"; do
 	Cache="$Current"/Cache
 
-	Organization="$Cache"/Organization/"$Filter".json
-	Exclude="$Cache"/Exclude/"$Filter".json
-	Dependency="$Cache"/Dependency/"$Filter".json
+	Organization="$Cache"/Organization/"$Dependency".json
+	Exclude="$Cache"/Exclude/"$Dependency".json
 
 	"$Current"/Cache/Dependency.sh \
 		"$Organization" \
@@ -20,6 +19,6 @@ for Filter in "${Filter[@]}"; do
 
 	# "$Current"/Setting/Dependency.sh \
 	# 	"$Organization" \
-	# 	"$Dependency" \
-	# 	"$Filter"
+	# 	"$SubDependency" \
+	# 	"$Dependency"
 done

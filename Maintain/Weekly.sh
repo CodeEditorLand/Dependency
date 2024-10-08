@@ -2,7 +2,7 @@
 
 Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
-Filter=(
+Dependency=(
 	"Biome"
 	"Land"
 	"OXC"
@@ -11,78 +11,78 @@ Filter=(
 	"Tauri"
 )
 
-for Filter in "${Filter[@]}"; do
+for Dependency in "${Dependency[@]}"; do
 	(
 		Cache="$Current"/Cache
 
-		Organization="$Cache"/Organization/"$Filter".json
-		Dependency="$Cache"/Dependency/"$Filter".json
+		Organization="$Cache"/Organization/"$Dependency".json
+		SubDependency="$Cache"/Dependency/"$Dependency".json
 
 		"$Current"/Module/Dependency.sh \
 			"$Organization" \
-			"$Dependency" \
-			"$Filter"
+			"$SubDependency" \
+			"$Dependency"
 
 		"$Current"/Configure/Dependency.sh \
 			"$Organization" \
-			"$Dependency" \
-			"$Filter"
+			"$SubDependency" \
+			"$Dependency"
 
 		"$Current"/Setting/Dependency.sh \
 			"$Organization" \
-			"$Dependency" \
-			"$Filter"
+			"$SubDependency" \
+			"$Dependency"
 
 		"$Current"/Save/Dependency.sh \
 			"$Organization" \
-			"$Dependency" \
-			"$Filter"
+			"$SubDependency" \
+			"$Dependency"
 
 		"$Current"/Switch/Branch.sh \
 			"$Organization" \
+			"$SubDependency" \
 			"$Dependency" \
-			"$Filter" \
 			"Current"
 
 		"$Current"/Save/Dependency.sh \
 			"$Organization" \
-			"$Dependency" \
-			"$Filter"
+			"$SubDependency" \
+			"$Dependency"
 
 		"$Current"/Move/package.json.sh \
 			"$Organization" \
-			"$Dependency" \
-			"$Filter"
+			"$SubDependency" \
+			"$Dependency"
 
 		"$Current"/Move/src.sh \
 			"$Organization" \
-			"$Dependency" \
-			"$Filter"
+			"$SubDependency" \
+			"$Dependency"
 
 		"$Current"/Clean/Dependency.sh \
 			"$Organization" \
-			"$Dependency" \
-			"$Filter"
+			"$SubDependency" \
+			"$Dependency"
 
 		"$Current"/Clean/Detail.sh \
 			"$Organization" \
-			"$Dependency" \
-			"$Filter"
+			"$SubDependency" \
+			"$Dependency"
 
 		"$Current"/Append/Detail.sh \
 			"$Organization" \
-			"$Dependency" \
-			"$Filter"
+			"$SubDependency" \
+			"$Dependency"
 
 		"$Current"/Save/Dependency.sh \
 			"$Organization" \
-			"$Dependency" \
-			"$Filter"
+			"$SubDependency" \
+			"$Dependency"
 
 		"$Current"/Sync/Dependency.sh \
 			"$Organization" \
-			"$Dependency" \
-			"$Filter"
+			"$SubDependency" \
+			"$Dependency"
 	) &
 done
 
