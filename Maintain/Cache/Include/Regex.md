@@ -34,3 +34,9 @@
 content
 $(?![\r\n])
 ```
+
+# Format all files
+
+```sh
+**/*.{js,ts,jsx,tsx,cjs,mjs,cts,mts,rs,yaml,toml,json,md}
+```

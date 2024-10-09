@@ -1,4 +1,5 @@
 <a href="https://app.fossa.com/projects/git%2Bgithub.com%2FCodeEditorLand%2FDependency?ref=badge_small"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2FCodeEditorLand%2FDependency.svg?type=small" alt="FOSSA Status"></a><table><tr>
+
 <td colspan="1"> <h3 align="center"> <picture> </picture> 🏞️ </h3> </td>
 <td colspan="3" valign="top"> <h3 align="center"> Land — </h3> </td>
 </tr><tr><td valign="top" colspan="1"><a href="HTTPS://GitHub.Com/CodeEditorLand/Echo" target="_blank">
