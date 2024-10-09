@@ -27,6 +27,7 @@ for Organization in "${Organization[@]}"; do
 					-o -iname .editorconfig \
 					-o -iname .eslintignore \
 					-o -iname .eslintplugin \
+					-o -iname eslint.config.js \
 					-o -iname .eslintrc.base.json \
 					-o -iname .eslintrc.cjs \
 					-o -iname .eslintrc.js \
