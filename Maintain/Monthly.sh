@@ -18,20 +18,20 @@ for Dependency in "${Dependency[@]}"; do
 		Organization="$Cache"/Organization/"$Dependency".json
 		SubDependency="$Cache"/Dependency/"$Dependency".json
 
-		"$Current"/Module/Dependency.sh \
-			"$Organization" \
-			"$SubDependency" \
-			"$Dependency"
+		# "$Current"/Module/Dependency.sh \
+		# 	"$Organization" \
+		# 	"$SubDependency" \
+		# 	"$Dependency"
 
-		"$Current"/Configure/Dependency.sh \
-			"$Organization" \
-			"$SubDependency" \
-			"$Dependency"
+		# "$Current"/Configure/Dependency.sh \
+		# 	"$Organization" \
+		# 	"$SubDependency" \
+		# 	"$Dependency"
 
-		"$Current"/Setting/Dependency.sh \
-			"$Organization" \
-			"$SubDependency" \
-			"$Dependency"
+		# "$Current"/Setting/Dependency.sh \
+		# 	"$Organization" \
+		# 	"$SubDependency" \
+		# 	"$Dependency"
 
 		"$Current"/Default/Branch.sh \
 			"$Organization" \

@@ -9,11 +9,7 @@ Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
 Fn
 
-# TODO: Add dynamic { "repository": { "directory": Dependency/$Dependency/Dependency/$Dependency } }
-
-# # The path is always CodeEditorLand/Dependency/$Dependency/Dependency/$Dependency or fetch the correct submodule URL
-
-Package="$Current"/../../../package.json
+Package="$Current"/../../../../package.json
 
 # shellcheck disable=SC2154
 Slug="$Owner/$Name"
