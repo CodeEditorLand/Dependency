@@ -21,10 +21,12 @@ for Organization in "${Organization[@]}"; do
 					-o -iname .azure-pipelines \
 					-o -iname .changeset \
 					-o -iname .clang-format \
+					-o -iname .eslint-plugin-local \
 					-o -iname .configurations \
 					-o -iname .csharpierrc \
 					-o -iname .devcontainer \
 					-o -iname .editorconfig \
+					-o -iname eslint.js \
 					-o -iname .eslintignore \
 					-o -iname .eslintplugin \
 					-o -iname eslint.config.js \
