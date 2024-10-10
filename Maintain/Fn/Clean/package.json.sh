@@ -5,76 +5,76 @@
 JSON=$(<package.json)
 
 JSON=$(echo "$JSON" | \jq -S --tab "del(\
-	.author,\
-	.bugs,\
-	.categories,\
-	.distro,\
-	.engines,\
-	.eslintConfig,\
-	.fix,\
-	.homepage,\
-	.keywords,\
-	.license,\
-	.packageManager,\
-	.peerDependencies,\
-	.prettier,\
-	.private,\
-	.publishConfig,\
-	.publisher,\
-	.repository,\
-	.scripts.[\"check:apply\"],\
-	.scripts.[\"fmt:js\"],\
-	.scripts.[\"format-check\"],\
-	.scripts.[\"format:check\"],\
-	.scripts.[\"format:eslint\"],\
-	.scripts.[\"format:prettier\"],\
-	.scripts.[\"format:stylelint\"],\
-	.scripts.[\"lint-fix:format\"],\
-	.scripts.[\"lint-fix:js\"],\
-	.scripts.[\"lint-fix:styles\"],\
-	.scripts.[\"lint-fix\"],\
-	.scripts.[\"lint-format\"],\
-	.scripts.[\"lint:client\"],\
-	.scripts.[\"lint:eslint\"],\
-	.scripts.[\"lint:fix:prettier\"],\
-	.scripts.[\"lint:fix\"],\
-	.scripts.[\"lint:format\"],\
-	.scripts.[\"lint:js\"],\
-	.scripts.[\"lint:prettier\"],\
-	.scripts.[\"lint:scripts\"],\
-	.scripts.[\"lint:server\"],\
-	.scripts.[\"lint:styles\"],\
-	.scripts.[\"lint:tsc\"],\
-	.scripts.[\"lint:types\"],\
-	.scripts.[\"prettier-fix\"],\
-	.scripts.[\"test:eslint-rules\"],\
-	.scripts.[\"test:fmt\"],\
-	.scripts.[\"test:lint\"],\
-	.scripts.[\"vscode:prepublish\"],\
-	.scripts.bump,\
-	.scripts.check,\
-	.scripts.eslint,\
-	.scripts.fmt,\
-	.scripts.format,\
-	.scripts.lint,\
-	.scripts.nodemon,\
-	.scripts.package,\
-	.scripts.postinstall,\
-	.scripts.posttest,\
-	.scripts.prepublish,\
-	.scripts.pretest,\
-	.scripts.prettier,\
-	.scripts.stylelint,\
-	.scripts.test,\
-	.scripts.tsc,\
-	.scripts.tslint,\
-	.scripts.typecheck,\
-	.scripts.watch,\
-	.tags,\
-	.test,\
-	.tslint,\
-	.type,\
-	.version\
+	try .author catch null,\
+	try .bugs catch null,\
+	try .categories catch null,\
+	try .distro catch null,\
+	try .engines catch null,\
+	try .eslintConfig catch null,\
+	try .fix catch null,\
+	try .homepage catch null,\
+	try .keywords catch null,\
+	try .license catch null,\
+	try .packageManager catch null,\
+	try .peerDependencies catch null,\
+	try .prettier catch null,\
+	try .private catch null,\
+	try .publishConfig catch null,\
+	try .publisher catch null,\
+	try .repository catch null,\
+	try .scripts.[\"check:apply\"] catch null,\
+	try .scripts.[\"fmt:js\"] catch null,\
+	try .scripts.[\"format-check\"] catch null,\
+	try .scripts.[\"format:check\"] catch null,\
+	try .scripts.[\"format:eslint\"] catch null,\
+	try .scripts.[\"format:prettier\"] catch null,\
+	try .scripts.[\"format:stylelint\"] catch null,\
+	try .scripts.[\"lint-fix:format\"] catch null,\
+	try .scripts.[\"lint-fix:js\"] catch null,\
+	try .scripts.[\"lint-fix:styles\"] catch null,\
+	try .scripts.[\"lint-fix\"] catch null,\
+	try .scripts.[\"lint-format\"] catch null,\
+	try .scripts.[\"lint:client\"] catch null,\
+	try .scripts.[\"lint:eslint\"] catch null,\
+	try .scripts.[\"lint:fix:prettier\"] catch null,\
+	try .scripts.[\"lint:fix\"] catch null,\
+	try .scripts.[\"lint:format\"] catch null,\
+	try .scripts.[\"lint:js\"] catch null,\
+	try .scripts.[\"lint:prettier\"] catch null,\
+	try .scripts.[\"lint:scripts\"] catch null,\
+	try .scripts.[\"lint:server\"] catch null,\
+	try .scripts.[\"lint:styles\"] catch null,\
+	try .scripts.[\"lint:tsc\"] catch null,\
+	try .scripts.[\"lint:types\"] catch null,\
+	try .scripts.[\"prettier-fix\"] catch null,\
+	try .scripts.[\"test:eslint-rules\"] catch null,\
+	try .scripts.[\"test:fmt\"] catch null,\
+	try .scripts.[\"test:lint\"] catch null,\
+	try .scripts.[\"vscode:prepublish\"] catch null,\
+	try .scripts.bump catch null,\
+	try .scripts.check catch null,\
+	try .scripts.eslint catch null,\
+	try .scripts.fmt catch null,\
+	try .scripts.format catch null,\
+	try .scripts.lint catch null,\
+	try .scripts.nodemon catch null,\
+	try .scripts.package catch null,\
+	try .scripts.postinstall catch null,\
+	try .scripts.posttest catch null,\
+	try .scripts.prepublish catch null,\
+	try .scripts.pretest catch null,\
+	try .scripts.prettier catch null,\
+	try .scripts.stylelint catch null,\
+	try .scripts.test catch null,\
+	try .scripts.tsc catch null,\
+	try .scripts.tslint catch null,\
+	try .scripts.typecheck catch null,\
+	try .scripts.watch catch null,\
+	try .tags catch null,\
+	try .test catch null,\
+	try .tslint catch null,\
+	try .type catch null,\
+	try .version catch null\
 )")
 
 echo "$JSON" >|package.json
@@ -738,7 +738,7 @@ Key() {
 		JQ="del("
 
 		for Exclude in "${Chunk[@]}"; do
-			JQ+=".[\"$1\"].[\"${Exclude}\"],"
+			JQ+="try .[\"$1\"].[\"${Exclude}\"] catch null,"
 		done
 
 		JQ=${JQ%,}
