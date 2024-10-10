@@ -33,6 +33,12 @@ for Dependency in "${Dependency[@]}"; do
 		# 	"$SubDependency" \
 		# 	"$Dependency"
 
+		"$Current"/Switch/Branch.sh \
+			"$Organization" \
+			"$SubDependency" \
+			"$Dependency" \
+			"Current"
+
 		"$Current"/Default/Branch.sh \
 			"$Organization" \
 			"$SubDependency" \
