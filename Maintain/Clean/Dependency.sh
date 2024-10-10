@@ -16,29 +16,29 @@ for Organization in "${Organization[@]}"; do
 				\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o \
 					\( \
 					-iname .prettierrc \
-					-o -iname '.changes' \
-					-o -iname '.github' \
 					-o -iname .azure-pipelines \
+					-o -iname .changes \
 					-o -iname .changeset \
 					-o -iname .clang-format \
-					-o -iname .eslint-plugin-local \
 					-o -iname .configurations \
 					-o -iname .csharpierrc \
 					-o -iname .devcontainer \
 					-o -iname .editorconfig \
-					-o -iname eslint.js \
+					-o -iname .eslint-ignore \
+					-o -iname .eslint-plugin-local \
 					-o -iname .eslintignore \
 					-o -iname .eslintplugin \
-					-o -iname eslint.config.js \
 					-o -iname .eslintrc.base.json \
 					-o -iname .eslintrc.cjs \
 					-o -iname .eslintrc.js \
 					-o -iname .eslintrc.json \
 					-o -iname .eslintrc.yaml \
 					-o -iname .eslintrc.yml \
+					-o -iname .github \
 					-o -iname .husky \
 					-o -iname .mailmap \
 					-o -iname .mention-bot \
+					-o -iname .node-version \
 					-o -iname .nvmrc \
 					-o -iname .pnpm-store \
 					-o -iname .prettierignore \
@@ -54,6 +54,8 @@ for Organization in "${Organization[@]}"; do
 					-o -iname ARCHITECTURE -type f \
 					-o -iname ARCHITECTURE.md \
 					-o -iname ARCHITECTURE.txt \
+					-o -iname biome.json \
+					-o -iname Cargo.lock \
 					-o -iname CHANGELOG -type f \
 					-o -iname CHANGELOG.md \
 					-o -iname CHANGELOG.txt \
@@ -63,31 +65,30 @@ for Organization in "${Organization[@]}"; do
 					-o -iname CONTRIBUTING -type f \
 					-o -iname CONTRIBUTING.md \
 					-o -iname CONTRIBUTING.txt \
-					-o -iname Cargo.lock \
+					-o -iname eslint.config.js \
+					-o -iname eslint.js \
+					-o -iname jsconfig.json \
 					-o -iname MAINTENANCE -type f \
 					-o -iname MAINTENANCE.md \
 					-o -iname MAINTENANCE.txt \
-					-o -iname README.md \
-					-o -iname SECURITY -type f \
-					-o -iname SECURITY.md \
-					-o -iname SECURITY.txt \
-					-o -iname SUPPORT -type f \
-					-o -iname SUPPORT.md \
-					-o -iname SUPPORT.txt \
-					-o -iname biome.json \
-					-o -iname jsconfig.json \
 					-o -iname package-lock.json \
 					-o -iname pnpm-global \
 					-o -iname pnpm-lock.yaml \
 					-o -iname prettier.config.cjs \
 					-o -iname prettier.config.js \
 					-o -iname prettier.config.mjs \
+					-o -iname README.md \
 					-o -iname renovate.json \
-					-o -iname .node-version \
 					-o -iname rome.json \
 					-o -iname rust-toolchain -type f \
 					-o -iname rust-toolchain.toml \
 					-o -iname rustfmt.toml \
+					-o -iname SECURITY -type f \
+					-o -iname SECURITY.md \
+					-o -iname SECURITY.txt \
+					-o -iname SUPPORT -type f \
+					-o -iname SUPPORT.md \
+					-o -iname SUPPORT.txt \
 					-o -iname tsfmt.json \
 					-o -iname webpack.config.js \
 					-o -iname yarn.lock \
