@@ -1,69 +1,96 @@
 #!/bin/bash
 
-SOURCE=Parent/"$(\gh repo view "$(\gh repo view --json parent | \jq -c -r '.parent.owner.login, .parent.name' | \tr -s '\r\n' '/' | \sed 's/\/$//')" --json defaultBranchRef | \jq -r -c '.defaultBranchRef.name')"
+\pwd
 
-cd Source/vs/workbench/api/browser/ || exit
+Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
-\git restore --source "$SOURCE" mainThreadComments.ts
+cd "$Current"/../../../Land/Dependency/Editor/Source/vs/workbench/api/browser/ || exit
 
-cd - || exit
+# shellcheck disable=SC1091
+\source "$Current"/../../Fn/Cache.sh
 
-cd Source/vs/workbench/api/common/ || exit
+Fn
 
-\git restore --source "$SOURCE" extHostComments.ts
+# shellcheck disable=SC2154
+\git restore --source Parent/"$BranchParent" mainThreadComments.ts
 
-cd - || exit
+cd "$Current"/../../../Land/Dependency/Editor/Source/vs/workbench/api/common/ || exit
 
-cd Source/vs/workbench/api/common/ || exit
+# shellcheck disable=SC1091
+\source "$Current"/../../Fn/Cache.sh
 
-\git restore --source "$SOURCE" extHostStatusBar.ts
+Fn
 
-cd - || exit
+\git restore --source Parent/"$BranchParent" extHostComments.ts
 
-cd Source/vs/workbench/api/common/ || exit
+cd "$Current"/../../../Land/Dependency/Editor/Source/vs/workbench/api/common/ || exit
 
-\git restore --source "$SOURCE" extHostTesting.ts
+# shellcheck disable=SC1091
+\source "$Current"/../../Fn/Cache.sh
 
-cd - || exit
+Fn
 
-cd Source/vs/workbench/api/common/ || exit
+\git restore --source Parent/"$BranchParent" extHostStatusBar.ts
 
-\git restore --source "$SOURCE" extHostTypes.ts
+cd "$Current"/../../../Land/Dependency/Editor/Source/vs/workbench/api/common/ || exit
 
-cd - || exit
+# shellcheck disable=SC1091
+\source "$Current"/../../Fn/Cache.sh
 
-cd Source/vs/workbench/browser/parts/ || exit
+Fn
 
-\git restore --source "$SOURCE" paneCompositeBar.ts
+\git restore --source Parent/"$BranchParent" extHostTesting.ts
 
-cd - || exit
+cd "$Current"/../../../Land/Dependency/Editor/Source/vs/workbench/api/common/ || exit
 
-cd Source/vs/workbench/contrib/extensions/browser/ || exit
+# shellcheck disable=SC1091
+\source "$Current"/../../Fn/Cache.sh
 
-\git restore --source "$SOURCE" extensionsWorkbenchService.ts
+Fn
 
-cd - || exit
+\git restore --source Parent/"$BranchParent" extHostTypes.ts
 
-cd Source/vs/workbench/services/extensionRecommendations/common/ || exit
+cd "$Current"/../../../Land/Dependency/Editor/Source/vs/workbench/browser/parts/ || exit
 
-\git restore --source "$SOURCE" extensionIgnoredRecommendationsService.ts
+# shellcheck disable=SC1091
+\source "$Current"/../../Fn/Cache.sh
 
-cd - || exit
+Fn
 
-cd Source/vs/workbench/services/userDataSync/browser/ || exit
+\git restore --source Parent/"$BranchParent" paneCompositeBar.ts
 
-\git restore --source "$SOURCE" userDataSyncWorkbenchService.ts
+cd "$Current"/../../../Land/Dependency/Editor/Source/vs/workbench/contrib/extensions/browser/ || exit
 
-cd - || exit
+# shellcheck disable=SC1091
+\source "$Current"/../../Fn/Cache.sh
 
-cd Source/vs/workbench/api/common/ || exit
+Fn
+
+\git restore --source Parent/"$BranchParent" extensionsWorkbenchService.ts
+
+cd "$Current"/../../../Land/Dependency/Editor/Source/vs/workbench/services/extensionRecommendations/common/ || exit
+
+# shellcheck disable=SC1091
+\source "$Current"/../../Fn/Cache.sh
+
+Fn
+
+\git restore --source Parent/"$BranchParent" extensionIgnoredRecommendationsService.ts
+
+cd "$Current"/../../../Land/Dependency/Editor/Source/vs/workbench/services/userDataSync/browser/ || exit
+
+# shellcheck disable=SC1091
+\source "$Current"/../../Fn/Cache.sh
+
+Fn
+
+\git restore --source Parent/"$BranchParent" userDataSyncWorkbenchService.ts
+
+cd "$Current"/../../../Land/Dependency/Editor/Source/vs/workbench/api/common/ || exit
 
 git restore --source "$SOURCE" extHostComments.ts
 
-cd - || exit
-
-cd Source/vs/workbench/api/common/ || exit
+cd "$Current"/../../../Land/Dependency/Editor/Source/vs/workbench/api/common/ || exit
 
 git restore --source "$SOURCE" extHostQuickOpen.ts
 
-cd - || exit
