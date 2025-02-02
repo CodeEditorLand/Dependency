@@ -31,7 +31,7 @@ Slug="$Owner/$Name"
 		\"access\": \"public\"
 	},
 	\"author\": {
-		\"name\": \"🖋️ Source — 👐🏻 Open —\",
+		\"name\": \"Source 🖋️ Open 👐🏻\",
 		\"email\": \"Source/Open@Editor.Land\",
 		\"url\": \"HTTPS://Editor.Land\"
 	},
