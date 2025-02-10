@@ -1,7 +1,7 @@
 <a href="HTTPS://app.fossa.com/projects/git%2Bgithub.com%2FCodeEditorLand%2FDependency?ref=badge_small"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2FCodeEditorLand%2FDependency.svg?type=small" alt="FOSSA Status"></a><table><tr>
 
 <td colspan="1"> <h3 align="center"> <picture> </picture> 🏞️ </h3> </td>
-<td colspan="3" valign="top"> <h3 align="center"> Land — </h3> </td>
+<td colspan="3" valign="top"> <h3 align="center"> Land </h3> </td>
 </tr><tr><td valign="top" colspan="1"><a href="HTTPS://GitHub.Com/CodeEditorLand/Echo" target="_blank">
 <picture>
 <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/github/last-commit/CodeEditorLand/Echo?label=Update&color=black&labelColor=black&logoColor=white&logoWidth=0">
@@ -151,7 +151,7 @@
 <source media="(prefers-color-scheme: dark)" srcset="https://PlayForm.LTD/Dark/Image/GitHub/Land.svg">
 <source media="(prefers-color-scheme: light)" srcset="https://PlayForm.LTD/Image/GitHub/Land.svg">
 <img width="28" alt="" src="https://PlayForm.LTD/Image/GitHub/Land.svg">
-</picture> </h3> </td> <td colspan="3" valign="top"> <h3 align="center"> Land —
+</picture> </h3> </td> <td colspan="3" valign="top"> <h3 align="center"> Land
 </h3> </td>
 </tr><tr><td valign="top" colspan="1"><a href="HTTPS://GitHub.Com/CodeEditorLand/Dependency" target="_blank">
 <picture>
@@ -266,7 +266,7 @@
 <source media="(prefers-color-scheme: dark)" srcset="https://PlayForm.LTD/Glyph/Image/GitHub/Tauri.svg">
 <source media="(prefers-color-scheme: light)" srcset="https://PlayForm.LTD/Glyph/Image/GitHub/Tauri.svg">
 <img width="28" alt="" src="https://PlayForm.LTD/Glyph/Image/GitHub/Tauri.svg">
-</picture> </h3> </td> <td colspan="3" valign="top"> <h3 align="center"> Tauri —
+</picture> </h3> </td> <td colspan="3" valign="top"> <h3 align="center"> Tauri
 </h3> </td>
 </tr><tr><td valign="top" colspan="1"><a href="HTTPS://GitHub.Com/CodeEditorLand/DependencyTauri" target="_blank">
 <picture>
@@ -345,7 +345,7 @@
 <source media="(prefers-color-scheme: dark)" srcset="https://PlayForm.LTD/Image/GitHub/OXC.svg">
 <source media="(prefers-color-scheme: light)" srcset="https://PlayForm.LTD/Image/GitHub/OXC.svg">
 <img width="28" alt="" src="https://PlayForm.LTD/Image/GitHub/OXC.svg">
-</picture> </h3> </td> <td colspan="3" valign="top"> <h3 align="center"> OXC —
+</picture> </h3> </td> <td colspan="3" valign="top"> <h3 align="center"> OXC
 </h3> </td>
 </tr><tr><td valign="top" colspan="1"><a href="HTTPS://GitHub.Com/CodeEditorLand/DependencyOXC" target="_blank">
 <picture>
@@ -365,7 +365,7 @@
 <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/github/downloads/CodeEditorLand/DependencyOXC/total?label=Download&color=white&labelColor=white&logoColor=black&logoWidth=0">
 <img src="https://img.shields.io/github/downloads/CodeEditorLand/DependencyOXC/total?label=Download&color=black&labelColor=black&logoColor=white&logoWidth=0" alt="Download" title="Download">
 </picture>
-</a><br><a href="HTTPS://GitHub.Com/CodeEditorLand/DependencyOXC" target="_blank"><b>OXC — Dependency 🖇️</b></a></td><td valign="top" colspan="1"><a href="HTTPS://GitHub.Com/CodeEditorLand/DependencyOXCCargo" target="_blank">
+</a><br><a href="HTTPS://GitHub.Com/CodeEditorLand/DependencyOXC" target="_blank"><b>OXC Dependency 🖇️</b></a></td><td valign="top" colspan="1"><a href="HTTPS://GitHub.Com/CodeEditorLand/DependencyOXCCargo" target="_blank">
 <picture>
 <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/github/last-commit/CodeEditorLand/DependencyOXCCargo?label=Update&color=black&labelColor=black&logoColor=white&logoWidth=0">
 <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/github/last-commit/CodeEditorLand/DependencyOXCCargo?label=Update&color=white&labelColor=white&logoColor=black&logoWidth=0">
@@ -424,7 +424,7 @@
 <source media="(prefers-color-scheme: dark)" srcset="https://PlayForm.LTD/Image/GitHub/Biome.svg">
 <source media="(prefers-color-scheme: light)" srcset="https://PlayForm.LTD/Image/GitHub/Biome.svg">
 <img width="28" alt="" src="https://PlayForm.LTD/Image/GitHub/Biome.svg">
-</picture> </h3> </td> <td colspan="3" valign="top"> <h3 align="center"> Biome —
+</picture> </h3> </td> <td colspan="3" valign="top"> <h3 align="center"> Biome
 </h3> </td>
 </tr><tr><td valign="top" colspan="1"><a href="HTTPS://GitHub.Com/CodeEditorLand/DependencyBiome" target="_blank">
 <picture>
