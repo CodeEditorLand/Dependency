@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 cd "Application/CodeEditorLand/Dependency/Microsoft/Dependency/Editor/extensions/css-language-features" || exit
 

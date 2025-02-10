@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 Dependency=(
 	"oxc-project/oxc"

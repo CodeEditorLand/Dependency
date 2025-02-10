@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 File=$(find . -name "package.json" -exec grep -l '"tauri"' {} +)
 
