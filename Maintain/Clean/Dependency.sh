@@ -28,10 +28,14 @@ for Organization in "${Organization[@]}"; do
 					-o -iname .eslint-plugin-local \
 					-o -iname .eslintignore \
 					-o -iname .eslintplugin \
+					-o -iname .eslintrc \
 					-o -iname .eslintrc.base.json \
+					-o -iname .eslintrc.browser.json \
 					-o -iname .eslintrc.cjs \
 					-o -iname .eslintrc.js \
 					-o -iname .eslintrc.json \
+					-o -iname .eslintrc.node.json \
+					-o -iname .eslintrc.webviews.json \
 					-o -iname .eslintrc.yaml \
 					-o -iname .eslintrc.yml \
 					-o -iname .github \

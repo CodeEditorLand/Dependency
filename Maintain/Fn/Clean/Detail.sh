@@ -47,6 +47,7 @@ JSON=$(echo "$JSON" | \jq -S --tab "del(\
 	try .scripts.[\"lint:styles\"] catch null,\
 	try .scripts.[\"lint:tsc\"] catch null,\
 	try .scripts.[\"lint:types\"] catch null,\
+	try .scripts.[\"precommit\"] catch null,\
 	try .scripts.[\"prettier-fix\"] catch null,\
 	try .scripts.[\"test:eslint-rules\"] catch null,\
 	try .scripts.[\"test:fmt\"] catch null,\
@@ -60,6 +61,7 @@ JSON=$(echo "$JSON" | \jq -S --tab "del(\
 	try .scripts.lint catch null,\
 	try .scripts.nodemon catch null,\
 	try .scripts.package catch null,\
+	try .scripts.postinstall catch null,\
 	try .scripts.posttest catch null,\
 	try .scripts.prepublish catch null,\
 	try .scripts.pretest catch null,\
@@ -154,6 +156,7 @@ Exclude=(
 	"@babel/preset-typescript"
 	"@babel/runtime"
 	"@babel/traverse"
+	"@biomejs/biome"
 	"@c4312/chromehash"
 	"@electron-forge/cli"
 	"@electron-forge/maker-deb"

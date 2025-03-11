@@ -683,6 +683,7 @@ Exclude=(
 	"vscode-languageserver"
 	"vscode-markdown-languageservice"
 	"vscode-nls-dev"
+	"vscode-nls-devdownload/2.0.2/build.tar.gz,"
 	"vscode-nls"
 	"vscode-notebook-error-overlay"
 	"vscode-oniguruma"
