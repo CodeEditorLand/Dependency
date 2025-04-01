@@ -11,7 +11,8 @@ Fn() {
 		if [ -n "$Owner" ] && [ "$Owner" != "null" ]; then
 			\git config Source.Owner "$Owner"
 		else
-			echo "Could not git config Source.Owner"
+			echo "Could not determine Source.Owner"
+			Owner=""
 		fi
 	fi
 
@@ -23,7 +24,8 @@ Fn() {
 		if [ -n "$Name" ] && [ "$Name" != "null" ]; then
 			\git config Source.Name "$Name"
 		else
-			echo "Could not git config Source.Name"
+			echo "Could not determine Source.Name"
+			Name=""
 		fi
 	fi
 
@@ -35,7 +37,8 @@ Fn() {
 		if [ -n "$OwnerParent" ] && [ "$OwnerParent" != "null" ]; then
 			\git config Parent.Owner "$OwnerParent"
 		else
-			echo "Could not git config Parent.Owner"
+			echo "Could not determine Parent.Owner (repo might not be a fork)."
+			OwnerParent=""
 		fi
 	fi
 
@@ -47,27 +50,50 @@ Fn() {
 		if [ -n "$NameParent" ] && [ "$NameParent" != "null" ]; then
 			\git config Parent.Name "$NameParent"
 		else
-			echo "Could not git config Parent.Name"
+			echo "Could not determine Parent.Name (repo might not be a fork)."
+			NameParent=""
 		fi
 	fi
 
-	BranchParent=$(\git config --get Parent.Branch)
+	BranchParent=""
 
-	if [ -z "$BranchParent" ] || [ "$BranchParent" = "null" ]; then
-		BranchParent=$(\gh repo view "$OwnerParent/$NameParent" --json defaultBranchRef | \jq -r '.defaultBranchRef.name')
+	BranchParentOverride=$(\git config --get Parent.BranchOverride)
 
-		if [ -n "$BranchParent" ] && [ "$BranchParent" != "null" ]; then
-			\git config Parent.Branch "$BranchParent"
+	if [ -n "$BranchParentOverride" ] && [ "$BranchParentOverride" != "null" ]; then
+		BranchParent="$BranchParentOverride"
+
+		echo "Using override Parent.BranchOverride: $BranchParent"
+	else
+		BranchParent=$(\git config --get Parent.Branch)
+
+		if [ -z "$BranchParent" ] || [ "$BranchParent" = "null" ]; then
+			if [ -n "$OwnerParent" ] && [ "$OwnerParent" != "null" ] &&
+				[ -n "$NameParent" ] && [ "$NameParent" != "null" ]; then
+				echo "Attempting to fetch default branch for parent $OwnerParent/$NameParent..."
+				BranchParentFetched=$(\gh repo view "$OwnerParent/$NameParent" --json defaultBranchRef | \jq -r '.defaultBranchRef.name' 2>/dev/null) # Suppress gh/jq errors if needed
+
+				if [ -n "$BranchParentFetched" ] && [ "$BranchParentFetched" != "null" ]; then
+					BranchParent="$BranchParentFetched"
+
+					\git config Parent.Branch "$BranchParent"
+
+					echo "Fetched and set Parent.Branch: $BranchParent"
+				else
+					echo "Could not fetch default branch for parent $OwnerParent/$NameParent."
+				fi
+			else
+				echo "Cannot fetch Parent.Branch: Parent Owner/Name not available."
+			fi
 		else
-			echo "Could not git config Parent.Branch"
+			echo "Using existing Parent.Branch config: $BranchParent"
 		fi
 	fi
+
+	export Owner
+	export Name
+	export OwnerParent
+	export NameParent
+	export BranchParent
 }
 
 export Fn
-
-export Owner
-export Name
-export OwnerParent
-export NameParent
-export BranchParent
