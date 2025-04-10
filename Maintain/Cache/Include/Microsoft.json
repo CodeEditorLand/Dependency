@@ -149,7 +149,6 @@
 	"CodeEditorLand/LandJupyterHub",
 	"CodeEditorLand/LandJupyterIpywidgets",
 	"CodeEditorLand/LandJupyterKeymap",
-	"CodeEditorLand/LandJupyterLSPMiddleware",
 	"CodeEditorLand/LandJupyterPowertoys",
 	"CodeEditorLand/LandJupyterSlideshow",
 	"CodeEditorLand/LandJvmTools",
