@@ -2,7 +2,7 @@
 
 \pwd
 
-JSON=$(<package.json)
+JSON=$(< package.json)
 
 JSON=$(echo "$JSON" | \jq -S --tab "del(\
 	try .author catch null,\
@@ -79,7 +79,7 @@ JSON=$(echo "$JSON" | \jq -S --tab "del(\
 	try .version catch null\
 )")
 
-echo "$JSON" >|package.json
+echo "$JSON" >| package.json
 
 Exclude=(
 	"@antfu/eslint-config"
@@ -736,7 +736,7 @@ Length=${#Exclude[@]}
 Size=210
 
 Key() {
-	JSON=$(<package.json)
+	JSON=$(< package.json)
 
 	for ((Start = 0; Start < Length; Start += Size)); do
 		Chunk=("${Exclude[@]:Start:Size}")
@@ -753,7 +753,7 @@ Key() {
 
 		JSON=$(echo "$JSON" | \jq -S --tab "$JQ")
 
-		echo "$JSON" >|package.json
+		echo "$JSON" >| package.json
 	done
 }
 
@@ -762,4 +762,4 @@ Key "devDependencies"
 Key "peerDependencies"
 Key "optionalDependencies"
 
-sort-package-json
+# sort-package-json
