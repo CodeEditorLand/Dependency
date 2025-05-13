@@ -2,7 +2,7 @@
 
 \pwd
 
-Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
+Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 
 cd "$Current"/../../../Biome/Dependency/BiomeIntelliJ || exit
 

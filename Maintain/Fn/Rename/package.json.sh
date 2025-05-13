@@ -7,7 +7,7 @@ Error() {
 
 Read() {
 	if [ -f "package.json" ]; then
-		JSON=$(< package.json)
+		JSON=$(<package.json)
 	else
 		Error "Cannot package.json"
 	fi
@@ -87,7 +87,7 @@ Process() {
                 sub("^'"$_PatternRenamePrefix"'"; "@codeeditorland/")
             else .
             end
-        ) catch . ' 2> /dev/null); then
+        ) catch . ' 2>/dev/null); then
 
 		Error "Cannot name"
 	fi
@@ -108,7 +108,7 @@ Process() {
                 else .
                 end)
             end
-        ) catch . ' 2> /dev/null); then
+        ) catch . ' 2>/dev/null); then
 
 		Error "Cannot dependencies"
 	fi
@@ -129,12 +129,12 @@ Process() {
                 else .
                 end)
             end
-        ) catch . ' 2> /dev/null); then
+        ) catch . ' 2>/dev/null); then
 
 		Error "Cannot devDependencies"
 	fi
 
-	echo "$Processed" >| package.json || Error "Cannot package.json"
+	echo "$Processed" >|package.json || Error "Cannot package.json"
 }
 
 Fn() {
