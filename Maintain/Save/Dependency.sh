@@ -14,9 +14,7 @@ for Organization in "${Organization[@]}"; do
 				# shellcheck disable=SC2154
 				\cd "$Folder"/"${SubDependency/"${Organization}/"/}" || \exit
 
-				# "$Current"/../Fn/Save/Dependency.sh
-
-				Run -P .git -C 'pwd' -C 'git add .' -C 'git ecommit'
+				"$Current"/../Fn/Save/Dependency.sh
 
 				\cd - || \exit
 			) &

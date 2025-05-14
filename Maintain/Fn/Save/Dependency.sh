@@ -6,4 +6,4 @@
 \pwd
 
 \git add . --no-verbose
-\git ecommit -q --no-status --short --no-edit
+\git ecommit -q --no-status --short --no-edit --no-verify
