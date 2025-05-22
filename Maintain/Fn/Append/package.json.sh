@@ -15,13 +15,13 @@ Package="$Current"/../../../../package.json
 Slug="$Owner/$Name"
 
 \jq -S --tab ".keywords += [ \"codeeditorland\", \"land\", \"playform\"] | . * {
-	\"homepage\": \"HTTPS://GitHub.Com/$Slug#readme\",
+	\"homepage\": \"https://GitHub.Com/$Slug#readme\",
 	\"bugs\": {
-		\"url\": \"HTTPS://GitHub.Com/$Slug/issues\"
+		\"url\": \"https://GitHub.Com/$Slug/issues\"
 	},
 	\"repository\": {
 		\"type\": \"git\",
-		\"url\": \"git+HTTPS://github.com/$Slug.git\"
+		\"url\": \"git+https://github.com/$Slug.git\"
 	},
 	\"version\": \"0.0.1\",
 	\"license\": \"SEE LICENSE IN LICENSE\",
@@ -33,7 +33,7 @@ Slug="$Owner/$Name"
 	\"author\": {
 		\"name\": \"Source 🖋️ Open 👐🏻\",
 		\"email\": \"Source/Open@Editor.Land\",
-		\"url\": \"HTTPS://Editor.Land\"
+		\"url\": \"https://Editor.Land\"
 	},
 	\"scripts\": {
 		\"prepublishOnly\": \"Build 'Source/**/*.ts'\"
