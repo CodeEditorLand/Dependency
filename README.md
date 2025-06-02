@@ -1,4 +1,4 @@
-<a href="https://app.fossa.com/projects/git%2Bgithub.com%2FCodeEditorLand%2FDependency?ref=badge_small"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2FCodeEditorLand%2FDependency.svg?type=small" alt="FOSSA Status"></a><table><tr>
+<table><tr>
 
 <td colspan="1"> <h3 align="center"> <picture> </picture> 🏞️ </h3> </td>
 <td colspan="3" valign="top"> <h3 align="center"> Land </h3> </td>
@@ -498,7 +498,7 @@
 <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/github/downloads/CodeEditorLand/DependencyBiomeService/total?label=Download&color=white&labelColor=white&logoColor=black&logoWidth=0">
 <img src="https://img.shields.io/github/downloads/CodeEditorLand/DependencyBiomeService/total?label=Download&color=black&labelColor=black&logoColor=white&logoWidth=0" alt="Download" title="Download">
 </picture>
-</a><br><a href="https://GitHub.Com/CodeEditorLand/DependencyBiomeDependency" target="_blank"><b>Dependency 🖇️ Biome 🗻</b></a></td></tr></table><a href="https://fossa.app/projects/git%2Bgithub.com%2FCodeEditorLand%2FDependency?ref=badge_large&issueType=license"><img src="https://fossa.app/api/projects/git%2Bgithub.com%2FCodeEditorLand%2FDependency.svg?type=large&issueType=license" alt="FOSSA Status"></a>
+</a><br><a href="https://GitHub.Com/CodeEditorLand/DependencyBiomeDependency" target="_blank"><b>Dependency 🖇️ Biome 🗻</b></a></td></tr></table>
 
 ## Funding
 
