@@ -146,7 +146,7 @@
 <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/github/downloads/CodeEditorLand/Wind/total?label=Download&color=white&labelColor=white&logoColor=black&logoWidth=0">
 <img src="https://img.shields.io/github/downloads/CodeEditorLand/Wind/total?label=Download&color=black&labelColor=black&logoColor=white&logoWidth=0" alt="Download" title="Download">
 </picture>
-</a><br><a href="https://GitHub.Com/CodeEditorLand/Wind" target="_blank"><b>Wind 🌬️</b></a></td></tr><tr>
+</a><br><a href="https://GitHub.Com/CodeEditorLand/Wind" target="_blank"><b>Wind 🍃</b></a></td></tr><tr>
 <td colspan="1"> <h3 align="center"> <picture>
 <source media="(prefers-color-scheme: dark)" srcset="https://PlayForm.Cloud/Dark/Image/GitHub/Land.svg">
 <source media="(prefers-color-scheme: light)" srcset="https://PlayForm.Cloud/Image/GitHub/Land.svg">
