@@ -2,7 +2,7 @@
 
 \pwd
 
-Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
+Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
 
 File=(
 	"$Current/../../../Microsoft/Dependency/LandPullRequestGitHub/Source/github/conflictResolutionCoordinator.ts"

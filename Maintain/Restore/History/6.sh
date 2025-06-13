@@ -2,7 +2,7 @@
 
 \pwd
 
-Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
+Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
 
 File=(
 	"$Current/../../../Tauri/Dependency/Tauri/crates/tauri-cli/templates/plugin/__example-basic/vanilla/package.json"
