@@ -1,21 +1,29 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
-Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
+Current=$(cd -- "$(dirname -- "$0")" >/dev/null 2>&1 && pwd)
+
+_FN_DIR_="$Current/../Fn"
+export _FN_DIR_
 
 # shellcheck disable=SC1091
-\source "$Current"/../Fn/Argument.sh
+. "$Current/../Fn/Argument.sh"
 
 Fn "$@"
 
-for Organization in "${Organization[@]}"; do
-	for SubDependency in "${SubDependency[@]}"; do
+while IFS= read -r Organization; do
+	while IFS= read -r SubDependency; do
 		# shellcheck disable=SC2154
-		\cd "$Folder"/"${SubDependency/"${Organization}/"/}" || \exit
+		SubName=$(echo "$SubDependency" | sed "s|${Organization}/||")
+		cd "$Folder/$SubName" || exit
 
-		\git fetch Parent --no-tags
+		git fetch Parent --no-tags
 
-		\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o -iname src -type d -execdir bash -c "" \;
+		find . -type d \( -iname node_modules -o -iname .git \) -prune -false -o -iname src -type d -execdir sh -c "" \;
 
-		\cd - || \exit
-	done
-done
+		cd - || exit
+	done <<-EOF
+		$SubDependency
+	EOF
+done <<-EOF
+	$Organization
+EOF

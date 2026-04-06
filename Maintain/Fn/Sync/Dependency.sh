@@ -1,6 +1,6 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
-\pwd
+pwd
 
-\git pull --no-edit --allow-unrelated-histories --no-progress -q -X theirs
-\git push --no-progress -q
+git pull --no-edit --allow-unrelated-histories --no-progress -q -X theirs
+git push --no-progress -q

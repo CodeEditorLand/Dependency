@@ -1,142 +1,35 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
-Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
+Current=$(cd -- "$(dirname -- "$0")" >/dev/null 2>&1 && pwd)
+
+_FN_DIR_="$Current/../Fn"
+export _FN_DIR_
 
 # shellcheck disable=SC1091
-\source "$Current"/../Fn/Argument.sh
+. "$Current/../Fn/Argument.sh"
 
 Fn "$@"
 
-for Organization in "${Organization[@]}"; do
+while IFS= read -r Organization; do
 	(
-		for SubDependency in "${SubDependency[@]}"; do
+		while IFS= read -r SubDependency; do
 			(
 				# shellcheck disable=SC2154
-				\cd "$Folder"/"${SubDependency/"${Organization}/"/}" || \exit
+				SubName=$(echo "$SubDependency" | sed "s|${Organization}/||")
+				cd "$Folder/$SubName" || exit
 
-				\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o \
-					\( \
-					-iname .prettierrc \
-					-o -iname .azure-pipelines \
-					-o -iname .changes \
-					-o -iname .changeset \
-					-o -iname .clang-format \
-					-o -iname .configurations \
-					-o -iname .csharpierrc \
-					-o -iname .devcontainer \
-					-o -iname .editorconfig \
-					-o -iname .eslint-ignore \
-					-o -iname .eslint-plugin-local \
-					-o -iname .eslintignore \
-					-o -iname .eslintplugin \
-					-o -iname .eslintrc \
-					-o -iname .eslintrc.base.json \
-					-o -iname .eslintrc.browser.json \
-					-o -iname .eslintrc.cjs \
-					-o -iname .eslintrc.js \
-					-o -iname .eslintrc.json \
-					-o -iname .eslintrc.node.json \
-					-o -iname .eslintrc.webviews.json \
-					-o -iname .eslintrc.yaml \
-					-o -iname .eslintrc.yml \
-					-o -iname .github \
-					-o -iname .husky \
-					-o -iname .mailmap \
-					-o -iname .mention-bot \
-					-o -iname .node-version \
-					-o -iname .nvmrc \
-					-o -iname .pnpm-store \
-					-o -iname .prettierignore \
-					-o -iname .prettierrc.cjs \
-					-o -iname .prettierrc.js \
-					-o -iname .prettierrc.json \
-					-o -iname .prettierrc.yaml \
-					-o -iname .rustfmt.toml \
-					-o -iname .stylua.toml \
-					-o -iname .vscode \
-					-o -iname .vscode-test.js \
-					-o -iname .yarnrc \
-					-o -iname ARCHITECTURE -type f \
-					-o -iname ARCHITECTURE.md \
-					-o -iname ARCHITECTURE.txt \
-					-o -iname biome.json \
-					-o -iname Cargo.lock \
-					-o -iname CHANGELOG -type f \
-					-o -iname CHANGELOG.md \
-					-o -iname CHANGELOG.txt \
-					-o -iname CODE_OF_CONDUCT -type f \
-					-o -iname CODE_OF_CONDUCT.md \
-					-o -iname CODE_OF_CONDUCT.txt \
-					-o -iname CONTRIBUTING -type f \
-					-o -iname CONTRIBUTING.md \
-					-o -iname CONTRIBUTING.txt \
-					-o -iname eslint.config.js \
-					-o -iname eslint.js \
-					-o -iname ISSUE_TEMPLATE \
-					-o -iname jsconfig.json \
-					-o -iname MAINTENANCE -type f \
-					-o -iname MAINTENANCE.md \
-					-o -iname MAINTENANCE.txt \
-					-o -iname package-lock.json \
-					-o -iname pnpm-global \
-					-o -iname pnpm-lock.yaml \
-					-o -iname prettier.config.cjs \
-					-o -iname prettier.config.js \
-					-o -iname prettier.config.mjs \
-					-o -iname README.md \
-					-o -iname renovate.json \
-					-o -iname rome.json \
-					-o -iname rust-toolchain -type f \
-					-o -iname rust-toolchain.toml \
-					-o -iname rustfmt.toml \
-					-o -iname SECURITY -type f \
-					-o -iname SECURITY.md \
-					-o -iname SECURITY.txt \
-					-o -iname SUPPORT -type f \
-					-o -iname SUPPORT.md \
-					-o -iname SUPPORT.txt \
-					-o -iname tsfmt.json \
-					-o -iname webpack.config.js \
-					-o -iname yarn.lock \
-					\) -exec rm -rf {} \;
+				find . -type d \( -iname node_modules -o -iname .git \) -prune -false -o -iname package.json -type f -execdir sh -c "$Current/../Fn/Clean/package.json.sh" \;
 
-				\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o \
-					\( \
-					-name test \
-					-o -name '__snapshot__' \
-					-o -name '__snapshots__' \
-					-o -name '__test__' \
-					-o -name '__tests__' \
-					-o -name 'fixtures' \
-					-o -name 'tests' \
-					\) -type d -exec rm -rf {} \;
-
-				\find . -type d \( -iname node_modules -o -iname \.git \) -prune -false -o \
-					\( \
-					-iname '*.unit.test.ts' \
-					-o -iname '*.js.snap' \
-					-o -iname '*.jsx.snap' \
-					-o -iname '*.spec.*.map' \
-					-o -iname '*.spec.*.snap' \
-					-o -iname '*.spec.js' \
-					-o -iname '*.spec.ts' \
-					-o -iname '*.spec.tsx' \
-					-o -iname '*.test.*.map' \
-					-o -iname '*.test.data.*' \
-					-o -iname '*.test.js' \
-					-o -iname '*.test.json' \
-					-o -iname '*.test.ts' \
-					-o -iname '*.ts.snap' \
-					-o -iname '*.tsx.snap' \
-					-o -iname '*.unit.test.js' \
-					\) -exec rm -rf {} \;
-
-				\cd - || \exit
+				cd - || exit
 			) &
-		done
+		done <<-EOF
+			$SubDependency
+		EOF
 
-		\wait
+		wait
 	) &
-done
+done <<-EOF
+	$Organization
+EOF
 
-\wait
+wait

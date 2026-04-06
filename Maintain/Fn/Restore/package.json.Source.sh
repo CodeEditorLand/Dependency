@@ -1,5 +1,5 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
-\pwd
+pwd
 
-\git restore --source Source/Current package.json
+git restore --source Source/Current package.json

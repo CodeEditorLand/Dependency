@@ -1,9 +1,9 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 # git ecommit is an alias for:
-# commit -a --allow-empty-message -m \"\"
+# commit -a --allow-empty-message -m ""
 
-\pwd
+pwd
 
-\git add . --no-verbose
-\git ecommit -q --no-status --short --no-edit --no-verify
+git add . --no-verbose
+git ecommit -q --no-status --short --no-edit --no-verify

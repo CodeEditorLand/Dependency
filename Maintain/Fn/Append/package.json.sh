@@ -1,20 +1,20 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
-\pwd
+pwd
 
-Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
+Current=$(cd -- "$(dirname -- "$0")" >/dev/null 2>&1 && pwd)
 
 # shellcheck disable=SC1091
-\source "$Current"/../Cache.sh
+. "$Current/../Cache.sh"
 
 Fn
 
-Package="$Current"/../../../../package.json
+Package="$Current/../../../../package.json"
 
 # shellcheck disable=SC2154
 Slug="$Owner/$Name"
 
-\jq -S --tab ".keywords += [ \"codeeditorland\", \"land\", \"playform\"] | . * {
+jq -S --tab ".keywords += [ \"codeeditorland\", \"land\", \"playform\"] | . * {
 	\"homepage\": \"https://GitHub.Com/$Slug#readme\",
 	\"bugs\": {
 		\"url\": \"https://GitHub.Com/$Slug/issues\"
@@ -31,7 +31,7 @@ Slug="$Owner/$Name"
 		\"access\": \"public\"
 	},
 	\"author\": {
-		\"name\": \"Source 🖋️ Open 👐🏻\",
+		\"name\": \"Source 🖋️ Open 👐🏻\",
 		\"email\": \"Source/Open@Editor.Land\",
 		\"url\": \"https://Editor.Land\"
 	},
@@ -39,10 +39,10 @@ Slug="$Owner/$Name"
 		\"prepublishOnly\": \"Build 'Source/**/*.ts'\"
 	},
 	\"devDependencies\": {
-		\"@playform/build\": \"$(\jq -r '.devDependencies["@playform/build"]' "$Package")\"
+		\"@playform/build\": \"$(jq -r '.devDependencies["@playform/build"]' "$Package")\"
 	}
 }" package.json >| package.json.tmp
 
-\mv package.json.tmp package.json
+mv package.json.tmp package.json
 
 # sort-package-json

@@ -1,6 +1,6 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
-\pwd
+pwd
 
-\git fetch --no-tags Source
-\git fetch --no-tags Parent
+git fetch --no-tags Source
+git fetch --no-tags Parent

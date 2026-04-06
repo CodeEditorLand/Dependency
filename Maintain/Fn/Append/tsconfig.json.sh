@@ -1,8 +1,8 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
-\pwd
+pwd
 
-\jq -S --tab ".include += [\"src\"] | . * {
+jq -S --tab ".include += [\"src\"] | . * {
 	\"compilerOptions\": {
 		\"baseUrl\": \"./\",
 		\"outDir\": \"Target\",
@@ -12,4 +12,4 @@
 }
 " tsconfig.json >| tsconfig.json.tmp
 
-\mv tsconfig.json.tmp tsconfig.json
+mv tsconfig.json.tmp tsconfig.json

@@ -1,20 +1,27 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
-Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
+Current=$(cd -- "$(dirname -- "$0")" >/dev/null 2>&1 && pwd)
+
+_FN_DIR_="$Current/../Fn"
+export _FN_DIR_
 
 # shellcheck disable=SC1091
-\source "$Current"/../Fn/Argument.sh
+. "$Current/../Fn/Argument.sh"
 
 Fn "$@"
 
-for Organization in "${Organization[@]}"; do
+while IFS= read -r Organization; do
 	(
-		for SubDependency in "${SubDependency[@]}"; do
-			("$Current"/../Fn/Setting/Dependency.sh "$SubDependency") &
-		done
+		while IFS= read -r SubDependency; do
+			("$Current/../Fn/Setting/Dependency.sh" "$SubDependency") &
+		done <<-EOF
+			$SubDependency
+		EOF
 
-		\wait
+		wait
 	) &
-done
+done <<-EOF
+	$Organization
+EOF
 
-\wait
+wait

@@ -1,31 +1,31 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
-\pwd
+pwd
 
 if [ $# -gt 0 ]; then
 	if [ -n "$1" ]; then
 		Dependency=$1
 	else
-		\echo "Cannot Dependency."
-		\exit 1
+		echo "Cannot Dependency."
+		exit 1
 	fi
 fi
 
-\gh api \
+gh api \
 	--method DELETE \
 	-H "Accept: application/vnd.github+json" \
 	-H "X-GitHub-Api-Version: 2022-11-28" \
 	repos/"${Dependency}"/branches/Current/protection \
 	--silent
 
-\gh api \
+gh api \
 	--method DELETE \
 	-H "Accept: application/vnd.github+json" \
 	-H "X-GitHub-Api-Version: 2022-11-28" \
 	repos/"${Dependency}"/branches/Previous/protection \
 	--silent
 
-\gh api \
+gh api \
 	--method PUT \
 	-H "Accept: application/vnd.github+json" \
 	-H "X-GitHub-Api-Version: 2022-11-28" \
@@ -33,14 +33,14 @@ fi
 	-f access_level='organization' \
 	--silent
 
-\gh api \
+gh api \
 	--method PUT \
 	-H "Accept: application/vnd.github+json" \
 	-H "X-GitHub-Api-Version: 2022-11-28" \
 	user/starred/"${Dependency}" \
 	--silent
 
-\gh api \
+gh api \
 	--method PUT \
 	-H "Accept: application/vnd.github+json" \
 	-H "X-GitHub-Api-Version: 2022-11-28" \
@@ -49,7 +49,7 @@ fi
 	-F can_approve_pull_request_reviews=true \
 	--silent
 
-\gh api \
+gh api \
 	--method PUT \
 	-H "Accept: application/vnd.github+json" \
 	-H "X-GitHub-Api-Version: 2022-11-28" \
@@ -58,21 +58,21 @@ fi
 	-f allowed_actions='all' \
 	--silent
 
-\gh api \
+gh api \
 	--method PUT \
 	-H "Accept: application/vnd.github+json" \
 	-H "X-GitHub-Api-Version: 2022-11-28" \
 	repos/"${Dependency}"/vulnerability-alerts \
 	--silent
 
-\gh api \
+gh api \
 	--method PUT \
 	-H "Accept: application/vnd.github+json" \
 	-H "X-GitHub-Api-Version: 2022-11-28" \
 	repos/"${Dependency}"/automated-security-fixes \
 	--silent
 
-\gh api \
+gh api \
 	--method PATCH \
 	-H "Accept: application/vnd.github+json" \
 	-H "X-GitHub-Api-Version: 2022-11-28" \
@@ -90,7 +90,7 @@ fi
 	-F web_commit_signoff_required=true \
 	--silent
 
-\gh repo edit "$Dependency" \
+gh repo edit "$Dependency" \
 	--allow-update-branch \
 	--delete-branch-on-merge \
 	--enable-auto-merge \

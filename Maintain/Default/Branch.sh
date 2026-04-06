@@ -1,9 +1,12 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
-Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
+Current=$(cd -- "$(dirname -- "$0")" >/dev/null 2>&1 && pwd)
+
+_FN_DIR_="$Current/../Fn"
+export _FN_DIR_
 
 # shellcheck disable=SC1091
-\source "$Current"/../Fn/Argument.sh
+. "$Current/../Fn/Argument.sh"
 
 Fn "$@"
 
@@ -11,26 +14,31 @@ if [ $# -gt 0 ]; then
 	if [ -n "$4" ]; then
 		Branch=$4
 	else
-		\echo "Cannot Branch."
-		\exit 1
+		echo "Cannot Branch."
+		exit 1
 	fi
 fi
 
-for Organization in "${Organization[@]}"; do
+while IFS= read -r Organization; do
 	(
-		for SubDependency in "${SubDependency[@]}"; do
+		while IFS= read -r SubDependency; do
 			(
 				# shellcheck disable=SC2154
-				\cd "$Folder"/"${SubDependency/"${Organization}/"/}" || \exit
+				SubName=$(echo "$SubDependency" | sed "s|${Organization}/||")
+				cd "$Folder/$SubName" || exit
 
-				\gh repo edit --default-branch "$Branch"
+				gh repo edit --default-branch "$Branch"
 
-				\cd - || \exit
+				cd - || exit
 			) &
-		done
+		done <<-EOF
+			$SubDependency
+		EOF
 
-		\wait
+		wait
 	) &
-done
+done <<-EOF
+	$Organization
+EOF
 
-\wait
+wait

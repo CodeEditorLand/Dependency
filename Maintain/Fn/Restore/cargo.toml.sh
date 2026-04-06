@@ -1,13 +1,13 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
-\pwd
+pwd
 
-Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
+Current=$(cd -- "$(dirname -- "$0")" >/dev/null 2>&1 && pwd)
 
 # shellcheck disable=SC1091
-\source "$Current"/../Cache.sh
+. "$Current/../Cache.sh"
 
 Fn
 
 # shellcheck disable=SC2154
-\git restore --source Parent/"$BranchParent" Cargo.toml
+git restore --source Parent/"$BranchParent" Cargo.toml

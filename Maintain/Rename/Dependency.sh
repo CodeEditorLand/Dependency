@@ -1,54 +1,46 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
-Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
+Current=$(cd -- "$(dirname -- "$0")" >/dev/null 2>&1 && pwd)
+
+_FN_DIR_="$Current/../Fn"
+export _FN_DIR_
 
 # shellcheck disable=SC1091
-\source "$Current"/../Fn/Argument.sh
+. "$Current/../Fn/Argument.sh"
 
 Fn "$@"
 
-for Organization in "${Organization[@]}"; do
+while IFS= read -r Organization; do
 	(
-		for SubDependency in "${SubDependency[@]}"; do
+		while IFS= read -r SubDependency; do
 			(
-				Name="${SubDependency/"${Organization}/"/}"
+				# shellcheck disable=SC2154
+				Name=$(echo "$SubDependency" | sed "s|${Organization}/||")
 
-				Rename=""
+				# Convert kebab-case to PascalCase
+				Rename=$(echo "$Name" | awk -F'-' '{
+					result = ""
+					for (i = 1; i <= NF; i++) {
+						word = $i
+						if (length(word) > 0) {
+							result = result toupper(substr(word, 1, 1)) substr(word, 2)
+						}
+					}
+					print result
+				}')
 
-				Rename=$(\tr '[:lower:]' '[:upper:]' <<< "${Name:0:1}")
+				Rename=$(echo "$Rename" | sed -E "s/vscode/Land/gI")
 
-				for ((i = 1; i < ${#Name}; i++)); do
-					if [ "${Name:i:1}" = "-" ]; then
-						Next="${Name:i+1:1}"
-
-						if [[ "$Next" =~ [a-z] ]]; then
-
-							Upper=$(\tr '[:lower:]' '[:upper:]' <<< "$Next")
-
-							Rename="${Rename}${Upper}"
-
-							((i++))
-
-						else
-
-							Rename="${Rename}-"
-
-						fi
-					else
-
-						Rename="${Rename}${Name:i:1}"
-
-					fi
-				done
-
-				Rename=$(\echo "$Rename" | \sed -E "s/vscode/Land/gI")
-
-				\gh repo rename --repo "$SubDependency" "$Rename" --yes
+				gh repo rename --repo "$SubDependency" "$Rename" --yes
 			) &
-		done
+		done <<-EOF
+			$SubDependency
+		EOF
 
-		\wait
+		wait
 	) &
-done
+done <<-EOF
+	$Organization
+EOF
 
-\wait
+wait
