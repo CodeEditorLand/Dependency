@@ -2,7 +2,7 @@
 
 pwd
 
-Current=$(cd -- "$(dirname -- "$0")" >/dev/null 2>&1 && pwd)
+Current=$(cd -- "$(dirname -- "$0")" > /dev/null 2>&1 && pwd)
 
 # shellcheck disable=SC1091
 . "$Current/../Cache.sh"
@@ -10,7 +10,7 @@ Current=$(cd -- "$(dirname -- "$0")" >/dev/null 2>&1 && pwd)
 Fn
 
 Remote() {
-	git remote get-url "$1" 2>/dev/null || git remote get-url origin
+	git remote get-url "$1" 2> /dev/null || git remote get-url origin
 }
 
 Source=$(Remote Source | sed 's/git@github.com:/ssh:\/\/git@github.com\//')

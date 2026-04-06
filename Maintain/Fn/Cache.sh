@@ -70,7 +70,7 @@ Fn() {
 			if [ -n "$OwnerParent" ] && [ "$OwnerParent" != "null" ] \
 				&& [ -n "$NameParent" ] && [ "$NameParent" != "null" ]; then
 				echo "Attempting to fetch default branch for parent $OwnerParent/$NameParent..."
-				BranchParentFetched=$(gh repo view "$OwnerParent/$NameParent" --json defaultBranchRef | jq -r '.defaultBranchRef.name' 2>/dev/null)
+				BranchParentFetched=$(gh repo view "$OwnerParent/$NameParent" --json defaultBranchRef | jq -r '.defaultBranchRef.name' 2> /dev/null)
 
 				if [ -n "$BranchParentFetched" ] && [ "$BranchParentFetched" != "null" ]; then
 					BranchParent="$BranchParentFetched"

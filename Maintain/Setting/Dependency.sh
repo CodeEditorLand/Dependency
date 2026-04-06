@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-Current=$(cd -- "$(dirname -- "$0")" >/dev/null 2>&1 && pwd)
+Current=$(cd -- "$(dirname -- "$0")" > /dev/null 2>&1 && pwd)
 
 _FN_DIR_="$Current/../Fn"
 export _FN_DIR_
@@ -14,13 +14,13 @@ while IFS= read -r Organization; do
 	(
 		while IFS= read -r SubDependency; do
 			("$Current/../Fn/Setting/Dependency.sh" "$SubDependency") &
-		done <<-EOF
+		done <<- EOF
 			$SubDependency
 		EOF
 
 		wait
 	) &
-done <<-EOF
+done <<- EOF
 	$Organization
 EOF
 

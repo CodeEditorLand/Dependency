@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-Current=$(cd -- "$(dirname -- "$0")" >/dev/null 2>&1 && pwd)
+Current=$(cd -- "$(dirname -- "$0")" > /dev/null 2>&1 && pwd)
 
 _FN_DIR_="$Current/../Fn"
 export _FN_DIR_
@@ -23,9 +23,9 @@ while IFS= read -r Organization; do
 		find . -type d \( -iname node_modules -o -iname .git \) -prune -false -o -iname tsconfig.json -type f -execdir sh -c "$Current/../Fn/Restore/tsconfig.json.sh" \;
 
 		cd - || exit
-	done <<-EOF
+	done <<- EOF
 		$SubDependency
 	EOF
-done <<-EOF
+done <<- EOF
 	$Organization
 EOF
