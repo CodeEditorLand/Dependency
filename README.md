@@ -516,24 +516,9 @@ This project is funded through
 
 ## Building Land
 
-> [!IMPORTANT]
->
-> The build is a two-step linear flow. Do NOT pull submodules recursively -- each
-> submodule is managed independently on its own branch.
->
-> **Step 1: Compile VS Code Source**
->
-> ```sh
-> cd Dependency/Microsoft/Dependency/Editor
-> nvm use 22 ; git fetch --all ; git reset --hard Parent/main ; git clean -dfx ; dum install ; dum compile ; dum compile-extensions-build
-> ```
->
-> **Step 2: Build Land Application**
->
-> ```sh
-> cd Land  # back to repository root
-> export Trace=all Record=1 Disable=false ; ./Maintain/Debug/Build.sh --profile debug-electron-bundled
-> ```
+For complete build instructions, see [`Documentation/GitHub/Building.md`](). The
+`Dependency` element contains the third-party dependencies (including VS Code
+source) required by the build.
 
 ### Dependency Submodule Role
 
