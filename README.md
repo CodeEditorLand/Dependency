@@ -508,6 +508,38 @@ This project is funded through
 [Next Generation Internet](https://ngi.eu) program. Learn more at the
 [NLnet project page](https://NLnet.NL/project/Land).
 
-| Land                                                                                                                                                  | PlayForm                                                                                                                                                   | NLnet                                                                                        | NGI0 Commons Fund                                                                                                                                   |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Land | PlayForm | NLnet | NGI0 Commons Fund |
+| :--- | :------- | :---- | :---------------- |
 | [<img src="https://raw.githubusercontent.com/CodeEditorLand/Asset/refs/heads/Current/Logo/Land.svg" height="80px" alt="Land" />](https://Editor.Land) | [<img src="https://raw.githubusercontent.com/PlayForm/Asset/refs/heads/Current/Logo/PlayForm.svg" height="80px" alt="PlayForm" />](https://PlayForm.Cloud) | [<img width="240px" src="https://NLnet.NL/logo/banner.svg" alt="NLnet" />](https://NLnet.NL) | [<img width="240px" src="https://NLnet.NL/image/logos/NGI0CommonsFund_tag_black_mono.svg" alt="NGI0 Commons Fund" />](https://NLnet.NL/commonsfund) |
+
+---
+
+## Building Land
+
+> [!IMPORTANT]
+>
+> The build is a two-step linear flow. Do NOT pull submodules recursively -- each
+> submodule is managed independently on its own branch.
+>
+> **Step 1: Compile VS Code Source**
+>
+> ```sh
+> cd Dependency/Microsoft/Dependency/Editor
+> nvm use 22 ; git fetch --all ; git reset --hard Parent/main ; git clean -dfx ; dum install ; dum compile ; dum compile-extensions-build
+> ```
+>
+> **Step 2: Build Land Application**
+>
+> ```sh
+> cd Land  # back to repository root
+> export Trace=all Record=1 Disable=false ; ./Maintain/Debug/Build.sh --profile debug-electron-bundled
+> ```
+
+### Dependency Submodule Role
+
+This `Dependency` submodule contains third-party dependencies used by Land,
+including the VS Code source (`Microsoft/Dependency/Editor`). Step 1 above must
+be run from the `Dependency/Microsoft/Dependency/Editor` directory to compile
+the VS Code source before building Land. Do NOT use
+`git clone --recurse-submodules` -- each dependency is managed independently on
+its own branch.
