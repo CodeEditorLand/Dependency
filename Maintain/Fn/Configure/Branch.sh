@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-pwd
+\pwd
 
 git switch -c Previous
 git switch Previous

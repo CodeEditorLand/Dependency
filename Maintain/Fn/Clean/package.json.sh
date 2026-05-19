@@ -4,7 +4,7 @@
 
 JSON=$(< package.json)
 
-JSON=$(echo "$JSON" | \jq -S --tab "del(\
+JSON=$(\echo "$JSON" | \jq -S --tab "del(\
 	try .author catch null,\
 	try .bugs catch null,\
 	try .categories catch null,\
@@ -79,7 +79,7 @@ JSON=$(echo "$JSON" | \jq -S --tab "del(\
 	try .version catch null\
 )")
 
-echo "$JSON" >| package.json
+\echo "$JSON" >| package.json
 
 Exclude=(
 	"@antfu/eslint-config"
@@ -751,9 +751,9 @@ Key() {
 
 		JQ+=")"
 
-		JSON=$(echo "$JSON" | \jq -S --tab "$JQ")
+		JSON=$(\echo "$JSON" | \jq -S --tab "$JQ")
 
-		echo "$JSON" >| package.json
+		\echo "$JSON" >| package.json
 	done
 }
 

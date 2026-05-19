@@ -1,13 +1,13 @@
 #!/usr/bin/env sh
 
-pwd
+\pwd
 
 if [ $# -gt 0 ]; then
 	if [ -n "$1" ]; then
 		Dependency=$1
 	else
-		echo "Cannot Dependency."
-		exit 1
+		\echo "Cannot Dependency."
+		\exit 1
 	fi
 fi
 

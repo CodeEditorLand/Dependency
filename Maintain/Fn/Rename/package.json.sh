@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 Error() {
-	echo "Error: $1" >&2
-	exit 1
+	\echo "Error: $1" >&2
+	\exit 1
 }
 
 Read() {
@@ -60,24 +60,24 @@ RenamePrefixOrganizational=(
 
 PatternRenameOrganizational=$(
 	IFS="|"
-	echo "(${RenameOrganizational[*]})"
+	\echo "(${RenameOrganizational[*]})"
 )
 
 PatternRenamePrefix=$(
 	IFS="|"
-	echo "(${RenamePrefix[*]})"
+	\echo "(${RenamePrefix[*]})"
 )
 
 _PatternRenamePrefix=$(
 	IFS="|"
-	echo "(${RenamePrefixOrganizational[*]})"
+	\echo "(${RenamePrefixOrganizational[*]})"
 )
 
 Process() {
 	local Temporary="$JSON"
 	local Processed
 
-	if ! Processed=$(echo "$Temporary" | jq -e -S --tab '
+	if ! Processed=$(\echo "$Temporary" | jq -e -S --tab '
         try (
             .name |= if test("^'"$PatternRenameOrganizational"'") then
                 sub("^'"$PatternRenameOrganizational"'"; "@codeeditorland")
@@ -89,12 +89,12 @@ Process() {
             end
         ) catch . ' 2> /dev/null); then
 
-		Error "Cannot name"
+		\Error "Cannot name"
 	fi
 
 	Temporary="$Processed"
 
-	if ! Processed=$(echo "$Temporary" | jq -e -S --tab '
+	if ! Processed=$(\echo "$Temporary" | jq -e -S --tab '
         try (
             .dependencies |= if . == null then
                 {}
@@ -110,12 +110,12 @@ Process() {
             end
         ) catch . ' 2> /dev/null); then
 
-		Error "Cannot dependencies"
+		\Error "Cannot dependencies"
 	fi
 
 	Temporary="$Processed"
 
-	if ! Processed=$(echo "$Temporary" | jq -e -S --tab '
+	if ! Processed=$(\echo "$Temporary" | jq -e -S --tab '
         try (
             .devDependencies |= if . == null then
                 {}
@@ -131,10 +131,10 @@ Process() {
             end
         ) catch . ' 2> /dev/null); then
 
-		Error "Cannot devDependencies"
+		\Error "Cannot devDependencies"
 	fi
 
-	echo "$Processed" >| package.json || Error "Cannot package.json"
+	\echo "$Processed" >| package.json || \Error "Cannot package.json"
 }
 
 Fn() {

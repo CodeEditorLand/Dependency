@@ -1,28 +1,29 @@
 #!/usr/bin/env sh
 
-Current=$(cd -- "$(dirname -- "$0")" > /dev/null 2>&1 && pwd)
+Current=$(\cd -- "$(\dirname -- "$0")" > /dev/null 2>&1 && \pwd)
 
 _FN_DIR_="$Current/../Fn"
-export _FN_DIR_
+\export _FN_DIR_
 
 # shellcheck disable=SC1091
 . "$Current/../Fn/Argument.sh"
 
 Fn "$@"
 
-while IFS= read -r Organization; do
-	while IFS= read -r SubDependency; do
+while IFS= \read -r Organization; do
+	while IFS= \read -r SubDependency; do
 		# shellcheck disable=SC2154
-		SubName=$(echo "$SubDependency" | sed "s|${Organization}/||")
-		cd "$Folder/$SubName" || exit
+		SubName=$(\echo "$SubDependency" | \sed "s|${Organization}/||")
+		# shellcheck disable=SC2154
+		\cd "$Folder/$SubName" || \exit
 
 		"$Current/../Fn/Save/Dependency.sh"
 
 		git fetch Parent --no-tags
 
-		find . -type d \( -iname node_modules -o -iname .git \) -prune -false -o -iname .gitignore -type f -execdir sh -c "$Current/../Fn/Restore/.gitignore.sh" \;
+		\find . -type d \( -iname node_modules -o -iname .git \) -prune -false -o -iname .gitignore -type f -execdir sh -c "$Current/../Fn/Restore/.gitignore.sh" \;
 
-		cd - || exit
+		\cd - || \exit
 	done <<- EOF
 		$SubDependency
 	EOF

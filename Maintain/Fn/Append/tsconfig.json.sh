@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-pwd
+\pwd
 
 jq -S --tab ".include += [\"src\"] | . * {
 	\"compilerOptions\": {
@@ -12,4 +12,4 @@ jq -S --tab ".include += [\"src\"] | . * {
 }
 " tsconfig.json >| tsconfig.json.tmp
 
-mv tsconfig.json.tmp tsconfig.json
+\mv tsconfig.json.tmp tsconfig.json

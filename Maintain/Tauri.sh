@@ -53,42 +53,42 @@ Organization="$Cache/Organization/$Dependency.json"
 SubDependency="$Cache/Dependency/$Dependency.json"
 
 if [ ! -f "$SubDependency" ]; then
-	echo "FATAL: $SubDependency not found. Activate it via:"
-	echo "  cp $Cache/Dependency/Inactive/$Dependency.json $SubDependency"
-	exit 1
+	\echo "FATAL: $SubDependency not found. Activate it via:"
+	\echo "  cp $Cache/Dependency/Inactive/$Dependency.json $SubDependency"
+	\exit 1
 fi
 
 Count=$(\jq '. | length' "$SubDependency")
 
-echo "================================================================"
-echo "Tauri full reset"
-echo "================================================================"
-echo "Sub-dependencies: $Count"
-echo "Mode:             $([ "$DRY_RUN" = true ] && echo dry-run || echo execute)"
-echo "Organization:     $Organization"
-echo "Sub-dep list:     $SubDependency"
-echo "================================================================"
+\echo "================================================================"
+\echo "Tauri full reset"
+\echo "================================================================"
+\echo "Sub-dependencies: $Count"
+\echo "Mode:             $([ "$DRY_RUN" = true ] && \echo dry-run || \echo execute)"
+\echo "Organization:     $Organization"
+\echo "Sub-dep list:     $SubDependency"
+\echo "================================================================"
 
 if [ "$DRY_RUN" = true ]; then
-	echo ""
-	echo "Pipeline that would run for each sub-dep:"
-	echo "  1. Configure/Dependency.sh    -> Source + Parent remotes, Previous + Current branches"
-	echo "  2. Save/Dependency.sh         -> commit any WIP"
-	echo "  3. Switch/Branch.sh Previous  -> switch to Previous branch"
-	echo "  4. Reset/Dependency.sh Previous -> reset hard to Parent/<upstream>, force-push Source/Previous"
-	echo "  5. Switch/Branch.sh Current   -> switch to Current branch"
-	echo "  6. Reset/Dependency.sh Current  -> reset hard to Parent/<upstream>, force-push Source/Current"
-	echo "  7. Switch/Branch.sh Current   -> end on Current"
-	echo ""
-	echo "Sub-dependencies:"
+	\echo ""
+	\echo "Pipeline that would run for each sub-dep:"
+	\echo "  1. Configure/Dependency.sh    -> Source + Parent remotes, Previous + Current branches"
+	\echo "  2. Save/Dependency.sh         -> commit any WIP"
+	\echo "  3. Switch/Branch.sh Previous  -> switch to Previous branch"
+	\echo "  4. Reset/Dependency.sh Previous -> reset hard to Parent/<upstream>, force-push Source/Previous"
+	\echo "  5. Switch/Branch.sh Current   -> switch to Current branch"
+	\echo "  6. Reset/Dependency.sh Current  -> reset hard to Parent/<upstream>, force-push Source/Current"
+	\echo "  7. Switch/Branch.sh Current   -> end on Current"
+	\echo ""
+	\echo "Sub-dependencies:"
 	\jq -r '.[]' "$SubDependency" | \sed 's/^/  - /'
-	exit 0
+	\exit 0
 fi
 
-read -r -p "Force-push will overwrite Source/Previous and Source/Current on $Count GitHub forks. Continue? [yes/NO] " Confirm
+\read -r -p "Force-push will overwrite Source/Previous and Source/Current on $Count GitHub forks. Continue? [yes/NO] " Confirm
 if [ "$Confirm" != "yes" ]; then
-	echo "Aborted."
-	exit 1
+	\echo "Aborted."
+	\exit 1
 fi
 
 # 1. Configure remotes + branches (idempotent).
@@ -108,9 +108,9 @@ fi
 # 5. End on Current.
 "$Current/Switch/Branch.sh" "$Organization" "$SubDependency" "$Dependency" "Current"
 
-echo ""
-echo "================================================================"
-echo "Tauri full reset complete."
-echo "  Source/Previous = upstream snapshot"
-echo "  Source/Current  = upstream HEAD (working branch)"
-echo "================================================================"
+\echo ""
+\echo "================================================================"
+\echo "Tauri full reset complete."
+\echo "  Source/Previous = upstream snapshot"
+\echo "  Source/Current  = upstream HEAD (working branch)"
+\echo "================================================================"

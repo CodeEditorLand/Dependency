@@ -18,13 +18,7 @@ while IFS= \read -r Organization; do
 				SubName=$(\echo "$SubDependency" | \sed "s|${Organization}/||")
 				\cd "$Folder/$SubName" || \exit
 
-				if [ -d "Source" ]; then
-					\mkdir -p src
-					\cp -rf Source/* src/
-					\rm -rf Source/
-				fi
-
-				\find . -type d \( -iname node_modules -o -iname .git \) -prune -false -o -name Source -type d -execdir sh -c 'mkdir -p src ; cp -rf Source/* src/ ; rm -rf Source/' \;
+				"$Current/../Fn/Pull/Dependency.sh"
 
 				\cd - || \exit
 			) &

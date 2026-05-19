@@ -1,8 +1,8 @@
 #!/usr/bin/env sh
 
-pwd
+\pwd
 
-Current=$(cd -- "$(dirname -- "$0")" > /dev/null 2>&1 && pwd)
+Current=$(\cd -- "$(\dirname -- "$0")" > /dev/null 2>&1 && \pwd)
 
 # shellcheck disable=SC1091
 . "$Current/../Cache.sh"
@@ -43,6 +43,6 @@ jq -S --tab ".keywords += [ \"codeeditorland\", \"land\", \"playform\"] | . * {
 	}
 }" package.json >| package.json.tmp
 
-mv package.json.tmp package.json
+\mv package.json.tmp package.json
 
 # sort-package-json

@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
-File=$(find . -name "package.json" -exec grep -l '"tauri"' {} +)
+File=$(\find . -name "package.json" -exec \grep -l '"tauri"' {} +)
 
 for File in $File; do
-	echo "Running ncu on $File"
+	\echo "Running ncu on $File"
 
 	(
-		cd "$(dirname "$File")" || exit
+		\cd "$(\dirname "$File")" || \exit
 
 		ncu -u --dep "dev,optional,peer,prod,bundle" --color --concurrency 12 -f /.*tauri.*/ --target greatest
 	)

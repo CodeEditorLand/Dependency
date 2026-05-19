@@ -4,7 +4,7 @@
 
 Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && \pwd)
 
-cd "$Current"/../../../Biome/Dependency/BiomeIntelliJ || exit
+\cd "$Current"/../../../Biome/Dependency/BiomeIntelliJ || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -15,7 +15,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE-APACHE
 \git restore --source Parent/"$BranchParent" LICENSE-MIT
 
-cd "$Current"/../../../Biome/Dependency/BiomeLand || exit
+\cd "$Current"/../../../Biome/Dependency/BiomeLand || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -26,7 +26,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE-APACHE
 \git restore --source Parent/"$BranchParent" LICENSE-MIT
 
-cd "$Current"/../../../Biome/Dependency/SetupBiome || exit
+\cd "$Current"/../../../Biome/Dependency/SetupBiome || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -36,7 +36,7 @@ Fn
 # shellcheck disable=SC2154
 \git restore --source Parent/"$BranchParent" LICENSE.md
 
-cd "$Current"/../../../Biome/Dependency/Biome || exit
+\cd "$Current"/../../../Biome/Dependency/Biome || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -66,7 +66,7 @@ Fn
 \git restore --source Parent/"$BranchParent" packages/@biomejs/js-api/LICENSE-MIT
 \git restore --source Parent/"$BranchParent" packages/@biomejs/js-api/ROME-LICENSE-MIT
 
-cd "$Current"/../../../Microsoft/Cargo/Runtime || exit
+\cd "$Current"/../../../Microsoft/Cargo/Runtime || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -76,7 +76,7 @@ Fn
 # shellcheck disable=SC2154
 \git restore --source Parent/"$BranchParent" THIRD_PARTY_LICENSES
 
-cd "$Current"/../../../Microsoft/Dependency/AzureStreamAnalyticsInLand || exit
+\cd "$Current"/../../../Microsoft/Dependency/AzureStreamAnalyticsInLand || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -86,7 +86,7 @@ Fn
 # shellcheck disable=SC2154
 \git restore --source Parent/"$BranchParent" LICENSE-CODE
 
-cd "$Current"/../../../Microsoft/Dependency/DevSkim || exit
+\cd "$Current"/../../../Microsoft/Dependency/DevSkim || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -96,7 +96,7 @@ Fn
 # shellcheck disable=SC2154
 \git restore --source Parent/"$BranchParent" LICENSE.txt
 
-cd "$Current"/../../../Microsoft/Dependency/LandAsa || exit
+\cd "$Current"/../../../Microsoft/Dependency/LandAsa || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -106,7 +106,7 @@ Fn
 # shellcheck disable=SC2154
 \git restore --source Parent/"$BranchParent" LICENSE-CODE
 
-cd "$Current"/../../../Microsoft/Dependency/LandAzureAppService || exit
+\cd "$Current"/../../../Microsoft/Dependency/LandAzureAppService || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -116,7 +116,7 @@ Fn
 # shellcheck disable=SC2154
 \git restore --source Parent/"$BranchParent" LICENSE.md
 
-cd "$Current"/../../../Microsoft/Dependency/Editor || exit
+\cd "$Current"/../../../Microsoft/Dependency/Editor || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -127,7 +127,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE.txt
 \git restore --source Parent/"$BranchParent" extensions/latex/cpp-bailout-license.txt
 
-cd "$Current"/../../../Microsoft/Dependency/LandAzureContainerapps || exit
+\cd "$Current"/../../../Microsoft/Dependency/LandAzureContainerapps || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -137,7 +137,7 @@ Fn
 # shellcheck disable=SC2154
 \git restore --source Parent/"$BranchParent" LICENSE.md
 
-cd "$Current"/../../../Microsoft/Dependency/LandAzureStorage || exit
+\cd "$Current"/../../../Microsoft/Dependency/LandAzureStorage || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -147,7 +147,7 @@ Fn
 # shellcheck disable=SC2154
 \git restore --source Parent/"$BranchParent" LICENSE.md
 
-cd "$Current"/../../../Microsoft/Dependency/LandAzureStaticwebapps || exit
+\cd "$Current"/../../../Microsoft/Dependency/LandAzureStaticwebapps || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -157,7 +157,7 @@ Fn
 # shellcheck disable=SC2154
 \git restore --source Parent/"$BranchParent" LICENSE.md
 
-cd "$Current"/../../../Microsoft/Dependency/LandAzureVirtualMachines || exit
+\cd "$Current"/../../../Microsoft/Dependency/LandAzureVirtualMachines || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -167,7 +167,7 @@ Fn
 # shellcheck disable=SC2154
 \git restore --source Parent/"$BranchParent" LICENSE.md
 
-cd "$Current"/../../../Microsoft/Dependency/LandCopilotRelease || exit
+\cd "$Current"/../../../Microsoft/Dependency/LandCopilotRelease || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -177,7 +177,7 @@ Fn
 # shellcheck disable=SC2154
 \git restore --source Parent/"$BranchParent" LICENSE-CODE
 
-cd "$Current"/../../../Microsoft/Dependency/LandCPPTools || exit
+\cd "$Current"/../../../Microsoft/Dependency/LandCPPTools || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -192,7 +192,7 @@ Fn
 \git restore --source Parent/"$BranchParent" RuntimeLicenses/vsdbg-LICENSE.txt
 \git restore --source Parent/"$BranchParent" Themes/LICENSE.txt
 
-cd "$Current"/../../../Microsoft/Dependency/LandDocker || exit
+\cd "$Current"/../../../Microsoft/Dependency/LandDocker || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -202,7 +202,7 @@ Fn
 # shellcheck disable=SC2154
 \git restore --source Parent/"$BranchParent" LICENSE.md
 
-cd "$Current"/../../../Microsoft/Dependency/LandDocs || exit
+\cd "$Current"/../../../Microsoft/Dependency/LandDocs || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -212,7 +212,7 @@ Fn
 # shellcheck disable=SC2154
 \git restore --source Parent/"$BranchParent" LICENSE.md
 
-cd "$Current"/../../../Microsoft/Dependency/LandIcons || exit
+\cd "$Current"/../../../Microsoft/Dependency/LandIcons || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -222,7 +222,7 @@ Fn
 # shellcheck disable=SC2154
 \git restore --source Parent/"$BranchParent" LICENSE-CODE
 
-cd "$Current"/../../../Microsoft/Dependency/LandJupyter || exit
+\cd "$Current"/../../../Microsoft/Dependency/LandJupyter || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -232,7 +232,7 @@ Fn
 # shellcheck disable=SC2154
 \git restore --source Parent/"$BranchParent" api/LICENSE.md
 
-cd "$Current"/../../../Microsoft/Dependency/LandLanguageServerNode || exit
+\cd "$Current"/../../../Microsoft/Dependency/LandLanguageServerNode || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -249,7 +249,7 @@ Fn
 \git restore --source Parent/"$BranchParent" tsconfig-gen/LICENSE.md
 \git restore --source Parent/"$BranchParent" types/License.txt
 
-cd "$Current"/../../../Microsoft/Dependency/LandMssql || exit
+\cd "$Current"/../../../Microsoft/Dependency/LandMssql || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -259,7 +259,7 @@ Fn
 # shellcheck disable=SC2154
 \git restore --source Parent/"$BranchParent" LICENSE.txt
 
-cd "$Current"/../../../Microsoft/Dependency/LandPython || exit
+\cd "$Current"/../../../Microsoft/Dependency/LandPython || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -269,7 +269,7 @@ Fn
 # shellcheck disable=SC2154
 \git restore --source Parent/"$BranchParent" pythonExtensionApi/LICENSE.md
 
-cd "$Current"/../../../Microsoft/Dependency/LandRemoteRepositoriesGitHub || exit
+\cd "$Current"/../../../Microsoft/Dependency/LandRemoteRepositoriesGitHub || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -279,7 +279,7 @@ Fn
 # shellcheck disable=SC2154
 \git restore --source Parent/"$BranchParent" LICENSE-CODE
 
-cd "$Current"/../../../Microsoft/Dependency/LandRemoteRelease || exit
+\cd "$Current"/../../../Microsoft/Dependency/LandRemoteRelease || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -290,7 +290,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE-extensions
 \git restore --source Parent/"$BranchParent" LICENSE-repository
 
-cd "$Current"/../../../Microsoft/Dependency/LandRussh || exit
+\cd "$Current"/../../../Microsoft/Dependency/LandRussh || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -300,7 +300,7 @@ Fn
 # shellcheck disable=SC2154
 \git restore --source Parent/"$BranchParent" LICENSE-2.0.txt
 
-cd "$Current"/../../../Microsoft/Dependency/LandToolsForAI || exit
+\cd "$Current"/../../../Microsoft/Dependency/LandToolsForAI || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -311,7 +311,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE-CODE
 \git restore --source Parent/"$BranchParent" archive/LICENSE-CODE
 
-cd "$Current"/../../../Microsoft/Dependency/LandWiki || exit
+\cd "$Current"/../../../Microsoft/Dependency/LandWiki || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -321,7 +321,7 @@ Fn
 # shellcheck disable=SC2154
 \git restore --source Parent/"$BranchParent" Contributor-License-Agreement.md
 
-cd "$Current"/../../../OXC/Dependency/OXC || exit
+\cd "$Current"/../../../OXC/Dependency/OXC || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -331,7 +331,7 @@ Fn
 # shellcheck disable=SC2154
 \git restore --source Parent/"$BranchParent" THIRD-PARTY-LICENSE
 
-cd "$Current"/../../../OXC/Dependency/UniCodeIDStart || exit
+\cd "$Current"/../../../OXC/Dependency/UniCodeIDStart || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -341,7 +341,7 @@ Fn
 # shellcheck disable=SC2154
 \git restore --source Parent/"$BranchParent" LICENSE-UNICODE
 
-cd "$Current"/../../../Rolldown/Dependency/Rolldown || exit
+\cd "$Current"/../../../Rolldown/Dependency/Rolldown || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -351,7 +351,7 @@ Fn
 # shellcheck disable=SC2154
 \git restore --source Parent/"$BranchParent" THIRD-PARTY-LICENSE
 
-cd "$Current"/../../../Rolldown/Dependency/RolldownPluginNodePolyfills || exit
+\cd "$Current"/../../../Rolldown/Dependency/RolldownPluginNodePolyfills || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -364,7 +364,7 @@ Fn
 \git restore --source Parent/"$BranchParent" polyfills/LICENSE-crypto-browserify.txt
 \git restore --source Parent/"$BranchParent" polyfills/LICENSE-process-es6.txt
 
-cd "$Current"/../../../SWC/Dependency/SWCProject.github.io || exit
+\cd "$Current"/../../../SWC/Dependency/SWCProject.github.io || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -377,7 +377,7 @@ Fn
 \git restore --source Parent/"$BranchParent" assets/js/5486.22089da0.js.LICENSE.txt
 \git restore --source Parent/"$BranchParent" assets/js/be0067a2.2e0f395f.js.LICENSE.txt
 
-cd "$Current"/../../../Tauri/Dependency/CreateTauriApp || exit
+\cd "$Current"/../../../Tauri/Dependency/CreateTauriApp || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -389,7 +389,7 @@ Fn
 \git restore --source Parent/"$BranchParent" node/LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" node/LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/DNSAutomation || exit
+\cd "$Current"/../../../Tauri/Dependency/DNSAutomation || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -400,7 +400,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/FixPathENVRS || exit
+\cd "$Current"/../../../Tauri/Dependency/FixPathENVRS || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -411,7 +411,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/MeiliSearchDocsearch || exit
+\cd "$Current"/../../../Tauri/Dependency/MeiliSearchDocsearch || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -422,7 +422,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/MSEdgeDriverManifestCache || exit
+\cd "$Current"/../../../Tauri/Dependency/MSEdgeDriverManifestCache || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -433,7 +433,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/NSISTauriUtils || exit
+\cd "$Current"/../../../Tauri/Dependency/NSISTauriUtils || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -444,7 +444,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/PluginsWorkspace || exit
+\cd "$Current"/../../../Tauri/Dependency/PluginsWorkspace || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -515,7 +515,7 @@ Fn
 \git restore --source Parent/"$BranchParent" shared/template/LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" shared/template/LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/TauriBindgen || exit
+\cd "$Current"/../../../Tauri/Dependency/TauriBindgen || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -526,7 +526,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/TauriCon || exit
+\cd "$Current"/../../../Tauri/Dependency/TauriCon || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -537,7 +537,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/Tauri || exit
+\cd "$Current"/../../../Tauri/Dependency/Tauri || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -569,7 +569,7 @@ Fn
 \git restore --source Parent/"$BranchParent" packages/cli/LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" packages/cli/LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/TauriDiscordBot || exit
+\cd "$Current"/../../../Tauri/Dependency/TauriDiscordBot || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -579,18 +579,7 @@ Fn
 # shellcheck disable=SC2154
 \git restore --source Parent/"$BranchParent" LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/TauriEGUI || exit
-
-# shellcheck disable=SC1091
-\source "$Current"/../../Fn/Cache.sh
-
-Fn
-
-# shellcheck disable=SC2154
-\git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
-\git restore --source Parent/"$BranchParent" LICENSE_MIT
-
-cd "$Current"/../../../Tauri/Dependency/TauriGitHubBot || exit
+\cd "$Current"/../../../Tauri/Dependency/TauriEGUI || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -601,7 +590,18 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/TauriInliner || exit
+\cd "$Current"/../../../Tauri/Dependency/TauriGitHubBot || \exit
+
+# shellcheck disable=SC1091
+\source "$Current"/../../Fn/Cache.sh
+
+Fn
+
+# shellcheck disable=SC2154
+\git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
+\git restore --source Parent/"$BranchParent" LICENSE_MIT
+
+\cd "$Current"/../../../Tauri/Dependency/TauriInliner || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -611,7 +611,7 @@ Fn
 # shellcheck disable=SC2154
 \git restore --source Parent/"$BranchParent" MIT-LICENSE.TXT
 
-cd "$Current"/../../../Tauri/Dependency/TauriInvokeHTTP || exit
+\cd "$Current"/../../../Tauri/Dependency/TauriInvokeHTTP || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -622,7 +622,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/TauriLand || exit
+\cd "$Current"/../../../Tauri/Dependency/TauriLand || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -633,7 +633,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/TauriPluginApp || exit
+\cd "$Current"/../../../Tauri/Dependency/TauriPluginApp || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -644,7 +644,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/TauriPluginAuthenticator || exit
+\cd "$Current"/../../../Tauri/Dependency/TauriPluginAuthenticator || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -655,7 +655,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/TauriPluginCLI || exit
+\cd "$Current"/../../../Tauri/Dependency/TauriPluginCLI || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -666,7 +666,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/TauriPluginAutostart || exit
+\cd "$Current"/../../../Tauri/Dependency/TauriPluginAutostart || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -677,7 +677,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/TauriPluginClipboardManager || exit
+\cd "$Current"/../../../Tauri/Dependency/TauriPluginClipboardManager || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -688,7 +688,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/TauriPluginDialog || exit
+\cd "$Current"/../../../Tauri/Dependency/TauriPluginDialog || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -699,7 +699,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/TauriPluginFS || exit
+\cd "$Current"/../../../Tauri/Dependency/TauriPluginFS || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -710,7 +710,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/TauriPluginFSWatch || exit
+\cd "$Current"/../../../Tauri/Dependency/TauriPluginFSWatch || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -721,7 +721,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/TauriPluginFSExtra || exit
+\cd "$Current"/../../../Tauri/Dependency/TauriPluginFSExtra || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -732,7 +732,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/TauriPluginGlobalShortCut || exit
+\cd "$Current"/../../../Tauri/Dependency/TauriPluginGlobalShortCut || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -743,7 +743,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/TauriPluginHTTP || exit
+\cd "$Current"/../../../Tauri/Dependency/TauriPluginHTTP || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -754,7 +754,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/TauriPluginLocalhost || exit
+\cd "$Current"/../../../Tauri/Dependency/TauriPluginLocalhost || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -765,7 +765,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/TauriPluginNotification || exit
+\cd "$Current"/../../../Tauri/Dependency/TauriPluginNotification || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -776,7 +776,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/TauriPluginLog || exit
+\cd "$Current"/../../../Tauri/Dependency/TauriPluginLog || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -787,7 +787,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/TauriPluginPersistedScope || exit
+\cd "$Current"/../../../Tauri/Dependency/TauriPluginPersistedScope || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -798,7 +798,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/TauriPluginOS || exit
+\cd "$Current"/../../../Tauri/Dependency/TauriPluginOS || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -809,7 +809,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/TauriPluginPositioner || exit
+\cd "$Current"/../../../Tauri/Dependency/TauriPluginPositioner || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -820,7 +820,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/TauriPluginProcess || exit
+\cd "$Current"/../../../Tauri/Dependency/TauriPluginProcess || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -831,7 +831,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/TauriPluginShell || exit
+\cd "$Current"/../../../Tauri/Dependency/TauriPluginShell || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -842,7 +842,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/TauriPluginSingleInstance || exit
+\cd "$Current"/../../../Tauri/Dependency/TauriPluginSingleInstance || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -853,7 +853,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/TauriPluginSQL || exit
+\cd "$Current"/../../../Tauri/Dependency/TauriPluginSQL || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -864,7 +864,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/TauriPluginStrongHold || exit
+\cd "$Current"/../../../Tauri/Dependency/TauriPluginStrongHold || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -875,7 +875,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/TauriPluginUpdater || exit
+\cd "$Current"/../../../Tauri/Dependency/TauriPluginUpdater || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -886,7 +886,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/TauriPluginStore || exit
+\cd "$Current"/../../../Tauri/Dependency/TauriPluginStore || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -897,7 +897,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/TauriPluginWebSocket || exit
+\cd "$Current"/../../../Tauri/Dependency/TauriPluginWebSocket || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -908,7 +908,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/TauriPluginUpload || exit
+\cd "$Current"/../../../Tauri/Dependency/TauriPluginUpload || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -919,7 +919,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/TauriPluginWindow || exit
+\cd "$Current"/../../../Tauri/Dependency/TauriPluginWindow || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -930,7 +930,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/TauriPluginWindowState || exit
+\cd "$Current"/../../../Tauri/Dependency/TauriPluginWindowState || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh
@@ -941,7 +941,7 @@ Fn
 \git restore --source Parent/"$BranchParent" LICENSE_APACHE-2.0
 \git restore --source Parent/"$BranchParent" LICENSE_MIT
 
-cd "$Current"/../../../Tauri/Dependency/WinRTNotification || exit
+\cd "$Current"/../../../Tauri/Dependency/WinRTNotification || \exit
 
 # shellcheck disable=SC1091
 \source "$Current"/../../Fn/Cache.sh

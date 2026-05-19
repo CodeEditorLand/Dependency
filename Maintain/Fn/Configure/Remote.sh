@@ -1,8 +1,8 @@
 #!/usr/bin/env sh
 
-pwd
+\pwd
 
-Current=$(cd -- "$(dirname -- "$0")" > /dev/null 2>&1 && pwd)
+Current=$(\cd -- "$(\dirname -- "$0")" > /dev/null 2>&1 && \pwd)
 
 # shellcheck disable=SC1091
 . "$Current/../Cache.sh"
@@ -13,10 +13,10 @@ Remote() {
 	git remote get-url "$1" 2> /dev/null || git remote get-url origin
 }
 
-Source=$(Remote Source | sed 's/git@github.com:/ssh:\/\/git@github.com\//')
+Source=$(Remote Source | \sed 's/git@github.com:/ssh:\/\/git@github.com\//')
 
-echo "Source: "
-echo "$Source"
+\echo "Source: "
+\echo "$Source"
 
 git remote remove origin
 
@@ -32,10 +32,10 @@ git remote remove Parent
 
 if [ "$Parent" != "null/null" ]; then
 	Parent="ssh://git@github.com/${Parent}"
-	Parent=$(echo "$Parent" | sed 's/\/$/\.git/')
+	Parent=$(\echo "$Parent" | \sed 's/\/$/\.git/')
 
-	echo "Parent: "
-	echo "$Parent"
+	\echo "Parent: "
+	\echo "$Parent"
 
 	git remote add Parent "$Parent"
 	git remote set-url Parent "$Parent"
