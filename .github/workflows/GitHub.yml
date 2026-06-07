@@ -51,7 +51,7 @@ jobs:
             TERRAFORM_TELEMETRY: 0
 
         steps:
-            - uses: pozil/auto-assign-issue@v2.2.0
+            - uses: pozil/auto-assign-issue@v4.0.0
               with:
                   repo-token: ${{ secrets.GITHUB_TOKEN }}
                   assignees: NikolaRHristov
