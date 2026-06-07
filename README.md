@@ -47,7 +47,7 @@
 							<br />
 							<a href="https://GitHub.Com/CodeEditorLand/Echo" target="_blank">
 								<b>
-									Echo 📣
+									Echo&#x2001;📣
 								</b>
 							</a>
 						</td>
@@ -88,7 +88,7 @@
 							<br />
 							<a href="https://GitHub.Com/CodeEditorLand/Land" target="_blank">
 								<b>
-									Land 🏞️
+									Land&#x2001;🏞️
 								</b>
 							</a>
 						</td>
@@ -131,7 +131,7 @@
 							<br />
 							<a href="https://GitHub.Com/CodeEditorLand/Element" target="_blank">
 								<b>
-									Element 🌱
+									Element&#x2001;🌱
 								</b>
 							</a>
 						</td>
@@ -172,7 +172,7 @@
 							<br />
 							<a href="https://GitHub.Com/CodeEditorLand/Mountain" target="_blank">
 								<b>
-									Mountain ⛰️
+									Mountain&#x2001;⛰️
 								</b>
 							</a>
 						</td>
@@ -215,7 +215,7 @@
 							<br />
 							<a href="https://GitHub.Com/CodeEditorLand/River" target="_blank">
 								<b>
-									River 🌊
+									River&#x2001;🌊
 								</b>
 							</a>
 						</td>
@@ -256,7 +256,7 @@
 							<br />
 							<a href="https://GitHub.Com/CodeEditorLand/Sky" target="_blank">
 								<b>
-									Sky 🌌
+									Sky&#x2001;🌌
 								</b>
 							</a>
 						</td>
@@ -299,7 +299,7 @@
 							<br />
 							<a href="https://GitHub.Com/CodeEditorLand/Sun" target="_blank">
 								<b>
-									Sun ☀️
+									Sun&#x2001;☀️
 								</b>
 							</a>
 						</td>
@@ -340,7 +340,7 @@
 							<br />
 							<a href="https://GitHub.Com/CodeEditorLand/Wind" target="_blank">
 								<b>
-									Wind 🍃
+									Wind&#x2001;🍃
 								</b>
 							</a>
 						</td>
@@ -399,7 +399,7 @@
 							<br />
 							<a href="https://GitHub.Com/CodeEditorLand/Dependency" target="_blank">
 								<b>
-									Dependency 🖇️
+									Dependency&#x2001;🖇️
 								</b>
 							</a>
 						</td>
@@ -440,7 +440,7 @@
 							<br />
 							<a href="https://GitHub.Com/CodeEditorLand/Editor" target="_blank">
 								<b>
-									Editor 🏞️
+									Editor&#x2001;🏞️
 								</b>
 							</a>
 						</td>
@@ -483,7 +483,7 @@
 							<br />
 							<a href="https://GitHub.Com/CodeEditorLand/Land" target="_blank">
 								<b>
-									Land 🏞️
+									Land&#x2001;🏞️
 								</b>
 							</a>
 						</td>
@@ -524,7 +524,7 @@
 							<br />
 							<a href="https://GitHub.Com/CodeEditorLand/DependencyMicrosoftCargo" target="_blank">
 								<b>
-									Cargo 📦 Land 🏞️
+									Cargo&#x2001;📦&#x2001;Land&#x2001;🏞️
 								</b>
 							</a>
 						</td>
@@ -567,7 +567,7 @@
 							<br />
 							<a href="https://GitHub.Com/CodeEditorLand/DependencyMicrosoftNPM" target="_blank">
 								<b>
-									NPM 📦 Land 🏞️
+									NPM&#x2001;📦&#x2001;Land&#x2001;🏞️
 								</b>
 							</a>
 						</td>
@@ -608,7 +608,7 @@
 							<br />
 							<a href="https://GitHub.Com/CodeEditorLand/DependencyMicrosoftDependency" target="_blank">
 								<b>
-									Dependency 🖇️ Land 🏞️
+									Dependency&#x2001;🖇️&#x2001;Land&#x2001;🏞️
 								</b>
 							</a>
 						</td>
@@ -667,7 +667,7 @@
 							<br />
 							<a href="https://GitHub.Com/CodeEditorLand/DependencyTauri" target="_blank">
 								<b>
-									Tauri 🤩 Dependency 🖇️
+									Tauri&#x2001;🤩&#x2001;Dependency&#x2001;🖇️
 								</b>
 							</a>
 						</td>
@@ -708,7 +708,7 @@
 							<br />
 							<a href="https://GitHub.Com/CodeEditorLand/DependencyTauriCargo" target="_blank">
 								<b>
-									Cargo 📦 Tauri 🤩
+									Cargo&#x2001;📦&#x2001;Tauri&#x2001;🤩
 								</b>
 							</a>
 						</td>
@@ -751,7 +751,7 @@
 							<br />
 							<a href="https://GitHub.Com/CodeEditorLand/DependencyTauriNPM" target="_blank">
 								<b>
-									NPM 📦 Tauri 🤩
+									NPM&#x2001;📦&#x2001;Tauri&#x2001;🤩
 								</b>
 							</a>
 						</td>
@@ -792,7 +792,7 @@
 							<br />
 							<a href="https://GitHub.Com/CodeEditorLand/DependencyTauriDependency" target="_blank">
 								<b>
-									Dependency 🖇️ Tauri 🤩
+									Dependency&#x2001;🖇️&#x2001;Tauri&#x2001;🤩
 								</b>
 							</a>
 						</td>
@@ -851,7 +851,7 @@
 							<br />
 							<a href="https://GitHub.Com/CodeEditorLand/DependencyOXC" target="_blank">
 								<b>
-									OXC Dependency 🖇️
+									OXC&#x2001;Dependency&#x2001;🖇️
 								</b>
 							</a>
 						</td>
@@ -892,7 +892,7 @@
 							<br />
 							<a href="https://GitHub.Com/CodeEditorLand/DependencyOXCCargo" target="_blank">
 								<b>
-									Cargo OXC 📦
+									Cargo&#x2001;OXC&#x2001;📦
 								</b>
 							</a>
 						</td>
@@ -935,7 +935,7 @@
 							<br />
 							<a href="https://GitHub.Com/CodeEditorLand/DependencyOXCNPM" target="_blank">
 								<b>
-									NPM OXC 📦
+									NPM&#x2001;OXC&#x2001;📦
 								</b>
 							</a>
 						</td>
@@ -976,7 +976,7 @@
 							<br />
 							<a href="https://GitHub.Com/CodeEditorLand/DependencyOXCDependency" target="_blank">
 								<b>
-									Dependency OXC 🖇️
+									Dependency&#x2001;OXC&#x2001;🖇️
 								</b>
 							</a>
 						</td>
@@ -1035,7 +1035,7 @@
 							<br />
 							<a href="https://GitHub.Com/CodeEditorLand/DependencyBiome" target="_blank">
 								<b>
-									Biome 🗻 Dependency 🖇️
+									Biome&#x2001;🗻&#x2001;Dependency&#x2001;🖇️
 								</b>
 							</a>
 						</td>
@@ -1076,7 +1076,7 @@
 							<br />
 							<a href="https://GitHub.Com/CodeEditorLand/DependencyBiomeCargo" target="_blank">
 								<b>
-									Cargo 📦 Biome 🗻
+									Cargo&#x2001;📦&#x2001;Biome&#x2001;🗻
 								</b>
 							</a>
 						</td>
@@ -1119,7 +1119,7 @@
 							<br />
 							<a href="https://GitHub.Com/CodeEditorLand/DependencyBiomeNPM" target="_blank">
 								<b>
-									NPM 📦 Biome 🗻
+									NPM&#x2001;📦&#x2001;Biome&#x2001;🗻
 								</b>
 							</a>
 						</td>
@@ -1160,7 +1160,7 @@
 							<br />
 							<a href="https://GitHub.Com/CodeEditorLand/DependencyBiomeDependency" target="_blank">
 								<b>
-									Dependency 🖇️ Biome 🗻
+									Dependency&#x2001;🖇️&#x2001;Biome&#x2001;🗻
 								</b>
 							</a>
 						</td>
