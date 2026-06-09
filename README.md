@@ -349,9 +349,9 @@
 						<td colspan="1">
 							<h3 align="center">
 								<picture>
-									<source media="(prefers-color-scheme: dark)" srcset="https://PlayForm.Cloud/Dark/Image/GitHub/Land.svg" />
-									<source media="(prefers-color-scheme: light)" srcset="https://PlayForm.Cloud/Image/GitHub/Land.svg" />
-									<img width="28" alt="" src="https://PlayForm.Cloud/Image/GitHub/Land.svg" />
+									<source media="(prefers-color-scheme: dark)" srcset="https://editor.land/Dark/Image/GitHub/Land.svg" />
+									<source media="(prefers-color-scheme: light)" srcset="https://editor.land/Image/GitHub/Land.svg" />
+									<img width="28" alt="" src="https://editor.land/Image/GitHub/Land.svg" />
 								</picture>
 							</h3>
 						</td>
@@ -617,9 +617,9 @@
 						<td colspan="1">
 							<h3 align="center">
 								<picture>
-									<source media="(prefers-color-scheme: dark)" srcset="https://PlayForm.Cloud/Glyph/Image/GitHub/Tauri.svg" />
-									<source media="(prefers-color-scheme: light)" srcset="https://PlayForm.Cloud/Glyph/Image/GitHub/Tauri.svg" />
-									<img width="28" alt="" src="https://PlayForm.Cloud/Glyph/Image/GitHub/Tauri.svg" />
+									<source media="(prefers-color-scheme: dark)" srcset="https://editor.land/Glyph/Image/GitHub/Tauri.svg" />
+									<source media="(prefers-color-scheme: light)" srcset="https://editor.land/Glyph/Image/GitHub/Tauri.svg" />
+									<img width="28" alt="" src="https://editor.land/Glyph/Image/GitHub/Tauri.svg" />
 								</picture>
 							</h3>
 						</td>
@@ -801,9 +801,9 @@
 						<td colspan="1">
 							<h3 align="center">
 								<picture>
-									<source media="(prefers-color-scheme: dark)" srcset="https://PlayForm.Cloud/Image/GitHub/OXC.svg" />
-									<source media="(prefers-color-scheme: light)" srcset="https://PlayForm.Cloud/Image/GitHub/OXC.svg" />
-									<img width="28" alt="" src="https://PlayForm.Cloud/Image/GitHub/OXC.svg" />
+									<source media="(prefers-color-scheme: dark)" srcset="https://editor.land/Image/GitHub/OXC.svg" />
+									<source media="(prefers-color-scheme: light)" srcset="https://editor.land/Image/GitHub/OXC.svg" />
+									<img width="28" alt="" src="https://editor.land/Image/GitHub/OXC.svg" />
 								</picture>
 							</h3>
 						</td>
@@ -985,9 +985,9 @@
 						<td colspan="1">
 							<h3 align="center">
 								<picture>
-									<source media="(prefers-color-scheme: dark)" srcset="https://PlayForm.Cloud/Image/GitHub/Biome.svg" />
-									<source media="(prefers-color-scheme: light)" srcset="https://PlayForm.Cloud/Image/GitHub/Biome.svg" />
-									<img width="28" alt="" src="https://PlayForm.Cloud/Image/GitHub/Biome.svg" />
+									<source media="(prefers-color-scheme: dark)" srcset="https://editor.land/Image/GitHub/Biome.svg" />
+									<source media="(prefers-color-scheme: light)" srcset="https://editor.land/Image/GitHub/Biome.svg" />
+									<img width="28" alt="" src="https://editor.land/Image/GitHub/Biome.svg" />
 								</picture>
 							</h3>
 						</td>
@@ -1181,7 +1181,7 @@ This project is funded through
 
 | Land | PlayForm | NLnet | NGI0 Commons Fund |
 | :--- | :------- | :---- | :---------------- |
-| [<img src="https://raw.githubusercontent.com/CodeEditorLand/Asset/refs/heads/Current/Logo/Land.svg" height="80px" alt="Land" />](https://Editor.Land) | [<img src="https://raw.githubusercontent.com/PlayForm/Asset/refs/heads/Current/Logo/PlayForm.svg" height="80px" alt="PlayForm" />](https://PlayForm.Cloud) | [<img width="240px" src="https://NLnet.NL/logo/banner.svg" alt="NLnet" />](https://NLnet.NL) | [<img width="240px" src="https://NLnet.NL/image/logos/NGI0CommonsFund_tag_black_mono.svg" alt="NGI0 Commons Fund" />](https://NLnet.NL/commonsfund) |
+| [<img src="https://raw.githubusercontent.com/CodeEditorLand/Asset/refs/heads/Current/Logo/Land.svg" height="80px" alt="Land" />](https://Editor.Land) | [<img src="https://raw.githubusercontent.com/PlayForm/Asset/refs/heads/Current/Logo/PlayForm.svg" height="80px" alt="PlayForm" />](https://editor.land) | [<img width="240px" src="https://NLnet.NL/logo/banner.svg" alt="NLnet" />](https://NLnet.NL) | [<img width="240px" src="https://NLnet.NL/image/logos/NGI0CommonsFund_tag_black_mono.svg" alt="NGI0 Commons Fund" />](https://NLnet.NL/commonsfund) |
 
 ---
 
