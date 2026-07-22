@@ -9,7 +9,11 @@
 				</picture>
 			</h3>
 		</td>
-		<td colspan="3" valign="top"><h3 align="center">Land&#x2001;🏞️</h3></td>
+		<td colspan="3" valign="top">
+			<h3 align="center">
+				Land&#x2001;🏞️
+			</h3>
+		</td>
 	</tr>
 	<tr>
 		<td valign="top" colspan="1">
@@ -47,7 +51,11 @@
 				</picture>
 			</a>
 			<br />
-			<a href="https://GitHub.Com/CodeEditorLand/Microsoft" target="_blank"><b>Microsoft&#x2001;📦</b></a>
+			<a href="https://GitHub.Com/CodeEditorLand/Microsoft" target="_blank">
+				<b>
+					Microsoft&#x2001;📦
+				</b>
+			</a>
 		</td>
 		<td valign="top" colspan="1">
 			<a href="https://GitHub.Com/CodeEditorLand/SWC" target="_blank">
@@ -84,7 +92,11 @@
 				</picture>
 			</a>
 			<br />
-			<a href="https://GitHub.Com/CodeEditorLand/SWC" target="_blank"><b>SWC&#x2001;⚡</b></a>
+			<a href="https://GitHub.Com/CodeEditorLand/SWC" target="_blank">
+				<b>
+					SWC&#x2001;⚡
+				</b>
+			</a>
 		</td>
 	</tr>
 	<tr>
@@ -123,7 +135,11 @@
 				</picture>
 			</a>
 			<br />
-			<a href="https://GitHub.Com/CodeEditorLand/Tauri" target="_blank"><b>Tauri&#x2001;🖇</b></a>
+			<a href="https://GitHub.Com/CodeEditorLand/Tauri" target="_blank">
+				<b>
+					Tauri&#x2001;🖇
+				</b>
+			</a>
 		</td>
 	</tr>
 </table>
@@ -143,18 +159,50 @@ This project is funded through
 <table>
 	<thead>
 		<tr>
-			<th align="left"><strong>Land</strong></th>
-			<th align="left"><strong>PlayForm</strong></th>
-			<th align="left"><strong>NLnet</strong></th>
-			<th align="left"><strong>NGI0 Commons Fund</strong></th>
+			<th align="left">
+				<strong>
+					Land
+				</strong>
+			</th>
+			<th align="left">
+				<strong>
+					PlayForm
+				</strong>
+			</th>
+			<th align="left">
+				<strong>
+					NLnet
+				</strong>
+			</th>
+			<th align="left">
+				<strong>
+					NGI0 Commons Fund
+				</strong>
+			</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
-			<td align="left" valign="middle"><a href="https://editor.land"><img width="60" src="https://raw.githubusercontent.com/CodeEditorLand/Asset/refs/heads/Current/Logo/Land.svg" alt="Land" /></a></td>
-			<td align="left" valign="middle"><a href="https://PlayForm.Cloud"><img width="76" src="https://raw.githubusercontent.com/PlayForm/Asset/refs/heads/Current/Logo/PlayForm.svg" alt="PlayForm" /></a></td>
-			<td align="left" valign="middle"><a href="https://NLnet.NL"><img width="240" src="https://NLnet.NL/logo/banner.svg" alt="NLnet" /></a></td>
-			<td align="left" valign="middle"><a href="https://NLnet.NL/commonsfund"><img width="240" src="https://NLnet.NL/image/logos/NGI0CommonsFund_tag_black_mono.svg" alt="NGI0 Commons Fund" /></a></td>
+			<td align="left" valign="middle">
+				<a href="https://editor.land">
+					<img width="60" src="https://raw.githubusercontent.com/CodeEditorLand/Asset/refs/heads/Current/Logo/Land.svg" alt="Land" />
+				</a>
+			</td>
+			<td align="left" valign="middle">
+				<a href="https://PlayForm.Cloud">
+					<img width="76" src="https://raw.githubusercontent.com/PlayForm/Asset/refs/heads/Current/Logo/PlayForm.svg" alt="PlayForm" />
+				</a>
+			</td>
+			<td align="left" valign="middle">
+				<a href="https://NLnet.NL">
+					<img width="240" src="https://NLnet.NL/logo/banner.svg" alt="NLnet" />
+				</a>
+			</td>
+			<td align="left" valign="middle">
+				<a href="https://NLnet.NL/commonsfund">
+					<img width="240" src="https://NLnet.NL/image/logos/NGI0CommonsFund_tag_black_mono.svg" alt="NGI0 Commons Fund" />
+				</a>
+			</td>
 		</tr>
 	</tbody>
 </table>
