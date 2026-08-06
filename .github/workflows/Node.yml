@@ -60,7 +60,7 @@ jobs:
         steps:
             - uses: actions/checkout@v6.0.3
 
-            - uses: pnpm/action-setup@v4.2.0
+            - uses: pnpm/action-setup@v6.0.8
               with:
                   version: 9.3.0
                   run_install: |
